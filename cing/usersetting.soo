@@ -1,0 +1,29 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.minimap.enabled": true,
+    "workbench.colorTheme": "Verdandi",
+    "workbench.activityBar.visible": true,
+    "git.ignoreMissingGitWarning": true,
+    //Crane: 可能是错误检查?
+    "crane.enableErrorTelemetry": true,
+    //指向 PHP 可执行文件。
+    "php.validate.executablePath": "D:/phpStudy/php/php-7.0.12-nts/php.exe",
+    //光标动画
+    "editor.cursorBlinking": "expand",
+    //屏幕标尺
+    "editor.rulers": [80],
+    //php 7.0配置路径
+    "php.executablePath": "D:/phpStudy/php/php-7.0.12-nts/php.exe",
+    "window.menuBarVisibility": "toggle",
+    // 字体
+    "editor.fontFamily": "'Fira Code Retina', Consolas, monospace",
+    // 启用字体连字
+    "editor.fontLigatures": true,
+    // 以像素为单位控制字号。
+    "editor.fontSize": 15,
+    // 控制字体粗细。
+    "editor.fontWeight": "normal",
+    //代码超出屏幕换行
+    "editor.wordWrap": "off",
+    //艾雷德尔的绘画世界
+}
