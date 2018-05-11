@@ -1,4 +1,4 @@
-/*if that was javascript code?
+/*That was javascript code?
 no.*/
 
 function _questOBH_A(){
