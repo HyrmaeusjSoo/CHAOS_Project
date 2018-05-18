@@ -1,0 +1,10 @@
+<li class="clearfix">
+    <label class="label_name col-xs-2 col-lg-2"><i></i>证件号：</label>
+    <div class="formControls col-xs-6">
+        <input type="text" class="input-text col-xs-12" id="ucard" name="ucard" 
+            value="<?=$member['ucard']?>" onchange="_checkUcard(this.value,'<?=site_url('Member/check_IDCard');?>')">
+    </div>
+    <div class="col-4">
+        <span class="Validform_checktip" id="ucard_chkput"></span>
+    </div>
+</li>
