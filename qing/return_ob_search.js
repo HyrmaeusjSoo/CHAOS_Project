@@ -9,10 +9,10 @@ function _loadOrderFY(){
                 if(_pageNO>data.pageSum || _pageNO==1){
                      return false;
                 }
-                var _draw = "";				    
+                var _draw = "";
                 for(var i=0;i<data.list.length;i++){
                     var _ol = data.list[i];//当前订单
-                    /* ！开始作画 */ 
+                    /* ！开始作画 */
                     // ！一行 左（店铺名）
                     _draw += '<div class="dfh1"><div class="dfh1-lf"><a href=""> <div class="dflf1"><img src="<?=$this->config->item('resource_url');?>mobile/images/dian_03.png" width="100%" height="100%"></div>';
                     _draw += '<div class="dflf2">'+_ol.splist[0].sname+'&nbsp;&nbsp;</div></a></div><div class="dfh1-rt">';
