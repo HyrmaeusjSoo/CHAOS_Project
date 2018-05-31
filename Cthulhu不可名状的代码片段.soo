@@ -2,48 +2,39 @@ Lomont: 0x5f375a86 // gives initial guess y0
 Carmack: i = 0x5f3759df - ( i >> 1 ); // what the fuck?
 
 
-payType:1uid:131
--sid:Array
-(
+payType:1
+uid:131
+-sid:Array(
     [0] => 1
 )
--cid:-chek:Array
-(
+
+-cid:
+-chek:Array(
     [0] => 339
 )
--ptype:1
 
-Array
-(
+-ptype:1
+Array(
     [msg] => Y
     [oid] => 1796
 )
 
-
-payType:1uid:131
--sid:Array
-(
+payType:1
+uid:131
+-sid:Array(
     [0] => 1
 )
--cid:-chek:Array
-(
+-cid:-chek:Array(
     [0] => 339
 )
--ptype:2
 
-Array
-(
+-ptype:2
+Array(
     [msg] => Y
     [oid] => 1797
 )
 
 
-echo 'payType:'.$payType;
-echo 'uid:'.$uid.'-sid:';
-print_r($sid);echo '-cid:'.$cid.'-chek:';
-print_r($checkbox);echo '-ptype:'.$ptype;echo '-arr:';
-print_r($arr);
-die;
 
 ǧ��棺
 	2000/01/01
