@@ -3,30 +3,35 @@
 	ASTRONEER
 	American Truck Simulator
 B:
-	+BioShock：
+	+BioShock{
 		+1
 		+2
 		+infinite
-	Borderlands：
+	}
+	Borderlands{
 		1
 		+2
 		The Pre-Sequel
+	}
 C:
 	+CS:GO
 	+CS:Source
 D:
-	+Darksiders:
+	+Darksiders{
 		+1
 		+2
-	DiRT
+	}
+	DiRT{
 		4
 		+Showdown
+	}
 	+DOOM
 	Distance
-	Dark Souls
+	Dark Souls{
 		1
 		2
 		3
+	}
 	Dishonred 2
 	Divinity: Original Sin 2
 	Dead Rising 4
@@ -57,10 +62,12 @@ M:
 	+Middle-earth:Shadow of Mordor
 	Mortal Kombat X
 N:
-	Need for Speed:
+	Need for Speed{
 		+14 Hot Pursuit
 		18
 		19
+	}
+		
 	NARUTO SHIPPUDEN: Ultimate Ninja Storm 4
 O:
 	Oxygen Not Included
@@ -71,9 +78,11 @@ P:
 	Prey
 Q:
 R:
-	Far Cry:
+	Far Cry{
 		4
 		5
+	}
+		
 S:
 	+Sleeping Dogs:Definitive Edition
 	Subnautica
@@ -82,9 +91,10 @@ S:
 	South Park The Fractured But Whole
 	Sid Meier's Civilization VI
 T:
-	Tomb Raider:
+	Tomb Raider{
 		+9
 		10
+	}
 	+Torchlight 2
 	Thumper
 	theHunter:Call of the Wild
@@ -94,10 +104,12 @@ U:
 V:
 W:
 	+The Witcher 3: Wild Hunt
-	+Wolfenstein:
+	+Wolfenstein{
 		+The New Order
 		+The Old Blood
 		2: The New Colossus
+	}
+		
 X:
 Y:
 Z:
