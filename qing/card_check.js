@@ -8,9 +8,9 @@ function _checkUcard(_cid,_url){
  		async:false,
  		error: function(data){
             alert('验证失败') ;
-      	},  
+      	},
  		success: function(data){
-// 			var s = data.replace(/(^\s+)|(\s+$)/g,'');
+//			var s = data.replace(/(^\s+)|(\s+$)/g,'');
  			var a = eval('('+data+')');
  			if( a == 'Y'){
  				$('#ucard_chkput').html('验证通过！');
@@ -23,3 +23,4 @@ function _checkUcard(_cid,_url){
  	});
 	//return boolean;
 }
+    
