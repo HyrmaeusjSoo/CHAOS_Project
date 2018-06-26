@@ -8,7 +8,7 @@ function _checkUcard(_cid,_url){
  		async:false,
  		error: function(data){
             alert('验证失败') ;
-      	},
+		},
  		success: function(data){
 //			var s = data.replace(/(^\s+)|(\s+$)/g,'');
  			var a = eval('('+data+')');
