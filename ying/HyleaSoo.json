@@ -21,7 +21,7 @@
   "SendOnFarmingFinished": false,
   "SteamTradeToken": null,
   "SendTradePeriod": 0,
-  "TradingPreferences": 1, 
+  "TradingPreferences": 1,
   "AcceptConfirmationsPeriod": 0,
   "CustomGamePlayedWhileFarming": null,
   "CustomGamePlayedWhileIdle": null,
@@ -43,7 +43,7 @@
 	//50620,	//Darksiders
 	//462780,	//Darksiders Warmastered Edition
 	//388410,	//Darksiders II Deathinitive Edition
-		/*359350, //Defunct*/
+		/*359350, //Defunct*/   
 		//201700,	//DiRT Showdown
         /*219740, // don't starve*/
 		/*248610,	//Door Kickers*/
