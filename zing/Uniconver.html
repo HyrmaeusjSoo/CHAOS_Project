@@ -15,9 +15,10 @@
                     <p>  再按“还原”，即可将其还原为简体中文。
                 </td>
             </tr>
-            </table>
+            </table><!-- span底部标签禁用 -->
         </center>
     </div>
+    <!-- my name is van.I'm an artist,a performance artist.i'm hired for people to profile their fantasies the deep dark fantasy♂ -->
     <p align=center>
         <textarea cols=100 rows=20 id=code></textarea> 
     </p>
@@ -25,7 +26,7 @@
         <input type=button onclick=encode(code,this) value=转化>
         <script>
             var mode="zhuan";
-            function encode(ob  j,btn){
+            function encode(obj,btn){
                 if(mode=="zhuan"){
                     obj.value=obj.value.replace(/[^\u0000-\u00FF]/g,function($0){return escape($0).replace(/(%u)(\w{4})/gi,"\\u$2")});
                     btn.value="还原";

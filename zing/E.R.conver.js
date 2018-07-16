@@ -11,7 +11,7 @@ function er(str){
         var item = list[i];
         var binaryStr = item.charCodeAt().toString(2);
         result.push(binaryStr);
-    }   
+    }
     return result.join("");
 }
 
