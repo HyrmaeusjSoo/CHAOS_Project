@@ -24,7 +24,7 @@
             $dtm_birth = "19".$arr_split[2] . '/' . $arr_split[3]. '/' .$arr_split[4];
             if(!strtotime($dtm_birth)) {
                 echo json_encode('N');
-            }    else {
+            }else{
                 echo json_encode('Y');
             }
         }else{//检查18位
