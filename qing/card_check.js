@@ -23,3 +23,8 @@ function _checkUcard(_cid,_url){
  	});
 	//return boolean;
 }
+
+/**
+ * quiet
+ */
+
