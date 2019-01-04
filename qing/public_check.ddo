@@ -1,0 +1,6 @@
+input 只能输入数字：
+	onkeyup = "value=value.replace(/[^\d]/g,'')"
+	onchange = "value=value.replace(/[^\d]/g,'')"
+	oninput="value=value.replace(/[^\d]/g,'')"
+	
+	
