@@ -1,14 +1,14 @@
 <?php
 
-    $abc = 'choice_type';
-    if($abc){
+    $type = 'choice_type';
+    if($type){
         //that api was playfun yuehan·kamake
     }
 
     /**
      * 检查身份证号
      */
-    function check_IDCard(){
+    function checkIDCard(){
         $id = strtoupper($this->input->post('id'));
         $regx = "/(^\d{15}$)|(^\d{17}([0-9]|X)$)/";
         $arr_split = array();
@@ -55,10 +55,4 @@
         }
     }
 
-?>
-<?php
-/*
-    递归函数的名称结尾要加"_r"
-    尽可能的应用'const'限定符
-*/
 ?>
