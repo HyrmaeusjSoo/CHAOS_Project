@@ -1,12 +1,12 @@
-# Cthulhu
+## Cthulhu
 
-### 在りし日のふたり
-### See me fly, I'm singing in the sky.
-### From past to present.
-### Life was simple and they were both happy.
+##### 在りし日のふたり
+##### See me fly, I'm singing in the sky.
+##### From past to present.
+##### Life was simple and they were both happy.
 ---------------------------------------------------------------
 
-### 我爱数学，同时亦爱一位世人。
+#### 我爱数学，同时亦爱一位世人。
 
 <pre>
     浮世梦如空 月照心自明 露湿乱世情 风过云雾散 滴滴印此生 秋风引枝露 
