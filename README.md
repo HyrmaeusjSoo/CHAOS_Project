@@ -1,4 +1,5 @@
 ## Cthulhu
+## &nbsp;&nbsp;&nbsp;&nbsp;:Personal Encyclopedia （个人百科收录）
 
 #### 在りし日のふたり
 #### See me fly, I'm singing in the sky.
