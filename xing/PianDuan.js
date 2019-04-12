@@ -1,5 +1,5 @@
 // +---------------------------------------------------------------------------------------+
-// | Hylea Soo's from past to present 在りし日のふたり Void Chaos False Philosophy code.      |
+// | Hylea Soo's from past to present 在りし日のふたり Void Chaos False Philosophy code.     |
 // +---------------------------------------------------------------------------------------+
 // | _wabbajack Numidium Human Requests. Hermaeus Mora's Oghma Infinium. We Are Observer.  |
 // +---------------------------------------------------------------------------------------+
