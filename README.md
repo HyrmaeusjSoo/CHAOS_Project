@@ -1,3 +1,5 @@
+### BGM: https://music.163.com/song?id=1351449575&userid=317172721
+
 ## Cthulhu
 ## &nbsp;&nbsp;&nbsp;&nbsp;:Personal Philosophy Encyclopedia （个人百科收录）
 
@@ -6,8 +8,6 @@
 #### From past to present.
 #### Life was simple and they were both happy.
 ---------------------------------------------------------------
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1351449575&auto=1&height=66"></iframe>
 
 #### 我爱数学，同时亦爱一位世人。
 
