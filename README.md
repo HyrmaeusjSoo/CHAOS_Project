@@ -3,7 +3,7 @@
 ## Cthulhu
 ## &nbsp;&nbsp;&nbsp;&nbsp;:Personal Philosophy Encyclopedia （个人百科收录）
 
-#### 在りし日のふたり
+#### 在りし日のふたり、そんなことはないよ。
 #### See me fly, I'm singing in the sky.
 #### From past to present.
 #### Life was simple and they were both happy.
