@@ -2,7 +2,7 @@
 
 
 
-    !function () {
+    (()=>{
         let zuida = simulator(0.01, 'ss', 15, 999);
         console.log('zd:'+ zuida +' : '+ xfjs((1/zuida*100),'0'));
         let shishi = simulator(0.01, 'ss', 10, 240);
@@ -13,7 +13,7 @@
         console.log('pt:' + putong +' : '+ xfjs((1/putong*100),'0'));
         let zuixiao = simulator();
         console.log('zx:' + zuixiao +' : '+ xfjs((1/zuixiao*100),'0'));
-    }();
+    })();
 
     /**
      * monitiaoxieyiren - jisuanzonggailv
