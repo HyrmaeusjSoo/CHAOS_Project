@@ -2,23 +2,39 @@
 
 
 
+    function simulator(){
+        console.log(zeno().zenogl(0.01, 'ss', 15, 999));
+    }
+    const zeno = _ => {
+        const zenogl = (yr, hx, xx, yq) => xfjs((yrgl(yr) * hxgl(hx) * xxgl(xx) * yqgl(yq)), 3);
+        const yrgl = yr => ({'kos-mos':0.1, 'Ji':0.31, 'Leigu':1.88, 'Bachongqie':0.25, 'Yue':0.13}[yr] || 0.1);
+        const hxgl = xy => ({'pt':1, 'xy':1.5, 'ss':3}[xy] || 1);
+        const xxgl = (xx = 5) => xfjs(0.01 * (100 + 5 * xx));
+        const yqgl = yq => gl(yq)<1 && 1 || xfjs(gl(yq));
+        const gl = yq => Math.sqrt(yq || 21)*0.01*1.3 + 0.95;
+        const xfjs = (xiaoshu, fuhao=2) => Math.floor(xiaoshu * 10**fuhao) / 10**fuhao;
+        return {
+            zenogl:zenogl, yrgl:yrgl, hxgl:hxgl, xxgl:xxgl, yqgl:yqgl, gl:gl, xfjs:xfjs
+        };
+    };
+    
     (()=>{
-        let zuida = simulator(0.01, 'ss', 15, 999);
+        let zuida = simulator2(0.01, 'ss', 15, 999);
         console.log('zd:'+ zuida +' : '+ xfjs((1/zuida*100),'0'));
-        let shishi = simulator(0.01, 'ss', 10, 240);
+        let shishi = simulator2(0.01, 'ss', 10, 240);
         console.log('ss:' + shishi +' : '+ xfjs((1/shishi*100),'0'));
-        let xiyou = simulator(0.01, 'xy', 10, 240);
+        let xiyou = simulator2(0.01, 'xy', 10, 240);
         console.log('xy:' + xiyou +' : '+ xfjs((1/xiyou*100),'0'));
-        let putong = simulator(0.01, 'pt', 10, 240);
+        let putong = simulator2(0.01, 'pt', 10, 240);
         console.log('pt:' + putong +' : '+ xfjs((1/putong*100),'0'));
-        let zuixiao = simulator();
+        let zuixiao = simulator2();
         console.log('zx:' + zuixiao +' : '+ xfjs((1/zuixiao*100),'0'));
     })();
 
     /**
      * monitiaoxieyiren - jisuanzonggailv
      */
-    function simulator(yr,hx,xx,yq) {
+    function simulator2(yr,hx,xx,yq) {
         //let shitiao = zenogl(0.1, hxgl('pt'), xxgl(), yqgl());
         let shitiao = zenogl(yr,hx,xx,yq);
         return shitiao;
