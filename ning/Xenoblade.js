@@ -2,10 +2,103 @@
 
 
 
-    function simulator(){
-        console.log(zeno().zenogl(0.01, 'ss', 15, 999));
+    const _mainTme1 = '6307#1`2`3`';
+    const _Zeno1 = (yr, hx, xx=5, yq) => 
+        ( _ => 
+            zenogl
+        )(e = 1 + 2 - 1
+            , xfjs = (xs, fh=2) => 
+                Math.floor(xs * 10**fh) / 10**fh
+            , zenogl = ( l => 
+                xfjs(
+                    ({'\u006b\u006d\u0073':0.1, '\u004a\u0069':0.31, '\u004c\u0067':1.88, '\u0042\u0063\u0071':0.25, '\u0059\u0075\u0065':0.13}[yr] || 0.1)
+                    * ({'\u0070\u0074':1, '\u0078\u0079':1.5, '\u0073\u0073':3}[hx] || 1)
+                    * xfjs(0.01 * (100 + 5 * xx))
+                    * (yq <= 1 && 1 || xfjs(yq))
+                , 3)
+            )(yq = (y => Math.sqrt(yq || 21)*0.01*1.3 + 0.95)())
+        )
+        + ' - ' + xfjs(1/zenogl*100, 0)
+    ;
+    const aa = (yr, hx, xx=5, yq=21) => 
+        ( _ =>
+            zeno(xfjs(yrgl() * hxgl() * xxgl() * yqgl(), 3)) +' - '+ xfjs(gl)
+        )( zenogl = ( _ => 
+                e = e - 1 
+                , yrgl = yr => ({'\u006b\u006d\u0073':0.1, '\u004a\u0069':0.31, '\u004c\u0067':1.88, '\u0042\u0063\u0071':0.25, '\u0059\u0075\u0065':0.13}[yr] || 0.1) 
+                , hxgl = hx => ({'\u0070\u0074':1, '\u0078\u0079':1.5, '\u0073\u0073':3}[hx] || 1) 
+                , xxgl = xx => xfjs(0.01 * (100 + 5 * (xx || 5))) 
+                , yqgl = yq => (y<=1 && 1 || xfjs(y)) 
+                , zeno = gl => gl=gl 
+            )( e = 1 + 2 
+                , xfjs = (xs, fh=2) => Math.floor(xs * 10**fh) / 10**fh
+                , y = (_ => Math.sqrt(yq || 21)*0.01*1.3 + 0.95)()
+            )
+        )
+    ;
+    
+    (()=>{
+        simulator();
+        zenoSimu();
+        xenoSimu();
+    })();
+    function xenoSimu() {
+        console.log('zd: '+Xeno('kos-mos', 'ss', 15, 999));
+        console.log('ss: '+Xeno('kos-mos', 'ss', 10, 240));
+        console.log('xy: '+Xeno('kos-mos', 'xy', 10, 240));
+        console.log('pt: '+Xeno('kos-mos', 'pt', 10, 240));
+        console.log('zx: '+Xeno());
     }
-    const zeno = _ => {
+    function zenoSimu() {
+        let zuida = Zeno().zenogl('kos-mos', 'ss', 15, 999);
+        console.log('zd: '+ zuida +' : '+ zeno().xfjs((1/zuida*100), 0));
+        let shishi = Zeno().zenogl('kos-mos', 'ss', 10, 240);
+        console.log('ss: ' + shishi +' : '+ zeno().xfjs((1/shishi*100), 0));
+        let xiyou = Zeno().zenogl('kos-mos', 'xy', 10, 240);
+        console.log('xy: ' + xiyou +' : '+ zeno().xfjs((1/xiyou*100), 0));
+        let putong = Zeno().zenogl('kos-mos', 'pt', 10, 240);
+        console.log('pt: ' + putong +' : '+ zeno().xfjs((1/putong*100), 0));
+        let zuixiao = Zeno().zenogl();
+        console.log('zx: ' + zuixiao +' : '+ zeno().xfjs((1/zuixiao*100), 0));
+    }
+    function simulator() {
+        let zuida = Zenogl('kos-mos', 'ss', 15, 999);
+        console.log('zd: '+ zuida +' : '+ xfjs((1/zuida*100),'0'));
+        let shishi = Zenogl('kos-mos', 'ss', 10, 240);
+        console.log('ss: ' + shishi +' : '+ xfjs((1/shishi*100),'0'));
+        let xiyou = Zenogl('kos-mos', 'xy', 10, 240);
+        console.log('xy: ' + xiyou +' : '+ xfjs((1/xiyou*100),'0'));
+        let putong = Zenogl('kos-mos', 'pt', 10, 240);
+        console.log('pt: ' + putong +' : '+ xfjs((1/putong*100),'0'));
+        let zuixiao = Zenogl();
+        console.log('zx: ' + zuixiao +' : '+ xfjs((1/zuixiao*100),'0'));
+    }
+    
+    /**
+     * yihangjisuandaima
+     */
+    const Xeno = (yr, hx, xx=5, yq) => 
+        ( _ => 
+            zenogl
+        )(e = 1 + 2 - 1
+            , xfjs = (xs, fh=2) =>
+                Math.floor(xs * 10**fh) / 10**fh
+            , zenogl = ( l => 
+                xfjs(
+                    ({'kos-mos':0.1, 'Ji':0.31, 'Leigu':1.88, 'Bachongqie':0.25, 'Yue':0.13}[yr] || 0.1)
+                    * ({'pt':1, 'xy':1.5, 'ss':3}[hx] || 1)
+                    * xfjs(0.01 * (100 + 5 * xx))
+                    * (yq <= 1 && 1 || xfjs(yq))
+                , 3)
+            )(yq = (y => Math.sqrt(yq || 21)*0.01*1.3 + 0.95)())
+        )
+        + ' - ' + xfjs(1/zenogl*100, 0)
+    ;
+
+    /**
+     * weiyihang
+     */
+    const Zeno = _ => {
         const zenogl = (yr, hx, xx, yq) => xfjs((yrgl(yr) * hxgl(hx) * xxgl(xx) * yqgl(yq)), 3);
         const yrgl = yr => ({'kos-mos':0.1, 'Ji':0.31, 'Leigu':1.88, 'Bachongqie':0.25, 'Yue':0.13}[yr] || 0.1);
         const hxgl = xy => ({'pt':1, 'xy':1.5, 'ss':3}[xy] || 1);
@@ -17,34 +110,12 @@
             zenogl:zenogl, yrgl:yrgl, hxgl:hxgl, xxgl:xxgl, yqgl:yqgl, gl:gl, xfjs:xfjs
         };
     };
-    
-    (()=>{
-        let zuida = simulator2(0.01, 'ss', 15, 999);
-        console.log('zd:'+ zuida +' : '+ xfjs((1/zuida*100),'0'));
-        let shishi = simulator2(0.01, 'ss', 10, 240);
-        console.log('ss:' + shishi +' : '+ xfjs((1/shishi*100),'0'));
-        let xiyou = simulator2(0.01, 'xy', 10, 240);
-        console.log('xy:' + xiyou +' : '+ xfjs((1/xiyou*100),'0'));
-        let putong = simulator2(0.01, 'pt', 10, 240);
-        console.log('pt:' + putong +' : '+ xfjs((1/putong*100),'0'));
-        let zuixiao = simulator2();
-        console.log('zx:' + zuixiao +' : '+ xfjs((1/zuixiao*100),'0'));
-    })();
-
-    /**
-     * monitiaoxieyiren - jisuanzonggailv
-     */
-    function simulator2(yr,hx,xx,yq) {
-        //let shitiao = zenogl(0.1, hxgl('pt'), xxgl(), yqgl());
-        let shitiao = zenogl(yr,hx,xx,yq);
-        return shitiao;
-    }
 
     /**
      * tiaoxieyirenzonggailv
      * baifenzhigailv = yirenchushi * hexinjiacheng * xinxiangzhishu * yunqizhishu
      */
-    function zenogl(yr,hx,xx,yq) {
+    function Zenogl(yr,hx,xx,yq) {
         let gailv = (yrgl(yr) * hxgl(hx) * xxgl(xx) * yqgl(yq));
         return xfjs(gailv, 3);
     }
