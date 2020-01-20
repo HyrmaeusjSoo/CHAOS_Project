@@ -25,11 +25,11 @@
     // 忽视git失效警告
     "git.ignoreMissingGitWarning": true,
 
-    // 指定PHP可执行文件
-    "php.validate.executablePath": "F:/geeker/PhpStudy20180211/PHPTutorial/php/php-7.2.1-nts/php.exe",
-    // PHP IntelliSense php7.0指定路径(必须7.0以上)
-    "php.executablePath": "F:/geeker/PhpStudy20180211/PHPTutorial/php/php-7.2.1-nts/php.exe",
-    
+    //// 指定PHP可执行文件
+    //"php.validate.executablePath": "F:/geeker/PhpStudy20180211/PHPTutorial/php/php-7.2.1-nts/php.exe",
+    //// PHP IntelliSense php7.0指定路径(必须7.0以上)
+    //"php.executablePath": "F:/geeker/PhpStudy20180211/PHPTutorial/php/php-7.2.1-nts/php.exe",
+
     // 菜单条显示方式 动态(可用alt调出)
     "window.menuBarVisibility": "toggle",
     // 动作条可见
