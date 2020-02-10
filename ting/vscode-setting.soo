@@ -1,10 +1,18 @@
 {
-    
+
     //Crane: 可能是错误检查?
     "crane.enableErrorTelemetry": true,
 
     // 显示空格
     "editor.renderWhitespace": "all",
+    // 显示制表符
+    "editor.renderControlCharacters": true,
+    // 关闭检测第一个tab后面全是tab
+    "editor.detectIndentation": false,
+    // tab为4个空格
+    "editor.tabSize": 4,
+    // 转为空格
+    "editor.insertSpaces": true,
     // 启用minimap
     "editor.minimap.enabled": true,
     // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
@@ -36,5 +44,5 @@
     "workbench.activityBar.visible": true,
     // 主题
     "workbench.colorTheme": "Verdandi",
-    
+
 }
