@@ -1,54 +1,54 @@
 /*Soo2:*/
-	410110, // 12 is better than 6
-	204300, // awesomenauts
-	238460, // battleblock theater
-	250900, // the binding of isaac: rebirth
-	433950, // bit blaster xl
-	49520,  // borderlands 2
-	204360, // castle crashers
-	10, //Counter-Strike
-	80, //Counter-Strike: Condition Zero
-	100, //Counter-Strike: Condition Zero Deleted Scenes
-	730, //Counter-Strike: Global Offensive
-	240, //Counter-Strike: Source
-	247080, // crypt of the necrodancer
-	219740, // don't starve
-	236090, // dust: an elysian tail
-	377160, //Fallout 4
-	229810, // a fistful of gun
-	463270, // ghost 1.0
-	219990, //Grim Dawn
-	269210, // hero siege
-	219150, // hotline miami
-	274170, // hotline miami 2: wrong number
-	250400, // how to survive
-	257850, // hyper light drifter
-	363420, // leap of fate
-	500,    // left 4 dead
-	550,    // left 4 dead 2
-	48000,  // limbo
-	361990,//Lakeview Cabin Collection
-	434650, // lost castle
-	234140, // mad max
-	329490, // phantom breaker: battle grounds
-	3590,   // plants vs. zombies: game of the year
-	405640, // pony island
-	248820, // risk of rain
-	241600, // rogue legacy
-	383080, // sakura clicker
-	283640, // salt and sanctuary
-	211820, // starbound
-	413150, //Stardew Valley
-	105600, // terraria
-	282070, // this war of mine
-	203160, //tomb raider
-	200710, // torchlight 2
-	233980  // unepic
+    410110, // 12 is better than 6
+    204300, // awesomenauts
+    238460, // battleblock theater
+    250900, // the binding of isaac: rebirth
+    433950, // bit blaster xl
+    49520,  // borderlands 2
+    204360, // castle crashers
+    10, //Counter-Strike
+    80, //Counter-Strike: Condition Zero
+    100, //Counter-Strike: Condition Zero Deleted Scenes
+    730, //Counter-Strike: Global Offensive
+    240, //Counter-Strike: Source
+    247080, // crypt of the necrodancer
+    219740, // don't starve
+    236090, // dust: an elysian tail
+    377160, //Fallout 4
+    229810, // a fistful of gun
+    463270, // ghost 1.0
+    219990, //Grim Dawn
+    269210, // hero siege
+    219150, // hotline miami
+    274170, // hotline miami 2: wrong number
+    250400, // how to survive
+    257850, // hyper light drifter
+    363420, // leap of fate
+    500,    // left 4 dead
+    550,    // left 4 dead 2
+    48000,  // limbo
+    361990,//Lakeview Cabin Collection
+    434650, // lost castle
+    234140, // mad max
+    329490, // phantom breaker: battle grounds
+    3590,   // plants vs. zombies: game of the year
+    405640, // pony island
+    248820, // risk of rain
+    241600, // rogue legacy
+    383080, // sakura clicker
+    283640, // salt and sanctuary
+    211820, // starbound
+    413150, //Stardew Valley
+    105600, // terraria
+    282070, // this war of mine
+    203160, //tomb raider
+    200710, // torchlight 2
+    233980  // unepic
 
 /*free to pay*/
-	570,       //dota2
+    570,       //dota2
 
 /*Soo1:*/
-	339400  // runestone keeper
+    339400  // runestone keeper
 
 /* And guess what? */
