@@ -9,34 +9,46 @@
 // +---------------------------------------------------------------------------------------+
 
 
+setInterval(
+    ( dogo = 24 - 8 + 1 
+        , fixed = (new Date((new Date()).toLocaleDateString() + ' '+dogo+':00:00')).getTime()
+        , now = (new Date()).getTime()
+        
+        , milliseconds = fixed - now
+        , seconds = (milliseconds / 1000).toString()
+        , minutes = (seconds / 60).toString()
+        , hours = (minutes / 60).toString()
+        
+        , H = hours.substr(0, hours.indexOf(".") + 1)
+        , Hms = '0' + hours.substr(hours.indexOf("."))
+        , Hmc = (Hms * 6 / 10).toString().substr(2)
+        , Hm = Hmc.substr(0, 2)
+        , Hss = '0.' + Hmc.substr(2)
+        , Hsc = (Hss * 6 / 10).toString().substr(2)
+        , Hs = Hsc.substr(0, 2)
+        
+        , M = minutes.substr(0, minutes.indexOf(".") + 1)
+        , Mss = '0' + minutes.substr(minutes.indexOf("."))
+        , Msc = (Mss * 6 / 10).toString().substr(2)
+        , Ms = Msc.substr(0, 2)
+        
+        , S = seconds.substr(0, seconds.indexOf("."))
+    ) => {
+        console.clear();
+        
+        //console.log(hours);
+        //console.log(minutes);
+        //console.log(seconds);
+        //console.log('--------------------');
+        console.log(H + Hm + '.' + Hs);
+        console.log(M + Ms);
+        console.log(S);
+    }
+, 2000);
+
+
+
 (() => {
-
-    http://HyleaSoo.club
-
-    1  .2  .3  .123.;//3/4 1/3 1/6
-    123.123.123.1  .;//3/4
-    123.223.123.1  .;
-    
-    123.123.123.123.;//4/4 1/3 1/6
-    123.123.123.1  .;//4/4 1/3
-    123.123.123.1  .;//4/4 1/3
-    123.123.123.1  .;//4/4 1/3
-    123.123.123.123.;//4/4 1/3 1/6
-    123.123.123.1  .;//4/4 1/3
-
-    qyjlxn  ln
-
-    //  236.82    444.61
-    //  336.82    344.61
-    //  436.82    244.61
-
-    367
-
-})();
-
-
-(() => {
-
     var goAndRunSeasonRift = function () {
         console.clear();
 
@@ -73,5 +85,4 @@
         console.log(S);
     };
     setInterval(goAndRunSeasonRift, 2000);
-
 })();
