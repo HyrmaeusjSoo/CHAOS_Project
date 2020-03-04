@@ -1,4 +1,5 @@
 ##### BGM: https://music.163.com/#/song?id=3986017
+##### BGM2: https://music.163.com/#/song?id=29393749
 
 ## Cthulhu
 ## &nbsp;&nbsp;&nbsp;&nbsp;:Personal Philosophy Encyclopedia （个人百科收录）
