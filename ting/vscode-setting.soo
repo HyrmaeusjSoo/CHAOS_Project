@@ -1,7 +1,10 @@
 {
-
+    
     //Crane: 可能是错误检查?
     "crane.enableErrorTelemetry": true,
+
+    //与活动文件同步
+    "explorer.autoReveal": false,
 
     // 显示空格
     "editor.renderWhitespace": "all",
@@ -44,5 +47,5 @@
     "workbench.activityBar.visible": true,
     // 主题
     "workbench.colorTheme": "Verdandi",
-
+    
 }
