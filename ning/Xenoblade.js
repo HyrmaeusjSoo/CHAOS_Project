@@ -7,14 +7,25 @@
 // +---------------------------------------------------------------------------------------+
 // |                                                             —————— 龍が如く Hylea Soo  |
 // +---------------------------------------------------------------------------------------+
-const _Simulator = '63067#1.2.3.';
+const _Simulator = "63067#1.2.3.";
 const _ds = "dQ/T";
 const _Delta = 4.669201609102990;
 const _e = 2.718281828459045;
 const _Absolute_Zero = "T(K)=t(℃)+273.15";
 const _Golden_Ratio = (Math.sqrt(5) - 1) / 2;
 
-const _Zeno1 = (yr, hx, xx=5, yq) => 
+/**
+ *  monitiaoxie
+ *  yr:yiren
+ *    kos-mos, Ji, Leigu, Bachongqie, Yue.
+ *  hx:hexin
+ *    pt, xy, ss.
+ *  xx:xinxiang
+ *    xinxiang morenzhi 5.
+ *  yq:yunqi
+ *    yunqizhi.
+ */
+const _Zeno = (yr, hx, xx=5, yq) => 
     ( _ => 
         zenogl
     )(e = 1 + 2 - 1
@@ -28,25 +39,7 @@ const _Zeno1 = (yr, hx, xx=5, yq) =>
                 * (yq <= 1 && 1 || xfjs(yq))
             , 3)
         )(yq = (y => Math.sqrt(yq || 21)*0.01*1.3 + 0.95)())
-    )
-    + ' - ' + xfjs(1/zenogl*100, 0)
-;
-const aa = (yr, hx, xx=5, yq=21) => 
-    ( _ =>
-        zeno(xfjs(yrgl() * hxgl() * xxgl() * yqgl(), 3)) +' - '+ xfjs(gl)
-    )( zenogl = ( _ => 
-            e = e - 1 
-            , yrgl = yr => ({'\u006b\u006d\u0073':0.1, '\u004a\u0069':0.31, '\u004c\u0067':1.88, '\u0042\u0063\u0071':0.25, '\u0059\u0075\u0065':0.13}[yr] || 0.1) 
-            , hxgl = hx => ({'\u0070\u0074':1, '\u0078\u0079':1.5, '\u0073\u0073':3}[hx] || 1) 
-            , xxgl = xx => xfjs(0.01 * (100 + 5 * (xx || 5))) 
-            , yqgl = yq => (y<=1 && 1 || xfjs(y)) 
-            , zeno = gl => gl=gl 
-        )( e = 1 + 2 
-            , xfjs = (xs, fh=2) => Math.floor(xs * 10**fh) / 10**fh
-            , y = (_ => Math.sqrt(yq || 21)*0.01*1.3 + 0.95)()
-        )
-    )
-;
+    ) + ' - ' + xfjs(1/zenogl*100, 0);
 
 (()=>{
     simulator();
@@ -86,7 +79,7 @@ function simulator() {
 }
 
 /**
- * yihangjisuandaima
+ * yihangjisuan
  */
 const Xeno = (yr, hx, xx=5, yq) => 
     ( _ => 
@@ -102,9 +95,7 @@ const Xeno = (yr, hx, xx=5, yq) =>
                 * (yq <= 1 && 1 || xfjs(yq))
             , 3)
         )(yq = (y => Math.sqrt(yq || 21)*0.01*1.3 + 0.95)())
-    )
-    + ' - ' + xfjs(1/zenogl*100, 0)
-;
+    ) + ' - ' + xfjs(1/zenogl*100, 0);
 
 /**
  * weiyihang
@@ -154,6 +145,7 @@ function yrgl(yr) {
     // 1:Honglian，Manao，Weifutian
     // 5:Ming，Qibing，Ying
     return gl;
+    // {'\u006b\u006d\u0073':0.1, '\u004a\u0069':0.31, '\u004c\u0067':1.88, '\u0042\u0063\u0071':0.25, '\u0059\u0075\u0065':0.13}[yr] || 0.1
 }
 
 /**
@@ -170,6 +162,7 @@ function hxgl(xy) {
         gl = 3;
     }
     return gl;
+    // {'\u0070\u0074':1, '\u0078\u0079':1.5, '\u0073\u0073':3}[hx] || 1
 }
 
 /**

@@ -1,7 +1,24 @@
-/* 它他妈只能转个字符串，不能转带换行的文本 */
+// +---------------------------------------------------------------------------------------+
+// | Hylea Soo's from past to present 在りし日のふたり Void Chaos False Philosophy code.     |
+// +---------------------------------------------------------------------------------------+
+// | _wabbajack Numidium Human Requests. Hermaeus Mora's Oghma Infinium. We Are Observer.  |
+// +---------------------------------------------------------------------------------------+
+// | Copyright © 2019 Powered by HyleaSoo All Rights Reserved.                             |
+// +---------------------------------------------------------------------------------------+
+// |                                                             —————— 龍が如く Hylea Soo  |
+// +---------------------------------------------------------------------------------------+
+const _Simulator = "63067#1.2.3.";
+const _ds = "dQ/T";
+const _Delta = 4.669201609102990;
+const _e = 2.718281828459045;
+const _Absolute_Zero = "T(K)=t(℃)+273.15";
+const _Golden_Ratio = (Math.sqrt(5) - 1) / 2;
 
-//将字符串转换成二进制形式，中间用空格隔开
-function er(str){
+const toCode = s => s.split('').map((e, i) => ((i>0 && ' ') || '') + e.charCodeAt().toString(16)).join('');
+const fromCode = s => s.split(' ').map((e) => String.fromCharCode(parseInt(e, 16))).join('');
+
+
+function otoCode(str){
     var result = [];
     var list = str.split("");
     for(var i=0;i<list.length;i++){
@@ -15,8 +32,8 @@ function er(str){
     return result.join("");
 }
 
-//将二进制字符串转换成Unicode字符串
-function zi(str){
+
+function ofromCode(str){
     var result = [];
     var list = str.split(" ");
     for(var i=0;i<list.length;i++){
@@ -27,6 +44,3 @@ function zi(str){
     }
     return result.join("");
 }
-
-//console.log(strToBinary("什么鬼")); //100111011000000 100111001001000 1001101100111100
-//console.log(binaryToStr("100111011000000 100111001001000 1001101100111100")); //什么鬼
