@@ -1,10 +1,9 @@
 {
+    // 书签自定义图标路径
+    "bookmarks.gutterIconPath": "",
     
-    //Crane: 可能是错误检查?
+    // Crane: 可能是错误检查?
     "crane.enableErrorTelemetry": true,
-
-    //与活动文件同步
-    "explorer.autoReveal": false,
 
     // 显示空格
     "editor.renderWhitespace": "all",
@@ -33,8 +32,26 @@
     // 代码超出屏幕换行
     "editor.wordWrap": "off",
 
+    // 与活动文件同步
+    "explorer.autoReveal": false,
+    // 删除前询问
+    "explorer.confirmDelete": false,
+
     // 忽视git失效警告
     "git.ignoreMissingGitWarning": true,
+
+    // SQL Server 连接配置
+    "mssql.connections": [
+        {
+            "server": "localhost",
+            "database": "dbname",
+            "authenticationType": "SqlLogin",
+            "user": "sa",
+            "password": "",
+            "emptyPasswordInput": false,
+            "savePassword": true
+        }
+    ],
 
     //// 指定PHP可执行文件
     //"php.validate.executablePath": "F:/geeker/PhpStudy20180211/PHPTutorial/php/php-7.2.1-nts/php.exe",
@@ -46,6 +63,6 @@
     // 动作条可见
     "workbench.activityBar.visible": true,
     // 主题
-    "workbench.colorTheme": "Verdandi",
+    "workbench.colorTheme": "GitHub Sharp",
     
 }

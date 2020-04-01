@@ -1,9 +1,9 @@
 // +---------------------------------------------------------------------------------------+
 // | Hylea Soo's from past to present 在りし日のふたり Void Chaos False Philosophy code.     |
 // +---------------------------------------------------------------------------------------+
-// | _wabbajack Numidium Human Requests. Hermaeus Mora's Oghma Infinium. We Are Observer.  |
+// | Elysium, in the Blue Sky. ファンタジーアドベンチャー。 ぼくらは同じ空を見上げている。         |
 // +---------------------------------------------------------------------------------------+
-// | Copyright © 2019 Powered by HyleaSoo All Rights Reserved.                             |
+// | Hermaeus Mora's Oghma Infinium. _wabbajack Zeno Human Requests.                 2019  |
 // +---------------------------------------------------------------------------------------+
 // |                                                             —————— 龍が如く Hylea Soo  |
 // +---------------------------------------------------------------------------------------+
