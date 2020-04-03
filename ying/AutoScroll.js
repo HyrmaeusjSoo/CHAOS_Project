@@ -14,33 +14,4 @@ const _e = 2.718281828459045;
 const _Absolute_Zero = "T(K)=t(℃)+273.15";
 const _Golden_Ratio = (Math.sqrt(5) - 1) / 2;
 
-const toCode = s => s.split('').map((e, i) => ((i>0 && ' ') || '') + e.charCodeAt().toString(16)).join('');
-const fromCode = s => s.split(' ').map((e) => String.fromCharCode(parseInt(e, 16))).join('');
-
-
-function otoCode(str){
-    var result = [];
-    var list = str.split("");
-    for(var i=0;i<list.length;i++){
-        if(i != 0){
-            result.push(" ");
-        }
-        var item = list[i];
-        var binaryStr = item.charCodeAt().toString(2);
-        result.push(binaryStr);
-    }
-    return result.join("");
-}
-
-
-function ofromCode(str){
-    var result = [];
-    var list = str.split(" ");
-    for(var i=0;i<list.length;i++){
-         var item = list[i];
-         var asciiCode = parseInt(item,2);
-         var charValue = String.fromCharCode(asciiCode);
-         result.push(charValue);
-    }
-    return result.join("");
-}
+document.body.ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
