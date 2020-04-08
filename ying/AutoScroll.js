@@ -15,3 +15,4 @@ const _Absolute_Zero = "T(K)=t(℃)+273.15";
 const _Golden_Ratio = (Math.sqrt(5) - 1) / 2;
 
 document.body.ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
+

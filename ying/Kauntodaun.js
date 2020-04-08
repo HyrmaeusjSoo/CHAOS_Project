@@ -41,13 +41,15 @@ setInterval(
     ) => {
         console.clear();
         
-        //console.log(hours);
-        //console.log(minutes);
-        //console.log(seconds);
-        //console.log('--------------------');
+        console.log('--------------------------------|');
+        console.log(hours);
+        console.log(minutes);
+        console.log(seconds);
+        console.log('--------------------------------|');
         console.log(H + Hm + '.' + Hs);
         console.log(M + Ms);
         console.log(S);
+        console.log('--------------------------------|');
     }
 , 2000);
 
