@@ -1,7 +1,55 @@
 {
+    /*
+    插件列表：
+        Bookmarks.
+        Bracket Pair Colorizer 2.
+        ESLint.
+        GitHub Plus Theme.
+        GitHub Sharp Theme.
+        JavaScript(ES6) code snippets.
+        Night Owl - Theme
+        Verdandi Theme
+        Winter is Coming Theme
+    */
+
     // 书签自定义图标路径
-    "bookmarks.gutterIconPath": "",
-    
+    "bookmarks.gutterIconPath": "/icon/ds.jpg",
+
+    // 活动范围设置
+    "bracket-pair-colorizer-2.activeScopeCSS": [
+        "borderStyle : solid",
+        "borderWidth : 1px",
+        "borderColor : {color}",
+        "opacity: 0.5"
+    ],
+    // 色彩模式 - 连贯显示
+    "bracket-pair-colorizer-2.colorMode": "Consecutive",
+    // 括号匹配颜色
+    "bracket-pair-colorizer-2.colors": [
+        "#ff8000",//legendary (orange)
+        "MediumVioletRed",
+        "#c600ff",//epic (purple)
+        "DarkCyan",
+        "#0081ff",//rare (blue)
+        "#e5cc80",//artifact (gold)
+        "#1eff00"//uncommon (green)
+    ],
+    // 强制迭代颜色
+    "bracket-pair-colorizer-2.forceIterationColorCycle": false,
+    // 强制唯一颜色
+    "bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
+    // 高亮活动范围
+    "bracket-pair-colorizer-2.highlightActiveScope": false,
+    // 范围线样式
+    "bracket-pair-colorizer-2.scopeLineCSS": [
+        "borderStyle : solid",
+        "borderWidth : 1px",
+        "borderColor : {color}",
+        "opacity: 0.5"
+    ],
+    // 装订线内显示括号
+    "bracket-pair-colorizer-2.showBracketsInGutter": true,
+
     // Crane: 可能是错误检查?
     "crane.enableErrorTelemetry": true,
 
@@ -23,6 +71,7 @@
     "editor.rulers": [80],
     // 控制字体系列
     "editor.fontFamily": "'Fira Code Retina', Consolas, monospace",
+    
     // 启用字体连字
     "editor.fontLigatures": true,
     // 以像素为单位控制字号
@@ -44,19 +93,19 @@
     "mssql.connections": [
         {
             "server": "localhost",
-            "database": "dbname",
+            "database": "Record",
             "authenticationType": "SqlLogin",
             "user": "sa",
-            "password": "",
+            "password": "root",
             "emptyPasswordInput": false,
             "savePassword": true
         }
     ],
 
     //// 指定PHP可执行文件
-    //"php.validate.executablePath": "F:/geeker/PhpStudy20180211/PHPTutorial/php/php-7.2.1-nts/php.exe",
+    //"php.validate.executablePath": "/php/php-7.2.1-nts/php.exe",
     //// PHP IntelliSense php7.0指定路径(必须7.0以上)
-    //"php.executablePath": "F:/geeker/PhpStudy20180211/PHPTutorial/php/php-7.2.1-nts/php.exe",
+    //"php.executablePath": "/php/php-7.2.1-nts/php.exe",
 
     // 菜单条显示方式 动态(可用alt调出)
     "window.menuBarVisibility": "toggle",
