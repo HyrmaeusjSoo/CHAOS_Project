@@ -1,0 +1,168 @@
+<!-- +---------------------------------------------------------------------------------------+ -->
+<!-- | Hylea Soo's from past to present 在りし日のふたり Void Chaos False Philosophy code.     | -->
+<!-- +---------------------------------------------------------------------------------------+ -->
+<!-- | Elysium, in the Blue Sky. ファンタジーアドベンチャー。 ぼくらは同じ空を見上げている。       | -->
+<!-- +---------------------------------------------------------------------------------------+ -->
+<!-- | Hermaeus Mora's Oghma Infinium. _wabbajack Zeno Human Requests.                 2020  | -->
+<!-- +---------------------------------------------------------------------------------------+ -->
+<!-- |                                                             —————— 龍が如く Hylea Soo  | -->
+<!-- +---------------------------------------------------------------------------------------+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="https://pastebin.com/favicon.ico">
+        <title>Journey's End</title>
+        <style>
+            html, body {margin: auto;}
+            div {width: 100%;text-align: center;color: Gray;}
+            input {
+                outline-style: none ;
+                border: 0px solid #ccc; 
+                border-radius: 10px;
+                padding: 8px 8px;
+                background-color: WhiteSmoke;
+            }
+            table {margin: auto;width: 32%;height: 280px;}
+            .ti {height: 70%;padding-bottom: 2%;}
+            .motto {
+                margin: auto;padding: 10px 0px 10px;width: 60%;height: 30%;
+                text-align: center;font-size: 12px;color: DarkGray;
+                border-top: 1px solid #e4e4e4;
+            }
+            .bri {margin: auto;padding-top: 2%;}
+            .con {margin: auto;padding-top: 2%;height: 100%;}
+            .ii {width: 30%;font-size: 14px;font-weight: 700;}
+            .ib {width: 2.5%;}
+        </style>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
+    </head>
+    <body>
+        <div class="ti">
+            <p>Journey into night. So, I hope you will enjoy this last piece..very much.</p>
+            <div class="bri">
+                <form action="https://www.baidu.com/s" target="_blank" method="GET">
+                    <input class="ii" type="text" name="wd" autocomplete="off" />
+                    <input class="ib" type="button" value=" "/>
+                </form>
+            </div>
+            <div class="con">
+                <table class="tc"></table>
+            </div>
+        </div>
+        <div class="motto">
+            <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
+        </div>
+    </body>
+</html>
+
+<script data-version="1.1">
+    const gol = ( _ => {
+        const [w, h] = [10, 10];
+        let s = Array(w).fill().map(x => Array(h).fill().map(y => Math.round(Math.random())));
+
+        const g = (t = s.map(x => x.map(y => y))) => t.map((x, i) => x.map((y, j) => s[i][j] = { 2: y, 3: 1 }[n(t, i, j)] || 0));
+        const n = (l, x, y, nd = 0) => {
+            l.map((m, i) => m.map((n, j) => nd += ((i <= x + 1 && i >= x - 1 && j <= y + 1 && j >= y - 1) && (i != x || j != y)) ? n : 0));
+            return nd;
+        }
+        const d = _ => {
+            console.clear();
+            s.map((x, i) => {
+                let c = '';
+                x.map(y => {
+                    c += y + ' ';
+                });
+                console.log(i + ': ' + c);
+            });
+        }
+        const ds = _ => { g(); d(); }
+
+        //document.body.ondblclick = _ => !window.e ? e = setInterval(ds, 1000) : (clearInterval(e), e = 0);
+
+        return {
+            w: w, h: h, s: s, d: d, g: g, n: n, ds: ds
+        };
+    })();
+</script>
+
+<script>
+    $( _ =>{
+        const es = (tr = '') =>{
+            $('.tc').empty();
+            gol.ds();
+            tr = '';
+            gol.s.map((x, i) => x.map((y, j) => tr += {0: `<tr><td>${y}</td>`, 9: `<td>${y}</td></tr>`}[j]||`<td>${y}</td>`));
+            $('.tc').append(tr);
+        }
+        const er = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), $('.tc').empty(), e2 = 0);
+        
+        $('.ii').focus(er).blur(er);
+    });
+</script>
+
+<script data-version="0.8">
+    /*
+    const [w, h] = [10, 10];
+    let c = ( a => {
+        for (let i = 0; i < w; i++) {
+            a[i] = [];
+            for (let j = 0; j < h; j++) {
+                a[i][j] = Math.round(Math.random());
+            }
+        }
+        return a;
+    })([]);
+
+    const gol = (l = c) => {
+        for (let i = 0; i < c.length; i++) {
+            for (let j = 0; j < c[i].length; j++) {
+                let n = nigh(l, i, j);
+                if (n == 2) {
+                    c[i][j] = c[i][j];
+                } else if (n == 3) {
+                    c[i][j] = 1;
+                } else {
+                    c[i][j] = 0;
+                }
+            }
+        }
+    }
+
+    const nigh = (l, x, y, nd = 0) => {
+        for (let i = x - 1; i <= x + 1; i++) {
+            for (let j = y - 1; j <= y + 1; j++) {
+                if (i >= 0 && j >= 0 && i < h && j < w) {
+                    if (i != x || j != y) {
+                        nd += l[i][j];
+                    }
+                }
+            }
+        }
+        return nd;
+    }
+
+    const draw = () => {
+        console.clear();
+        for (let i = 0; i < c.length; i++) {
+            let a = '';
+            for (let j = 0; j < c[i].length; j++) {
+                a += c[i][j] + ' ';
+            }
+            console.info(i +': '+ a);
+        }
+    }
+
+    const run = () => {
+        gol();
+        draw();
+    }
+
+    document.body.ondblclick = () => {
+        if (!window.s) {
+            s = setInterval(run, 1000);
+        } else {
+            (clearInterval(s), s = 0);
+        }
+    }
+    */
+</script>
