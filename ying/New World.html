@@ -17,7 +17,7 @@
             div {width: 100%;text-align: center;color: Gray;}
             input {
                 outline-style: none ;
-                border: 0px solid #ccc; 
+                border: 0px solid #ccc;
                 border-radius: 10px;
                 padding: 8px 8px;
                 background-color: WhiteSmoke;
@@ -75,7 +75,7 @@
                 console.log(i + ': ' + c);
             });
         }
-        const ds = _ => { g(); d(); }
+        const ds = _ => {g(); d();}
 
         //document.body.ondblclick = _ => !window.e ? e = setInterval(ds, 1000) : (clearInterval(e), e = 0);
 
@@ -87,16 +87,21 @@
 
 <script>
     $( _ =>{
+        let c = 0b0;
         const es = (tr = '') =>{
             $('.tc').empty();
             gol.ds();
             tr = '';
             gol.s.map((x, i) => x.map((y, j) => tr += {0: `<tr><td>${y}</td>`, 9: `<td>${y}</td></tr>`}[j]||`<td>${y}</td>`));
             $('.tc').append(tr);
+            c = c + 0b1;
+            $('.ii').val(c.toString(2));
         }
         const er = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), $('.tc').empty(), e2 = 0);
-        
+        const eb = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), e2 = 0);
+
         $('.ii').focus(er).blur(er);
+        $('.ib').click(_ => {c = 0b0; $('.ii').val('')});
     });
 </script>
 
