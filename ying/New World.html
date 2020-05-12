@@ -24,7 +24,7 @@
             }
             table {margin: auto;width: 32%;height: 280px;}
             .ti {height: 70%;padding-bottom: 2%;}
-            .motto {
+            .write-bottom {
                 margin: auto;padding: 10px 0px 10px;width: 60%;height: 30%;
                 text-align: center;font-size: 12px;color: DarkGray;
                 border-top: 1px solid #e4e4e4;
@@ -33,27 +33,103 @@
             .con {margin: auto;padding-top: 2%;height: 100%;}
             .ii {width: 30%;font-size: 14px;font-weight: 700;}
             .ib {width: 2.5%;}
+            .saying {margin: auto;padding-top: 2%;width: 70%; height: 100%;}
+            .tl {text-align: left;}
+            .tr {text-align: right;}
+            .motto-bottom {
+                margin: auto;padding: 10px 0px 10px;width: 70%;
+                text-align: center;font-size: 12px;color: DarkGray;
+                border-top: 1px solid #e4e4e4;
+            }
+            .ml {text-align: left; width: 33%; height: 100%; float: left;}
+            .mc {text-align: center; width: 33%; height: 100%; float: left;}
+            .mr {text-align: right; width: 33%; height: 100%; float: right;}
         </style>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
     </head>
     <body>
-        <div class="ti">
-            <p>Journey into night. So, I hope you will enjoy this last piece..very much.</p>
-            <div class="bri">
-                <form action="https://www.baidu.com/s" target="_blank" method="GET">
-                    <input class="ii" type="text" name="wd" autocomplete="off" />
-                    <input class="ib" type="button" value=" "/>
-                </form>
+        <input type="button" id="gol" value="switch">
+
+        <div class="gol-page">
+            <div class="ti">
+                <p>Journey into night. So, I hope you will enjoy this last piece..very much.</p>
+                <div class="bri">
+                    <form action="https://www.baidu.com/s" target="_blank" method="GET">
+                        <input class="ii" type="text" name="wd" autocomplete="off" />
+                        <input class="ib" type="button" value=" "/>
+                    </form>
+                </div>
+                <div class="con">
+                    <table class="tc"></table>
+                </div>
             </div>
-            <div class="con">
-                <table class="tc"></table>
+            <div class="write-bottom">
+                <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
             </div>
         </div>
-        <div class="motto">
-            <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
+
+        <div class="motto-page" hidden>
+            <div class="saying">
+                <p class="tl">Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.</p>
+                <p class="tr">———— West World S1E10</p>
+            </div>
+            <div class="motto-bottom">
+                <div class="ml">
+                    <p>山风渐:女归吉，利贞。</p>
+                    <p>初六 鸿渐于干，小子厉，有言，无咎。</p>
+                    <p>六二 鸿渐于磐，饮食衎衎，吉。</p>
+                    <p>九三 鸿渐于陆，夫征不复，妇孕不育，凶；利御寇。</p>
+                    <p>六四 鸿渐于木，或得其桷，无咎。</p>
+                    <p>九五 鸿渐于陵。妇三岁不孕；终莫之胜，吉。</p>
+                    <p>上九 鸿渐于陆，其羽可用为仪，吉。</p>
+                </div>
+                <div class="mc">
+                    <p>あつまれ　どうぶつの森</p>
+                    <p>ゼルダの伝説</p>
+                    <p>ゼノブレイド2</p>
+                    <p>Rufuran no chika meikyū to majo no ryodan</p>
+                    <p>The Elder Scrolls V: Skyrim</p>
+                    <p>The Witness</p>
+                    <p>Fantasy RPG</p>
+                </div>
+                <div class="mr">
+                    <p>在りし日のふたり</p>
+                    <p>ぼくらは同じ空を見上げている</p>
+                    <p>Elysium, in the Blue Sky</p>
+                    <p>From Past to Present</p>
+                    <p>地球最後の告白を — 物述有栖</p>
+                </div>
+            </div>
         </div>
     </body>
 </html>
+
+<script>
+    $('#gol').click( _ => {
+        $('.gol-page').toggle();
+        $('.motto-page').toggle();
+    });
+</script>
+
+<script>
+    $( _ =>{
+        let c = 0b0;
+        const es = (tr = '') =>{
+            $('.tc').empty();
+            gol.ds();
+            tr = '';
+            gol.s.map((x, i) => x.map((y, j) => tr += {0: `<tr><td>${y}</td>`, 9: `<td>${y}</td></tr>`}[j]||`<td>${y}</td>`));
+            $('.tc').append(tr);
+            c = c + 0b1;
+            $('.ii').val(c.toString(2));
+        }
+        const er = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), $('.tc').empty(), e2 = 0);
+        const eb = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), e2 = 0);
+
+        $('.ii').focus(er).blur(er);
+        $('.ib').click(_ => {c = 0b0; $('.ii').val('')});
+    });
+</script>
 
 <script data-version="1.1">
     const gol = ( _ => {
@@ -83,26 +159,6 @@
             w: w, h: h, s: s, d: d, g: g, n: n, ds: ds
         };
     })();
-</script>
-
-<script>
-    $( _ =>{
-        let c = 0b0;
-        const es = (tr = '') =>{
-            $('.tc').empty();
-            gol.ds();
-            tr = '';
-            gol.s.map((x, i) => x.map((y, j) => tr += {0: `<tr><td>${y}</td>`, 9: `<td>${y}</td></tr>`}[j]||`<td>${y}</td>`));
-            $('.tc').append(tr);
-            c = c + 0b1;
-            $('.ii').val(c.toString(2));
-        }
-        const er = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), $('.tc').empty(), e2 = 0);
-        const eb = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), e2 = 0);
-
-        $('.ii').focus(er).blur(er);
-        $('.ib').click(_ => {c = 0b0; $('.ii').val('')});
-    });
 </script>
 
 <script data-version="0.8">
