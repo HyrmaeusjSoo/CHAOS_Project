@@ -1,9 +1,18 @@
 /*
+ Navicat Premium Data Transfer
+
+ Source Server         : localhost
+ Source Server Type    : SQL Server
+ Source Server Version : 11002100
+ Source Host           : localhost:1433
+ Source Catalog        : Record
+ Source Schema         : dbo
+
  Target Server Type    : SQL Server
  Target Server Version : 11002100
  File Encoding         : 65001
 
- Date: 23/03/2020 10:55:06
+ Date: 21/05/2020 09:44:12
 */
 
 

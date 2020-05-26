@@ -22,9 +22,10 @@
                 padding: 8px 8px;
                 background-color: WhiteSmoke;
             }
+            .switch {margin-left:1%;}
             table {margin: auto;width: 32%;height: 280px;}
             .ti {height: 70%;padding-bottom: 2%;}
-            .write-bottom {
+            .write_bottom {
                 margin: auto;padding: 10px 0px 10px;width: 60%;height: 30%;
                 text-align: center;font-size: 12px;color: DarkGray;
                 border-top: 1px solid #e4e4e4;
@@ -33,10 +34,11 @@
             .con {margin: auto;padding-top: 2%;height: 100%;}
             .ii {width: 30%;font-size: 14px;font-weight: 700;}
             .ib {width: 2.5%;}
-            .saying {margin: auto;padding-top: 2%;width: 70%; height: 100%;}
+            .saying {margin: auto;padding-top: 2%;width: 70%; height: 100%; font-size: 14px;}
+            pre {font-family:Console,Verdana; font-size: 14px; text-align: left;}
             .tl {text-align: left;}
             .tr {text-align: right;}
-            .motto-bottom {
+            .motto_bottom {
                 margin: auto;padding: 10px 0px 10px;width: 70%;
                 text-align: center;font-size: 12px;color: DarkGray;
                 border-top: 1px solid #e4e4e4;
@@ -48,9 +50,9 @@
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
     </head>
     <body>
-        <input type="button" id="gol" value="switch">
+        <input type="button" class="switch" id="switch" value="switch">
 
-        <div class="gol-page">
+        <div class="gol_page">
             <div class="ti">
                 <p>Journey into night. So, I hope you will enjoy this last piece..very much.</p>
                 <div class="bri">
@@ -63,19 +65,21 @@
                     <table class="tc"></table>
                 </div>
             </div>
-            <div class="write-bottom">
+            <div class="write_bottom">
                 <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
             </div>
         </div>
 
-        <div class="motto-page" hidden>
+        <div class="motto_page" hidden>
+            <input type="button" class="switch" id="theWitness" value="The Witness">
+            <input type="button" class="switch" id="motto" value="Motto">
             <div class="saying">
-                <p class="tl">Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.</p>
-                <p class="tr">———— West World S1E10</p>
+                <pre id="p_text"></pre>
+                <p class="tr"><a href="https://github.com/HyleaSoo/Cthulhu">More</a></p>
             </div>
-            <div class="motto-bottom">
+            <div class="motto_bottom" id="mb">
                 <div class="ml">
-                    <p>山风渐:女归吉，利贞。</p>
+                    <p>山风渐: 女归吉，利贞。</p>
                     <p>初六 鸿渐于干，小子厉，有言，无咎。</p>
                     <p>六二 鸿渐于磐，饮食衎衎，吉。</p>
                     <p>九三 鸿渐于陆，夫征不复，妇孕不育，凶；利御寇。</p>
@@ -90,6 +94,7 @@
                     <p>Rufuran no chika meikyū to majo no ryodan</p>
                     <p>The Elder Scrolls V: Skyrim</p>
                     <p>The Witness</p>
+                    <p>Terraria 1.4: Journey's End</p>
                     <p>Fantasy RPG</p>
                 </div>
                 <div class="mr">
@@ -105,10 +110,23 @@
 </html>
 
 <script>
-    $('#gol').click( _ => {
-        $('.gol-page').toggle();
-        $('.motto-page').toggle();
+    $( _ => {
+        $('#switch').click( _ => {
+            $('.gol_page').toggle();
+            $('.motto_page').toggle();
+        });
+
+        const TheWitness_txt = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
+        const motto_soo = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ming/motto.soo";
+        $.get(TheWitness_txt, res => $('#p_text').html(res));
+        $('#theWitness').click( _ => $.get(TheWitness_txt, res => $('#p_text').html(res)));
+        $('#motto').click( _ => $.get(motto_soo, res => {$('#p_text').html(res)}));
     });
+
+    const toCode = s => s.split('').map((e, i) => ((i > 0 && ' ') || '') + e.charCodeAt().toString(16)).join('');
+    const fromCode = s => s.split(' ').map((e) => String.fromCharCode(parseInt(e, 16))).join('');
+    document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
+    document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
 </script>
 
 <script>

@@ -1,9 +1,18 @@
 /*
+ Navicat Premium Data Transfer
+
+ Source Server         : localhost
+ Source Server Type    : SQL Server
+ Source Server Version : 11002100
+ Source Host           : localhost:1433
+ Source Catalog        : Record
+ Source Schema         : dbo
+
  Target Server Type    : SQL Server
  Target Server Version : 11002100
  File Encoding         : 65001
 
- Date: 23/03/2020 10:55:16
+ Date: 21/05/2020 09:44:01
 */
 
 
@@ -240,6 +249,15 @@ GO
 INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1053', N'3', N'点心世界', N'1', N'67.4100', NULL, N'67.4100', N'2020-03-14 13:30:29.000', NULL)
 GO
 
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1054', N'2', N'异度之刃决定版', N'4', N'338.0000', N'12.0000', N'350.0000', N'2020-05-03 15:50:37.000', NULL)
+GO
+
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1055', N'3', N'Daemon X Machina', N'4', N'251.3200', NULL, N'251.3200', N'2020-05-03 16:21:00.000', NULL)
+GO
+
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1056', N'3', N'怒之铁拳4', N'4', N'155.0000', NULL, N'155.0000', N'2020-05-03 16:21:00.000', NULL)
+GO
+
 SET IDENTITY_INSERT [dbo].[Record] OFF
 GO
 
@@ -247,7 +265,7 @@ GO
 -- ----------------------------
 -- Auto increment value for Record
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[Record]', RESEED, 1053)
+DBCC CHECKIDENT ('[dbo].[Record]', RESEED, 1056)
 GO
 
 
