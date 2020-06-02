@@ -135,9 +135,44 @@
 </script>
 
 <script>
-    $( _ =>{
+    $( _ =>{ 
+        const record_url = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ning/Records/Record.json";
+        var record;
+        $.get(record_url, res => { 
+            let rs = JSON.parse(res).RECORDS;
+            let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
+            let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
+            let total = 0;
+            for (let i=0; i<rs.length; i++) {
+                if ( ! rs[i].Total) {
+                    rs[i].Total = 0.00;
+                }
+                total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
+                switch (rs[i].Type) {
+                    case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
+                    case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
+                    case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
+                    case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
+                }
+                switch (rs[i].Region) {
+                    case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
+                    case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
+                    case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
+                    case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
+                    case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
+                }
+            }
+            console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
+            console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
+            console.log('Total:' + total);
+        });
+    });
+</script>
+
+<script>
+    $( _ => {
         let c = 0b0;
-        const es = (tr = '') =>{
+        const es = (tr = '') => {
             $('.tc').empty();
             gol.ds();
             tr = '';
