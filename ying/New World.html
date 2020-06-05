@@ -27,10 +27,15 @@
             table {margin: auto;width: 32%;height: 280px;}
             .ti {height: 70%;padding-bottom: 2%;}
             .write_bottom {
-                margin: auto;padding: 10px 0px 10px;width: 60%;height: 30%;
+                margin: auto;padding: 8px 0px 8px;width: 60%;height: 30%;
                 text-align: center;font-size: 12px;color: DarkGray;
                 border-top: 1px solid #e4e4e4;
             }
+            .fcr {
+                margin: auto;width: 60%;height: 30%;
+                text-align: center;font-size: 12px;color: DarkGray;
+            }
+            .fcr p {margin: 0px 0px 8px 0px;}
             .bri {margin: auto;padding-top: 2%;}
             .con {margin: auto;padding-top: 2%;height: 100%;}
             .ii {width: 30%;font-size: 14px;font-weight: 700;}
@@ -69,7 +74,6 @@
             </div>
             <div class="write_bottom">
                 <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
-                <p>© 2018—2020 Hylea Soo</p>
             </div>
         </div>
 
@@ -108,8 +112,12 @@
                     <p>Fantasy RPG</p>
                 </div>
                 <div class="cls"></div>
-                <p>© 2018—2020 Hylea Soo</p>
             </div>
+        </div>
+        
+        <div class="fcr">
+            <p>© 2018—2020 _Hylea Soo</p>
+            <p id="record_btn">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         </div>
     </body>
 </html>
@@ -136,36 +144,47 @@
 
 <script>
     $( _ =>{ 
-        const record_url = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ning/Records/Record.json";
-        var record;
-        $.get(record_url, res => { 
-            let rs = JSON.parse(res).RECORDS;
-            let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
-            let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
-            let total = 0;
-            for (let i=0; i<rs.length; i++) {
-                if ( ! rs[i].Total) {
-                    rs[i].Total = 0.00;
-                }
-                total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
-                switch (rs[i].Type) {
-                    case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
-                    case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
-                    case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
-                    case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
-                }
-                switch (rs[i].Region) {
-                    case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
-                    case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
-                    case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
-                    case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
-                    case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
-                }
+
+        $("#record_btn").click( _ => { 
+            if (prompt() == fromCode("72 65 63 6f 72 64")) {
+                const record_url = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ning/Records/Record.json";
+                $.get(record_url, res => { 
+                
+                    let rs = JSON.parse(res).RECORDS;
+                    
+                    let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
+                    let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
+                    let total = 0;
+                    
+                    for (let i=0; i<rs.length; i++) {
+                        if ( ! rs[i].Total) {
+                            rs[i].Total = 0.00;
+                        }
+                        total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
+                        switch (rs[i].Type) {
+                            case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
+                            case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
+                            case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
+                            case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
+                        }
+                        switch (rs[i].Region) {
+                            case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
+                            case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
+                            case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
+                            case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
+                            case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
+                        }
+                    }
+                    
+                    console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
+                    console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
+                    console.log('Total:' + total);
+                });
+            } else {
+                console.clear();
             }
-            console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
-            console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
-            console.log('Total:' + total);
         });
+
     });
 </script>
 
