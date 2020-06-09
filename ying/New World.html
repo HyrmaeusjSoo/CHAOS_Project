@@ -143,14 +143,16 @@
 </script>
 
 <script>
+    let record;
+    
     $( _ =>{ 
-
         $("#record_btn").click( _ => { 
             if (prompt() == fromCode("72 65 63 6f 72 64")) {
                 const record_url = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ning/Records/Record.json";
                 $.get(record_url, res => { 
-                
+                    
                     let rs = JSON.parse(res).RECORDS;
+                    record = rs;
                     
                     let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
                     let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
@@ -184,7 +186,6 @@
                 console.clear();
             }
         });
-
     });
 </script>
 
