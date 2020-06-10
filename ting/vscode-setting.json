@@ -1,6 +1,6 @@
 {
     /*
-    插件列表：
+    插件列表:
         Bookmarks.
         Bracket Pair Colorizer 2.
         ESLint.
@@ -13,7 +13,7 @@
     */
 
     // 书签自定义图标路径
-    "bookmarks.gutterIconPath": "/icon/ds.jpg",
+    "bookmarks.gutterIconPath": "icon/ds.jpg",
 
     // 活动范围设置
     "bracket-pair-colorizer-2.activeScopeCSS": [
@@ -26,13 +26,20 @@
     "bracket-pair-colorizer-2.colorMode": "Consecutive",
     // 括号匹配颜色
     "bracket-pair-colorizer-2.colors": [
-        "#ff8000",//legendary (orange)
-        "MediumVioletRed",
-        "#c600ff",//epic (purple)
-        "DarkCyan",
-        "#0081ff",//rare (blue)
-        "#e5cc80",//artifact (gold)
-        "#1eff00"//uncommon (green)
+        "#ff8000", //legendary (orange)
+        "#c600ff", //epic (purple)
+        "#0081ff", //rare (blue)
+        "#1eff00", //uncommon (green)
+        "#e5cc80", //artifact (gold)
+        "MediumVioletRed",//中紫红
+        "Aqua",
+        "#CC9909", //暗金
+        "DarkCyan",//灰蓝
+        "#19CAAD", //淡绿
+        "#D1BA74", //灰黄
+        "#F4606C", //淡玫红
+        "#8CC7B5", //灰绿
+        "Pink", //粉色
     ],
     // 强制迭代颜色
     "bracket-pair-colorizer-2.forceIterationColorCycle": false,
