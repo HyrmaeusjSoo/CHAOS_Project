@@ -26,11 +26,11 @@
     "bracket-pair-colorizer-2.colorMode": "Consecutive",
     // 括号匹配颜色
     "bracket-pair-colorizer-2.colors": [
-        "#ff8000", //legendary (orange)
-        "#c600ff", //epic (purple)
-        "#0081ff", //rare (blue)
-        "#1eff00", //uncommon (green)
         "#e5cc80", //artifact (gold)
+        "#1eff00", //uncommon (green)
+        "#0081ff", //rare (blue)
+        "#c600ff", //epic (purple)
+        "#ff8000", //legendary (orange)
         "MediumVioletRed",//中紫红
         "Aqua",
         "#CC9909", //暗金
