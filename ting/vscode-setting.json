@@ -10,10 +10,11 @@
         Night Owl - Theme
         Verdandi Theme
         Winter is Coming Theme
+        C#
     */
 
     // 书签自定义图标路径
-    "bookmarks.gutterIconPath": "icon/ds.jpg",
+    "bookmarks.gutterIconPath": "/icon/ds.jpg",
 
     // 活动范围设置
     "bracket-pair-colorizer-2.activeScopeCSS": [
@@ -74,11 +75,12 @@
     "editor.minimap.enabled": true,
     // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
     "editor.cursorBlinking": "expand",
+    // 光滑输入
+    "editor.cursorSmoothCaretAnimation": true,
     // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
     "editor.rulers": [80],
     // 控制字体系列
     "editor.fontFamily": "'Fira Code Retina', Consolas, monospace",
-    
     // 启用字体连字
     "editor.fontLigatures": true,
     // 以像素为单位控制字号
@@ -120,5 +122,4 @@
     "workbench.activityBar.visible": true,
     // 主题
     "workbench.colorTheme": "GitHub Sharp",
-    
 }
