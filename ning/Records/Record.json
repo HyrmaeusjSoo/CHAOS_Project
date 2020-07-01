@@ -471,7 +471,7 @@
       "Freight": "",
       "Total": "595.57",
       "TransactionDate": "2019-12-16 14:05:55",
-      "Remark": "$84.98美金点卡购买-淘宝"
+      "Remark": "$84.98美元点卡购买-淘宝"
     },
     {
       "Id": "1047",
@@ -582,6 +582,17 @@
       "Total": "968",
       "TransactionDate": "2020-06-13 03:29:37",
       "Remark": ""
+    },
+    {
+      "Id": "1058",
+      "Type": "3",
+      "Name": "Super Smash Bros.™ Ultimate: Fighters Pass Vol. 2",
+      "Region": "2",
+      "Price": "212.38",
+      "Freight": "",
+      "Total": "212.38",
+      "TransactionDate": "2020-06-30 18:09:00",
+      "Remark": "$29.99美元点卡充值购买"
     }
   ]
 }

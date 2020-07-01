@@ -123,17 +123,19 @@
 </html>
 
 <script>
+    const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
+
     $( _ => {
         $('#switch').click( _ => {
             $('.gol_page').toggle();
             $('.motto_page').toggle();
         });
 
-        const TheWitness_txt = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
-        const motto_soo = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ming/motto.soo";
-        $.get(TheWitness_txt, res => $('#p_text').html(res));
-        $('#theWitness').click( _ => $.get(TheWitness_txt, res => $('#p_text').html(res)));
-        $('#motto').click( _ => $.get(motto_soo, res => {$('#p_text').html(res)}));
+        const TheWitness_txt = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
+        const motto_soo = "ming/motto.soo";
+        $.get(cUrl+TheWitness_txt, res => $('#p_text').html(res));
+        $('#theWitness').click( _ => $.get(cUrl+TheWitness_txt, res => $('#p_text').html(res)));
+        $('#motto').click( _ => $.get(cUrl+motto_soo, res => {$('#p_text').html(res)}));
     });
 
     const toCode = s => s.split('').map((e, i) => ((i > 0 && ' ') || '') + e.charCodeAt().toString(16)).join('');
@@ -143,50 +145,46 @@
 </script>
 
 <script>
-    let record;
-    
-    $( _ =>{ 
-        $("#record_btn").click( _ => { 
-            if (prompt() == fromCode("72 65 63 6f 72 64")) {
-                const record_url = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ning/Records/Record.json";
-                $.get(record_url, res => { 
-                    
-                    let rs = JSON.parse(res).RECORDS;
-                    record = rs;
-                    
-                    let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
-                    let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
-                    let total = 0;
-                    
-                    for (let i=0; i<rs.length; i++) {
-                        if ( ! rs[i].Total) {
-                            rs[i].Total = 0.00;
-                        }
-                        total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
-                        switch (rs[i].Type) {
-                            case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
-                            case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
-                            case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
-                            case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
-                        }
-                        switch (rs[i].Region) {
-                            case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
-                            case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
-                            case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
-                            case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
-                            case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
-                        }
+    const record = () => {
+        if (prompt() == fromCode("72 65 63 6f 72 64")) {
+            const record_url = "ning/Records/Record.json";
+            $.get(cUrl+record_url, res => { 
+                let rs = JSON.parse(res).RECORDS;
+                
+                let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
+                let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
+                let total = 0;
+                
+                for (let i=0; i<rs.length; i++) {
+                    if ( ! rs[i].Total) {
+                        rs[i].Total = 0.00;
                     }
-                    
-                    console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
-                    console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
-                    console.log('Total:' + total);
-                });
-            } else {
-                console.clear();
-            }
-        });
-    });
+                    total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
+                    switch (rs[i].Type) {
+                        case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
+                        case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
+                        case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
+                        case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
+                    }
+                    switch (rs[i].Region) {
+                        case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
+                        case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
+                        case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
+                        case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
+                        case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
+                    }
+                }
+                
+                console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
+                console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
+                console.log('Total:' + total);
+            });
+        } else {
+            console.clear();
+        }
+    }
+
+    $( _ =>{$("#record_btn").click(record)});
 </script>
 
 <script>
