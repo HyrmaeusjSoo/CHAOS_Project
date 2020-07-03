@@ -261,6 +261,9 @@ GO
 INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1057', N'1', N'CFORCE15.6英寸 CF011XPro便携式显示屏', NULL, N'968.00', NULL, N'968.00', N'2020-06-13 03:29:37', NULL)
 GO
 
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1058', N'3', N'Super Smash Bros.™ Ultimate: Fighters Pass Vol. 2', N'2', N'212.38', NULL, N'212.38', N'2020-06-30 18:09:00', N'$29.99美元点卡充值购买')
+GO
+
 SET IDENTITY_INSERT [dbo].[Record] OFF
 GO
 
