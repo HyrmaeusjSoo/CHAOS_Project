@@ -124,7 +124,7 @@
 
 <script>
     const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
-
+    
     $( _ => {
         $('#switch').click( _ => {
             $('.gol_page').toggle();
@@ -142,14 +142,21 @@
     const fromCode = s => s.split(' ').map((e) => String.fromCharCode(parseInt(e, 16))).join('');
     document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
     document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
+
+    const step = _ => {
+        $.get(cUrl+"ying/Kauntodaun.js", res => eval(res));
+    }
 </script>
 
 <script>
-    const record = () => {
-        if (prompt() == fromCode("72 65 63 6f 72 64")) {
+    let NSGames = null;
+    const record = _woo => {
+        const tw = fromCode("72 65 63 6f 72 64");
+        if (_woo == tw || prompt() == tw) {
             const record_url = "ning/Records/Record.json";
             $.get(cUrl+record_url, res => { 
                 let rs = JSON.parse(res).RECORDS;
+                NSGames = rs;
                 
                 let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
                 let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;

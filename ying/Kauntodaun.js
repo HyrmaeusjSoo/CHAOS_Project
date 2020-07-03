@@ -54,7 +54,7 @@ setInterval(
 , 2000);
 
 
-
+/* 
 (() => {
     var goAndRunSeasonRift = function () {
         console.clear();
@@ -93,3 +93,4 @@ setInterval(
     };
     setInterval(goAndRunSeasonRift, 2000);
 })();
+*/
