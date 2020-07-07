@@ -14,6 +14,7 @@ const _e = 2.718281828459045;
 const _Absolute_Zero = "T(K)=t(℃)+273.15";
 const _Golden_Ratio = (Math.sqrt(5) - 1) / 2;
 
+
 setInterval(
     ( dogo = 24 - 8 + 1 
         , fixed = (new Date((new Date()).toLocaleDateString() + ' '+dogo+':00:00')).getTime()

@@ -131,11 +131,11 @@
             $('.motto_page').toggle();
         });
 
-        const TheWitness_txt = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
-        const motto_soo = "ming/motto.soo";
-        $.get(cUrl+TheWitness_txt, res => $('#p_text').html(res));
-        $('#theWitness').click( _ => $.get(cUrl+TheWitness_txt, res => $('#p_text').html(res)));
-        $('#motto').click( _ => $.get(cUrl+motto_soo, res => {$('#p_text').html(res)}));
+        const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
+        const mottoSoo = "ming/motto.soo";
+        $.get(cUrl+theWitnessTXT, res => $('#p_text').html(res));
+        $('#theWitness').click( _ => $.get(cUrl+theWitnessTXT, res => $('#p_text').html(res)));
+        $('#motto').click( _ => $.get(cUrl+mottoSoo, res => {$('#p_text').html(res)}));
     });
 
     const toCode = s => s.split('').map((e, i) => ((i > 0 && ' ') || '') + e.charCodeAt().toString(16)).join('');
@@ -191,7 +191,7 @@
         }
     }
 
-    $( _ =>{$("#record_btn").click(record)});
+    $( _ => {$("#record_btn").click(record)});
 </script>
 
 <script>
