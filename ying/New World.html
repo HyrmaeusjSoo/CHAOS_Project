@@ -116,7 +116,7 @@
         </div>
         
         <div class="fcr">
-            <p>© 2018—2020 _Hylea Soo</p>
+            <p>© 2018 - 2020 Hylea Soo</p>
             <p id="record_btn">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         </div>
     </body>
@@ -157,34 +157,22 @@
             $.get(cUrl+record_url, res => { 
                 let rs = JSON.parse(res).RECORDS;
                 NSGames = rs;
-                
-                let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
-                let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
-                let total = 0;
-                
-                for (let i=0; i<rs.length; i++) {
-                    if ( ! rs[i].Total) {
-                        rs[i].Total = 0.00;
-                    }
-                    total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
-                    switch (rs[i].Type) {
-                        case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
-                        case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
-                        case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
-                        case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
-                    }
-                    switch (rs[i].Region) {
-                        case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
-                        case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
-                        case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
-                        case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
-                        case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
-                    }
-                }
-                
-                console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
-                console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
-                console.log('Total:' + total);
+
+                let totalG = 0;
+                let typeG = {'1': 0, '2': 0, '3': 0, '5': 0};
+                let regionG = {'1': 0, '2': 0, '3': 0, '4': 0, '5': 0};
+
+                const adt = (o, t) => ((parseFloat(o) || 0) + parseFloat(t)).toFixed(2);
+
+                rs.map( x => {
+                    totalG = adt(x.Total, totalG);
+                    typeG[x.Type] = adt(x.Total, typeG[x.Type]);
+                    regionG[x.Region] = adt(x.Total, regionG[x.Region]);
+                });
+
+                console.log('Type: ' + typeG['1'] + ', ' + typeG['2'] + ', ' + typeG['3'] + ', ' + typeG['5']);
+                console.log('Region: ' + regionG['1'] + ', ' + regionG['2'] + ', ' + regionG['3'] + ', ' + regionG['4'] + ', ' + regionG['5']);
+                console.log('Total: ' + totalG);
             });
         } else {
             console.clear();
@@ -226,21 +214,19 @@
         }
         const d = _ => {
             console.clear();
+            console.log('  ' + s[0].map((x, i) => ' '+ i +' ').join(''));
             s.map((x, i) => {
                 let c = '';
                 x.map(y => {
-                    c += y + ' ';
+                    c += y + '  ';
                 });
                 console.log(i + ': ' + c);
             });
         }
         const ds = _ => {g(); d();}
-
         //document.body.ondblclick = _ => !window.e ? e = setInterval(ds, 1000) : (clearInterval(e), e = 0);
 
-        return {
-            w: w, h: h, s: s, d: d, g: g, n: n, ds: ds
-        };
+        return {w, h, s, d, g, n, ds};
     })();
 </script>
 
@@ -306,6 +292,49 @@
             s = setInterval(run, 1000);
         } else {
             (clearInterval(s), s = 0);
+        }
+    }
+    */
+    /*
+    let NSGames = null;
+    const record = _woo => {
+        const tw = fromCode("72 65 63 6f 72 64");
+        if (_woo == tw || prompt() == tw) {
+            const record_url = "ning/Records/Record.json";
+            $.get(cUrl+record_url, res => { 
+                let rs = JSON.parse(res).RECORDS;
+                NSGames = rs;
+                
+                let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
+                let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
+                let total = 0;
+                
+                for (let i=0; i<rs.length; i++) {
+                    if ( ! rs[i].Total) {
+                        rs[i].Total = 0.00;
+                    }
+                    total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
+                    switch (rs[i].Type) {
+                        case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
+                        case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
+                        case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
+                        case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
+                    }
+                    switch (rs[i].Region) {
+                        case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
+                        case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
+                        case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
+                        case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
+                        case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
+                    }
+                }
+                
+                console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
+                console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
+                console.log('Total:' + total);
+            });
+        } else {
+            console.clear();
         }
     }
     */

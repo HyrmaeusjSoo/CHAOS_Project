@@ -14,7 +14,7 @@
     */
 
     // 书签自定义图标路径
-    "bookmarks.gutterIconPath": "/icon/ds.jpg",
+    "bookmarks.gutterIconPath": "icon/ds.jpg",
 
     // 活动范围设置
     "bracket-pair-colorizer-2.activeScopeCSS": [
@@ -32,15 +32,15 @@
         "#0081ff", //rare (blue)
         "#c600ff", //epic (purple)
         "#ff8000", //legendary (orange)
-        "MediumVioletRed",//中紫红
-        "Aqua",
+        "#E4007F", //品红
+        "Aqua", //青
+        "Pink", //粉
         "#CC9909", //暗金
         "DarkCyan",//灰蓝
         "#19CAAD", //淡绿
         "#D1BA74", //灰黄
         "#F4606C", //淡玫红
         "#8CC7B5", //灰绿
-        "Pink", //粉色
     ],
     // 强制迭代颜色
     "bracket-pair-colorizer-2.forceIterationColorCycle": false,
