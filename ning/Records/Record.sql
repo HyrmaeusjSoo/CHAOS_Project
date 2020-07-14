@@ -267,6 +267,15 @@ GO
 INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1059', N'3', N'无主之地传奇合集', N'2', N'255.00', NULL, N'255.00', N'2020-07-04 16:15:00', N'$50美元点卡购买')
 GO
 
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1060', N'3', N'狙击精英3', N'1', N'54.03', NULL, N'54.03', N'2020-07-13 17:54:00', N'1071金币+821円')
+GO
+
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1061', N'3', N'神鸭特攻', N'3', N'0', NULL, N'0', N'2020-07-13 18:24:00', N'191金币兑换 时价￥11.85')
+GO
+
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1062', N'3', N'Not Not - A Brain Buster', N'3', N'0', NULL, N'0', N'2020-07-13 18:42:00', N'98金币兑换 时价￥6.08')
+GO
+
 SET IDENTITY_INSERT [dbo].[Record] OFF
 GO
 

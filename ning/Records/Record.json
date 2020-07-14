@@ -604,6 +604,39 @@
       "Total": "255.00",
       "TransactionDate": "2020-07-04 16:15:00",
       "Remark": "$50美元点卡购买"
+    },
+    {
+      "Id": "1060",
+      "Type": "3",
+      "Name": "狙击精英3",
+      "Region": "1",
+      "Price": "54.03",
+      "Freight": "",
+      "Total": "54.03",
+      "TransactionDate": "2020-07-13 17:54:00",
+      "Remark": "1071金币+821円"
+    },
+    {
+      "Id": "1061",
+      "Type": "3",
+      "Name": "神鸭特攻",
+      "Region": "3",
+      "Price": "0",
+      "Freight": "",
+      "Total": "0",
+      "TransactionDate": "2020-07-13 18:24:00",
+      "Remark": "191金币兑换 时价￥11.85"
+    },
+    {
+      "Id": "1062",
+      "Type": "3",
+      "Name": "Not Not - A Brain Buster",
+      "Region": "3",
+      "Price": "0",
+      "Freight": "",
+      "Total": "0",
+      "TransactionDate": "2020-07-13 18:42:00",
+      "Remark": "98金币兑换 时价￥6.08"
     }
   ]
 }
