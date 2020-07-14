@@ -150,9 +150,8 @@
 
 <script>
     let NSGames = null;
-    const record = _woo => {
-        const tw = fromCode("72 65 63 6f 72 64");
-        if (_woo == tw || prompt() == tw) {
+    const record = (_woo = prompt()) => {
+        if (_woo == fromCode("72 65 63 6f 72 64")) {
             const record_url = "ning/Records/Record.json";
             $.get(cUrl+record_url, res => { 
                 let rs = JSON.parse(res).RECORDS;
@@ -180,6 +179,18 @@
     }
 
     $( _ => {$("#record_btn").click(record)});
+</script>
+
+<script>
+    const astrodict = (_woo = prompt()) => {
+        if (_woo) {
+            const astrodict_url = "ding/astrodict_191103/astrodict_191103ec.json";
+            $.get(cUrl+astrodict_url, res => { 
+                let al = JSON.parse(res).RECORDS;
+                console.log(al[_woo]);
+            });
+        }
+    }
 </script>
 
 <script>
