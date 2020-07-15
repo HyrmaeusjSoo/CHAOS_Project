@@ -73,7 +73,7 @@
                 </div>
             </div>
             <div class="write_bottom">
-                <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
+                <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we <span id="astro_btn">dreamed</span> of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
             </div>
         </div>
 
@@ -178,13 +178,15 @@
         }
     }
 
-    $( _ => {$("#record_btn").click(record)});
+    $( _ => {$("#record_btn").click( _ => record())});
 </script>
 
 <script>
-    let ast = null;
-    $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => ast = JSON.parse(res).AstroDict);
-    const AstroDict = (_woo = prompt()) => _woo && ast && ast.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
+    let AD = null;
+    $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = JSON.parse(res).AstroDict);
+    const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
+    
+    $( _ => {$("#astro_btn").click( _ => AstroDict().map(x => $('.tc').append(`<tr><td>eng:${x.E}</td><td>chz:${x.C}</td></tr>`)))});
 </script>
 
 <script>
