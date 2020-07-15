@@ -182,15 +182,9 @@
 </script>
 
 <script>
-    const astrodict = (_woo = prompt()) => {
-        if (_woo) {
-            const astrodict_url = "ding/astrodict_191103/astrodict_191103ec.json";
-            $.get(cUrl+astrodict_url, res => { 
-                let al = JSON.parse(res).RECORDS;
-                console.log(al[_woo]);
-            });
-        }
-    }
+    let ast = null;
+    $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => ast = JSON.parse(res).AstroDict);
+    const AstroDict = (_woo = prompt()) => _woo && ast && ast.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
 </script>
 
 <script>
