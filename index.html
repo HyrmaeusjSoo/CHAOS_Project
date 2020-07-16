@@ -188,7 +188,7 @@
     $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
     
-    $( _ => {$("#astro_btn").click( _ => AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`)))});
+    $( _ => {$("#astro_btn").click( _ => {$('.tc').empty(),AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))})});
 </script>
 
 <script>
