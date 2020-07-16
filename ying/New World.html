@@ -123,8 +123,9 @@
 </html>
 
 <script>
-    const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
-    
+    //const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
+    const cUrl = "https://hyleasoo.github.io/Cthulhu/";
+
     $( _ => {
         $('#switch').click( _ => {
             $('.gol_page').toggle();
@@ -154,7 +155,7 @@
         if (_woo == fromCode("72 65 63 6f 72 64")) {
             const record_url = "ning/Records/Record.json";
             $.get(cUrl+record_url, res => { 
-                let rs = JSON.parse(res).RECORDS;
+                let rs = res.RECORDS;//JSON.parse(res).RECORDS;
                 NSGames = rs;
 
                 let totalG = 0;
@@ -183,10 +184,10 @@
 
 <script>
     let AD = null;
-    $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = JSON.parse(res).AstroDict);
+    $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
     
-    $( _ => {$("#astro_btn").click( _ => AstroDict().map(x => $('.tc').append(`<tr><td>eng:${x.E}</td><td>chz:${x.C}</td></tr>`)))});
+    $( _ => {$("#astro_btn").click( _ => AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`)))});
 </script>
 
 <script>

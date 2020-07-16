@@ -22,20 +22,26 @@
                 padding: 8px 8px;
                 background-color: WhiteSmoke;
             }
-            .switch {margin-left:1%;}
+            .switch {margin-left:20%;}
+            .switch_mp {margin-left:0.8%;}
             table {margin: auto;width: 32%;height: 280px;}
             .ti {height: 70%;padding-bottom: 2%;}
             .write_bottom {
-                margin: auto;padding: 10px 0px 10px;width: 60%;height: 30%;
+                margin: auto;padding: 8px 0px 8px;width: 60%;height: 30%;
                 text-align: center;font-size: 12px;color: DarkGray;
                 border-top: 1px solid #e4e4e4;
             }
+            .fcr {
+                margin: auto;width: 60%;height: 30%;
+                text-align: center;font-size: 12px;color: DarkGray;
+            }
+            .fcr p {margin: 0px 0px 8px 0px;}
             .bri {margin: auto;padding-top: 2%;}
             .con {margin: auto;padding-top: 2%;height: 100%;}
             .ii {width: 30%;font-size: 14px;font-weight: 700;}
             .ib {width: 2.5%;}
             .saying {margin: auto;padding-top: 2%;width: 70%; height: 100%; font-size: 14px;}
-            pre {font-family:Console,Verdana; font-size: 14px; text-align: left;}
+            pre {font-family:"Microsoft YaHei",Console,Verdana; font-size: 14px; text-align: left;}
             .tl {text-align: left;}
             .tr {text-align: right;}
             .motto_bottom {
@@ -46,6 +52,7 @@
             .ml {text-align: left; width: 33%; height: 100%; float: left;}
             .mc {text-align: center; width: 33%; height: 100%; float: left;}
             .mr {text-align: right; width: 33%; height: 100%; float: right;}
+            .cls {clear:both;}
         </style>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
     </head>
@@ -66,13 +73,13 @@
                 </div>
             </div>
             <div class="write_bottom">
-                <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we dreamed of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
+                <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we <span id="astro_btn">dreamed</span> of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
             </div>
         </div>
 
         <div class="motto_page" hidden>
-            <input type="button" class="switch" id="theWitness" value="The Witness">
-            <input type="button" class="switch" id="motto" value="Motto">
+            <input type="button" class="switch_mp" id="theWitness" value="The Witness">
+            <input type="button" class="switch_mp" id="motto" value="Motto">
             <div class="saying">
                 <pre id="p_text"></pre>
                 <p class="tr"><a href="https://github.com/HyleaSoo/Cthulhu">More</a></p>
@@ -88,6 +95,13 @@
                     <p>上九 鸿渐于陆，其羽可用为仪，吉。</p>
                 </div>
                 <div class="mc">
+                    <p>在りし日のふたり</p>
+                    <p>ぼくらは同じ空を見上げている</p>
+                    <p>Elysium, in the Blue Sky</p>
+                    <p>From Past to Present</p>
+                    <p>地球最後の告白を — 物述有栖</p>
+                </div>
+                <div class="mr">
                     <p>あつまれ　どうぶつの森</p>
                     <p>ゼルダの伝説</p>
                     <p>ゼノブレイド2</p>
@@ -97,42 +111,89 @@
                     <p>Terraria 1.4: Journey's End</p>
                     <p>Fantasy RPG</p>
                 </div>
-                <div class="mr">
-                    <p>在りし日のふたり</p>
-                    <p>ぼくらは同じ空を見上げている</p>
-                    <p>Elysium, in the Blue Sky</p>
-                    <p>From Past to Present</p>
-                    <p>地球最後の告白を — 物述有栖</p>
-                </div>
+                <div class="cls"></div>
             </div>
+        </div>
+        
+        <div class="fcr">
+            <p>© 2018 - 2020 Hylea Soo</p>
+            <p id="record_btn">&nbsp;&nbsp;&nbsp;&nbsp;</p>
         </div>
     </body>
 </html>
 
 <script>
+    //const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
+    const cUrl = "https://hyleasoo.github.io/Cthulhu/";
+
     $( _ => {
         $('#switch').click( _ => {
             $('.gol_page').toggle();
             $('.motto_page').toggle();
         });
 
-        const TheWitness_txt = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
-        const motto_soo = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/ming/motto.soo";
-        $.get(TheWitness_txt, res => $('#p_text').html(res));
-        $('#theWitness').click( _ => $.get(TheWitness_txt, res => $('#p_text').html(res)));
-        $('#motto').click( _ => $.get(motto_soo, res => {$('#p_text').html(res)}));
+        const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
+        const mottoSoo = "ming/motto.soo";
+        $.get(cUrl+theWitnessTXT, res => $('#p_text').html(res));
+        $('#theWitness').click( _ => $.get(cUrl+theWitnessTXT, res => $('#p_text').html(res)));
+        $('#motto').click( _ => $.get(cUrl+mottoSoo, res => {$('#p_text').html(res)}));
     });
 
     const toCode = s => s.split('').map((e, i) => ((i > 0 && ' ') || '') + e.charCodeAt().toString(16)).join('');
     const fromCode = s => s.split(' ').map((e) => String.fromCharCode(parseInt(e, 16))).join('');
     document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
     document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
+
+    const step = _ => {
+        $.get(cUrl+"ying/Kauntodaun.js", res => eval(res));
+    }
 </script>
 
 <script>
-    $( _ =>{
+    let NSGames = null;
+    const record = (_woo = prompt()) => {
+        if (_woo == fromCode("72 65 63 6f 72 64")) {
+            const record_url = "ning/Records/Record.json";
+            $.get(cUrl+record_url, res => { 
+                let rs = res.RECORDS;//JSON.parse(res).RECORDS;
+                NSGames = rs;
+
+                let totalG = 0;
+                let typeG = {'1': 0, '2': 0, '3': 0, '5': 0};
+                let regionG = {'1': 0, '2': 0, '3': 0, '4': 0, '5': 0};
+
+                const adt = (o, t) => ((parseFloat(o) || 0) + parseFloat(t)).toFixed(2);
+
+                rs.map( x => {
+                    totalG = adt(x.Total, totalG);
+                    typeG[x.Type] = adt(x.Total, typeG[x.Type]);
+                    regionG[x.Region] = adt(x.Total, regionG[x.Region]);
+                });
+
+                console.log('Type: ' + typeG['1'] + ', ' + typeG['2'] + ', ' + typeG['3'] + ', ' + typeG['5']);
+                console.log('Region: ' + regionG['1'] + ', ' + regionG['2'] + ', ' + regionG['3'] + ', ' + regionG['4'] + ', ' + regionG['5']);
+                console.log('Total: ' + totalG);
+            });
+        } else {
+            console.clear();
+        }
+    }
+
+    $( _ => {$("#record_btn").click( _ => record())});
+</script>
+
+<script>
+    let AD = null;
+    $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
+    const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
+    
+    $( _ => {$("#astro_btn").click( _ => AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`)))});
+</script>
+
+<script>
+    $( _ => {
         let c = 0b0;
-        const es = (tr = '') =>{
+        const es = (tr = '') => {
             $('.tc').empty();
             gol.ds();
             tr = '';
@@ -145,7 +206,7 @@
         const eb = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), e2 = 0);
 
         $('.ii').focus(er).blur(er);
-        $('.ib').click(_ => {c = 0b0; $('.ii').val('')});
+        $('.ib').click( _ => {c = 0b0; $('.ii').val('')});
     });
 </script>
 
@@ -161,21 +222,19 @@
         }
         const d = _ => {
             console.clear();
+            console.log('  ' + s[0].map((x, i) => ' '+ i +' ').join(''));
             s.map((x, i) => {
                 let c = '';
                 x.map(y => {
-                    c += y + ' ';
+                    c += y + '  ';
                 });
                 console.log(i + ': ' + c);
             });
         }
         const ds = _ => {g(); d();}
-
         //document.body.ondblclick = _ => !window.e ? e = setInterval(ds, 1000) : (clearInterval(e), e = 0);
 
-        return {
-            w: w, h: h, s: s, d: d, g: g, n: n, ds: ds
-        };
+        return {w, h, s, d, g, n, ds};
     })();
 </script>
 
@@ -241,6 +300,49 @@
             s = setInterval(run, 1000);
         } else {
             (clearInterval(s), s = 0);
+        }
+    }
+    */
+    /*
+    let NSGames = null;
+    const record = _woo => {
+        const tw = fromCode("72 65 63 6f 72 64");
+        if (_woo == tw || prompt() == tw) {
+            const record_url = "ning/Records/Record.json";
+            $.get(cUrl+record_url, res => { 
+                let rs = JSON.parse(res).RECORDS;
+                NSGames = rs;
+                
+                let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
+                let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
+                let total = 0;
+                
+                for (let i=0; i<rs.length; i++) {
+                    if ( ! rs[i].Total) {
+                        rs[i].Total = 0.00;
+                    }
+                    total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
+                    switch (rs[i].Type) {
+                        case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
+                        case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
+                        case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
+                        case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
+                    }
+                    switch (rs[i].Region) {
+                        case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
+                        case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
+                        case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
+                        case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
+                        case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
+                    }
+                }
+                
+                console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
+                console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
+                console.log('Total:' + total);
+            });
+        } else {
+            console.clear();
         }
     }
     */
