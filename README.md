@@ -1,5 +1,3 @@
-##### BGM: https://music.163.com/#/song?id=3986017
-##### BGM2: https://music.163.com/#/song?id=29393749
 
 ## Cthulhu
 ## &nbsp;&nbsp;&nbsp;&nbsp;:Personal Philosophy Encyclopedia （个人百科收录）
@@ -97,3 +95,8 @@
     没有距离
 ```
     
+##### BGM: https://music.163.com/#/song?id=3986017
+##### BGM2: https://music.163.com/#/song?id=29393749
+##### BGM3: https://music.163.com/song?id=565970056&userid=317172721
+##### BGM4: https://music.163.com/dj?id=2064726229&userid=317172721
+##### BGM5: https://music.163.com/song?id=1398217158&userid=317172721
