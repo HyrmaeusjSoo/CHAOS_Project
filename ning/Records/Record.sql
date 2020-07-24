@@ -276,6 +276,9 @@ GO
 INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1062', N'3', N'Not Not - A Brain Buster', N'3', N'0', NULL, N'0', N'2020-07-13 18:42:00', N'98金币兑换 时价￥6.08')
 GO
 
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1063', N'1', N'国产pro手柄升级版 大乱斗限定', N'', N'209.00', NULL, N'209.00', N'2020-07-20 13:13:10', N'')
+GO
+
 SET IDENTITY_INSERT [dbo].[Record] OFF
 GO
 

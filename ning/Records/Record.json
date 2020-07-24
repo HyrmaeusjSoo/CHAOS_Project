@@ -637,6 +637,17 @@
       "Total": "0",
       "TransactionDate": "2020-07-13 18:42:00",
       "Remark": "98金币兑换 时价￥6.08"
+    },
+    {
+      "Id": "1063",
+      "Type": "1",
+      "Name": "国产pro手柄升级版 大乱斗限定",
+      "Region": "",
+      "Price": "209.00",
+      "Freight": "",
+      "Total": "209.00",
+      "TransactionDate": "2020-07-20 13:13:10",
+      "Remark": ""
     }
   ]
 }
