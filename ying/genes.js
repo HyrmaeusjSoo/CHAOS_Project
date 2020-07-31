@@ -1,128 +1,94 @@
+// +---------------------------------------------------------------------------------------+
+// | Hylea Soo's from past to present 在りし日のふたり Void Chaos False Philosophy code.     |
+// +---------------------------------------------------------------------------------------+
+// | Elysium, in the Blue Sky. ファンタジーアドベンチャー。 ぼくらは同じ空を見上げている。        |
+// +---------------------------------------------------------------------------------------+
+// | Hermaeus Mora's Oghma Infinium. _wabbajack Zeno Human Requests.                 2019  |
+// +---------------------------------------------------------------------------------------+
+// |                                                             —————— 龍が如く Hylea Soo  |
+// +---------------------------------------------------------------------------------------+
 
-
-function GeneCalculator() {
-    this.forward = function(t, s) {
-        let n = [];
-        for (let e = 0; e < t.length; ++e)
-            switch (t[e] + s[e]) {
-                case "00":
-                    n.push(["0", "0", "0", "0"]);
-                    break;
-                case "01":
-                case "10":
-                    n.push(["0", "0", "1", "1"]);
-                    break;
-                case "02":
-                case "20":
-                    n.push(["1", "1", "1", "1"]);
-                    break;
-                case "11":
-                    n.push(["0", "1", "1", "2"]);
-                    break;
-                case "12":
-                case "21":
-                    n.push(["1", "1", "2", "2"]);
-                    break;
-                case "22":
-                    n.push(["2", "2", "2", "2"])
-            }
-        let a = [], c = new Array(n.length);
-        c.fill(0);
-        let u = e(c, n);
-        for (a.push(u); r(c, n); )
-            u = e(c, n),
-            a.push(u);
-        let l = {};
-        for (let e = 0; e < a.length; ++e)
-            l.hasOwnProperty(a[e]) ? ++l[a[e]] : l[a[e]] = 1;
-        return l
-    }
-    ,
-    this.backward = function(s) {
-        let n = [];
-        for (let e = 0; e < s.length; ++e)
-            switch (s[e]) {
-                case "0":
-                    n.push(["00", "01", "10", "11"]);
-                    break;
-                case "1":
-                    n.push(["01", "10", "02", "20", "11", "12", "21"]);
-                    break;
-                case "2":
-                    n.push(["11", "12", "21", "22"])
-            }
-        let a = []
-          , c = new Array(n.length);
-        c.fill(0);
-        let u = e(c, n);
-        for (a.push(u); r(c, n); )
-            u = e(c, n),
-            a.push(u);
-        let l = {};
-        for (let e = 0; e < a.length; ++e) {
-            let r = ""
-              , n = ""
-              , c = 1;
-            for (let u = 0, l = 0; u < a[e].length; u += 2,
-            ++l)
-                r += a[e][u],
-                n += a[e][u + 1],
-                c *= t(s[l], a[e][u], a[e][u + 1]);
-            let u = r + "-" + n
-              , h = n + "-" + r;
-            l.hasOwnProperty(u) || l.hasOwnProperty(h) || (l[u] = c)
-        }
-        return l
+let gcb = (t, s) => {
+    const zl = {
+        '00': ["00", "00", "00", "00"],
+        '01': ["00", "00", "01", "01"], '10': ["00", "00", "01", "01"],
+        '02': ["01", "01", "01", "01"], '20': ["01", "01", "01", "01"],
+        '11': ["00", "01", "01", "11"],
+        '12': ["01", "01", "11", "11"], '21': ["01", "01", "11", "11"],
+        '22': ["11", "11", "11", "11"]
     };
-    let e = function(e, r) {
-        return e.reduce((function(e, t, s) {
-            return "" + e + r[s][t]
-        }
-        ), "")
-    }
-    , r = function(e, r) {
-        for (let t = e.length - 1; t >= 0; --t) {
-            let s = r[t].length - 1;
-            if (e[t] + 1 <= s)
-                return ++e[t],
-                !0;
-            if (t - 1 < 0)
-                return !1;
-            e[t] = 0
-        }
-    }
-    , t = function(e, r, t) {
-        switch (e + r + t) {
-            case "000":
-                return 4;
-            case "001":
-            case "010":
-                return 2;
-            case "011":
-                return 1;
-            case "101":
-            case "110":
-                return 2;
-            case "102":
-            case "120":
-                return 4;
-            case "111":
-                return 2;
-            case "112":
-            case "121":
-                return 2;
-            case "211":
-                return 1;
-            case "212":
-            case "221":
-                return 2;
-            case "222":
-                return 4;
-            default:
-                return 1
-        }
-    }
+    const z = {
+        '00': ["0", "0", "0", "0"],
+        '01': ["0", "0", "1", "1"], '10': ["0", "0", "1", "1"],
+        '02': ["1", "1", "1", "1"], '20': ["1", "1", "1", "1"],
+        '11': ["0", "1", "1", "2"],
+        '12': ["1", "1", "2", "2"], '21': ["1", "1", "2", "2"],
+        '22': ["2", "2", "2", "2"]
+    };
+    const n = (([...t].map((x, i) => x + s[i])).map(x => x)).map(x => z[x] || '');
+    const r = J => J.reduce((x, i) => x.flatMap(y => i.map(z => `${y}${z}`)));
+    let g={};
+    r(n).map(x => g.hasOwnProperty(x) ? g[x]++ : g[x]=1);
+    let total = Object.values(g).reduce((c, x)=> c+x);
+    Object.keys(g).map((x)=>g[x]/=total);
+
+    return g;
 }
+const gc = {'0': '00', '1': '01', '2': '11'};
+let ab = (g = gcb('012', '111'), ne = {}) => { return Object.keys(g).map(x => ne[([...x].reduce((c, y) => c + (gc[y]), ''))] = g[x] * 100), ne};
+
+
+
+// 011 =  [0,1,2]  [["0", "0", "0", "0"],["0", "1", "1", "2"],["2", "2", "1", "2"]]
+let e = (m, n) => m.reduce(((x, t, s) => "" + x + n[s][t]), "");
+const gl = {
+    "000": 4, "001": 2, "010": 2, "011": 1, "101": 2, "110": 2, "102": 4,
+    "120": 4, "111": 2, "112": 2, "121": 2, "211": 1, "212": 2, "221": 2, "222": 4
+};
+let t11 = (e, r, t) => gl[e + r + t] || 1;
+
+
+function gcb1(t, s) {
+    const z = {
+        '00': ["0", "0", "0", "0"],
+        '01': ["0", "0", "1", "1"], '10': ["0", "0", "1", "1"],
+        '02': ["1", "1", "1", "1"], '20': ["1", "1", "1", "1"],
+        '11': ["0", "1", "1", "2"],
+        '12': ["1", "1", "2", "2"], '21': ["1", "1", "2", "2"],
+        '22': ["2", "2", "2", "2"]
+    };
+    const n = (([...t].map((x, i) => x + s[i])).map(x => x)).map(x => z[x] || '');
+    let a = [], c = new Array(n.length);
+    c.fill(0);
+    // 011 =  [0,1,2]  [["0", "0", "0", "0"],["0", "1", "1", "2"],["2", "2", "1", "2"]]
+    let e = (m, n) => m.reduce(((x, t, s) => "" + x + n[s][t]), "");
+    let u = e(c, n);
+    
+    n.reduce(
+        ((c, x, i) => c + (x.reduce((a, y, j) => a + y + 'c', '')) + ' - ')
+        , ''
+    );
+
+
+    // [0,0,0]  [["0", "0", "0", "0"], ["0", "1", "1", "2"], ["2", "2", "1", "2"]]
+    let r = (e, r) => {
+        for (let t = 0; t < e.length; t++) {
+            let s = r[t].length - 1;
+            if (e[t] + 1 <= s) return e[t]++, true;
+            if (t + 1 > s) return false;
+            e[t] = 0;
+        }
+    }
+    // true c++;
+    for (a.push(u); r(c, n);)
+        u = e(c, n), a.push(u);
+    //["001", "001", "002", "002", "011", "011", "012", "012", "011", "011", "012", "012", "021", "021", "022", "022", "001", "001", "002", "002", "011", "011", "012", "012", "011", "011", "012", "012", "021", "021", "022", "022", "101", "101", "102", "102", "111", "111", "112", "112", "111", "111", "112", "112", "121", "121", "122", "122", "101", "101", "102", "102", "111", "111", "112", "112", "111", "111", "112", "112", "121", "121", "122", "122"]
+    let l = {};
+    a.map(x => l.hasOwnProperty(x) ? l[x]++ : l[x]=1);
+
+    return l;
+}
+
 
 
 
@@ -164,11 +130,6 @@ const FlowerCrosser = () => {
 
   const isCrossed = choiceA.indexOf(-1) === -1 && choiceB.indexOf(-1) === -1;
 
-  const posRef = useRef({
-    sourceA: [] as ClientRect[],
-    sourceB: [] as ClientRect[],
-  });
-
   const crossFlowers = () => {
     setChoiceA(choiceA.map(random01));
     setChoiceB(choiceB.map(random01));
@@ -182,7 +143,7 @@ const FlowerCrosser = () => {
     return result === '10' ? '01' : result;
   }).join(' ');
 
-  const kbShortcuts = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+  const kbShortcuts = (e= React.KeyboardEvent(HTMLButtonElement)) => {
     if (e.which >= 49 && e.which <= 53) {
       setChoiceA([-1, -1, -1, -1]);
       setChoiceB([-1, -1, -1, -1]);
@@ -193,14 +154,7 @@ const FlowerCrosser = () => {
   return null;
 };
 
-const getFlowerColorAndName = (species: FlowerNames, genes: string) => {
-  const color = resolveFlowerColor({ species, genes});
-  const speciesName = speciesNames[species];
-  if ('aeiou'.split('').indexOf(color[0]) !== -1) {
-    return `an ${color} ${speciesName}`;
-  }
-  return `a ${color} ${speciesName}`;
-};
+
 
 const getRandomSpecies = () => {
   return [
