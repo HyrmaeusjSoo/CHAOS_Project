@@ -25,7 +25,7 @@ let gcb = (t, s) => {
         '12': ["1", "1", "2", "2"], '21': ["1", "1", "2", "2"],
         '22': ["2", "2", "2", "2"]
     };
-    const n = (([...t].map((x, i) => x + s[i])).map(x => x)).map(x => z[x] || '');
+    const n = [...t].map((x, i) => x + s[i]).map(x => z[x] || '');
     const r = J => J.reduce((x, i) => x.flatMap(y => i.map(z => `${y}${z}`)));
     let g={};
     r(n).map(x => g.hasOwnProperty(x) ? g[x]++ : g[x]=1);
@@ -41,11 +41,11 @@ let ab = (g = gcb('012', '111'), ne = {}) => { return Object.keys(g).map(x => ne
 
 // 011 =  [0,1,2]  [["0", "0", "0", "0"],["0", "1", "1", "2"],["2", "2", "1", "2"]]
 let e = (m, n) => m.reduce(((x, t, s) => "" + x + n[s][t]), "");
-const gl = {
+const bn = {
     "000": 4, "001": 2, "010": 2, "011": 1, "101": 2, "110": 2, "102": 4,
     "120": 4, "111": 2, "112": 2, "121": 2, "211": 1, "212": 2, "221": 2, "222": 4
 };
-let t11 = (e, r, t) => gl[e + r + t] || 1;
+let t11 = (e, r, t) => bn[e + r + t] || 1;
 
 
 function gcb1(t, s) {
@@ -88,7 +88,44 @@ function gcb1(t, s) {
 
     return l;
 }
+/*====================================*/
+this.backward = function (s) {
+    const bz = { '0': ["00", "01", "10", "11"], '1': ["01", "10", "02", "20", "11", "12", "21"], '2': ["11", "12", "21", "22"] };
+    const n = [...s].map(x => bz[x]);
+    const e = (m, n) => m.reduce(((x, t, s) => "" + x + n[s][t]), "");
+    const bn = {
+        "000": 4, "001": 2, "010": 2, "011": 1, "101": 2, "110": 2, "102": 4,
+        "120": 4, "111": 2, "112": 2, "121": 2, "211": 1, "212": 2, "221": 2, "222": 4
+    };
+    const t = (e, r, t) => bn[e + r + t] || 1;
+    const r = J => J.reduce((x, i) => x.flatMap(y => i.map(z => `${y}${z}`)));
 
+    let a = [], c = new Array(n.length);
+    c.fill(0);
+    let u = e(c, n);
+    for (a.push(u); r(c, n);)
+        u = e(c, n), a.push(u);
+    let l = {};
+    for (let e = 0; e < a.length; ++e) {
+        let r = "", n = "", c = 1;
+        for (let u = 0, l = 0; u < a[e].length; u += 2, ++l)
+            r += a[e][u], n += a[e][u + 1], c *= t(s[l], a[e][u], a[e][u + 1]);
+        let u = r + "-" + n, h = n + "-" + r;
+        l.hasOwnProperty(u) || l.hasOwnProperty(h) || (l[u] = c)
+    }
+
+    /*r(n)
+    let l = {};
+    r(n).map(x => {
+        //g.hasOwnProperty(x) ? g[x]++ : g[x] = 1;
+        let r = "", n = "", c = 1;
+        for (let u = 0, l = 0; u < a[e].length; u += 2, ++l)
+            r += a[e][u], n += a[e][u + 1], c *= t(s[l], a[e][u], a[e][u + 1]);
+        let u = r + "-" + n, h = n + "-" + r;
+        l.hasOwnProperty(u) || l.hasOwnProperty(h) || (l[u] = c)
+    });*/
+    return l;
+};
 
 
 
