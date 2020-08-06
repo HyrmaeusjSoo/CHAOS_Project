@@ -37,6 +37,8 @@ let gcb = (t, s) => {
 const gc = {'0': '00', '1': '01', '2': '11'};
 let ab = (g = gcb('012', '111'), ne = {}) => { return Object.keys(g).map(x => ne[([...x].reduce((c, y) => c + (gc[y]), ''))] = g[x] * 100), ne};
 
+// ch("000111",2)  =>  [0, 1, 2]
+let ch = (a, s) => (Array.from({length: Math.ceil(a.length/s)}, (x, i) => parseInt(a[i*s]) + parseInt(a[i*s+1]))).join('');
 
 
 // 011 =  [0,1,2]  [["0", "0", "0", "0"],["0", "1", "1", "2"],["2", "2", "1", "2"]]
