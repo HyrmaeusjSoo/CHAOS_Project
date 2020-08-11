@@ -27,10 +27,10 @@ let gcb = (t, s) => {
     };
     const n = [...t].map((x, i) => x + s[i]).map(x => z[x] || '');
     const r = J => J.reduce((x, i) => x.flatMap(y => i.map(z => `${y}${z}`)));
-    let g={};
+    let g = {};
     r(n).map(x => g.hasOwnProperty(x) ? g[x]++ : g[x]=1);
     let total = Object.values(g).reduce((c, x)=> c+x);
-    Object.keys(g).map((x)=>g[x]/=total);
+    Object.keys(g).map((x) => g[x]/=total);
 
     return g;
 }
