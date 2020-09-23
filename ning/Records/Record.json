@@ -648,6 +648,17 @@
       "Total": "209.00",
       "TransactionDate": "2020-07-20 13:13:10",
       "Remark": ""
+    },
+    {
+      "Id": "1064",
+      "Type": "3",
+      "Name": "Hades",
+      "Region": "2",
+      "Price": "134.99",
+      "Freight": "",
+      "Total": "134.99",
+      "TransactionDate": "2020-09-18 17:59:46",
+      "Remark": "$19.99点卡购买，时价￥116.00"
     }
   ]
 }

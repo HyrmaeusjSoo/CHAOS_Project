@@ -279,6 +279,9 @@ GO
 INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1063', N'1', N'国产pro手柄升级版 大乱斗限定', N'', N'209.00', NULL, N'209.00', N'2020-07-20 13:13:10', N'')
 GO
 
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1064', N'3', N'Hades', N'2', N'134.99', NULL, N'134.99', N'2020-09-18 17:59:46', N'$19.99点卡购买，时价￥116.00')
+GO
+
 SET IDENTITY_INSERT [dbo].[Record] OFF
 GO
 
