@@ -1,6 +1,6 @@
-
 ## Cthulhu
 ## &nbsp;&nbsp;&nbsp;&nbsp;:Personal Philosophy Encyclopedia （个人百科收录）
+[HyleaSoo](https://hyleasoo.github.io/Cthulhu/)
 
 #### 在りし日のふたり、ぼくらは同じ空を見上げている。
 #### See me fly, I'm singing in the sky.

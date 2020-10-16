@@ -1,0 +1,113 @@
+{
+    "flower": {
+        "rose": [
+            {"color": "Rd", "count": 1, "price": 0}, 
+            {"color": "Ye", "count": 1, "price": 0}, 
+            {"color": "Wh", "count": 1, "price": 0}, 
+            {"color": "Og", "count": 1, "price": 0}, 
+            {"color": "Pk", "count": 1, "price": 0}, 
+            {"color": "Vt", "count": 1, "price": 0}, 
+            {"color": "Bk", "count": 1, "price": 0}, 
+            {"color": "Bu", "count": 0, "price": 0}, 
+            {"color": "Gd", "count": 0, "price": 0} 
+        ],
+        "cosmos": [
+            {"color": "Rd", "count": 1, "price": 0}, 
+            {"color": "Ye", "count": 1, "price": 0}, 
+            {"color": "Wh", "count": 1, "price": 0}, 
+            {"color": "Og", "count": 1, "price": 0}, 
+            {"color": "Pk", "count": 1, "price": 0}, 
+            {"color": "Bk", "count": 1, "price": 0} 
+        ],
+        "lily": [
+            {"color": "Rd", "count": 1, "price": 0}, 
+            {"color": "Ye", "count": 1, "price": 0}, 
+            {"color": "Wh", "count": 1, "price": 0}, 
+            {"color": "Og", "count": 1, "price": 0}, 
+            {"color": "Pk", "count": 1, "price": 0}, 
+            {"color": "Bk", "count": 1, "price": 0} 
+        ],
+        "pansy": [
+            {"color": "Rd", "count": 1, "price": 0}, 
+            {"color": "Ye", "count": 1, "price": 0}, 
+            {"color": "Wh", "count": 1, "price": 0}, 
+            {"color": "Og", "count": 1, "price": 0}, 
+            {"color": "Bu", "count": 1, "price": 0}, 
+            {"color": "Vt", "count": 1, "price": 0} 
+        ],
+        "hyacinth": [
+            {"color": "Rd", "count": 1, "price": 0}, 
+            {"color": "Ye", "count": 1, "price": 0}, 
+            {"color": "Wh", "count": 1, "price": 0}, 
+            {"color": "Og", "count": 1, "price": 0}, 
+            {"color": "Pk", "count": 1, "price": 0}, 
+            {"color": "Bu", "count": 1, "price": 0}, 
+            {"color": "Vt", "count": 1, "price": 0} 
+        ],
+        "tulip": [
+            {"color": "Rd", "count": 1, "price": 0}, 
+            {"color": "Ye", "count": 1, "price": 0}, 
+            {"color": "Wh", "count": 1, "price": 0}, 
+            {"color": "Og", "count": 1, "price": 0}, 
+            {"color": "Pk", "count": 1, "price": 0}, 
+            {"color": "Vt", "count": 1, "price": 0}, 
+            {"color": "Bk", "count": 1, "price": 0} 
+        ],
+        "mum": [
+            {"color": "Rd", "count": 1, "price": 0}, 
+            {"color": "Ye", "count": 1, "price": 0}, 
+            {"color": "Wh", "count": 1, "price": 0}, 
+            {"color": "Pk", "count": 1, "price": 0}, 
+            {"color": "Vt", "count": 1, "price": 0}, 
+            {"color": "Gn", "count": 1, "price": 0}
+        ],
+        "windflower": [
+            {"color": "Rd", "count": 1, "price": 0}, 
+            {"color": "Ye", "count": 1, "price": 0}, 
+            {"color": "Og", "count": 1, "price": 0}, 
+            {"color": "Pk", "count": 1, "price": 0}, 
+            {"color": "Bu", "count": 1, "price": 0}, 
+            {"color": "Vt", "count": 1, "price": 0} 
+        ]
+    },
+    "tree":[
+        {"breed": "cedar", "count": 1, "price":0}, 
+        {"breed": "hardwood", "count": 1, "price":0}, 
+        {"breed": "bamboo", "count": 1, "price":0}, 
+        {"breed": "peach", "count": 1, "price":0}, 
+        {"breed": "apple", "count": 1, "price":0}, 
+        {"breed": "orange", "count": 1, "price":0}, 
+        {"breed": "pear", "count": 0, "price":0}, 
+        {"breed": "cherry", "count": 0, "price":0}, 
+        {"breed": "coconut", "count": 1, "price":0} 
+    ],
+    "Shrub": {
+        "azalea": [
+            {"color": "Wh", "count": 2, "price":140}, 
+            {"color": "Pk", "count": 10, "price":140} 
+        ], 
+        "hibiscus": [
+            {"color": "Rd", "count": 10, "price":140}, 
+            {"color": "Ye", "count": 15, "price":140} 
+        ], 
+        "hydrangea": [
+            {"color": "Bu", "count": 20, "price":140}, 
+            {"color": "Pk", "count": 10, "price":140} 
+        ], 
+        "camellia": [
+            {"color": "Wh", "count": 10, "price":140}, 
+            {"color": "Pk", "count": 11, "price":140} 
+        ], 
+        "tea-olive": [
+            {"color": "Ye", "count": 10, "price":140}, 
+            {"color": "Og", "count": 10, "price":140} 
+        ] 
+    },
+    "a5": [
+        {"color": "Rd", "count": 1, "price": 0}, 
+        {"color": "Ye", "count": 1, "price": 0}, 
+        {"color": "Og", "count": 1, "price": 0}, 
+        {"color": "Wh", "count": 1, "price": 0}, 
+        {"color": "Gn", "count": 1, "price": 0}
+    ]
+}

@@ -56,7 +56,7 @@
             .cls {clear:both;}
         </style>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
-        <script src="ying/NongLi.js"></script>
+        <script data-tag="BaZi" src="ying/NongLi.js"></script>
     </head>
     <body>
         <input type="button" class="switch" id="switch" value="switch">
@@ -124,9 +124,9 @@
     </body>
 </html>
 
-<script>
-    //const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
-    const cUrl = "https://hyleasoo.github.io/Cthulhu/";
+<script data-tag="Variable">
+    const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
+    //const cUrl = "https://hyleasoo.github.io/Cthulhu/";
 
     $( _ => {
         $('#switch').click( _ => {
@@ -151,7 +151,7 @@
     }
 </script>
 
-<script>
+<script data-tag="NSGames">
     let NSGames = null;
     const record = (_woo = prompt()) => {
         if (_woo == fromCode("72 65 63 6f 72 64")) {
@@ -184,7 +184,7 @@
     $( _ => {$("#record_btn").click( _ => record())});
 </script>
 
-<script>
+<script data-tag="AstroDict">
     let AD = null;
     $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
@@ -192,7 +192,7 @@
     $( _ => {$("#astro_btn").click( _ => {$('.tc').empty(),AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))})});
 </script>
 
-<script>
+<script data-tag="Gol">
     $( _ => {
         let c = 0b0;
         const es = (tr = '') => {
@@ -212,7 +212,7 @@
     });
 </script>
 
-<script data-version="1.1">
+<script data-tag="GolCalc" data-version="1.1">
     const gol = ( _ => {
         const [w, h] = [10, 10];
         let s = Array(w).fill().map(x => Array(h).fill().map(y => Math.round(Math.random())));
@@ -240,7 +240,7 @@
     })();
 </script>
 
-<script data-version="0.8">
+<script data-tag="GolCalc" data-version="0.8">
     /*
     const [w, h] = [10, 10];
     let c = ( a => {
