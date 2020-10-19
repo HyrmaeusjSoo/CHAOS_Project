@@ -166,7 +166,7 @@
 
                 const adt = (o, t) => ((parseFloat(o) || 0) + parseFloat(t)).toFixed(2);
 
-                rs.map( x => {
+                rs.map(x => {
                     totalG = adt(x.Total, totalG);
                     typeG[x.Type] = adt(x.Total, typeG[x.Type]);
                     regionG[x.Region] = adt(x.Total, regionG[x.Region]);
