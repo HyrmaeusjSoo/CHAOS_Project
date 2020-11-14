@@ -659,6 +659,17 @@
       "Total": "134.99",
       "TransactionDate": "2020-09-18 17:59:46",
       "Remark": "$19.99点卡购买，时价￥116.00"
+    },
+    {
+      "Id": "1065",
+      "Type": "3",
+      "Name": "Overcooked2：美食家版",
+      "Region": "1",
+      "Price": "155.25",
+      "Freight": "",
+      "Total": "155.25",
+      "TransactionDate": "2020-10-31 21:24:49",
+      "Remark": "2,450円-42金币，含税219円"
     }
   ]
 }

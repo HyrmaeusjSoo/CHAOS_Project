@@ -17,25 +17,24 @@ const _Golden_Ratio = (Math.sqrt(5) - 1) / 2;
 
 setInterval(
     ( dogo = 24 - 8 + 1 
-        , fixed = (new Date((new Date()).toLocaleDateString() + ' '+dogo+':00:00')).getTime()
-        , now = (new Date()).getTime()
+        , fixed = (new Date(new Date().toLocaleDateString() + ' '+dogo+':00:00')).getTime()
         
-        , milliseconds = fixed - now
+        , milliseconds = fixed - Date.now()
         , seconds = (milliseconds / 1000).toString()
         , minutes = (seconds / 60).toString()
         , hours = (minutes / 60).toString()
         
         , H = hours.substr(0, hours.indexOf(".") + 1)
         , Hms = '0' + hours.substr(hours.indexOf("."))
-        , Hmc = (Hms * 6 / 10).toString().substr(2)
+        , Hmc = (Hms * 0.6).toString().substr(2)
         , Hm = Hmc.substr(0, 2)
         , Hss = '0.' + Hmc.substr(2)
-        , Hsc = (Hss * 6 / 10).toString().substr(2)
+        , Hsc = (Hss * 0.6).toString().substr(2)
         , Hs = Hsc.substr(0, 2)
         
         , M = minutes.substr(0, minutes.indexOf(".") + 1)
         , Mss = '0' + minutes.substr(minutes.indexOf("."))
-        , Msc = (Mss * 6 / 10).toString().substr(2)
+        , Msc = (Mss * 0.6).toString().substr(2)
         , Ms = Msc.substr(0, 2)
         
         , S = seconds.substr(0, seconds.indexOf("."))

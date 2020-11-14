@@ -265,9 +265,11 @@ GO
 INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1064', N'3', N'Hades', N'2', N'134.99', NULL, N'134.99', N'2020-09-18 17:59:46', N'$19.99点卡购买，时价￥116.00')
 GO
 
-SET IDENTITY_INSERT [dbo].[Record] OFF
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1065', N'3', N'Overcooked2：美食家版', N'1', N'155.25', NULL, N'155.25', N'2020-10-31 21:24:49', N'2,450円-42金币，含税219円')
 GO
 
+SET IDENTITY_INSERT [dbo].[Record] OFF
+GO
 
 -- ----------------------------
 -- Auto increment value for Record

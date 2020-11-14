@@ -1,106 +1,109 @@
 {
     "flower": {
         "rose": [
-            {"clr": "Rd", "qty": 9, "price": 40, "produce": 40}, 
+            {"clr": "Rd", "qty": 10, "price": 40, "produce": 40}, 
             {"clr": "Ye", "qty": 24, "price": 40, "produce": 40}, 
             {"clr": "Wh", "qty": 11, "price": 40, "produce": 40}, 
-            {"clr": "Og", "qty": 16, "price": 80, "produce": 80}, 
-            {"clr": "Pk", "qty": 8, "price": 80, "produce": 80}, 
+            {"clr": "Og", "qty": 17, "price": 80, "produce": 80}, 
+            {"clr": "Pk", "qty": 9, "price": 80, "produce": 80}, 
             {"clr": "Vt", "qty": 22, "price": 240, "produce": 240}, 
             {"clr": "Bk", "qty": 3, "price": 240, "produce": 240}, 
             {"clr": "Bu", "qty": 0, "price": 1000, "produce": 1000}, 
-            {"clr": "Gd", "qty": 0, "price": 1000, "produce": 1000} 
+            {"clr": "Gd", "qty": 0, "price": 1000, "produce": 1000}
         ],
         "cosmos": [
             {"clr": "Rd", "qty": 18, "price": 40, "produce": 40}, 
             {"clr": "Ye", "qty": 17, "price": 40, "produce": 40}, 
             {"clr": "Wh", "qty": 17, "price": 40, "produce": 40}, 
-            {"clr": "Og", "qty": 33, "price": 80, "produce": 80}, 
+            {"clr": "Og", "qty": 31, "price": 80, "produce": 80}, 
             {"clr": "Pk", "qty": 18, "price": 80, "produce": 80}, 
-            {"clr": "Bk", "qty": 3, "price": 240, "produce": 240} 
+            {"clr": "Bk", "qty": 3, "price": 240, "produce": 240}
         ],
         "lily": [
-            {"clr": "Rd", "qty": 8, "price": 0, "produce": 0}, 
-            {"clr": "Ye", "qty": 11, "price": 0, "produce": 0}, 
-            {"clr": "Wh", "qty": 9, "price": 0, "produce": 0}, 
-            {"clr": "Og", "qty": 15, "price": 0, "produce": 0}, 
-            {"clr": "Pk", "qty": 7, "price": 0, "produce": 0}, 
-            {"clr": "Bk", "qty": 4, "price": 0, "produce": 0} 
+            {"clr": "Rd", "qty": 8, "price": 40, "produce": 40}, 
+            {"clr": "Ye", "qty": 11, "price": 40, "produce": 40}, 
+            {"clr": "Wh", "qty": 9, "price": 40, "produce": 40}, 
+            {"clr": "Og", "qty": 15, "price": 80, "produce": 80}, 
+            {"clr": "Pk", "qty": 8, "price": 80, "produce": 80}, 
+            {"clr": "Bk", "qty": 4, "price": 80, "produce": 80}
         ],
         "pansy": [
-            {"clr": "Rd", "qty": 20, "price": 0, "produce": 0}, 
-            {"clr": "Ye", "qty": 6, "price": 0, "produce": 0}, 
-            {"clr": "Wh", "qty": 6, "price": 0, "produce": 0}, 
-            {"clr": "Og", "qty": 11, "price": 0, "produce": 0}, 
-            {"clr": "Bu", "qty": 7, "price": 0, "produce": 0}, 
-            {"clr": "Vt", "qty": 3, "price": 0, "produce": 0} 
+            {"clr": "Rd", "qty": 22, "price": 40, "produce": 40}, 
+            {"clr": "Ye", "qty": 6, "price": 40, "produce": 40}, 
+            {"clr": "Wh", "qty": 6, "price": 40, "produce": 40}, 
+            {"clr": "Og", "qty": 11, "price": 80, "produce": 80}, 
+            {"clr": "Bu", "qty": 7, "price": 80, "produce": 80}, 
+            {"clr": "Vt", "qty": 3, "price": 240, "produce": 240}
         ],
         "hyacinth": [
-            {"clr": "Rd", "qty": 12, "price": 0, "produce": 0}, 
-            {"clr": "Ye", "qty": 14, "price": 0, "produce": 0}, 
-            {"clr": "Wh", "qty": 11, "price": 0, "produce": 0}, 
-            {"clr": "Og", "qty": 11, "price": 0, "produce": 0}, 
-            {"clr": "Pk", "qty": 10, "price": 0, "produce": 0}, 
-            {"clr": "Bu", "qty": 7, "price": 0, "produce": 0}, 
-            {"clr": "Vt", "qty": 3, "price": 0, "produce": 0} 
+            {"clr": "Rd", "qty": 12, "price": 40, "produce": 40}, 
+            {"clr": "Ye", "qty": 12, "price": 40, "produce": 40}, 
+            {"clr": "Wh", "qty": 11, "price": 40, "produce": 40}, 
+            {"clr": "Og", "qty": 11, "price": 80, "produce": 80}, 
+            {"clr": "Pk", "qty": 11, "price": 80, "produce": 80}, 
+            {"clr": "Bu", "qty": 8, "price": 80, "produce": 80}, 
+            {"clr": "Vt", "qty": 4, "price": 240, "produce": 240}
         ],
         "tulip": [
-            {"clr": "Rd", "qty": 5, "price": 0, "produce": 0}, 
-            {"clr": "Ye", "qty": 6, "price": 0, "produce": 0}, 
-            {"clr": "Wh", "qty": 1, "price": 0, "produce": 0}, 
-            {"clr": "Og", "qty": 22, "price": 0, "produce": 0}, 
-            {"clr": "Pk", "qty": 15, "price": 0, "produce": 0}, 
-            {"clr": "Vt", "qty": 4, "price": 0, "produce": 0}, 
-            {"clr": "Bk", "qty": 26, "price": 0, "produce": 0} 
+            {"clr": "Rd", "qty": 5, "price": 40, "produce": 40}, 
+            {"clr": "Ye", "qty": 6, "price": 40, "produce": 40}, 
+            {"clr": "Wh", "qty": 1, "price": 40, "produce": 40}, 
+            {"clr": "Og", "qty": 22, "price": 80, "produce": 80}, 
+            {"clr": "Pk", "qty": 15, "price": 80, "produce": 80}, 
+            {"clr": "Vt", "qty": 5, "price": 240, "produce": 240}, 
+            {"clr": "Bk", "qty": 26, "price": 80, "produce": 80}
         ],
         "mum": [
-            {"clr": "Rd", "qty": 7, "price": 0, "produce": 0}, 
-            {"clr": "Ye", "qty": 7, "price": 0, "produce": 0}, 
-            {"clr": "Wh", "qty": 4, "price": 0, "produce": 0}, 
-            {"clr": "Pk", "qty": 24, "price": 0, "produce": 0}, 
-            {"clr": "Vt", "qty": 9, "price": 0, "produce": 0}, 
-            {"clr": "Gn", "qty": 15, "price": 0, "produce": 0}
+            {"clr": "Rd", "qty": 7, "price": 40, "produce": 40}, 
+            {"clr": "Ye", "qty": 7, "price": 40, "produce": 40}, 
+            {"clr": "Wh", "qty": 4, "price": 40, "produce": 40}, 
+            {"clr": "Pk", "qty": 24, "price": 80, "produce": 80}, 
+            {"clr": "Vt", "qty": 11, "price": 80, "produce": 80}, 
+            {"clr": "Gn", "qty": 15, "price": 240, "produce": 240}
         ],
         "windflower": [
-            {"clr": "Ye", "qty": 14, "price": 0, "produce": 0}, 
-            {"clr": "Wh", "qty": 9, "price": 0, "produce": 0}, 
-            {"clr": "Og", "qty": 14, "price": 0, "produce": 0}, 
-            {"clr": "Pk", "qty": 10, "price": 0, "produce": 0}, 
-            {"clr": "Bu", "qty": 12, "price": 0, "produce": 0}, 
-            {"clr": "Vt", "qty": 1, "price": 0, "produce": 0} 
+            {"clr": "Rd", "qty": 12, "price": 40, "produce": 40}, 
+            {"clr": "Wh", "qty": 9, "price": 40, "produce": 40}, 
+            {"clr": "Og", "qty": 14, "price": 40, "produce": 40}, 
+            {"clr": "Pk", "qty": 10, "price": 80, "produce": 80}, 
+            {"clr": "Bu", "qty": 13, "price": 80, "produce": 80}, 
+            {"clr": "Vt", "qty": 3, "price": 240, "produce": 240}
+        ],
+        "lilyofthevalley": [
+            {"clr": "Wh", "qty": 0, "price": 222, "produce":222}
         ]
     },
     "tree":[
-        {"breed": "cedar", "qty": 42, "price":0, "produce": 0}, 
-        {"breed": "hardwood", "qty": 26, "price":0, "produce": 0}, 
-        {"breed": "bamboo", "qty": 16, "price":0, "produce": 0}, 
-        {"breed": "peach", "qty": 24, "price":0, "produce": 0}, 
-        {"breed": "apple", "qty": 9, "price":0, "produce": 0}, 
-        {"breed": "orange", "qty": 7, "price":0, "produce": 0}, 
-        {"breed": "pear", "qty": 0, "price":0, "produce": 0}, 
-        {"breed": "cherry", "qty": 0, "price":0, "produce": 0}, 
-        {"breed": "coconut", "qty": 14, "price":0, "produce": 0} 
+        {"breed": "cedar", "qty": 42, "price":240, "produce": 0}, 
+        {"breed": "hardwood", "qty": 26, "price":240, "produce": 0}, 
+        {"breed": "bamboo", "qty": 16, "price":1500, "produce": 250}, 
+        {"breed": "peach", "qty": 24, "price":300, "produce": 100}, 
+        {"breed": "apple", "qty": 9, "price":300, "produce": 500}, 
+        {"breed": "orange", "qty": 7, "price":300, "produce": 500}, 
+        {"breed": "pear", "qty": 0, "price":300, "produce": 500}, 
+        {"breed": "cherry", "qty": 0, "price":300, "produce": 500}, 
+        {"breed": "coconut", "qty": 14, "price":500, "produce": 250}
     ],
     "shrub": {
         "azalea": [
             {"clr": "Wh", "qty": 5, "price":140}, 
-            {"clr": "Pk", "qty": 10, "price":140} 
+            {"clr": "Pk", "qty": 10, "price":140}
         ], 
         "hibiscus": [
             {"clr": "Rd", "qty": 10, "price":140}, 
-            {"clr": "Ye", "qty": 15, "price":140} 
+            {"clr": "Ye", "qty": 15, "price":140}
         ], 
         "hydrangea": [
             {"clr": "Bu", "qty": 20, "price":140}, 
-            {"clr": "Pk", "qty": 10, "price":140} 
+            {"clr": "Pk", "qty": 10, "price":140}
         ], 
         "camellia": [
             {"clr": "Wh", "qty": 10, "price":140}, 
-            {"clr": "Pk", "qty": 11, "price":140} 
+            {"clr": "Pk", "qty": 10, "price":140}
         ], 
         "tea-olive": [
             {"clr": "Ye", "qty": 10, "price":140}, 
-            {"clr": "Og", "qty": 10, "price":140} 
+            {"clr": "Og", "qty": 10, "price":140}
         ] 
     },
     "pumpkin": [
