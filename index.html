@@ -56,7 +56,9 @@
             .cls {clear:both;}
         </style>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
+        <script data-tag="E.R.conver" src="ying/E.R.conver.js"></script>
         <script data-tag="BaZi" src="ying/NongLi.js"></script>
+        <script data-tag="Kauntodaun" src="ying/Kauntodaun.js"></script>
     </head>
     <body>
         <input type="button" class="switch" id="switch" value="switch">
@@ -125,8 +127,8 @@
 </html>
 
 <script data-tag="Variable">
-    const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
-    //const cUrl = "https://hyleasoo.github.io/Cthulhu/";
+    //const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
+    const cUrl = "https://hyleasoo.github.io/Cthulhu/";
 
     $( _ => {
         $('#switch').click( _ => {
@@ -141,14 +143,10 @@
         $('#motto').click( _ => $.get(cUrl+mottoSoo, res => {$('#p_text').html(res)}));
     });
 
-    const toCode = s => s.split('').map((e, i) => ((i > 0 && ' ') || '') + e.charCodeAt().toString(16)).join('');
-    const fromCode = s => s.split(' ').map((e) => String.fromCharCode(parseInt(e, 16))).join('');
     document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
     document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
 
-    const step = _ => {
-        $.get(cUrl+"ying/Kauntodaun.js", res => eval(res));
-    }
+    const step = _ => window.si ? clearInterval(si) : si = kauntodaun();
 </script>
 
 <script data-tag="NSGames">

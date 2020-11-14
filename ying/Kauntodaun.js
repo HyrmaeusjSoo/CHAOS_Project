@@ -7,15 +7,11 @@
 // +---------------------------------------------------------------------------------------+
 // |                                                             —————— 龍が如く Hylea Soo  |
 // +---------------------------------------------------------------------------------------+
-const _Simulator = "63067#1.2.3.";
-const _ds = "dQ/T";
-const _Delta = 4.669201609102990;
-const _e = 2.718281828459045;
-const _Absolute_Zero = "T(K)=t(℃)+273.15";
-const _Golden_Ratio = (Math.sqrt(5) - 1) / 2;
+//const _Simulator = "63067#1.2.3.";
 
+const htm = m => Math.floor(m / 60) + ":" + m % 60
 
-setInterval(
+const kauntodaun = _ => setInterval(
     ( dogo = 24 - 8 + 1 
         , fixed = (new Date(new Date().toLocaleDateString() + ' '+dogo+':00:00')).getTime()
         
