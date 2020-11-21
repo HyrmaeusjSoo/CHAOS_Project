@@ -136,7 +136,7 @@ const bazi = (dt = new Date()) => {
     cjr = (nl0 - gl0) % 31 + 1;
     cjy = (nl0 - gl0 > 30) ? 2 : 1;
     jq = tg[(dy + 6) % 10] + dz[dy % 12];
-    jh = tg[(dy + 7) % 10] + dz[(dy + 1) % 12];
+    jh = tg[(dy + 8) % 10] + dz[(dy + 2) % 12];
     sum = (Date.UTC(y, m - 1, d, h) - Date.UTC(1901, 1, 18, 23)) / 1000;
     sumd = Math.floor(sum / 86400);
     day = (Math.floor((sum - 1800) / 86400) + 51) % 7;
@@ -194,7 +194,7 @@ const bazi = (dt = new Date()) => {
         fw: `${f[tn] + f[dn]} ${f[ty] + f[dy]} ${f[tr] + f[dr]} ${f[ts] + f[ds]}`,
         gl: `${y}年${m}月${d}日(星期${xq})${h}点`,
         nl: `${gzn}年${yue}月${ri}日${dz[dzs]}时`,
-        qh: `${jq}年=>${gzn}=>${jh}年`,
+        qh: `${jq}年=>${gzn}年=>${jh}年`,
         sx: `${sx[dzn]}`,
         wx: `${w[tn] + w[dn]} ${w[ty] + w[dy]} ${w[tr] + w[dr]} ${w[ts] + w[ds]}`
     };
