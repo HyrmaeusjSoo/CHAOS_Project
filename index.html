@@ -17,48 +17,47 @@
             html, body {margin: auto;}
             div {width: 100%;text-align: center;color: Gray;}
             input {
-                outline-style: none ;
-                border: 0px solid #ccc;
-                border-radius: 10px;
-                padding: 8px 8px;
+                padding: 8px 8px; outline-style: none;
+                border: 0px solid #ccc; border-radius: 10px;
                 background-color: WhiteSmoke;
             }
-            .switch {margin-left:20%;}
-            .switch_mp {margin-left:0.8%;}
-            table {margin: auto;width: 32%;height: 280px;}
-            .ti {height: 70%;padding-bottom: 2%;}
+            table {margin: auto;width: 28%; height: 430px;}
+            pre {font-family: "Microsoft YaHei", Console, Verdana; font-size: 14px; text-align: left;}
+            .switch {margin-left: 20%;}
+            .switch_mp {margin-left: 0.8%;}
+            .ti {height: 70%; padding-bottom: 2%;}
             .write_bottom {
-                margin: auto;padding: 8px 0px 8px;width: 60%;height: 30%;
-                text-align: center;font-size: 12px;color: DarkGray;
+                margin: auto; padding: 8px 0px 8px; width: 60%; height: 30%;
+                text-align: center; font-size: 12px; color: DarkGray;
                 border-top: 1px solid #e4e4e4;
             }
             .fcr {
-                margin: auto;width: 60%;height: 30%;
-                text-align: center;font-size: 12px;color: DarkGray;
+                margin: auto; width: 60%; height: 30%;
+                text-align: center; font-size: 12px; color: DarkGray;
             }
             .fcr p {margin: 0px 0px 8px 0px;}
-            .bri {margin: auto;padding-top: 2%;}
-            .con {margin: auto;padding-top: 2%;height: 100%;}
-            .ii {width: 30%;font-size: 14px;font-weight: 700;}
+            .bri {margin: auto; padding-top: 2%;}
+            .con {margin: auto; padding-top: 2%; height: 100%;}
+            .ii {width: 30%; font-size: 14px; font-weight: 700;}
             .ib {width: 2.5%;}
-            .saying {margin: auto;padding-top: 2%;width: 70%; height: 100%; font-size: 14px;}
-            pre {font-family:"Microsoft YaHei",Console,Verdana; font-size: 14px; text-align: left;}
+            .saying {margin: auto; padding-top: 2%; width: 70%; height: 100%; font-size: 14px;}
             .tl {text-align: left;}
             .tr {text-align: right;}
             .motto_bottom {
-                margin: auto;padding: 10px 0px 10px;width: 70%;
-                text-align: center;font-size: 12px;color: DarkGray;
+                margin: auto; padding: 10px 0px 10px; width: 70%;
+                text-align: center; font-size: 12px; color: DarkGray;
                 border-top: 1px solid #e4e4e4;
             }
             .ml {text-align: left; width: 33%; height: 100%; float: left;}
             .mc {text-align: center; width: 33%; height: 100%; float: left;}
             .mr {text-align: right; width: 33%; height: 100%; float: right;}
-            .cls {clear:both;}
+            .cls {clear: both;}
         </style>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
         <script data-tag="E.R.conver" src="ying/E.R.conver.js"></script>
         <script data-tag="BaZi" src="ying/NongLi.js"></script>
         <script data-tag="Kauntodaun" src="ying/Kauntodaun.js"></script>
+        <script data-tag="Xenoblade" src="ying/Xenoblade.js"></script>
     </head>
     <body>
         <input type="button" class="switch" id="switch" value="switch">
@@ -146,7 +145,7 @@
     document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
     document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
 
-    const step = _ => window.si ? clearInterval(si) : si = kauntodaun();
+    const step = (x = undefined) => window.si ? (clearInterval(si), si = 0) : si = kauntodaun(x);
 </script>
 
 <script data-tag="NSGames">
@@ -197,7 +196,7 @@
             $('.tc').empty();
             gol.ds();
             tr = '';
-            gol.s.map((x, i) => x.map((y, j) => tr += {0: `<tr><td>${y}</td>`, 9: `<td>${y}</td></tr>`}[j]||`<td>${y}</td>`));
+            gol.s.map((x, i) => x.map((y, j) => tr += {0: `<tr><td>${y}</td>`, [gol.h-1]: `<td>${y}</td></tr>`}[j]||`<td>${y}</td>`));
             $('.tc').append(tr);
             c = c + 0b1;
             $('.ii').val(c.toString(2));
@@ -212,7 +211,7 @@
 
 <script data-tag="GolCalc" data-version="1.1">
     const gol = ( _ => {
-        const [w, h] = [10, 10];
+        const [w, h] = [16, 16];
         let s = Array(w).fill().map(x => Array(h).fill().map(y => Math.round(Math.random())));
 
         const g = (t = s.map(x => x.map(y => y))) => t.map((x, i) => x.map((y, j) => s[i][j] = { 2: y, 3: 1 }[n(t, i, j)] || 0));
@@ -222,13 +221,13 @@
         }
         const d = _ => {
             console.clear();
-            console.log('  ' + s[0].map((x, i) => ' '+ i +' ').join(''));
+            console.log('  ' + s[0].map((x, i) => ' '+ i.toString(w) +' ').join(''));
             s.map((x, i) => {
                 let c = '';
                 x.map(y => {
                     c += y + '  ';
                 });
-                console.log(i + ': ' + c);
+                console.log(i.toString(h) + ': ' + c);
             });
         }
         const ds = _ => {g(); d();}

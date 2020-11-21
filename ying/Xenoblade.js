@@ -36,11 +36,6 @@ const _Zeno = (yr, hx, xx=5, yq) =>
         )(yq = (y => Math.sqrt(yq || 21)*0.01*1.3 + 0.95)())
     ) + ' - ' + xfjs(1/zenogl*100, 0);
 
-(()=>{
-    simulator();
-    zenoSimu();
-    xenoSimu();
-})();
 function xenoSimu() {
     console.log('zd: '+Xeno('kos-mos', 'ss', 15, 999));
     console.log('ss: '+Xeno('kos-mos', 'ss', 10, 240));
@@ -186,4 +181,7 @@ function xfjs(xiaoshu, fuhao) {
     let shuwei = fuhao ? (10 ** fuhao) : 100;
     return Math.floor(xiaoshu * shuwei) / shuwei;
 }
-    
+
+
+
+
