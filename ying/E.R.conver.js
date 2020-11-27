@@ -9,11 +9,30 @@
 // +---------------------------------------------------------------------------------------+
 //const _Simulator = "63067#1.2.3.";
 
-const toCode = s => s.split('').map((e, i) => ((i>0 && ' ') || '') + e.charCodeAt().toString(16)).join('');
-const fromCode = s => s.split(' ').map((e) => String.fromCharCode(parseInt(e, 16))).join('');
+const rk = "abcdef ghijklmnopqrstuvwxyz";
 
 
-function otoCode(str){
+
+
+
+const aa = ((b=16) => {
+    const f = b>10 ? b-10 : 0;
+    const rc = _ => String.fromCharCode(96 + f + Math.ceil(Math.random() * (26 - f)));
+    const TCode = s => s.split('').map((e, i) => (i>0 && rc() || '') + e.charCodeAt().toString(b)).join('');
+    const a = 97 + f;
+    const s = `${a}`;
+    const FCode = s => s.split(' ').map(e => String.fromCharCode(parseInt(e, b))).join('');
+
+    return {rc, TCode, FCode};
+})();
+
+
+
+const TCode16 = s => s.split('').map((e, i) => (i>0 && ' ' || '') + e.charCodeAt().toString(16)).join('');
+const FCode16 = s => s.split(' ').map(e => String.fromCharCode(parseInt(e, 16))).join('');
+
+
+function toCode(str){
     var result = [];
     var list = str.split("");
     for(var i=0;i<list.length;i++){
@@ -28,7 +47,7 @@ function otoCode(str){
 }
 
 
-function ofromCode(str){
+function fromCode(str){
     var result = [];
     var list = str.split(" ");
     for(var i=0;i<list.length;i++){
@@ -39,3 +58,7 @@ function ofromCode(str){
     }
     return result.join("");
 }
+
+
+
+

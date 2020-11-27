@@ -126,8 +126,8 @@
 </html>
 
 <script data-tag="Variable">
-    //const cUrl = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
-    const cUrl = "https://hyleasoo.github.io/Cthulhu/";
+    //const CS = "https://raw.githubusercontent.com/HyleaSoo/Cthulhu/master/";
+    const CS = "https://hyleasoo.github.io/Cthulhu/";
 
     $( _ => {
         $('#switch').click( _ => {
@@ -137,9 +137,9 @@
 
         const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
         const mottoSoo = "ming/motto.soo";
-        $.get(cUrl+theWitnessTXT, res => $('#p_text').html(res));
-        $('#theWitness').click( _ => $.get(cUrl+theWitnessTXT, res => $('#p_text').html(res)));
-        $('#motto').click( _ => $.get(cUrl+mottoSoo, res => {$('#p_text').html(res)}));
+        $.get(CS+theWitnessTXT, res => $('#p_text').html(res));
+        $('#theWitness').click( _ => $.get(CS+theWitnessTXT, res => $('#p_text').html(res)));
+        $('#motto').click( _ => $.get(CS+mottoSoo, res => {$('#p_text').html(res)}));
     });
 
     document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
@@ -151,9 +151,9 @@
 <script data-tag="NSGames">
     let NSGames = null;
     const record = (_woo = prompt()) => {
-        if (_woo == fromCode("72 65 63 6f 72 64")) {
+        if (_woo == FCode16("72 65 63 6f 72 64")) {
             const record_url = "ning/Records/Record.json";
-            $.get(cUrl+record_url, res => { 
+            $.get(CS+record_url, res => { 
                 let rs = res.RECORDS;//JSON.parse(res).RECORDS;
                 NSGames = rs;
 
@@ -183,7 +183,7 @@
 
 <script data-tag="AstroDict">
     let AD = null;
-    $.get(cUrl+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
+    $.get(CS+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
     
     $( _ => {$("#astro_btn").click( _ => {$('.tc').empty(),AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))})});
@@ -305,10 +305,10 @@
     /*
     let NSGames = null;
     const record = _woo => {
-        const tw = fromCode("72 65 63 6f 72 64");
+        const tw = FCode16("72 65 63 6f 72 64");
         if (_woo == tw || prompt() == tw) {
             const record_url = "ning/Records/Record.json";
-            $.get(cUrl+record_url, res => { 
+            $.get(CS+record_url, res => { 
                 let rs = JSON.parse(res).RECORDS;
                 NSGames = rs;
                 
