@@ -89,23 +89,8 @@
             </div>
             <div class="motto_bottom" id="mb">
                 <div class="ml"></div>
-                <div class="mc">
-                    <p>在りし日のふたり</p>
-                    <p>ぼくらは同じ空を見上げている</p>
-                    <p>Elysium, in the Blue Sky</p>
-                    <p>From Past to Present</p>
-                    <p>地球最後の告白を — 物述有栖</p>
-                </div>
-                <div class="mr">
-                    <p>あつまれ　どうぶつの森</p>
-                    <p>ゼルダの伝説</p>
-                    <p>ゼノブレイド2</p>
-                    <p>Rufuran no chika meikyū to majo no ryodan</p>
-                    <p>The Elder Scrolls V: Skyrim</p>
-                    <p>The Witness</p>
-                    <p>Terraria 1.4: Journey's End</p>
-                    <p>Fantasy RPG</p>
-                </div>
+                <div class="mc"></div>
+                <div class="mr"></div>
                 <div class="cls"></div>
             </div>
         </div>
@@ -130,22 +115,19 @@
         const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
         const mottoSoo = "ming/motto.soo";
         $.get(CS+theWitnessTXT, res => $('#p_text').html(res));
-        $('#theWitness').click( _ => $.get(CS+theWitnessTXT, res => $('#p_text').html(res)));
-        $('#motto').click( _ => $.get(CS+mottoSoo, res => {$('#p_text').html(res)}));
+        $('#theWitness').click( _ => $.get(CS + theWitnessTXT, p => $('#p_text').html(p)));
+        $('#motto').click( _ => $.get(CS + mottoSoo, p => {$('#p_text').html(p)}));
+        $.get(CS + "ding/motto_bottom.json", m => {
+            m.ml.map(x=>{$(".ml").append('<p>'+ x +'</p>')});
+            m.mc.map(x=>{$(".mc").append('<p>'+ x +'</p>')});
+            m.mr.map(x=>{$(".mr").append('<p>'+ x +'</p>')});
+        });
     });
 
     document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
     document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
 
     const step = (x = undefined) => window.si ? (clearInterval(si), si = 0) : si = kauntodaun(x);
-</script>
-
-<script data-tag="ZhouYi">
-    let ZY = null;
-    $.get(CS+"ying/ZhouYi.json", res => ZY = res);
-    $.get(CS+"ding/motto_bottom.json", m => {
-        m.ml.map(x=>{$(".ml").append('<p>'+ x +'</p>')});
-    });
 </script>
 
 <script data-tag="NSGames">
@@ -187,6 +169,11 @@
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
     
     $( _ => {$("#astro_btn").click( _ => {$('.tc').empty(),AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))})});
+</script>
+
+<script data-tag="ZhouYi">
+    let ZY = null;
+    $.get(CS+"ying/ZhouYi.json", res => ZY = res);
 </script>
 
 <script data-tag="Gol">
