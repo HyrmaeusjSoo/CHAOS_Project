@@ -28,11 +28,20 @@
     "bracket-pair-colorizer-2.colorMode": "Consecutive",
     // 括号匹配颜色
     "bracket-pair-colorizer-2.colors": [
+        //wow
         "#e5cc80", //artifact (gold)
         "#1eff00", //uncommon (green)
         "#0081ff", //rare (blue)
         "#c600ff", //epic (purple)
         "#ff8000", //legendary (orange)
+        //diablo
+        "#BA2636", //太古
+        "#0f0", //套装
+        "#ff8000", //传奇
+        "#ff0", //稀有
+        "#6969ff", //魔法
+        //"#fff", //普通
+        //other
         "#E4007F", //品红
         "Aqua", //青
         "Pink", //粉

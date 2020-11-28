@@ -54,7 +54,7 @@
             .cls {clear: both;}
         </style>
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js"></script>
-        <script data-tag="E.R.conver" src="ying/E.R.conver.js"></script>
+        <script data-tag="E.R.convert" src="ying/E.R.convert.js"></script>
         <script data-tag="BaZi" src="ying/NongLi.js"></script>
         <script data-tag="Kauntodaun" src="ying/Kauntodaun.js"></script>
         <script data-tag="Xenoblade" src="ying/Xenoblade.js"></script>
@@ -88,15 +88,7 @@
                 <p class="tr"><a href="https://github.com/HyleaSoo/Cthulhu">More</a></p>
             </div>
             <div class="motto_bottom" id="mb">
-                <div class="ml">
-                    <p>山风渐: 女归吉，利贞。</p>
-                    <p>初六 鸿渐于干，小子厉，有言，无咎。</p>
-                    <p>六二 鸿渐于磐，饮食衎衎，吉。</p>
-                    <p>九三 鸿渐于陆，夫征不复，妇孕不育，凶；利御寇。</p>
-                    <p>六四 鸿渐于木，或得其桷，无咎。</p>
-                    <p>九五 鸿渐于陵。妇三岁不孕；终莫之胜，吉。</p>
-                    <p>上九 鸿渐于陆，其羽可用为仪，吉。</p>
-                </div>
+                <div class="ml"></div>
                 <div class="mc">
                     <p>在りし日のふたり</p>
                     <p>ぼくらは同じ空を見上げている</p>
@@ -117,7 +109,7 @@
                 <div class="cls"></div>
             </div>
         </div>
-        
+
         <div class="fcr">
             <p>© 2018 - 2020 Hylea Soo</p>
             <p id="record_btn">&nbsp;&nbsp;&nbsp;&nbsp;</p>
@@ -148,10 +140,18 @@
     const step = (x = undefined) => window.si ? (clearInterval(si), si = 0) : si = kauntodaun(x);
 </script>
 
+<script data-tag="ZhouYi">
+    let ZY = null;
+    $.get(CS+"ying/ZhouYi.json", res => ZY = res);
+    $.get(CS+"ding/motto_bottom.json", m => {
+        m.ml.map(x=>{$(".ml").append('<p>'+ x +'</p>')});
+    });
+</script>
+
 <script data-tag="NSGames">
     let NSGames = null;
     const record = (_woo = prompt()) => {
-        if (_woo == FCode16("72 65 63 6f 72 64")) {
+        if (_woo == ERConvert.FCode('72q65i63k6fh72t64') && _woo == FCode16("72 65 63 6f 72 64")) {
             const record_url = "ning/Records/Record.json";
             $.get(CS+record_url, res => { 
                 let rs = res.RECORDS;//JSON.parse(res).RECORDS;
@@ -305,7 +305,7 @@
     /*
     let NSGames = null;
     const record = _woo => {
-        const tw = FCode16("72 65 63 6f 72 64");
+        const tw = ERConvert.FCode('72q65i63k6fh72t64');//FCode16("72 65 63 6f 72 64");
         if (_woo == tw || prompt() == tw) {
             const record_url = "ning/Records/Record.json";
             $.get(CS+record_url, res => { 
