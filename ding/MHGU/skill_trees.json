@@ -1,0 +1,1847 @@
+[
+    {
+        "_id": "1",
+        "name": "Poison",
+        "name_de": "Gift",
+        "name_fr": "Poison",
+        "name_es": "Veneno",
+        "name_it": "Veleno",
+        "name_ja": ""
+    },
+    {
+        "_id": "2",
+        "name": "Paralysis",
+        "name_de": "Lähmung",
+        "name_fr": "Paralysie",
+        "name_es": "Parálisis",
+        "name_it": "Paralisi",
+        "name_ja": ""
+    },
+    {
+        "_id": "3",
+        "name": "Sleep",
+        "name_de": "Schlaf",
+        "name_fr": "Sommeil",
+        "name_es": "Sueño",
+        "name_it": "Sonno",
+        "name_ja": ""
+    },
+    {
+        "_id": "4",
+        "name": "Stun",
+        "name_de": "Betäuben",
+        "name_fr": "Volonté",
+        "name_es": "Aturdir",
+        "name_it": "Stordimento",
+        "name_ja": ""
+    },
+    {
+        "_id": "5",
+        "name": "Hearing",
+        "name_de": "Gehör",
+        "name_fr": "Ouïe",
+        "name_es": "Oído",
+        "name_it": "Udito",
+        "name_ja": ""
+    },
+    {
+        "_id": "6",
+        "name": "Wind Res",
+        "name_de": "Windabwehr",
+        "name_fr": "Vent",
+        "name_es": "Res. viento",
+        "name_it": "Vento",
+        "name_ja": ""
+    },
+    {
+        "_id": "7",
+        "name": "Tremor Res",
+        "name_de": "Bebenabw.",
+        "name_fr": "Anti-séisme",
+        "name_es": "Res. temblor",
+        "name_it": "Antisismico",
+        "name_ja": ""
+    },
+    {
+        "_id": "8",
+        "name": "Bind Res",
+        "name_de": "Bindeabw.",
+        "name_fr": "Enlisement",
+        "name_es": "Res. atrap.",
+        "name_it": "Vincolo",
+        "name_ja": ""
+    },
+    {
+        "_id": "9",
+        "name": "Heat Res",
+        "name_de": "Hitzeabwehr",
+        "name_fr": "Chaleur",
+        "name_es": "Res. calor",
+        "name_it": "Calore",
+        "name_ja": ""
+    },
+    {
+        "_id": "10",
+        "name": "Cold Res",
+        "name_de": "Kälteabwehr",
+        "name_fr": "Froid",
+        "name_es": "Res. frío",
+        "name_it": "Freddo",
+        "name_ja": ""
+    },
+    {
+        "_id": "11",
+        "name": "ColdBlooded",
+        "name_de": "Kälteschutz",
+        "name_fr": "Sang froid",
+        "name_es": "Sangre fría",
+        "name_it": "Polare",
+        "name_ja": ""
+    },
+    {
+        "_id": "12",
+        "name": "HotBlooded",
+        "name_de": "Hitzeschutz",
+        "name_fr": "Sang chaud",
+        "name_es": "Apasionado",
+        "name_it": "Tropicale",
+        "name_ja": ""
+    },
+    {
+        "_id": "13",
+        "name": "Anti-Theft",
+        "name_de": "Anti-Dieb",
+        "name_fr": "Antivol",
+        "name_es": "Antirrobo",
+        "name_it": "Anti-ladro",
+        "name_ja": ""
+    },
+    {
+        "_id": "14",
+        "name": "Def Lock",
+        "name_de": "Abw.-Sperre",
+        "name_fr": "Assurance",
+        "name_es": "Piel dura",
+        "name_it": "Difesa OK",
+        "name_ja": ""
+    },
+    {
+        "_id": "15",
+        "name": "Frenzy Res",
+        "name_de": "Rasereiab.",
+        "name_fr": "Anti-furie",
+        "name_es": "Res. cólera",
+        "name_it": "Antifrenesia",
+        "name_ja": ""
+    },
+    {
+        "_id": "16",
+        "name": "Biology",
+        "name_de": "Biologie",
+        "name_fr": "Biologie",
+        "name_es": "Biólogo",
+        "name_it": "Biologia",
+        "name_ja": ""
+    },
+    {
+        "_id": "17",
+        "name": "Bleeding",
+        "name_de": "Blutung",
+        "name_fr": "Hémorragie",
+        "name_es": "Sangrado",
+        "name_it": "Emorragia",
+        "name_ja": ""
+    },
+    {
+        "_id": "18",
+        "name": "Attack",
+        "name_de": "Angriff",
+        "name_fr": "Attaque",
+        "name_es": "Ataque",
+        "name_it": "Attacco",
+        "name_ja": ""
+    },
+    {
+        "_id": "19",
+        "name": "Defense",
+        "name_de": "Verteidig.",
+        "name_fr": "Défense",
+        "name_es": "Defensa",
+        "name_it": "Difesa",
+        "name_ja": ""
+    },
+    {
+        "_id": "20",
+        "name": "Health",
+        "name_de": "Gesundheit",
+        "name_fr": "Vie",
+        "name_es": "Salud",
+        "name_it": "Vita",
+        "name_ja": ""
+    },
+    {
+        "_id": "21",
+        "name": "Fire Res",
+        "name_de": "Feuerabw.",
+        "name_fr": "Ignifuge",
+        "name_es": "Res. fuego",
+        "name_it": "Ignifugo",
+        "name_ja": ""
+    },
+    {
+        "_id": "22",
+        "name": "Water Res",
+        "name_de": "Wasserabw.",
+        "name_fr": "Étanche",
+        "name_es": "Res. agua",
+        "name_it": "Acquatico",
+        "name_ja": ""
+    },
+    {
+        "_id": "23",
+        "name": "Thunder Res",
+        "name_de": "Donnerabw.",
+        "name_fr": "Isolant",
+        "name_es": "Res. rayo",
+        "name_it": "Isolante",
+        "name_ja": ""
+    },
+    {
+        "_id": "24",
+        "name": "Ice Res",
+        "name_de": "Eisabwehr",
+        "name_fr": "Antigel",
+        "name_es": "Res. hielo",
+        "name_it": "Antigelo",
+        "name_ja": ""
+    },
+    {
+        "_id": "25",
+        "name": "Dragon Res",
+        "name_de": "Drachenab.",
+        "name_fr": "Draconien",
+        "name_es": "Res. draco",
+        "name_it": "Antidrago",
+        "name_ja": ""
+    },
+    {
+        "_id": "26",
+        "name": "Blight Res",
+        "name_de": "Brandabw.",
+        "name_fr": "Fléau",
+        "name_es": "Res. plaga",
+        "name_it": "Res elem.",
+        "name_ja": ""
+    },
+    {
+        "_id": "27",
+        "name": "Fire Atk",
+        "name_de": "Feuerangriff",
+        "name_fr": "Feu",
+        "name_es": "Atq. fuego",
+        "name_it": "Att. fuoco",
+        "name_ja": ""
+    },
+    {
+        "_id": "28",
+        "name": "Water Atk",
+        "name_de": "Wasseran.",
+        "name_fr": "Eau",
+        "name_es": "Atq. agua",
+        "name_it": "Att. acqua",
+        "name_ja": ""
+    },
+    {
+        "_id": "29",
+        "name": "Thunder Atk",
+        "name_de": "Donnerang.",
+        "name_fr": "Foudre",
+        "name_es": "Atq. rayo",
+        "name_it": "Att. tuono",
+        "name_ja": ""
+    },
+    {
+        "_id": "30",
+        "name": "Ice Atk",
+        "name_de": "Eisangriff",
+        "name_fr": "Glace",
+        "name_es": "Atq. hielo",
+        "name_it": "Att. gelo",
+        "name_ja": ""
+    },
+    {
+        "_id": "31",
+        "name": "Dragon Atk",
+        "name_de": "Drachenan.",
+        "name_fr": "Dragon",
+        "name_es": "Atq. draco",
+        "name_it": "Att. drago",
+        "name_ja": ""
+    },
+    {
+        "_id": "32",
+        "name": "Elemental",
+        "name_de": "Element",
+        "name_fr": "Élément",
+        "name_es": "Atq. elem.",
+        "name_it": "Att. elem.",
+        "name_ja": ""
+    },
+    {
+        "_id": "33",
+        "name": "Status",
+        "name_de": "Status",
+        "name_fr": "Statut",
+        "name_es": "Estado",
+        "name_it": "Att. status",
+        "name_ja": ""
+    },
+    {
+        "_id": "34",
+        "name": "Sharpener",
+        "name_de": "Schärfer",
+        "name_fr": "Aiguiseur",
+        "name_es": "Afilador",
+        "name_it": "Rasoio",
+        "name_ja": ""
+    },
+    {
+        "_id": "35",
+        "name": "Handicraft",
+        "name_de": "Handwerk",
+        "name_fr": "Artisanat",
+        "name_es": "Artesano",
+        "name_it": "Artigiano",
+        "name_ja": ""
+    },
+    {
+        "_id": "36",
+        "name": "Sharpness",
+        "name_de": "Schärfe",
+        "name_fr": "Tranchant",
+        "name_es": "Afilado",
+        "name_it": "Acutezza",
+        "name_ja": ""
+    },
+    {
+        "_id": "37",
+        "name": "Fencing",
+        "name_de": "Fechten",
+        "name_fr": "Escrime",
+        "name_es": "Esgrima",
+        "name_it": "Scherma",
+        "name_ja": ""
+    },
+    {
+        "_id": "38",
+        "name": "Grinder",
+        "name_de": "Schleifer",
+        "name_fr": "Métallurgie",
+        "name_es": "Amolador",
+        "name_it": "Metallurgia",
+        "name_ja": ""
+    },
+    {
+        "_id": "39",
+        "name": "Blunt",
+        "name_de": "Stumpf",
+        "name_fr": "Matraque",
+        "name_es": "Impacto",
+        "name_it": "Levigazione",
+        "name_ja": ""
+    },
+    {
+        "_id": "40",
+        "name": "Crit Draw",
+        "name_de": "KritHieb",
+        "name_fr": "Dégainage",
+        "name_es": "Desenfunde",
+        "name_it": "Rapi-danno",
+        "name_ja": ""
+    },
+    {
+        "_id": "41",
+        "name": "Punish Draw",
+        "name_de": "StrafHieb",
+        "name_fr": "Punition",
+        "name_es": "Pena inmed.",
+        "name_it": "Punizione",
+        "name_ja": ""
+    },
+    {
+        "_id": "42",
+        "name": "Sheathing",
+        "name_de": "Wegstecken",
+        "name_fr": "Rengainage",
+        "name_es": "Vaina veloz",
+        "name_it": "Rinfodero",
+        "name_ja": ""
+    },
+    {
+        "_id": "43",
+        "name": "Sheathe Sharpen",
+        "name_de": "WegstcknSchärfer",
+        "name_fr": "Rengainage aiguiseur",
+        "name_es": "Vaina afilada",
+        "name_it": "Rinfodero acuto",
+        "name_ja": ""
+    },
+    {
+        "_id": "44",
+        "name": "Bladescale",
+        "name_de": "Klingenschuppe",
+        "name_fr": "Lamécaille",
+        "name_es": "Filoescama",
+        "name_it": "Scaglialama",
+        "name_ja": ""
+    },
+    {
+        "_id": "45",
+        "name": "Reload Spd",
+        "name_de": "NachlGesch",
+        "name_fr": "Fusilier",
+        "name_es": "Vel. recarg.",
+        "name_it": "Ricarica",
+        "name_ja": ""
+    },
+    {
+        "_id": "46",
+        "name": "Recoil",
+        "name_de": "Rückstoß",
+        "name_fr": "Recul",
+        "name_es": "Cadencia",
+        "name_it": "Rinculo",
+        "name_ja": ""
+    },
+    {
+        "_id": "47",
+        "name": "Precision",
+        "name_de": "Präzision",
+        "name_fr": "Sniper",
+        "name_es": "Precisión",
+        "name_it": "Precisione",
+        "name_ja": ""
+    },
+    {
+        "_id": "48",
+        "name": "Normal Up",
+        "name_de": "Normal +",
+        "name_fr": "Normal G",
+        "name_es": "Disparo+",
+        "name_it": "Normale",
+        "name_ja": ""
+    },
+    {
+        "_id": "49",
+        "name": "Pierce Up",
+        "name_de": "Perforier +",
+        "name_fr": "Perçant G",
+        "name_es": "Perforar+",
+        "name_it": "Perforante",
+        "name_ja": ""
+    },
+    {
+        "_id": "50",
+        "name": "Pellet Up",
+        "name_de": "Schrot +",
+        "name_fr": "Plomb G",
+        "name_es": "Perdigón+",
+        "name_it": "Ventaglio",
+        "name_ja": ""
+    },
+    {
+        "_id": "51",
+        "name": "Heavy Up",
+        "name_de": "Schwer +",
+        "name_fr": "Lourd G",
+        "name_es": "Pesado+",
+        "name_it": "Pesante",
+        "name_ja": ""
+    },
+    {
+        "_id": "52",
+        "name": "Normal S+",
+        "name_de": "Normal S+",
+        "name_fr": "Normal",
+        "name_es": "Mun. normal",
+        "name_it": "P normali",
+        "name_ja": ""
+    },
+    {
+        "_id": "53",
+        "name": "Pierce S+",
+        "name_de": "Perfor. S+",
+        "name_fr": "Perçant",
+        "name_es": "Mun. perfor.",
+        "name_it": "P perforanti",
+        "name_ja": ""
+    },
+    {
+        "_id": "54",
+        "name": "Pellet S+",
+        "name_de": "Schrot S+",
+        "name_fr": "Grenaille",
+        "name_es": "Mun. perdig.",
+        "name_it": "P ventaglio",
+        "name_ja": ""
+    },
+    {
+        "_id": "55",
+        "name": "Crag S+",
+        "name_de": "Explosiv S+",
+        "name_fr": "Antiblind.",
+        "name_es": "Mun. explos.",
+        "name_it": "P esplosivi",
+        "name_ja": ""
+    },
+    {
+        "_id": "56",
+        "name": "Clust S+",
+        "name_de": "Streu S+",
+        "name_fr": "Frag",
+        "name_es": "Mun. grupo",
+        "name_it": "P grappolo",
+        "name_ja": ""
+    },
+    {
+        "_id": "57",
+        "name": "Poison C+",
+        "name_de": "Gift B+",
+        "name_fr": "F Poison",
+        "name_es": "Rv. veneno",
+        "name_it": "B veleno",
+        "name_ja": ""
+    },
+    {
+        "_id": "58",
+        "name": "Para C+",
+        "name_de": "Lähm B+",
+        "name_fr": "F Paralysie",
+        "name_es": "Rv. paraliz.",
+        "name_it": "B paralisi",
+        "name_ja": ""
+    },
+    {
+        "_id": "59",
+        "name": "Sleep C+",
+        "name_de": "Schlaf B+",
+        "name_fr": "F Sommeil",
+        "name_es": "Rv. sueño",
+        "name_it": "B sonno",
+        "name_ja": ""
+    },
+    {
+        "_id": "60",
+        "name": "Power C+",
+        "name_de": "Kraft B+",
+        "name_fr": "F Force",
+        "name_es": "Rv. energía",
+        "name_it": "B potenza",
+        "name_ja": ""
+    },
+    {
+        "_id": "61",
+        "name": "Elem C+",
+        "name_de": "Elem B+",
+        "name_fr": "F Élément",
+        "name_es": "Rv. elem.",
+        "name_it": "B elemento",
+        "name_ja": ""
+    },
+    {
+        "_id": "62",
+        "name": "C.Range C+",
+        "name_de": "Nhkmpf B+",
+        "name_fr": "F Combat",
+        "name_es": "Rv. alcance",
+        "name_it": "B cortor.",
+        "name_ja": ""
+    },
+    {
+        "_id": "63",
+        "name": "Exhaust C+",
+        "name_de": "Ermüd. B+",
+        "name_fr": "F Faiblesse",
+        "name_es": "Rv. fatiga",
+        "name_it": "B fatica",
+        "name_ja": ""
+    },
+    {
+        "_id": "64",
+        "name": "Blast C+",
+        "name_de": "Spreng B+",
+        "name_fr": "F Explosion",
+        "name_es": "Rv. nitro",
+        "name_it": "B scoppio",
+        "name_ja": ""
+    },
+    {
+        "_id": "65",
+        "name": "Rapid Fire",
+        "name_de": "Schnellfeuer",
+        "name_fr": "Tir rapide",
+        "name_es": "Fuego rápido",
+        "name_it": "Fuoco rap.",
+        "name_ja": ""
+    },
+    {
+        "_id": "66",
+        "name": "Dead Eye",
+        "name_de": "Mstrschütze",
+        "name_fr": "Kyudo",
+        "name_es": "Puntería",
+        "name_it": "Mirino",
+        "name_ja": ""
+    },
+    {
+        "_id": "67",
+        "name": "Loading",
+        "name_de": "Kapazität",
+        "name_fr": "Munitions",
+        "name_es": "Recargando",
+        "name_it": "Cartucciera",
+        "name_ja": ""
+    },
+    {
+        "_id": "68",
+        "name": "Haphazard",
+        "name_de": "Willkür",
+        "name_fr": "Cinétique",
+        "name_es": "Aleatorio",
+        "name_it": "Balistica",
+        "name_ja": ""
+    },
+    {
+        "_id": "69",
+        "name": "Ammo Saver",
+        "name_de": "MunitSpar",
+        "name_fr": "Éco-munit.",
+        "name_es": "Ahorramun.",
+        "name_it": "Risparmio",
+        "name_ja": ""
+    },
+    {
+        "_id": "70",
+        "name": "Expert",
+        "name_de": "Experte",
+        "name_fr": "Expert",
+        "name_es": "Experto",
+        "name_it": "Affinità",
+        "name_ja": ""
+    },
+    {
+        "_id": "71",
+        "name": "Tenderizer",
+        "name_de": "Klopfer",
+        "name_fr": "Supplice",
+        "name_es": "Maza",
+        "name_it": "Cecchino",
+        "name_ja": ""
+    },
+    {
+        "_id": "72",
+        "name": "Chain Crit",
+        "name_de": "Kettenkrit",
+        "name_fr": "Vendetta",
+        "name_es": "Serie crítica",
+        "name_it": "Serie critica",
+        "name_ja": ""
+    },
+    {
+        "_id": "73",
+        "name": "Crit Status",
+        "name_de": "KritStatus",
+        "name_fr": "Châtiment",
+        "name_es": "Crít. est.",
+        "name_it": "Crit. status",
+        "name_ja": ""
+    },
+    {
+        "_id": "74",
+        "name": "Crit Element",
+        "name_de": "KritElement",
+        "name_fr": "Chamanisme",
+        "name_es": "Crít. elm.",
+        "name_it": "Crit. elemen.",
+        "name_ja": ""
+    },
+    {
+        "_id": "75",
+        "name": "Critical Up",
+        "name_de": "Krit +",
+        "name_fr": "Critiques +",
+        "name_es": "Crítico +1",
+        "name_it": "Critico+",
+        "name_ja": ""
+    },
+    {
+        "_id": "76",
+        "name": "Negative Crit",
+        "name_de": "Krit -",
+        "name_fr": "Critique négatif",
+        "name_es": "Críticos negativos",
+        "name_it": "Critico-",
+        "name_ja": ""
+    },
+    {
+        "_id": "77",
+        "name": "FastCharge",
+        "name_de": "Schn. lad.",
+        "name_fr": "Charge",
+        "name_es": "Carga veloz",
+        "name_it": "Carica",
+        "name_ja": ""
+    },
+    {
+        "_id": "78",
+        "name": "Stamina",
+        "name_de": "Ausdauer",
+        "name_fr": "Stamina",
+        "name_es": "Resistencia",
+        "name_it": "Resistenza",
+        "name_ja": ""
+    },
+    {
+        "_id": "79",
+        "name": "Constitution",
+        "name_de": "Konstitution",
+        "name_fr": "Athlète",
+        "name_es": "Constitución",
+        "name_it": "Atleta",
+        "name_ja": ""
+    },
+    {
+        "_id": "80",
+        "name": "Stam Recov",
+        "name_de": "AusdErholg",
+        "name_fr": "Vigueur",
+        "name_es": "Estad. forma",
+        "name_it": "Resistente",
+        "name_ja": ""
+    },
+    {
+        "_id": "81",
+        "name": "Distance Runner",
+        "name_de": "Dauerlauf",
+        "name_fr": "Énergie",
+        "name_es": "Carrera de fondo",
+        "name_it": "G corsa",
+        "name_ja": ""
+    },
+    {
+        "_id": "82",
+        "name": "Evasion",
+        "name_de": "Ausweichen",
+        "name_fr": "Évasion",
+        "name_es": "Evasión",
+        "name_it": "Schivata",
+        "name_ja": ""
+    },
+    {
+        "_id": "83",
+        "name": "Evade Dist",
+        "name_de": "Asweichdst",
+        "name_fr": "Esquive",
+        "name_es": "Dis. evasión",
+        "name_it": "Schivatore",
+        "name_ja": ""
+    },
+    {
+        "_id": "84",
+        "name": "Bubble",
+        "name_de": "Blase",
+        "name_fr": "Savon",
+        "name_es": "Burbuja",
+        "name_it": "Bolla",
+        "name_ja": ""
+    },
+    {
+        "_id": "85",
+        "name": "Guard",
+        "name_de": "Block",
+        "name_fr": "Garde",
+        "name_es": "Guardia",
+        "name_it": "Guardia",
+        "name_ja": ""
+    },
+    {
+        "_id": "86",
+        "name": "Guard Up",
+        "name_de": "Block +",
+        "name_fr": "Paladin",
+        "name_es": "Escudo",
+        "name_it": "Blocco",
+        "name_ja": ""
+    },
+    {
+        "_id": "87",
+        "name": "KO",
+        "name_de": "Knock-out",
+        "name_fr": "KO",
+        "name_es": "Boxeador",
+        "name_it": "KO",
+        "name_ja": ""
+    },
+    {
+        "_id": "88",
+        "name": "Stam Drain",
+        "name_de": "Ausd.Entzug",
+        "name_fr": "Fatigue",
+        "name_es": "Robarresis.",
+        "name_it": "Sfinitore",
+        "name_ja": ""
+    },
+    {
+        "_id": "89",
+        "name": "Maestro",
+        "name_de": "Maestro",
+        "name_fr": "Musique",
+        "name_es": "Músico",
+        "name_it": "Maestro",
+        "name_ja": ""
+    },
+    {
+        "_id": "90",
+        "name": "Artillery",
+        "name_de": "Artillerie",
+        "name_fr": "Artillerie",
+        "name_es": "Artillería",
+        "name_it": "Artigliere",
+        "name_ja": ""
+    },
+    {
+        "_id": "91",
+        "name": "Destroyer",
+        "name_de": "Zerstörer",
+        "name_fr": "Destruction",
+        "name_es": "Destructor",
+        "name_it": "Spaccone",
+        "name_ja": ""
+    },
+    {
+        "_id": "92",
+        "name": "Bomb Boost",
+        "name_de": "Bombast",
+        "name_fr": "Bombe",
+        "name_es": "Bombardero",
+        "name_it": "Bombarolo",
+        "name_ja": ""
+    },
+    {
+        "_id": "93",
+        "name": "Gloves Off",
+        "name_de": "Brachial",
+        "name_fr": "Puissance",
+        "name_es": "Poder",
+        "name_it": "Rinforzo",
+        "name_ja": ""
+    },
+    {
+        "_id": "94",
+        "name": "Spirit",
+        "name_de": "Elan",
+        "name_fr": "Courage",
+        "name_es": "Espíritu",
+        "name_it": "Spirito",
+        "name_ja": ""
+    },
+    {
+        "_id": "95",
+        "name": "Unscathed",
+        "name_de": "Unversehrt",
+        "name_fr": "Invincible",
+        "name_es": "Ileso",
+        "name_it": "Illeso",
+        "name_ja": ""
+    },
+    {
+        "_id": "96",
+        "name": "Chance",
+        "name_de": "Chance",
+        "name_fr": "Hasard",
+        "name_es": "Pegaso",
+        "name_it": "Chance",
+        "name_ja": ""
+    },
+    {
+        "_id": "97",
+        "name": "Dragon Spirit",
+        "name_de": "Drachengeist",
+        "name_fr": "Dracoénergie",
+        "name_es": "Dracoenergía",
+        "name_it": "Spirito drago",
+        "name_ja": ""
+    },
+    {
+        "_id": "98",
+        "name": "Potential",
+        "name_de": "Potenzial",
+        "name_fr": "Potentiel",
+        "name_es": "Potencial",
+        "name_it": "Potenziale",
+        "name_ja": ""
+    },
+    {
+        "_id": "99",
+        "name": "Survivor",
+        "name_de": "Überleben",
+        "name_fr": "Survie",
+        "name_es": "Superviv.",
+        "name_it": "Superstite",
+        "name_ja": ""
+    },
+    {
+        "_id": "100",
+        "name": "Furor",
+        "name_de": "Furore",
+        "name_fr": "Fureur",
+        "name_es": "Furor",
+        "name_it": "Rabbia",
+        "name_ja": ""
+    },
+    {
+        "_id": "101",
+        "name": "Crisis",
+        "name_de": "Krise",
+        "name_fr": "Vengeance",
+        "name_es": "Crisis",
+        "name_it": "Emergenza",
+        "name_ja": ""
+    },
+    {
+        "_id": "102",
+        "name": "Guts",
+        "name_de": "Mut",
+        "name_fr": "Bravoure",
+        "name_es": "Tripas",
+        "name_it": "Coraggio",
+        "name_ja": ""
+    },
+    {
+        "_id": "103",
+        "name": "Sense",
+        "name_de": "Spürsinn",
+        "name_fr": "Ninja",
+        "name_es": "Sentido",
+        "name_it": "Presenza",
+        "name_ja": ""
+    },
+    {
+        "_id": "104",
+        "name": "Team Player",
+        "name_de": "Teamspieler",
+        "name_fr": "Moral",
+        "name_es": "En equipo",
+        "name_it": "Gregario",
+        "name_ja": ""
+    },
+    {
+        "_id": "105",
+        "name": "TeamLeader",
+        "name_de": "Teamanfüh.",
+        "name_fr": "Leader",
+        "name_es": "Liderazgo",
+        "name_it": "Capitano",
+        "name_ja": ""
+    },
+    {
+        "_id": "106",
+        "name": "Mounting",
+        "name_de": "Aufsteigen",
+        "name_fr": "Cavalier",
+        "name_es": "Monta",
+        "name_it": "Cavaliere",
+        "name_ja": ""
+    },
+    {
+        "_id": "107",
+        "name": "Vault",
+        "name_de": "Katapult",
+        "name_fr": "Saut",
+        "name_es": "Impulso",
+        "name_it": "Balzo",
+        "name_ja": ""
+    },
+    {
+        "_id": "108",
+        "name": "Insight",
+        "name_de": "Erkenntnis",
+        "name_fr": "Méditation",
+        "name_es": "Conocimiento",
+        "name_it": "Intuito",
+        "name_ja": ""
+    },
+    {
+        "_id": "109",
+        "name": "Endurance",
+        "name_de": "Willensstärke",
+        "name_fr": "Endurance",
+        "name_es": "Perseverancia",
+        "name_it": "Sopportazione",
+        "name_ja": ""
+    },
+    {
+        "_id": "110",
+        "name": "Prolong SP",
+        "name_de": "SP-Verlängerung",
+        "name_fr": "Extension SP",
+        "name_es": "SP prolongado",
+        "name_it": "Estensione SP",
+        "name_ja": ""
+    },
+    {
+        "_id": "111",
+        "name": "Psychic",
+        "name_de": "Vision",
+        "name_fr": "Lucidité",
+        "name_es": "Lucidez",
+        "name_it": "Sibilla",
+        "name_ja": ""
+    },
+    {
+        "_id": "112",
+        "name": "Perception",
+        "name_de": "Wahrnehmen",
+        "name_fr": "Perception",
+        "name_es": "Percepción",
+        "name_it": "Cattura",
+        "name_ja": ""
+    },
+    {
+        "_id": "113",
+        "name": "Ranger",
+        "name_de": "Ranger",
+        "name_fr": "Chasse",
+        "name_es": "Soldado",
+        "name_it": "Ranger",
+        "name_ja": ""
+    },
+    {
+        "_id": "114",
+        "name": "Transporter",
+        "name_de": "Rucksack",
+        "name_fr": "Convoyeur",
+        "name_es": "Porteador",
+        "name_it": "Portatore",
+        "name_ja": ""
+    },
+    {
+        "_id": "115",
+        "name": "Protection",
+        "name_de": "Schutz",
+        "name_fr": "Protection",
+        "name_es": "Protección",
+        "name_it": "Protezione",
+        "name_ja": ""
+    },
+    {
+        "_id": "116",
+        "name": "Hero Shield",
+        "name_de": "Heldschild",
+        "name_fr": "Halo sacré",
+        "name_es": "Heroísmo",
+        "name_it": "Eroismo",
+        "name_ja": ""
+    },
+    {
+        "_id": "117",
+        "name": "Rec Level",
+        "name_de": "ErholStufe",
+        "name_fr": "Restaurer",
+        "name_es": "Curación",
+        "name_it": "Medicina",
+        "name_ja": ""
+    },
+    {
+        "_id": "118",
+        "name": "Rec Speed",
+        "name_de": "ErholGschw",
+        "name_fr": "Facteur X",
+        "name_es": "Recuperac.",
+        "name_it": "Recupero",
+        "name_ja": ""
+    },
+    {
+        "_id": "119",
+        "name": "Lasting Pwr",
+        "name_de": "Ewige Kraft",
+        "name_fr": "Objets",
+        "name_es": "Duración",
+        "name_it": "Oggetti",
+        "name_ja": ""
+    },
+    {
+        "_id": "120",
+        "name": "Wide-Range",
+        "name_de": "Großraum",
+        "name_fr": "Soutien",
+        "name_es": "Efecto área",
+        "name_it": "Ampia area",
+        "name_ja": ""
+    },
+    {
+        "_id": "121",
+        "name": "Hunger",
+        "name_de": "Hunger",
+        "name_fr": "Appétit",
+        "name_es": "Hambre",
+        "name_it": "Fame",
+        "name_ja": ""
+    },
+    {
+        "_id": "122",
+        "name": "Gluttony",
+        "name_de": "Schlemmen",
+        "name_fr": "Gastronome",
+        "name_es": "Glotonería",
+        "name_it": "Ingordigia",
+        "name_ja": ""
+    },
+    {
+        "_id": "123",
+        "name": "Eating",
+        "name_de": "Essen",
+        "name_fr": "Repas",
+        "name_es": "Consumir",
+        "name_it": "Cucina",
+        "name_ja": ""
+    },
+    {
+        "_id": "124",
+        "name": "Light Eater",
+        "name_de": "Genügsamkt",
+        "name_fr": "Frugal",
+        "name_es": "Dieta",
+        "name_it": "Dieta",
+        "name_ja": ""
+    },
+    {
+        "_id": "125",
+        "name": "Carnivore",
+        "name_de": "Fleischfr.",
+        "name_fr": "Carnivore",
+        "name_es": "Carnívoro",
+        "name_it": "Predatore",
+        "name_ja": ""
+    },
+    {
+        "_id": "126",
+        "name": "Mycology",
+        "name_de": "Mykologe",
+        "name_fr": "Mycologie",
+        "name_es": "Micología",
+        "name_it": "Micologia",
+        "name_ja": ""
+    },
+    {
+        "_id": "127",
+        "name": "Botany",
+        "name_de": "Botanik",
+        "name_fr": "Botanique",
+        "name_es": "Botánica",
+        "name_it": "Botanica",
+        "name_ja": ""
+    },
+    {
+        "_id": "128",
+        "name": "Combo Rate",
+        "name_de": "Kombi-Rate",
+        "name_fr": "Inventeur",
+        "name_es": "Combinación",
+        "name_it": "Combinatore",
+        "name_ja": ""
+    },
+    {
+        "_id": "129",
+        "name": "Combo Plus",
+        "name_de": "Kombi-Bonus",
+        "name_fr": "Alchimiste",
+        "name_es": "Combinac.+",
+        "name_it": "Alchimista",
+        "name_ja": ""
+    },
+    {
+        "_id": "130",
+        "name": "Speed Setup",
+        "name_de": "SchnellAufb.",
+        "name_fr": "Piège",
+        "name_es": "Trampero",
+        "name_it": "Trappola",
+        "name_ja": ""
+    },
+    {
+        "_id": "131",
+        "name": "Gathering",
+        "name_de": "Sammeln",
+        "name_fr": "Collecte",
+        "name_es": "Recogida",
+        "name_it": "Raccolta",
+        "name_ja": ""
+    },
+    {
+        "_id": "132",
+        "name": "Honey",
+        "name_de": "Honig",
+        "name_fr": "Miel",
+        "name_es": "Miel",
+        "name_it": "Miele",
+        "name_ja": ""
+    },
+    {
+        "_id": "133",
+        "name": "Charmer",
+        "name_de": "Amulettf.",
+        "name_fr": "Charme",
+        "name_es": "Amuleto",
+        "name_it": "Idolatra",
+        "name_ja": ""
+    },
+    {
+        "_id": "134",
+        "name": "Whim",
+        "name_de": "Laune",
+        "name_fr": "Lubie",
+        "name_es": "Capricho",
+        "name_it": "Fatalità",
+        "name_ja": ""
+    },
+    {
+        "_id": "135",
+        "name": "Fate",
+        "name_de": "Schicksal",
+        "name_fr": "Destin",
+        "name_es": "Suerte",
+        "name_it": "Fato",
+        "name_ja": ""
+    },
+    {
+        "_id": "136",
+        "name": "Carving",
+        "name_de": "Zerlegen",
+        "name_fr": "Dépeçage",
+        "name_es": "Cortador",
+        "name_it": "Ricavo",
+        "name_ja": ""
+    },
+    {
+        "_id": "137",
+        "name": "Capturer",
+        "name_de": "Fänger",
+        "name_fr": "Capture",
+        "name_es": "Capturas",
+        "name_it": "Premi",
+        "name_ja": ""
+    },
+    {
+        "_id": "138",
+        "name": "Bherna",
+        "name_de": "Bherna",
+        "name_fr": "Bherna",
+        "name_es": "Bherna",
+        "name_it": "Bherna",
+        "name_ja": ""
+    },
+    {
+        "_id": "139",
+        "name": "Kokoto",
+        "name_de": "Kokoto",
+        "name_fr": "Kokoto",
+        "name_es": "Kokoto",
+        "name_it": "Kokoto",
+        "name_ja": ""
+    },
+    {
+        "_id": "140",
+        "name": "Pokke",
+        "name_de": "Pokke",
+        "name_fr": "Pokke",
+        "name_es": "Pokke",
+        "name_it": "Pokke",
+        "name_ja": ""
+    },
+    {
+        "_id": "141",
+        "name": "Yukumo",
+        "name_de": "Yukumo",
+        "name_fr": "Yukumo",
+        "name_es": "Yukumo",
+        "name_it": "Yukumo",
+        "name_ja": ""
+    },
+    {
+        "_id": "142",
+        "name": "Soaratorium",
+        "name_de": "Aerotorium",
+        "name_fr": "Aérolabo",
+        "name_es": "Flotatorio",
+        "name_it": "Solcacieli",
+        "name_ja": ""
+    },
+    {
+        "_id": "143",
+        "name": "Flying Pub",
+        "name_de": "Flug-Taverne",
+        "name_fr": "Taverne volante",
+        "name_es": "Taberna volante",
+        "name_it": "Taverna volante",
+        "name_ja": ""
+    },
+    {
+        "_id": "144",
+        "name": "Redhelm",
+        "name_de": "Rothelm",
+        "name_fr": "Crâne-ard.",
+        "name_es": "Ámbar",
+        "name_it": "Sanguis",
+        "name_ja": ""
+    },
+    {
+        "_id": "145",
+        "name": "Snowbaron",
+        "name_de": "Schneesturm",
+        "name_fr": "Maître-nei.",
+        "name_es": "Alud",
+        "name_it": "Nix",
+        "name_ja": ""
+    },
+    {
+        "_id": "146",
+        "name": "Stonefist",
+        "name_de": "Steinfaust",
+        "name_fr": "Poing-fer",
+        "name_es": "Pétreo",
+        "name_it": "Marmor",
+        "name_ja": ""
+    },
+    {
+        "_id": "147",
+        "name": "Drilltusk",
+        "name_de": "Bohrhauer",
+        "name_fr": "Brise-roc",
+        "name_es": "Toro",
+        "name_it": "Vis",
+        "name_ja": ""
+    },
+    {
+        "_id": "148",
+        "name": "Dreadqueen",
+        "name_de": "Giftstachel",
+        "name_fr": "Reine-poi.",
+        "name_es": "Maldita",
+        "name_it": "Imperatrix",
+        "name_ja": ""
+    },
+    {
+        "_id": "149",
+        "name": "C.beard",
+        "name_de": "Kristallbart",
+        "name_fr": "Roi-cristal",
+        "name_es": "Vítreo",
+        "name_it": "Adamas",
+        "name_ja": ""
+    },
+    {
+        "_id": "150",
+        "name": "Silverwind",
+        "name_de": "Silberwind",
+        "name_fr": "Vent-acier",
+        "name_es": "Argénteo",
+        "name_it": "Ventus",
+        "name_ja": ""
+    },
+    {
+        "_id": "151",
+        "name": "Deadeye",
+        "name_de": "Narbig.",
+        "name_fr": "Œil-mort",
+        "name_es": "Cíclope",
+        "name_it": "Caecus",
+        "name_ja": ""
+    },
+    {
+        "_id": "152",
+        "name": "Dreadking",
+        "name_de": "Dunkelfeuer",
+        "name_fr": "Roi-enfer",
+        "name_es": "Maldito",
+        "name_it": "Rex",
+        "name_ja": ""
+    },
+    {
+        "_id": "153",
+        "name": "Thunderlord",
+        "name_de": "Donnrschlag",
+        "name_fr": "Feu-du-ciel",
+        "name_es": "Tormenta",
+        "name_it": "Fulgur",
+        "name_ja": ""
+    },
+    {
+        "_id": "154",
+        "name": "Grimclaw",
+        "name_de": "Düsterklaue",
+        "name_fr": "Griffe-som.",
+        "name_es": "Guadaña",
+        "name_it": "Furor",
+        "name_ja": ""
+    },
+    {
+        "_id": "155",
+        "name": "Hellblade",
+        "name_de": "Zornklinge",
+        "name_fr": "Lame-chaos",
+        "name_es": "Inferno",
+        "name_it": "Ignis",
+        "name_ja": ""
+    },
+    {
+        "_id": "156",
+        "name": "Nightcloak",
+        "name_de": "Mondschein",
+        "name_fr": "Lune-noire",
+        "name_es": "Nébula",
+        "name_it": "Occultus",
+        "name_ja": ""
+    },
+    {
+        "_id": "157",
+        "name": "Rustrazor",
+        "name_de": "Rostklauen",
+        "name_fr": "Brise-os",
+        "name_es": "Férreo",
+        "name_it": "Acutus",
+        "name_ja": ""
+    },
+    {
+        "_id": "158",
+        "name": "Soulseer",
+        "name_de": "Karmaseher",
+        "name_fr": "Perce-âme",
+        "name_es": "Tengen",
+        "name_it": "Arcanum",
+        "name_ja": ""
+    },
+    {
+        "_id": "159",
+        "name": "Boltreaver",
+        "name_de": "Blitzschlag",
+        "name_fr": "Prince-orage",
+        "name_es": "Fulmen",
+        "name_it": "Fulmen",
+        "name_ja": ""
+    },
+    {
+        "_id": "160",
+        "name": "Elderfrost",
+        "name_de": "Eiszapfen",
+        "name_fr": "Givre-ancien",
+        "name_es": "Glacial",
+        "name_it": "Glacialis",
+        "name_ja": ""
+    },
+    {
+        "_id": "161",
+        "name": "Bloodbath",
+        "name_de": "Blutbad",
+        "name_fr": "Bain-de-sang",
+        "name_es": "Sanguinario",
+        "name_it": "Cruor",
+        "name_ja": ""
+    },
+    {
+        "_id": "162",
+        "name": "Redhelm X",
+        "name_de": "Rothelm X",
+        "name_fr": "Crâne-ardent X",
+        "name_es": "Ámbar X",
+        "name_it": "Sanguis X",
+        "name_ja": ""
+    },
+    {
+        "_id": "163",
+        "name": "Snowbaron X",
+        "name_de": "Schneesturm X",
+        "name_fr": "Maître-neige X",
+        "name_es": "Alud X",
+        "name_it": "Nix X",
+        "name_ja": ""
+    },
+    {
+        "_id": "164",
+        "name": "Stonefist X",
+        "name_de": "Steinfaust X",
+        "name_fr": "Poing-fer X",
+        "name_es": "Pétreo X",
+        "name_it": "Marmor X",
+        "name_ja": ""
+    },
+    {
+        "_id": "165",
+        "name": "Drilltusk X",
+        "name_de": "Bohrhauer X",
+        "name_fr": "Brise-roc X",
+        "name_es": "Toro X",
+        "name_it": "Vis X",
+        "name_ja": ""
+    },
+    {
+        "_id": "166",
+        "name": "Dreadqueen X",
+        "name_de": "Giftstachel X",
+        "name_fr": "Reine-poison X",
+        "name_es": "Maldita X",
+        "name_it": "Imperatrix X",
+        "name_ja": ""
+    },
+    {
+        "_id": "167",
+        "name": "Crystalbeard X",
+        "name_de": "Kristallbart X",
+        "name_fr": "Roi-cristal X",
+        "name_es": "Vítreo X",
+        "name_it": "Adamas X",
+        "name_ja": ""
+    },
+    {
+        "_id": "168",
+        "name": "Silverwind X",
+        "name_de": "Silberwind X",
+        "name_fr": "Vent-acier X",
+        "name_es": "Argénteo X",
+        "name_it": "Ventus X",
+        "name_ja": ""
+    },
+    {
+        "_id": "169",
+        "name": "Deadeye X",
+        "name_de": "Narbiger X",
+        "name_fr": "Œil-mort X",
+        "name_es": "Cíclope X",
+        "name_it": "Caecus X",
+        "name_ja": ""
+    },
+    {
+        "_id": "170",
+        "name": "Dreadking X",
+        "name_de": "Dunkelfeuer X",
+        "name_fr": "Roi-enfer X",
+        "name_es": "Maldito X",
+        "name_it": "Rex X",
+        "name_ja": ""
+    },
+    {
+        "_id": "171",
+        "name": "Thunderlord X",
+        "name_de": "Donnerschlag X",
+        "name_fr": "Feu-du-ciel X",
+        "name_es": "Tormenta X",
+        "name_it": "Fulgur X",
+        "name_ja": ""
+    },
+    {
+        "_id": "172",
+        "name": "Grimclaw X",
+        "name_de": "Düsterklauen X",
+        "name_fr": "Griffe-sombre X",
+        "name_es": "Guadaña X",
+        "name_it": "Furor X",
+        "name_ja": ""
+    },
+    {
+        "_id": "173",
+        "name": "Hellblade X",
+        "name_de": "Zornklingen X",
+        "name_fr": "Lame-chaos X",
+        "name_es": "Inferno X",
+        "name_it": "Ignis X",
+        "name_ja": ""
+    },
+    {
+        "_id": "174",
+        "name": "Nightcloak X",
+        "name_de": "Mondschein X",
+        "name_fr": "Lune-noire X",
+        "name_es": "Nébula X",
+        "name_it": "Occultus X",
+        "name_ja": ""
+    },
+    {
+        "_id": "175",
+        "name": "Rustrazor X",
+        "name_de": "Rostklauen X",
+        "name_fr": "Brise-os X",
+        "name_es": "Férreo X",
+        "name_it": "Acutus X",
+        "name_ja": ""
+    },
+    {
+        "_id": "176",
+        "name": "Soulseer X",
+        "name_de": "Karmaseher X",
+        "name_fr": "Perce-âme X",
+        "name_es": "Tengen X",
+        "name_it": "Arcanum X",
+        "name_ja": ""
+    },
+    {
+        "_id": "177",
+        "name": "Boltreaver X",
+        "name_de": "Blitzschlag X",
+        "name_fr": "Prince-orage X",
+        "name_es": "Fulmen X",
+        "name_it": "Fulmen X",
+        "name_ja": ""
+    },
+    {
+        "_id": "178",
+        "name": "Elderfrost X",
+        "name_de": "Eiszapfen X",
+        "name_fr": "Givre-ancien X",
+        "name_es": "Glacial X",
+        "name_it": "Glacialis X",
+        "name_ja": ""
+    },
+    {
+        "_id": "179",
+        "name": "Bloodbath X",
+        "name_de": "Blutbad X",
+        "name_fr": "Bain-de-sang X",
+        "name_es": "Sanguinario X",
+        "name_it": "Cruor X",
+        "name_ja": ""
+    },
+    {
+        "_id": "180",
+        "name": "D. Fencing",
+        "name_de": "S. Fechten",
+        "name_fr": "Sournois",
+        "name_es": "Esgrima s.",
+        "name_it": "Schermidore",
+        "name_ja": ""
+    },
+    {
+        "_id": "181",
+        "name": "Edge Lore",
+        "name_de": "Schnittkunde",
+        "name_fr": "Inflexible",
+        "name_es": "Saber filo",
+        "name_it": "Affilama",
+        "name_ja": ""
+    },
+    {
+        "_id": "182",
+        "name": "PowerEater",
+        "name_de": "Großer Appetit",
+        "name_fr": "Ogre",
+        "name_es": "Comepoder",
+        "name_it": "Abbuffata",
+        "name_ja": ""
+    },
+    {
+        "_id": "183",
+        "name": "Mechanic",
+        "name_de": "Mechaniker",
+        "name_fr": "Ingénieur",
+        "name_es": "Mecánico",
+        "name_it": "Meccanico",
+        "name_ja": ""
+    },
+    {
+        "_id": "184",
+        "name": "Brawn",
+        "name_de": "Muskelkraft",
+        "name_fr": "Mastodonte",
+        "name_es": "Músculos",
+        "name_it": "Possanza",
+        "name_ja": ""
+    },
+    {
+        "_id": "185",
+        "name": "Prayer",
+        "name_de": "Gebet",
+        "name_fr": "Prière",
+        "name_es": "Oración",
+        "name_it": "Preghiera",
+        "name_ja": ""
+    },
+    {
+        "_id": "186",
+        "name": "Covert",
+        "name_de": "Tarnung",
+        "name_fr": "Incognito",
+        "name_es": "Encubierto",
+        "name_it": "Infiltrato",
+        "name_ja": ""
+    },
+    {
+        "_id": "187",
+        "name": "Edgemaster",
+        "name_de": "Schneidemeister",
+        "name_fr": "Shogun",
+        "name_es": "Punzante",
+        "name_it": "Maestro d'armi",
+        "name_ja": ""
+    },
+    {
+        "_id": "188",
+        "name": "SteadyHand",
+        "name_de": "Sichere Hand",
+        "name_fr": "Fermeté",
+        "name_es": "Pulso firme",
+        "name_it": "Manoferma",
+        "name_ja": ""
+    },
+    {
+        "_id": "189",
+        "name": "Status Res",
+        "name_de": "Statusabwehr",
+        "name_fr": "Pureté",
+        "name_es": "Bienestar",
+        "name_it": "Benessere",
+        "name_ja": ""
+    },
+    {
+        "_id": "190",
+        "name": "Fury",
+        "name_de": "Zorn",
+        "name_fr": "Furie",
+        "name_es": "Furia",
+        "name_it": "Furia",
+        "name_ja": ""
+    },
+    {
+        "_id": "191",
+        "name": "Nimbleness",
+        "name_de": "Gewandheit",
+        "name_fr": "Agilité",
+        "name_es": "Destreza",
+        "name_it": "Elusivo",
+        "name_ja": ""
+    },
+    {
+        "_id": "192",
+        "name": "Readiness",
+        "name_de": "Bereit",
+        "name_fr": "Iaido",
+        "name_es": "Iai-do",
+        "name_it": "Invasato",
+        "name_ja": ""
+    },
+    {
+        "_id": "193",
+        "name": "Resilience",
+        "name_de": "Widerstand",
+        "name_fr": "Prétorien",
+        "name_es": "Resiliencia",
+        "name_it": "Coriaceità",
+        "name_ja": ""
+    },
+    {
+        "_id": "194",
+        "name": "Brutality",
+        "name_de": "Rohheit",
+        "name_fr": "Brutalité",
+        "name_es": "Brutalidad",
+        "name_it": "Percossa",
+        "name_ja": ""
+    },
+    {
+        "_id": "195",
+        "name": "Stalwart",
+        "name_de": "Tapferkeit",
+        "name_fr": "Égide",
+        "name_es": "Lealtad",
+        "name_it": "Scudo",
+        "name_ja": ""
+    },
+    {
+        "_id": "196",
+        "name": "Prudence",
+        "name_de": "Vernunft",
+        "name_fr": "Prudence",
+        "name_es": "Prudencia",
+        "name_it": "Prudenza",
+        "name_ja": ""
+    },
+    {
+        "_id": "197",
+        "name": "Amplify",
+        "name_de": "Verstärken",
+        "name_fr": "Druide",
+        "name_es": "Amplificar",
+        "name_it": "Estensione",
+        "name_ja": ""
+    },
+    {
+        "_id": "198",
+        "name": "Hoarding",
+        "name_de": "Horten",
+        "name_fr": "Trésor",
+        "name_es": "Acaparar",
+        "name_it": "Millemalie",
+        "name_ja": ""
+    },
+    {
+        "_id": "199",
+        "name": "Avarice",
+        "name_de": "Habgier",
+        "name_fr": "Cupidité",
+        "name_es": "Codicia",
+        "name_it": "Avidità",
+        "name_ja": ""
+    },
+    {
+        "_id": "200",
+        "name": "Anti-Kushala",
+        "name_de": "Anti-Kushala",
+        "name_fr": "Anti-Kushala",
+        "name_es": "Antikushala",
+        "name_it": "Anti-Kushala",
+        "name_ja": ""
+    },
+    {
+        "_id": "201",
+        "name": "Anti-Chameleos",
+        "name_de": "Anti-Chameleos",
+        "name_fr": "Anti-Chameleos",
+        "name_es": "Antichameleos",
+        "name_it": "Anti-Chameleos",
+        "name_ja": ""
+    },
+    {
+        "_id": "202",
+        "name": "Anti-Teostra",
+        "name_de": "Anti-Teostra",
+        "name_fr": "Anti-Teostra",
+        "name_es": "Antiteostra",
+        "name_it": "Anti-Teostra",
+        "name_ja": ""
+    },
+    {
+        "_id": "203",
+        "name": "Torso Up",
+        "name_de": "Torso+",
+        "name_fr": "Torse +",
+        "name_es": "Torso+",
+        "name_it": "Torso+",
+        "name_ja": ""
+    },
+    {
+        "_id": "204",
+        "name": "Secret Arts",
+        "name_de": "Geheimwissen",
+        "name_fr": "Arts secrets",
+        "name_es": "Técnicas secretas",
+        "name_it": "Arti segrete",
+        "name_ja": ""
+    },
+    {
+        "_id": "205",
+        "name": "Talisman Boost",
+        "name_de": "Mächtiger Talisman",
+        "name_fr": "Bonus de talisman",
+        "name_es": "Mejora de talismán",
+        "name_it": "Potenziamento talismani",
+        "name_ja": ""
+    }
+]

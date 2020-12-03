@@ -58,6 +58,7 @@
         <script data-tag="BaZi" src="ying/NongLi.js"></script>
         <script data-tag="Kauntodaun" src="ying/Kauntodaun.js"></script>
         <script data-tag="Xenoblade" src="ying/Xenoblade.js"></script>
+        <script data-tag="ACNH" src="ying/ACNH.js"></script>
     </head>
     <body>
         <input type="button" class="switch" id="switch" value="switch">
@@ -71,6 +72,7 @@
                         <input class="ib" type="button" value=" "/>
                     </form>
                 </div>
+                <!--<a href="ying/Example.html">Example</a>-->
                 <div class="con">
                     <table class="tc"></table>
                 </div>
@@ -167,13 +169,13 @@
     let AD = null;
     $.get(CS+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
-    
+
     $( _ => {$("#astro_btn").click( _ => {$('.tc').empty(),AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))})});
 </script>
 
 <script data-tag="ZhouYi">
     let ZY = null;
-    $.get(CS+"ying/ZhouYi.json", res => ZY = res);
+    $.get(CS+"ding/ZhouYi.json", res => ZY = res);
 </script>
 
 <script data-tag="Gol">

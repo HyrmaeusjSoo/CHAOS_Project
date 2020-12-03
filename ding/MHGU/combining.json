@@ -1,0 +1,1649 @@
+[
+    {
+        "_id": "1",
+        "created_item_id": "9",
+        "item_1_id": "272",
+        "item_2_id": "292",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "2",
+        "created_item_id": "10",
+        "item_1_id": "9",
+        "item_2_id": "271",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "3",
+        "created_item_id": "1717",
+        "item_1_id": "1716",
+        "item_2_id": "271",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "4",
+        "created_item_id": "11",
+        "item_1_id": "384",
+        "item_2_id": "292",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "5",
+        "created_item_id": "12",
+        "item_1_id": "11",
+        "item_2_id": "271",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "6",
+        "created_item_id": "13",
+        "item_1_id": "292",
+        "item_2_id": "273",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "7",
+        "created_item_id": "27",
+        "item_1_id": "385",
+        "item_2_id": "279",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "8",
+        "created_item_id": "28",
+        "item_1_id": "298",
+        "item_2_id": "12",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "9",
+        "created_item_id": "29",
+        "item_1_id": "14",
+        "item_2_id": "526",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "55"
+    },
+    {
+        "_id": "10",
+        "created_item_id": "31",
+        "item_1_id": "36",
+        "item_2_id": "433",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "11",
+        "created_item_id": "34",
+        "item_1_id": "385",
+        "item_2_id": "271",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "12",
+        "created_item_id": "14",
+        "item_1_id": "298",
+        "item_2_id": "34",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "13",
+        "created_item_id": "25",
+        "item_1_id": "367",
+        "item_2_id": "34",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "14",
+        "created_item_id": "15",
+        "item_1_id": "34",
+        "item_2_id": "49",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "15",
+        "created_item_id": "16",
+        "item_1_id": "471",
+        "item_2_id": "50",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "16",
+        "created_item_id": "30",
+        "item_1_id": "293",
+        "item_2_id": "271",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "17",
+        "created_item_id": "33",
+        "item_1_id": "473",
+        "item_2_id": "34",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "18",
+        "created_item_id": "17",
+        "item_1_id": "34",
+        "item_2_id": "303",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "19",
+        "created_item_id": "18",
+        "item_1_id": "472",
+        "item_2_id": "17",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "55"
+    },
+    {
+        "_id": "20",
+        "created_item_id": "19",
+        "item_1_id": "14",
+        "item_2_id": "303",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "21",
+        "created_item_id": "20",
+        "item_1_id": "34",
+        "item_2_id": "304",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "22",
+        "created_item_id": "21",
+        "item_1_id": "472",
+        "item_2_id": "20",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "55"
+    },
+    {
+        "_id": "23",
+        "created_item_id": "22",
+        "item_1_id": "14",
+        "item_2_id": "304",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "24",
+        "created_item_id": "24",
+        "item_1_id": "280",
+        "item_2_id": "385",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "25",
+        "created_item_id": "53",
+        "item_1_id": "50",
+        "item_2_id": "280",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "26",
+        "created_item_id": "23",
+        "item_1_id": "322",
+        "item_2_id": "385",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "27",
+        "created_item_id": "52",
+        "item_1_id": "50",
+        "item_2_id": "322",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "28",
+        "created_item_id": "282",
+        "item_1_id": "2054",
+        "item_2_id": "280",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "29",
+        "created_item_id": "283",
+        "item_1_id": "2060",
+        "item_2_id": "322",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "30",
+        "created_item_id": "46",
+        "item_1_id": "45",
+        "item_2_id": "295",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "31",
+        "created_item_id": "47",
+        "item_1_id": "45",
+        "item_2_id": "294",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "32",
+        "created_item_id": "48",
+        "item_1_id": "45",
+        "item_2_id": "276",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "33",
+        "created_item_id": "69",
+        "item_1_id": "317",
+        "item_2_id": "277",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "34",
+        "created_item_id": "74",
+        "item_1_id": "69",
+        "item_2_id": "385",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "35",
+        "created_item_id": "75",
+        "item_1_id": "69",
+        "item_2_id": "275",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "36",
+        "created_item_id": "76",
+        "item_1_id": "69",
+        "item_2_id": "295",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "37",
+        "created_item_id": "71",
+        "item_1_id": "69",
+        "item_2_id": "386",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "38",
+        "created_item_id": "78",
+        "item_1_id": "69",
+        "item_2_id": "79",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "39",
+        "created_item_id": "70",
+        "item_1_id": "302",
+        "item_2_id": "277",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "40",
+        "created_item_id": "77",
+        "item_1_id": "69",
+        "item_2_id": "297",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "41",
+        "created_item_id": "35",
+        "item_1_id": "274",
+        "item_2_id": "293",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "42",
+        "created_item_id": "88",
+        "item_1_id": "274",
+        "item_2_id": "86",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "43",
+        "created_item_id": "89",
+        "item_1_id": "35",
+        "item_2_id": "87",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "44",
+        "created_item_id": "90",
+        "item_1_id": "368",
+        "item_2_id": "89",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "55"
+    },
+    {
+        "_id": "45",
+        "created_item_id": "91",
+        "item_1_id": "88",
+        "item_2_id": "542",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "55"
+    },
+    {
+        "_id": "46",
+        "created_item_id": "92",
+        "item_1_id": "370",
+        "item_2_id": "91",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "55"
+    },
+    {
+        "_id": "47",
+        "created_item_id": "72",
+        "item_1_id": "35",
+        "item_2_id": "450",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "48",
+        "created_item_id": "82",
+        "item_1_id": "275",
+        "item_2_id": "81",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "49",
+        "created_item_id": "83",
+        "item_1_id": "80",
+        "item_2_id": "82",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "50",
+        "created_item_id": "84",
+        "item_1_id": "80",
+        "item_2_id": "387",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "51",
+        "created_item_id": "264",
+        "item_1_id": "260",
+        "item_2_id": "389",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "52",
+        "created_item_id": "262",
+        "item_1_id": "260",
+        "item_2_id": "383",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "95"
+    },
+    {
+        "_id": "53",
+        "created_item_id": "263",
+        "item_1_id": "260",
+        "item_2_id": "388",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "54",
+        "created_item_id": "57",
+        "item_1_id": "410",
+        "item_2_id": "317",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "55",
+        "created_item_id": "58",
+        "item_1_id": "410",
+        "item_2_id": "318",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "56",
+        "created_item_id": "59",
+        "item_1_id": "410",
+        "item_2_id": "320",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "57",
+        "created_item_id": "60",
+        "item_1_id": "275",
+        "item_2_id": "410",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "58",
+        "created_item_id": "61",
+        "item_1_id": "275",
+        "item_2_id": "407",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "59",
+        "created_item_id": "62",
+        "item_1_id": "275",
+        "item_2_id": "408",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "60",
+        "created_item_id": "36",
+        "item_1_id": "384",
+        "item_2_id": "432",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "61",
+        "created_item_id": "266",
+        "item_1_id": "36",
+        "item_2_id": "265",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "62",
+        "created_item_id": "267",
+        "item_1_id": "13",
+        "item_2_id": "265",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "63",
+        "created_item_id": "268",
+        "item_1_id": "18",
+        "item_2_id": "408",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "55"
+    },
+    {
+        "_id": "64",
+        "created_item_id": "269",
+        "item_1_id": "21",
+        "item_2_id": "408",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "55"
+    },
+    {
+        "_id": "65",
+        "created_item_id": "65",
+        "item_1_id": "64",
+        "item_2_id": "295",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "66",
+        "created_item_id": "66",
+        "item_1_id": "64",
+        "item_2_id": "276",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "67",
+        "created_item_id": "67",
+        "item_1_id": "64",
+        "item_2_id": "294",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "68",
+        "created_item_id": "63",
+        "item_1_id": "56",
+        "item_2_id": "407",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "69",
+        "created_item_id": "41",
+        "item_1_id": "40",
+        "item_2_id": "1515",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "70",
+        "created_item_id": "43",
+        "item_1_id": "42",
+        "item_2_id": "1515",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "71",
+        "created_item_id": "101",
+        "item_1_id": "308",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "72",
+        "created_item_id": "102",
+        "item_1_id": "367",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "73",
+        "created_item_id": "103",
+        "item_1_id": "309",
+        "item_2_id": "98",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "90"
+    },
+    {
+        "_id": "74",
+        "created_item_id": "104",
+        "item_1_id": "571",
+        "item_2_id": "99",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "75"
+    },
+    {
+        "_id": "75",
+        "created_item_id": "105",
+        "item_1_id": "365",
+        "item_2_id": "99",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "75"
+    },
+    {
+        "_id": "76",
+        "created_item_id": "106",
+        "item_1_id": "307",
+        "item_2_id": "98",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "90"
+    },
+    {
+        "_id": "77",
+        "created_item_id": "107",
+        "item_1_id": "432",
+        "item_2_id": "98",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "75"
+    },
+    {
+        "_id": "78",
+        "created_item_id": "108",
+        "item_1_id": "432",
+        "item_2_id": "99",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "75"
+    },
+    {
+        "_id": "79",
+        "created_item_id": "109",
+        "item_1_id": "293",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "80",
+        "created_item_id": "110",
+        "item_1_id": "369",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "81",
+        "created_item_id": "111",
+        "item_1_id": "370",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "82",
+        "created_item_id": "112",
+        "item_1_id": "310",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "83",
+        "created_item_id": "113",
+        "item_1_id": "433",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "84",
+        "created_item_id": "114",
+        "item_1_id": "368",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "85",
+        "created_item_id": "115",
+        "item_1_id": "274",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "86",
+        "created_item_id": "116",
+        "item_1_id": "362",
+        "item_2_id": "98",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "75"
+    },
+    {
+        "_id": "87",
+        "created_item_id": "118",
+        "item_1_id": "281",
+        "item_2_id": "98",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "75"
+    },
+    {
+        "_id": "88",
+        "created_item_id": "117",
+        "item_1_id": "386",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "89",
+        "created_item_id": "119",
+        "item_1_id": "306",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "90",
+        "created_item_id": "128",
+        "item_1_id": "272",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "91",
+        "created_item_id": "129",
+        "item_1_id": "9",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "92",
+        "created_item_id": "120",
+        "item_1_id": "295",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "93",
+        "created_item_id": "121",
+        "item_1_id": "616",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "94",
+        "created_item_id": "122",
+        "item_1_id": "294",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "95",
+        "created_item_id": "123",
+        "item_1_id": "603",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "96",
+        "created_item_id": "124",
+        "item_1_id": "276",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "97",
+        "created_item_id": "125",
+        "item_1_id": "364",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "98",
+        "created_item_id": "130",
+        "item_1_id": "302",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "99",
+        "created_item_id": "126",
+        "item_1_id": "296",
+        "item_2_id": "98",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "100",
+        "created_item_id": "127",
+        "item_1_id": "375",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "101",
+        "created_item_id": "207",
+        "item_1_id": "99",
+        "item_2_id": "56",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "102",
+        "created_item_id": "213",
+        "item_1_id": "295",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "103",
+        "created_item_id": "214",
+        "item_1_id": "294",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "104",
+        "created_item_id": "215",
+        "item_1_id": "276",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "105",
+        "created_item_id": "208",
+        "item_1_id": "274",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "106",
+        "created_item_id": "209",
+        "item_1_id": "293",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "107",
+        "created_item_id": "212",
+        "item_1_id": "362",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "108",
+        "created_item_id": "218",
+        "item_1_id": "302",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "109",
+        "created_item_id": "216",
+        "item_1_id": "296",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "110",
+        "created_item_id": "217",
+        "item_1_id": "370",
+        "item_2_id": "207",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "90"
+    },
+    {
+        "_id": "111",
+        "created_item_id": "210",
+        "item_1_id": "385",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "112",
+        "created_item_id": "211",
+        "item_1_id": "279",
+        "item_2_id": "207",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "113",
+        "created_item_id": "229",
+        "item_1_id": "221",
+        "item_2_id": "219",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "114",
+        "created_item_id": "230",
+        "item_1_id": "222",
+        "item_2_id": "219",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "115",
+        "created_item_id": "231",
+        "item_1_id": "223",
+        "item_2_id": "219",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "116",
+        "created_item_id": "232",
+        "item_1_id": "221",
+        "item_2_id": "220",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "117",
+        "created_item_id": "233",
+        "item_1_id": "222",
+        "item_2_id": "220",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "118",
+        "created_item_id": "234",
+        "item_1_id": "223",
+        "item_2_id": "220",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "119",
+        "created_item_id": "235",
+        "item_1_id": "224",
+        "item_2_id": "219",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "120",
+        "created_item_id": "236",
+        "item_1_id": "225",
+        "item_2_id": "219",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "121",
+        "created_item_id": "237",
+        "item_1_id": "226",
+        "item_2_id": "219",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "122",
+        "created_item_id": "238",
+        "item_1_id": "227",
+        "item_2_id": "219",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "123",
+        "created_item_id": "239",
+        "item_1_id": "228",
+        "item_2_id": "219",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "124",
+        "created_item_id": "240",
+        "item_1_id": "224",
+        "item_2_id": "51",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "125",
+        "created_item_id": "241",
+        "item_1_id": "225",
+        "item_2_id": "51",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "126",
+        "created_item_id": "242",
+        "item_1_id": "226",
+        "item_2_id": "51",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "127",
+        "created_item_id": "243",
+        "item_1_id": "227",
+        "item_2_id": "51",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "128",
+        "created_item_id": "244",
+        "item_1_id": "228",
+        "item_2_id": "51",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "129",
+        "created_item_id": "37",
+        "item_1_id": "276",
+        "item_2_id": "294",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "65"
+    },
+    {
+        "_id": "130",
+        "created_item_id": "68",
+        "item_1_id": "37",
+        "item_2_id": "64",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "131",
+        "created_item_id": "73",
+        "item_1_id": "37",
+        "item_2_id": "69",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "75"
+    },
+    {
+        "_id": "132",
+        "created_item_id": "131",
+        "item_1_id": "37",
+        "item_2_id": "99",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "90"
+    },
+    {
+        "_id": "133",
+        "created_item_id": "346",
+        "item_1_id": "345",
+        "item_2_id": "320",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "134",
+        "created_item_id": "346",
+        "item_1_id": "345",
+        "item_2_id": "392",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "135",
+        "created_item_id": "347",
+        "item_1_id": "345",
+        "item_2_id": "325",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "136",
+        "created_item_id": "347",
+        "item_1_id": "345",
+        "item_2_id": "393",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "137",
+        "created_item_id": "348",
+        "item_1_id": "345",
+        "item_2_id": "329",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "138",
+        "created_item_id": "348",
+        "item_1_id": "345",
+        "item_2_id": "395",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "139",
+        "created_item_id": "349",
+        "item_1_id": "345",
+        "item_2_id": "334",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "140",
+        "created_item_id": "349",
+        "item_1_id": "345",
+        "item_2_id": "396",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "141",
+        "created_item_id": "318",
+        "item_1_id": "449",
+        "item_2_id": "318",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "142",
+        "created_item_id": "319",
+        "item_1_id": "449",
+        "item_2_id": "319",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "143",
+        "created_item_id": "320",
+        "item_1_id": "449",
+        "item_2_id": "320",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "144",
+        "created_item_id": "325",
+        "item_1_id": "449",
+        "item_2_id": "325",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "145",
+        "created_item_id": "329",
+        "item_1_id": "449",
+        "item_2_id": "329",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "146",
+        "created_item_id": "334",
+        "item_1_id": "449",
+        "item_2_id": "334",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "147",
+        "created_item_id": "326",
+        "item_1_id": "449",
+        "item_2_id": "326",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "148",
+        "created_item_id": "335",
+        "item_1_id": "449",
+        "item_2_id": "335",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "149",
+        "created_item_id": "321",
+        "item_1_id": "449",
+        "item_2_id": "321",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "150",
+        "created_item_id": "323",
+        "item_1_id": "449",
+        "item_2_id": "323",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "151",
+        "created_item_id": "324",
+        "item_1_id": "449",
+        "item_2_id": "324",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "152",
+        "created_item_id": "332",
+        "item_1_id": "449",
+        "item_2_id": "332",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "153",
+        "created_item_id": "413",
+        "item_1_id": "449",
+        "item_2_id": "413",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "154",
+        "created_item_id": "414",
+        "item_1_id": "449",
+        "item_2_id": "414",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "155",
+        "created_item_id": "415",
+        "item_1_id": "449",
+        "item_2_id": "415",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "156",
+        "created_item_id": "395",
+        "item_1_id": "449",
+        "item_2_id": "395",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "157",
+        "created_item_id": "392",
+        "item_1_id": "449",
+        "item_2_id": "392",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "158",
+        "created_item_id": "393",
+        "item_1_id": "449",
+        "item_2_id": "393",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "159",
+        "created_item_id": "391",
+        "item_1_id": "449",
+        "item_2_id": "391",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "160",
+        "created_item_id": "396",
+        "item_1_id": "449",
+        "item_2_id": "396",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "161",
+        "created_item_id": "427",
+        "item_1_id": "449",
+        "item_2_id": "427",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "162",
+        "created_item_id": "247",
+        "item_1_id": "250",
+        "item_2_id": "247",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "100"
+    },
+    {
+        "_id": "163",
+        "created_item_id": "248",
+        "item_1_id": "250",
+        "item_2_id": "248",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "100"
+    },
+    {
+        "_id": "164",
+        "created_item_id": "249",
+        "item_1_id": "250",
+        "item_2_id": "249",
+        "amount_made_min": "4",
+        "amount_made_max": "4",
+        "percentage": "100"
+    },
+    {
+        "_id": "165",
+        "created_item_id": "252",
+        "item_1_id": "250",
+        "item_2_id": "252",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "100"
+    },
+    {
+        "_id": "166",
+        "created_item_id": "253",
+        "item_1_id": "250",
+        "item_2_id": "253",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "167",
+        "created_item_id": "254",
+        "item_1_id": "250",
+        "item_2_id": "254",
+        "amount_made_min": "3",
+        "amount_made_max": "3",
+        "percentage": "100"
+    },
+    {
+        "_id": "168",
+        "created_item_id": "350",
+        "item_1_id": "345",
+        "item_2_id": "330",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "169",
+        "created_item_id": "350",
+        "item_1_id": "345",
+        "item_2_id": "401",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "170",
+        "created_item_id": "351",
+        "item_1_id": "345",
+        "item_2_id": "331",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "171",
+        "created_item_id": "351",
+        "item_1_id": "345",
+        "item_2_id": "402",
+        "amount_made_min": "1",
+        "amount_made_max": "1",
+        "percentage": "95"
+    },
+    {
+        "_id": "172",
+        "created_item_id": "330",
+        "item_1_id": "449",
+        "item_2_id": "330",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "173",
+        "created_item_id": "331",
+        "item_1_id": "449",
+        "item_2_id": "331",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "174",
+        "created_item_id": "327",
+        "item_1_id": "449",
+        "item_2_id": "327",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "175",
+        "created_item_id": "333",
+        "item_1_id": "449",
+        "item_2_id": "333",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "176",
+        "created_item_id": "401",
+        "item_1_id": "449",
+        "item_2_id": "401",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "177",
+        "created_item_id": "402",
+        "item_1_id": "449",
+        "item_2_id": "402",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "178",
+        "created_item_id": "428",
+        "item_1_id": "449",
+        "item_2_id": "428",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "179",
+        "created_item_id": "338",
+        "item_1_id": "449",
+        "item_2_id": "338",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "180",
+        "created_item_id": "390",
+        "item_1_id": "449",
+        "item_2_id": "390",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "181",
+        "created_item_id": "412",
+        "item_1_id": "449",
+        "item_2_id": "412",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "182",
+        "created_item_id": "290",
+        "item_1_id": "449",
+        "item_2_id": "290",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    },
+    {
+        "_id": "183",
+        "created_item_id": "291",
+        "item_1_id": "449",
+        "item_2_id": "291",
+        "amount_made_min": "2",
+        "amount_made_max": "2",
+        "percentage": "100"
+    }
+]
