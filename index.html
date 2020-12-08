@@ -144,6 +144,7 @@
                 let totalG = 0;
                 let typeG = {'1': 0, '2': 0, '3': 0, '5': 0};
                 let regionG = {'1': 0, '2': 0, '3': 0, '4': 0, '5': 0};
+                let yearG = {'2018': 0, '2019':0, '2020':0};
 
                 const adt = (o, t) => ((parseFloat(o) || 0) + parseFloat(t)).toFixed(2);
 
@@ -151,10 +152,12 @@
                     totalG = adt(x.Total, totalG);
                     typeG[x.Type] = adt(x.Total, typeG[x.Type]);
                     regionG[x.Region] = adt(x.Total, regionG[x.Region]);
+                    yearG[x.TransactionDate.substr(0,4)] = adt(x.Total, yearG[x.TransactionDate.substr(0,4)]);
                 });
 
                 console.log('Type: ' + typeG['1'] + ', ' + typeG['2'] + ', ' + typeG['3'] + ', ' + typeG['5']);
                 console.log('Region: ' + regionG['1'] + ', ' + regionG['2'] + ', ' + regionG['3'] + ', ' + regionG['4'] + ', ' + regionG['5']);
+                console.log('Year:' +yearG['2018'] +', ' + yearG['2019'] +', '+ yearG['2020']);
                 console.log('Total: ' + totalG);
             });
         } else {
