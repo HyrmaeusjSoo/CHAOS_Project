@@ -126,6 +126,9 @@
         });
     });
 
+    //localStorage.setItem(TCode16(location.hostname), ERConvert.TCode(Date.now().toString(16)));
+    //parseInt(ERConvert.FCode(localStorage.getItem(TCode16(location.hostname))), 16);
+
     document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
     document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
 
