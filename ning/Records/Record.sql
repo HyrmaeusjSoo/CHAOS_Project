@@ -268,6 +268,15 @@ GO
 INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1065', N'3', N'Overcooked2：美食家版', N'1', N'155.25', NULL, N'155.25', N'2020-10-31 21:24:49', N'2,450円-42金币，含税219円')
 GO
 
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1066', N'3', N'What Remains of Edith Finch', N'2', N'0', NULL, N'0', N'2020-12-31 19:21:33', N'金币兑换，时价$5.99、￥38.66')
+GO
+
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1067', N'3', N'Need for Speed™ Hot Pursuit Remastered', N'2', N'129.03', NULL, N'129.03', N'2020-12-31 22:05:11', N'时价$19.99')
+GO
+
+INSERT INTO [dbo].[Record] ([Id], [Type], [Name], [Region], [Price], [Freight], [Total], [TransactionDate], [Remark]) VALUES (N'1068', N'3', N'MudRunner - American Wilds', N'2', N'48.34', NULL, N'48.34', N'2020-12-31 22:11:52', N'总价$7.49，金币兑换$4.26，支付$3.23')
+GO
+
 SET IDENTITY_INSERT [dbo].[Record] OFF
 GO
 
