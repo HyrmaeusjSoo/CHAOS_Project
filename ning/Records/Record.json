@@ -703,6 +703,17 @@
       "Total": "48.34",
       "TransactionDate": "2020-12-31 22:11:52",
       "Remark": "总价$7.49，金币兑换$4.26，支付$3.23"
+    },
+    {
+      "Id": "1069",
+      "Type": "3",
+      "Name": "MONSTER HUNTER RISE 豪華版",
+      "Region": "4",
+      "Price": "456.16",
+      "Freight": "",
+      "Total": "456.16",
+      "TransactionDate": "2020-01-11 17:31:00",
+      "Remark": "时价HKD543.00"
     }
   ]
 }
