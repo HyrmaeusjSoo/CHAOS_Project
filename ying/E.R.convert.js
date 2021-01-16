@@ -9,15 +9,15 @@
 // +---------------------------------------------------------------------------------------+
 //const _Simulator = "63067#1.2.3.";
 
-const ERConvert = ((b = 16) => {
+const ERCode = ((b = 16) => {
     const f = b>10 ? b-10 : 0;
     const rc = _ => String.fromCharCode(96 + f + Math.ceil(Math.random() * (26 - f)));
     const TCode = s => [...s].map((x, y) => (y>0 && rc() || '') + x.charCodeAt().toString(b)).join('');
-    const FCode = s => [...s].map((x, y)=> (x.charCodeAt() > 96 + f) ? ' ' : s[y]).join('').split(' ').map(e => String.fromCharCode(parseInt(e, b))).join('');
-    const SCode = s => [...s].map((x, y)=> (x.charCodeAt() > 96 + f) ? ' ' : s[y]);
+    const FCode = s => [...s].map((x, y) => (x.charCodeAt() > 96 + f) ? ' ' : s[y]).join('').split(' ').map(e => String.fromCharCode(parseInt(e, b))).join('');
+    const SCode = s => [...s].map((x, y) => (x.charCodeAt() > 96 + f) ? ' ' : s[y]);
     const SFCode = s => SCode(s).join('').split(' ').map(e => String.fromCharCode(parseInt(e, b))).join('');
 
-    return {rc, TCode, FCode, SCode};
+    return {rc, TCode, FCode, SCode, SFCode};
 })();
 
 const TCode16 = s => [...s].map((e, i) => (i>0 && ' ' || '') + e.charCodeAt().toString(16)).join('');

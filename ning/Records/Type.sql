@@ -1,56 +1,23 @@
 
--- ----------------------------
--- Table structure for Type
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[Type]') AND type IN ('U'))
-	DROP TABLE [dbo].[Type]
-GO
-
-CREATE TABLE [dbo].[Type] (
-  [Id] int  NOT NULL,
-  [Name] nvarchar(50) COLLATE Chinese_PRC_CI_AS  NOT NULL
-)
-GO
-
-ALTER TABLE [dbo].[Type] SET (LOCK_ESCALATION = TABLE)
-GO
-
-EXEC sp_addextendedproperty
-'MS_Description', N'编号',
-'SCHEMA', N'dbo',
-'TABLE', N'Type',
-'COLUMN', N'Id'
-GO
-
-EXEC sp_addextendedproperty
-'MS_Description', N'Item名称',
-'SCHEMA', N'dbo',
-'TABLE', N'Type',
-'COLUMN', N'Name'
-GO
-
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Records of Type
+-- Table structure for type
 -- ----------------------------
-INSERT INTO [dbo].[Type] ([Id], [Name]) VALUES (N'1', N'配置')
-GO
-
-INSERT INTO [dbo].[Type] ([Id], [Name]) VALUES (N'2', N'卡带')
-GO
-
-INSERT INTO [dbo].[Type] ([Id], [Name]) VALUES (N'3', N'数字')
-GO
-
-INSERT INTO [dbo].[Type] ([Id], [Name]) VALUES (N'5', N'其他')
-GO
-
+DROP TABLE IF EXISTS `type`;
+CREATE TABLE `type`  (
+  `Id` int(0) NOT NULL COMMENT '编号',
+  `Name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '类型名称',
+  PRIMARY KEY (`Id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Primary Key structure for table Type
+-- Records of type
 -- ----------------------------
-ALTER TABLE [dbo].[Type] ADD CONSTRAINT [PK__Type__3214EC07DF4D28E8] PRIMARY KEY CLUSTERED ([Id])
-WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
-ON [PRIMARY]
-GO
+INSERT INTO `type` VALUES (1, '配置');
+INSERT INTO `type` VALUES (2, '卡带');
+INSERT INTO `type` VALUES (3, '数字');
+INSERT INTO `type` VALUES (5, '其他');
 
+SET FOREIGN_KEY_CHECKS = 1;

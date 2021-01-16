@@ -6,8 +6,8 @@
             {"clr": "Wh", "qty": 11, "price": 40, "produce": 40}, 
             {"clr": "Og", "qty": 17, "price": 80, "produce": 80}, 
             {"clr": "Pk", "qty": 9, "price": 80, "produce": 80}, 
-            {"clr": "Vt", "qty": 22, "price": 240, "produce": 240}, 
-            {"clr": "Bk", "qty": 3, "price": 240, "produce": 240}, 
+            {"clr": "Vt", "qty": 23, "price": 240, "produce": 240}, 
+            {"clr": "Bk", "qty": 4, "price": 240, "produce": 240}, 
             {"clr": "Bu", "qty": 0, "price": 1000, "produce": 1000}, 
             {"clr": "Gd", "qty": 0, "price": 1000, "produce": 1000}
         ],
@@ -33,7 +33,7 @@
             {"clr": "Wh", "qty": 6, "price": 40, "produce": 40}, 
             {"clr": "Og", "qty": 11, "price": 80, "produce": 80}, 
             {"clr": "Bu", "qty": 7, "price": 80, "produce": 80}, 
-            {"clr": "Vt", "qty": 3, "price": 240, "produce": 240}
+            {"clr": "Vt", "qty": 4, "price": 240, "produce": 240}
         ],
         "hyacinth": [
             {"clr": "Rd", "qty": 12, "price": 40, "produce": 40}, 
@@ -42,7 +42,7 @@
             {"clr": "Og", "qty": 11, "price": 80, "produce": 80}, 
             {"clr": "Pk", "qty": 11, "price": 80, "produce": 80}, 
             {"clr": "Bu", "qty": 9, "price": 80, "produce": 80}, 
-            {"clr": "Vt", "qty": 4, "price": 240, "produce": 240}
+            {"clr": "Vt", "qty": 5, "price": 240, "produce": 240}
         ],
         "tulip": [
             {"clr": "Rd", "qty": 5, "price": 40, "produce": 40}, 
@@ -67,7 +67,7 @@
             {"clr": "Og", "qty": 14, "price": 40, "produce": 40}, 
             {"clr": "Pk", "qty": 10, "price": 80, "produce": 80}, 
             {"clr": "Bu", "qty": 13, "price": 80, "produce": 80}, 
-            {"clr": "Vt", "qty": 4, "price": 240, "produce": 240}
+            {"clr": "Vt", "qty": 5, "price": 240, "produce": 240}
         ],
         "lilyofthevalley": [
             {"clr": "Wh", "qty": 0, "price": 222, "produce":222}

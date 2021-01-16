@@ -126,8 +126,8 @@
         });
     });
 
-    //localStorage.setItem(TCode16(location.hostname), ERConvert.TCode(Date.now().toString(16)));
-    //parseInt(ERConvert.FCode(localStorage.getItem(TCode16(location.hostname))), 16);
+    //localStorage.setItem(TCode16(location.hostname), ERCode.TCode(Date.now().toString(16)));
+    //parseInt(ERCode.FCode(localStorage.getItem(TCode16(location.hostname))), 16);
 
     document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
     document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
@@ -138,7 +138,7 @@
 <script data-tag="NSGames">
     let NSGames = null;
     const record = (_woo = prompt()) => {
-        if (_woo == ERConvert.FCode('72q65i63k6fh72t64') && _woo == FCode16("72 65 63 6f 72 64")) {
+        if (_woo == ERCode.FCode('72q65i63k6fh72t64') && _woo == FCode16("72 65 63 6f 72 64")) {
             const record_url = "ning/Records/Record.json";
             $.get(CS+record_url, res => { 
                 let rs = res.RECORDS;//JSON.parse(res).RECORDS;
@@ -300,7 +300,7 @@
     /*
     let NSGames = null;
     const record = _woo => {
-        const tw = ERConvert.FCode('72q65i63k6fh72t64');//FCode16("72 65 63 6f 72 64");
+        const tw = ERCode.FCode('72q65i63k6fh72t64');//FCode16("72 65 63 6f 72 64");
         if (_woo == tw || prompt() == tw) {
             const record_url = "ning/Records/Record.json";
             $.get(CS+record_url, res => { 

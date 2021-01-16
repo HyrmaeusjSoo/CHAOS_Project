@@ -1,72 +1,24 @@
 
--- ----------------------------
--- Table structure for Region
--- ----------------------------
-IF EXISTS (SELECT * FROM sys.all_objects WHERE object_id = OBJECT_ID(N'[dbo].[Region]') AND type IN ('U'))
-	DROP TABLE [dbo].[Region]
-GO
-
-CREATE TABLE [dbo].[Region] (
-  [Id] int  IDENTITY(1,1) NOT NULL,
-  [Name] nvarchar(50) COLLATE Chinese_PRC_CI_AS  NOT NULL
-)
-GO
-
-ALTER TABLE [dbo].[Region] SET (LOCK_ESCALATION = TABLE)
-GO
-
-EXEC sp_addextendedproperty
-'MS_Description', N'编号',
-'SCHEMA', N'dbo',
-'TABLE', N'Region',
-'COLUMN', N'Id'
-GO
-
-EXEC sp_addextendedproperty
-'MS_Description', N'服务器区名',
-'SCHEMA', N'dbo',
-'TABLE', N'Region',
-'COLUMN', N'Name'
-GO
-
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Records of Region
+-- Table structure for region
 -- ----------------------------
-SET IDENTITY_INSERT [dbo].[Region] ON
-GO
-
-INSERT INTO [dbo].[Region] ([Id], [Name]) VALUES (N'1', N'11区')
-GO
-
-INSERT INTO [dbo].[Region] ([Id], [Name]) VALUES (N'2', N'美服')
-GO
-
-INSERT INTO [dbo].[Region] ([Id], [Name]) VALUES (N'3', N'墨西哥服')
-GO
-
-INSERT INTO [dbo].[Region] ([Id], [Name]) VALUES (N'4', N'港服')
-GO
-
-INSERT INTO [dbo].[Region] ([Id], [Name]) VALUES (N'5', N'欧服')
-GO
-
-SET IDENTITY_INSERT [dbo].[Region] OFF
-GO
-
+DROP TABLE IF EXISTS `region`;
+CREATE TABLE `region`  (
+  `Id` int(0) NOT NULL COMMENT '编号',
+  `Name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT '服务器区名',
+  PRIMARY KEY (`Id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Auto increment value for Region
+-- Records of region
 -- ----------------------------
-DBCC CHECKIDENT ('[dbo].[Region]', RESEED, 5)
-GO
+INSERT INTO `region` VALUES (1, '11区');
+INSERT INTO `region` VALUES (2, '美服');
+INSERT INTO `region` VALUES (3, '墨西哥服');
+INSERT INTO `region` VALUES (4, '港服');
+INSERT INTO `region` VALUES (5, '欧服');
 
-
--- ----------------------------
--- Primary Key structure for table Region
--- ----------------------------
-ALTER TABLE [dbo].[Region] ADD CONSTRAINT [PK__Region__3214EC07FC64AB62] PRIMARY KEY CLUSTERED ([Id])
-WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)  
-ON [PRIMARY]
-GO
-
+SET FOREIGN_KEY_CHECKS = 1;

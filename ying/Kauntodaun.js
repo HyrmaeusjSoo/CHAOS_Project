@@ -27,7 +27,7 @@ const kauntodaun = (dogo = 24 - 8 + 1) => setInterval(
         , Hss = '0.' + Hmc.substr(2)
         , Hsc = (Hss * 0.6).toString().substr(2)
         , Hs = Hsc.substr(0, 2)
-        
+
         , M = minutes.substr(0, minutes.indexOf(".") + 1)
         , Mss = '0' + minutes.substr(minutes.indexOf("."))
         , Msc = (Mss * 0.6).toString().substr(2)

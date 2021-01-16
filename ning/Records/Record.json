@@ -6,9 +6,9 @@
       "Name": "Nintendo Switch 主机",
       "Region": "1",
       "Price": "1955",
-      "Freight": "",
+      "Freight": "0",
       "Total": "1955",
-      "TransactionDate": "2018-6-19 19:20:12",
+      "TransactionDate": "2018-06-19 19:20:12",
       "Remark": "日版机盒"
     },
     {
@@ -19,7 +19,7 @@
       "Price": "369",
       "Freight": "12",
       "Total": "381",
-      "TransactionDate": "2018-6-20 13:02:14",
+      "TransactionDate": "2018-06-20 13:02:14",
       "Remark": "620一单"
     },
     {
@@ -28,20 +28,20 @@
       "Name": "Xenoblade2",
       "Region": "4",
       "Price": "445",
-      "Freight": "",
+      "Freight": "0",
       "Total": "445",
-      "TransactionDate": "2018-6-20 13:02:14",
+      "TransactionDate": "2018-06-20 13:02:14",
       "Remark": "620一单"
     },
     {
       "Id": "1004",
       "Type": "1",
       "Name": "便携包",
-      "Region": "",
+      "Region": "0",
       "Price": "75",
-      "Freight": "",
+      "Freight": "0",
       "Total": "75",
-      "TransactionDate": "2018-7-2 18:56:33",
+      "TransactionDate": "2018-07-02 18:56:33",
       "Remark": ""
     },
     {
@@ -50,20 +50,20 @@
       "Name": "ゼルダの伝説 ブレス オブ ザ ワイルド 季票",
       "Region": "2",
       "Price": "128",
-      "Freight": "",
+      "Freight": "0",
       "Total": "128",
-      "TransactionDate": "2018-7-2 19:09:40",
+      "TransactionDate": "2018-07-02 19:09:40",
       "Remark": ""
     },
     {
       "Id": "1008",
       "Type": "1",
       "Name": "闪迪128G SD储存卡",
-      "Region": "",
+      "Region": "0",
       "Price": "199",
-      "Freight": "",
+      "Freight": "0",
       "Total": "199",
-      "TransactionDate": "2018-7-13 18:53:17",
+      "TransactionDate": "2018-07-13 18:53:17",
       "Remark": ""
     },
     {
@@ -72,20 +72,20 @@
       "Name": "Xenoblade2 季票",
       "Region": "1",
       "Price": "165",
-      "Freight": "",
+      "Freight": "0",
       "Total": "165",
-      "TransactionDate": "2018-8-10 20:50:26",
+      "TransactionDate": "2018-08-10 20:50:26",
       "Remark": "黄金之国"
     },
     {
       "Id": "1010",
       "Type": "1",
       "Name": "喷射2限定pro手柄",
-      "Region": "",
+      "Region": "0",
       "Price": "449",
-      "Freight": "",
+      "Freight": "0",
       "Total": "449",
-      "TransactionDate": "2018-8-11 15:04:38",
+      "TransactionDate": "2018-08-11 15:04:38",
       "Remark": ""
     },
     {
@@ -94,9 +94,9 @@
       "Name": "Splatoon2 完全版",
       "Region": "1",
       "Price": "455",
-      "Freight": "",
+      "Freight": "0",
       "Total": "455",
-      "TransactionDate": "2018-8-20 19:05:40",
+      "TransactionDate": "2018-08-20 19:05:40",
       "Remark": "本体+dlc"
     },
     {
@@ -105,9 +105,9 @@
       "Name": "Hollow Knight",
       "Region": "3",
       "Price": "37.9",
-      "Freight": "",
+      "Freight": "0",
       "Total": "37.9",
-      "TransactionDate": "2018-8-24 18:47:24",
+      "TransactionDate": "2018-08-24 18:47:24",
       "Remark": ""
     },
     {
@@ -116,16 +116,16 @@
       "Name": "THUMPER リズム・バイオレンスゲーム",
       "Region": "1",
       "Price": "50",
-      "Freight": "",
+      "Freight": "0",
       "Total": "50",
-      "TransactionDate": "2018-9-29 22:23:37",
+      "TransactionDate": "2018-09-29 22:23:37",
       "Remark": "暴走甲虫"
     },
     {
       "Id": "1014",
       "Type": "1",
       "Name": "国产pro手柄",
-      "Region": "",
+      "Region": "0",
       "Price": "83.99",
       "Freight": "8",
       "Total": "91.99",
@@ -138,9 +138,9 @@
       "Name": "Monster Hunter Double Cross (GU)",
       "Region": "2",
       "Price": "313",
-      "Freight": "",
+      "Freight": "0",
       "Total": "313",
-      "TransactionDate": "2019-2-13 13:32:33",
+      "TransactionDate": "2019-02-13 13:32:33",
       "Remark": ""
     },
     {
@@ -151,7 +151,7 @@
       "Price": "335",
       "Freight": "23",
       "Total": "358",
-      "TransactionDate": "2019-4-6 09:20:23",
+      "TransactionDate": "2019-04-06 09:20:23",
       "Remark": ""
     },
     {
@@ -160,9 +160,9 @@
       "Name": "Cat Quest",
       "Region": "3",
       "Price": "25.11",
-      "Freight": "",
+      "Freight": "0",
       "Total": "25.11",
-      "TransactionDate": "2019-4-14 12:55:16",
+      "TransactionDate": "2019-04-14 12:55:16",
       "Remark": ""
     },
     {
@@ -171,9 +171,9 @@
       "Name": "Labyrinth of Refrain:Coven of Dusk",
       "Region": "4",
       "Price": "363",
-      "Freight": "",
+      "Freight": "0",
       "Total": "363",
-      "TransactionDate": "2019-4-22 12:25:47",
+      "TransactionDate": "2019-04-22 12:25:47",
       "Remark": ""
     },
     {
@@ -182,9 +182,9 @@
       "Name": "Reigns Game of Thrones",
       "Region": "2",
       "Price": "26.81",
-      "Freight": "",
+      "Freight": "0",
       "Total": "26.81",
-      "TransactionDate": "2019-4-22 21:07:34",
+      "TransactionDate": "2019-04-22 21:07:34",
       "Remark": ""
     },
     {
@@ -195,7 +195,7 @@
       "Price": "208",
       "Freight": "23",
       "Total": "231",
-      "TransactionDate": "2019-4-25 12:53:14",
+      "TransactionDate": "2019-04-25 12:53:14",
       "Remark": ""
     },
     {
@@ -204,20 +204,20 @@
       "Name": "The Way Remastered",
       "Region": "2",
       "Price": "6.69",
-      "Freight": "",
+      "Freight": "0",
       "Total": "6.69",
-      "TransactionDate": "2019-5-3 21:41:53",
+      "TransactionDate": "2019-05-03 21:41:53",
       "Remark": ""
     },
     {
       "Id": "1022",
       "Type": "1",
       "Name": "amiibo卡 塞尔达合集",
-      "Region": "",
+      "Region": "0",
       "Price": "55",
-      "Freight": "",
+      "Freight": "0",
       "Total": "55",
-      "TransactionDate": "2019-5-13 09:23:01",
+      "TransactionDate": "2019-05-13 09:23:01",
       "Remark": ""
     },
     {
@@ -226,9 +226,9 @@
       "Name": "Octopath Traveler",
       "Region": "5",
       "Price": "367",
-      "Freight": "",
+      "Freight": "0",
       "Total": "367",
-      "TransactionDate": "2019-5-17 12:37:26",
+      "TransactionDate": "2019-05-17 12:37:26",
       "Remark": ""
     },
     {
@@ -237,9 +237,9 @@
       "Name": "Enter The Gungeon",
       "Region": "3",
       "Price": "54.69",
-      "Freight": "",
+      "Freight": "0",
       "Total": "54.69",
-      "TransactionDate": "2019-5-21 20:09:40",
+      "TransactionDate": "2019-05-21 20:09:40",
       "Remark": ""
     },
     {
@@ -248,9 +248,9 @@
       "Name": "Dead Cells",
       "Region": "2",
       "Price": "138.61",
-      "Freight": "",
+      "Freight": "0",
       "Total": "138.61",
-      "TransactionDate": "2019-5-24 18:32:56",
+      "TransactionDate": "2019-05-24 18:32:56",
       "Remark": ""
     },
     {
@@ -259,9 +259,9 @@
       "Name": "Katana ZERO",
       "Region": "1",
       "Price": "80.11",
-      "Freight": "",
+      "Freight": "0",
       "Total": "80.11",
-      "TransactionDate": "2019-5-30 20:12:22",
+      "TransactionDate": "2019-05-30 20:12:22",
       "Remark": ""
     },
     {
@@ -270,31 +270,31 @@
       "Name": "NBA2K19",
       "Region": "2",
       "Price": "20.72",
-      "Freight": "",
+      "Freight": "0",
       "Total": "20.72",
-      "TransactionDate": "2019-6-12 18:13:15",
+      "TransactionDate": "2019-06-12 18:13:15",
       "Remark": ""
     },
     {
       "Id": "1028",
       "Type": "1",
       "Name": "国产异度之刃2限定pro手柄",
-      "Region": "",
+      "Region": "0",
       "Price": "137.8",
-      "Freight": "",
+      "Freight": "0",
       "Total": "137.8",
-      "TransactionDate": "2019-6-15 12:34:56",
+      "TransactionDate": "2019-06-15 12:34:56",
       "Remark": ""
     },
     {
       "Id": "1029",
       "Type": "1",
       "Name": "雷克沙 512GB SD储存卡 UHS-I U3 V30 A2 633x",
-      "Region": "",
+      "Region": "0",
       "Price": "398.89",
-      "Freight": "",
+      "Freight": "0",
       "Total": "398.89",
-      "TransactionDate": "2019-6-18 12:48:08",
+      "TransactionDate": "2019-06-18 12:48:08",
       "Remark": ""
     },
     {
@@ -303,9 +303,9 @@
       "Name": "Into The Breach",
       "Region": "3",
       "Price": "27.92",
-      "Freight": "",
+      "Freight": "0",
       "Total": "27.92",
-      "TransactionDate": "2019-6-29 19:50:20",
+      "TransactionDate": "2019-06-29 19:50:20",
       "Remark": ""
     },
     {
@@ -313,10 +313,10 @@
       "Type": "3",
       "Name": "Escape Doodland",
       "Region": "3",
-      "Price": "",
-      "Freight": "",
-      "Total": "",
-      "TransactionDate": "2019-6-29 20:12:00",
+      "Price": "0",
+      "Freight": "0",
+      "Total": "0",
+      "TransactionDate": "2019-06-29 20:12:00",
       "Remark": "95个金币兑换 时价:￥6.75"
     },
     {
@@ -325,9 +325,9 @@
       "Name": "墨西哥英雄大混战：完全版",
       "Region": "3",
       "Price": "40.38",
-      "Freight": "",
+      "Freight": "0",
       "Total": "40.38",
-      "TransactionDate": "2019-7-6 22:30:25",
+      "TransactionDate": "2019-07-06 22:30:25",
       "Remark": ""
     },
     {
@@ -336,9 +336,9 @@
       "Name": "墨西哥英雄大混战2：完全版",
       "Region": "3",
       "Price": "108.53",
-      "Freight": "",
+      "Freight": "0",
       "Total": "108.53",
-      "TransactionDate": "2019-7-6 22:25:00",
+      "TransactionDate": "2019-07-06 22:25:00",
       "Remark": ""
     },
     {
@@ -347,9 +347,9 @@
       "Name": "The Friends of Ringo Ishikawa",
       "Region": "1",
       "Price": "76.82",
-      "Freight": "",
+      "Freight": "0",
       "Total": "76.82",
-      "TransactionDate": "2019-7-7 20:09:14",
+      "TransactionDate": "2019-07-07 20:09:14",
       "Remark": ""
     },
     {
@@ -358,9 +358,9 @@
       "Name": "火焰纹章 风花雪月",
       "Region": "4",
       "Price": "357",
-      "Freight": "",
+      "Freight": "0",
       "Total": "357",
-      "TransactionDate": "2019-7-13 12:40:30",
+      "TransactionDate": "2019-07-13 12:40:30",
       "Remark": ""
     },
     {
@@ -369,9 +369,9 @@
       "Name": "FAST FMX",
       "Region": "1",
       "Price": "95.82",
-      "Freight": "",
+      "Freight": "0",
       "Total": "95.82",
-      "TransactionDate": "2019-7-17 21:07:11",
+      "TransactionDate": "2019-07-17 21:07:11",
       "Remark": ""
     },
     {
@@ -380,9 +380,9 @@
       "Name": "海贼无双3杜蕾斯版",
       "Region": "2",
       "Price": "110.25",
-      "Freight": "",
+      "Freight": "0",
       "Total": "110.25",
-      "TransactionDate": "2019-7-18 20:38:10",
+      "TransactionDate": "2019-07-18 20:38:10",
       "Remark": ""
     },
     {
@@ -391,9 +391,9 @@
       "Name": "火焰纹章风花雪月季票",
       "Region": "1",
       "Price": "179.56",
-      "Freight": "",
+      "Freight": "0",
       "Total": "179.56",
-      "TransactionDate": "2019-8-5 19:48:52",
+      "TransactionDate": "2019-08-05 19:48:52",
       "Remark": ""
     },
     {
@@ -402,9 +402,9 @@
       "Name": "火影忍者疾风传究极忍者风暴3",
       "Region": "1",
       "Price": "127.05",
-      "Freight": "",
+      "Freight": "0",
       "Total": "127.05",
-      "TransactionDate": "2019-8-11 18:34:27",
+      "TransactionDate": "2019-08-11 18:34:27",
       "Remark": ""
     },
     {
@@ -413,9 +413,9 @@
       "Name": "ASTRAL CHAIN",
       "Region": "4",
       "Price": "414.97",
-      "Freight": "",
+      "Freight": "0",
       "Total": "414.97",
-      "TransactionDate": "2019-8-19 12:54:00",
+      "TransactionDate": "2019-08-19 12:54:00",
       "Remark": ""
     },
     {
@@ -424,9 +424,9 @@
       "Name": "Starlink: Battle For Atlas",
       "Region": "3",
       "Price": "196.28",
-      "Freight": "",
+      "Freight": "0",
       "Total": "196.28",
-      "TransactionDate": "2019-8-29 18:47:17",
+      "TransactionDate": "2019-08-29 18:47:17",
       "Remark": ""
     },
     {
@@ -435,9 +435,9 @@
       "Name": "Sayonara Wild Hearts",
       "Region": "3",
       "Price": "91.5",
-      "Freight": "",
+      "Freight": "0",
       "Total": "91.5",
-      "TransactionDate": "2019-9-25 11:18:15",
+      "TransactionDate": "2019-09-25 11:18:15",
       "Remark": ""
     },
     {
@@ -446,7 +446,7 @@
       "Name": "The Messenger",
       "Region": "2",
       "Price": "84.57",
-      "Freight": "",
+      "Freight": "0",
       "Total": "84.57",
       "TransactionDate": "2019-11-29 21:36:02",
       "Remark": ""
@@ -457,7 +457,7 @@
       "Name": "Call of Juarez: Gunslinger",
       "Region": "2",
       "Price": "128.97",
-      "Freight": "",
+      "Freight": "0",
       "Total": "128.97",
       "TransactionDate": "2019-12-10 20:04:00",
       "Remark": ""
@@ -468,7 +468,7 @@
       "Name": "Super Smash Bros: Ultimate + 季票1",
       "Region": "2",
       "Price": "595.57",
-      "Freight": "",
+      "Freight": "0",
       "Total": "595.57",
       "TransactionDate": "2019-12-16 14:05:55",
       "Remark": "$84.98美元点卡购买-淘宝"
@@ -479,7 +479,7 @@
       "Name": "蒸汽世界：冒险",
       "Region": "1",
       "Price": "128.99",
-      "Freight": "",
+      "Freight": "0",
       "Total": "128.99",
       "TransactionDate": "2019-12-31 19:48:00",
       "Remark": ""
@@ -492,7 +492,7 @@
       "Price": "340",
       "Freight": "18",
       "Total": "358",
-      "TransactionDate": "2020-1-17 14:25:30",
+      "TransactionDate": "2020-01-17 14:25:30",
       "Remark": ""
     },
     {
@@ -501,31 +501,31 @@
       "Name": "あつまれ　どうぶつの森 Animal Crossing: New Horizons",
       "Region": "1",
       "Price": "414.2",
-      "Freight": "",
+      "Freight": "0",
       "Total": "414.2",
-      "TransactionDate": "2020-2-21 18:56:55",
+      "TransactionDate": "2020-02-21 18:56:55",
       "Remark": ""
     },
     {
       "Id": "1050",
       "Type": "1",
       "Name": "国产pro手柄升级版 大乱斗限定",
-      "Region": "",
+      "Region": "0",
       "Price": "205.8",
-      "Freight": "",
+      "Freight": "0",
       "Total": "205.8",
-      "TransactionDate": "2020-3-2 13:11:37",
+      "TransactionDate": "2020-03-02 13:11:37",
       "Remark": ""
     },
     {
       "Id": "1052",
       "Type": "1",
       "Name": "pro遥感轴*10",
-      "Region": "",
+      "Region": "0",
       "Price": "23",
       "Freight": "12",
       "Total": "44",
-      "TransactionDate": "2020-3-2 13:11:38",
+      "TransactionDate": "2020-03-02 13:11:38",
       "Remark": ""
     },
     {
@@ -534,9 +534,9 @@
       "Name": "点心世界",
       "Region": "1",
       "Price": "67.41",
-      "Freight": "",
+      "Freight": "0",
       "Total": "67.41",
-      "TransactionDate": "2020-3-14 13:30:29",
+      "TransactionDate": "2020-03-14 13:30:29",
       "Remark": ""
     },
     {
@@ -547,7 +547,7 @@
       "Price": "338",
       "Freight": "12",
       "Total": "350",
-      "TransactionDate": "2020-5-3 15:50:37",
+      "TransactionDate": "2020-05-03 15:50:37",
       "Remark": ""
     },
     {
@@ -556,9 +556,9 @@
       "Name": "Daemon X Machina",
       "Region": "4",
       "Price": "251.32",
-      "Freight": "",
+      "Freight": "0",
       "Total": "251.32",
-      "TransactionDate": "2020-5-3 16:21:00",
+      "TransactionDate": "2020-05-03 16:21:00",
       "Remark": ""
     },
     {
@@ -567,18 +567,18 @@
       "Name": "怒之铁拳4",
       "Region": "4",
       "Price": "155",
-      "Freight": "",
+      "Freight": "0",
       "Total": "155",
-      "TransactionDate": "2020-5-3 16:21:00",
+      "TransactionDate": "2020-05-03 16:21:00",
       "Remark": ""
     },
     {
       "Id": "1057",
       "Type": "1",
       "Name": "CFORCE15.6英寸 CF011XPro便携式显示屏",
-      "Region": "",
+      "Region": "0",
       "Price": "968",
-      "Freight": "",
+      "Freight": "0",
       "Total": "968",
       "TransactionDate": "2020-06-13 03:29:37",
       "Remark": ""
@@ -589,7 +589,7 @@
       "Name": "Super Smash Bros.™ Ultimate: Fighters Pass Vol. 2",
       "Region": "2",
       "Price": "212.38",
-      "Freight": "",
+      "Freight": "0",
       "Total": "212.38",
       "TransactionDate": "2020-06-30 18:09:00",
       "Remark": "$29.99美元点卡充值购买"
@@ -599,9 +599,9 @@
       "Type": "3",
       "Name": "无主之地传奇合集",
       "Region": "2",
-      "Price": "255.00",
-      "Freight": "",
-      "Total": "255.00",
+      "Price": "255",
+      "Freight": "0",
+      "Total": "255",
       "TransactionDate": "2020-07-04 16:15:00",
       "Remark": "$50美元点卡购买"
     },
@@ -611,7 +611,7 @@
       "Name": "狙击精英3",
       "Region": "1",
       "Price": "54.03",
-      "Freight": "",
+      "Freight": "0",
       "Total": "54.03",
       "TransactionDate": "2020-07-13 17:54:00",
       "Remark": "1071金币+821円"
@@ -622,7 +622,7 @@
       "Name": "神鸭特攻",
       "Region": "3",
       "Price": "0",
-      "Freight": "",
+      "Freight": "0",
       "Total": "0",
       "TransactionDate": "2020-07-13 18:24:00",
       "Remark": "191金币兑换 时价￥11.85"
@@ -633,7 +633,7 @@
       "Name": "Not Not - A Brain Buster",
       "Region": "3",
       "Price": "0",
-      "Freight": "",
+      "Freight": "0",
       "Total": "0",
       "TransactionDate": "2020-07-13 18:42:00",
       "Remark": "98金币兑换 时价￥6.08"
@@ -642,10 +642,10 @@
       "Id": "1063",
       "Type": "1",
       "Name": "国产pro手柄升级版 大乱斗限定",
-      "Region": "",
-      "Price": "209.00",
-      "Freight": "",
-      "Total": "209.00",
+      "Region": "0",
+      "Price": "209",
+      "Freight": "0",
+      "Total": "209",
       "TransactionDate": "2020-07-20 13:13:10",
       "Remark": ""
     },
@@ -655,7 +655,7 @@
       "Name": "Hades",
       "Region": "2",
       "Price": "134.99",
-      "Freight": "",
+      "Freight": "0",
       "Total": "134.99",
       "TransactionDate": "2020-09-18 17:59:46",
       "Remark": "$19.99点卡购买，时价￥116.00"
@@ -666,7 +666,7 @@
       "Name": "Overcooked2：美食家版",
       "Region": "1",
       "Price": "155.25",
-      "Freight": "",
+      "Freight": "0",
       "Total": "155.25",
       "TransactionDate": "2020-10-31 21:24:49",
       "Remark": "2,450円-42金币，含税219円"
@@ -677,7 +677,7 @@
       "Name": "What Remains of Edith Finch",
       "Region": "2",
       "Price": "0",
-      "Freight": "",
+      "Freight": "0",
       "Total": "0",
       "TransactionDate": "2020-12-31 19:21:33",
       "Remark": "金币兑换，时价$5.99、￥38.66"
@@ -688,7 +688,7 @@
       "Name": "Need for Speed™ Hot Pursuit Remastered",
       "Region": "2",
       "Price": "129.03",
-      "Freight": "",
+      "Freight": "0",
       "Total": "129.03",
       "TransactionDate": "2020-12-31 22:05:11",
       "Remark": "时价$19.99"
@@ -699,7 +699,7 @@
       "Name": "MudRunner - American Wilds",
       "Region": "2",
       "Price": "48.34",
-      "Freight": "",
+      "Freight": "0",
       "Total": "48.34",
       "TransactionDate": "2020-12-31 22:11:52",
       "Remark": "总价$7.49，金币兑换$4.26，支付$3.23"
@@ -710,7 +710,7 @@
       "Name": "MONSTER HUNTER RISE 豪華版",
       "Region": "4",
       "Price": "456.16",
-      "Freight": "",
+      "Freight": "0",
       "Total": "456.16",
       "TransactionDate": "2020-01-11 17:31:00",
       "Remark": "时价HKD543.00"
