@@ -182,6 +182,7 @@
 <script data-tag="ZhouYi">
     let ZY = null;
     $.get(CS+"ding/ZhouYi.json", res => ZY = res);
+    const QG = _ => ZY.Yi.find(x => x.Hao == Math.floor(Math.random() * ERCode.FCode('36x33')) + 1);
 </script>
 
 <script data-tag="Gol">
