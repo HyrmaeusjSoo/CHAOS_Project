@@ -74,7 +74,13 @@
                 </div>
                 <!--<a href="ying/Example.html">Example</a>-->
                 <div class="con">
-                    <table class="tc"></table>
+                    <table class="tc">
+                        <tr><td></td><td class="h11 h23 m55 szt"></td><td class="h12 h0 m60 m0 m1 m2 szt"></td><td class="h1 h13 m5 szt"></td><td></td></tr>
+                        <tr><td class="h10 h22 m50 szt"></td><td></td><td></td><td></td><td class="h2 h14 m10 szt"></td></tr>
+                        <tr><td class="h9 h21 m45 szt"></td><td></td><td>1</td><td></td><td class="h3 h15 m15 szt"></td></tr>
+                        <tr><td class="h8 h20 m40 szt"></td><td></td><td></td><td></td><td class="h4 h16 m20 szt"></td></tr>
+                        <tr><td></td><td class="h7 h19 m35 szt"></td><td class="h6 h18 m30 szt"></td><td class="h5 h17 m25 szt"></td><td></td></tr>
+                    </table>
                 </div>
             </div>
             <div class="write_bottom">
@@ -133,10 +139,6 @@
     document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
 
     const step = (x = undefined) => window.si ? (clearInterval(si), si = 0) : si = kauntodaun(x);
-
-    $('.tc').empty();
-    $('.tc').load(CS + "ying/shizhong.html");
-
 </script>
 
 <script data-tag="NSGames">
@@ -177,7 +179,7 @@
 
 <script data-tag="AstroDict">
     let AD = null;
-    $.get(CS+"ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
+    $.get(CS + "ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
 
     $( _ => {$("#astro_btn").click( _ => {$('.tc').empty(),AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))})});
@@ -185,14 +187,37 @@
 
 <script data-tag="ZhouYi">
     let ZY = null;
-    $.get(CS+"ding/ZhouYi.json", res => ZY = res);
+    $.get(CS + "ding/ZhouYi.json", res => ZY = res);
     const QG = _ => ZY.Yi.find(x => x.Hao == Math.floor(Math.random() * ERCode.FCode('36x33')) + 1);
+</script>
+
+<script>
+    let szi;
+    let shizhong = _ => {
+        //$('.tc').empty();
+        //$('.tc').load(CS + "ying/shizhong.html");
+        let msj = ms => (ms % 5 == 1 && (ms - 1)) || (ms % 5 == 2 && (ms - 2)) || (ms % 5 == 3 && (ms + 2)) || (ms % 5 == 4 && (ms + 1)) || ms;
+        szi = setInterval( _ =>{
+            $('.szt').text("");
+            let dt = new Date();
+            let ss = dt.getSeconds();
+            $('.m' + msj(ss)).text(ss);
+            let mm = dt.getMinutes();
+            let om = $('.m' + msj(mm)).text();
+            $('.m' + msj(mm)).text( om ? mm + ":" + om : "." + mm);
+            let hh = dt.getHours();
+            let oh = $('.h' + hh).text();
+            $('.h' + hh).text( oh ? hh + ":" + oh : hh + ".");
+        }, 1000);
+    };
+    $( _ => shizhong() );
 </script>
 
 <script data-tag="Gol">
     $( _ => {
         let c = 0b0;
         const es = (tr = '') => {
+            clearInterval(szi);
             $('.tc').empty();
             gol.ds();
             tr = '';
@@ -201,8 +226,8 @@
             c = c + 0b1;
             $('.ii').val(c.toString(2));
         }
-        const er = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), $('.tc').empty(), e2 = 0);
-        const eb = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), e2 = 0);
+        const er = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), shizhong(), e2 = 0);
+        //const eb = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), $('.tc').empty(), e2 = 0);
 
         $('.ii').focus(er).blur(er);
         $('.ib').click( _ => {c = 0b0; $('.ii').val('')});
