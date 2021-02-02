@@ -198,10 +198,10 @@
             $('.m' + msj(dt.getSeconds())).text(dt.getSeconds());
             let mm = dt.getMinutes();
             let om = $('.m' + msj(mm)).text();
-            $('.m' + msj(mm)).text( om ? mm + ":" + om : "." + mm);
+            $('.m' + msj(mm)).text(om ? mm + ":" + om : "." + mm);
             let hh = dt.getHours();
-            let oh = $('.h' + hh).text();
-            $('.h' + hh).text( oh ? hh + ":" + oh : hh + ".");
+            let oh = $('.h' + hh).text().replace(".", "");
+            $('.h' + hh).text(oh ? hh + "." + oh : hh + ".");
             $('.zys').text(sci(hh));
         }, 1000);
     };
