@@ -9,7 +9,7 @@
 // +---------------------------------------------------------------------------------------+
 //const _Simulator = "63067#1.2.3.";
 
-const ACNH = (_ => {
+const ACNH = ( _ => {
 
     const ftspm = {1: 'flower', 2: 'tree', 3: 'shrub', 4:'pumpkin', 5:'meteor'};
     const TotalFlower = ac => fst(ac, ftspm[1]);
