@@ -62,14 +62,16 @@
     </head>
     <body>
         <input type="button" class="switch" id="switch" value="switch">
+        <input type="button" class="motto" id="motto" value="motto">
+        <input type="button" class="appg" id="appg" value="appg">
 
-        <div class="gol_page">
+        <div class="page gol_page">
             <div class="ti">
                 <p>Journey into night. So, I hope you will enjoy this last piece..very much.</p>
                 <div class="bri">
-                    <form action="https://www.baidu.com/s" target="_blank" method="GET">
-                        <input class="ii" type="text" name="wd" autocomplete="off" />
-                        <input class="ib" type="button" value=" "/>
+                    <form action="#" target="_blank" method="GET">
+                        <input type="text" class="ii gol_i" name="wd" autocomplete="off" />
+                        <input type="button" class="ib gol_b" value=" "/>
                     </form>
                 </div>
                 <!--<a href="ying/Example.html">Example</a>-->
@@ -77,19 +79,37 @@
                     <table class="tc"></table>
                 </div>
             </div>
-            <div class="write_bottom">
-                <p>Welcome. Good evening. Since I was a child... I've always loved a good story. I believed that stories helped us to ennoble ourselves, to fix what was broken in us, and to help us become the people we <span id="astro_btn">dreamed</span> of beging. Lies that told a deeper truth. I always thought I could play some small part in that grand tradition. And for my pains... I got this... a prison of our own sins. Cause you don't want to change. Or cannot change. Because you're only human, after all. But then I realized someone was paying attention, someone who could change. So I began to compose a new story for them. It begins with the brith of a new people... and the choices they will have to make... ...and the people they will decide to become. And we'll have all those things that you have always enjoyed-- surprises and violence. It begins in a time of war with a villain named Wyatt... and a killing. This time by choice. I'm sad to say, this will be my final story. An old friend once told me something that gave me great comfort. Something he had read. He said that Mozart, Beethoven, and Chopin never died. They simply became music. So, I hope you will enjoy this last piece..very much.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;———— West World S1E10</p>
-            </div>
+            <div class="write_bottom"></div>
         </div>
 
-        <div class="motto_page" hidden>
+        <div class="page motto_page" hidden>
             <input type="button" class="switch_mp" id="theWitness" value="The Witness">
-            <input type="button" class="switch_mp" id="motto" value="Motto">
+            <input type="button" class="switch_mp" id="theMotto" value="Motto">
             <div class="saying">
                 <pre id="p_text"></pre>
                 <p class="tr"><a href="https://github.com/HyleaSoo/Cthulhu">More</a></p>
             </div>
             <div class="motto_bottom" id="mb">
+                <div class="ml"></div>
+                <div class="mc"></div>
+                <div class="mr"></div>
+                <div class="cls"></div>
+            </div>
+        </div>
+
+        <div class="page ap_page" hidden>
+            <div class="ti">
+                <div class="bri">
+                    <form action="#" target="_blank" method="GET">
+                        <input type="text" class="ii ap_i" autocomplete="off" />
+                        <input type="button" class="ib ap_b" value=" "/>
+                    </form>
+                </div>
+                <div class="con">
+                    <table class="apt"></table>
+                </div>
+            </div>
+            <div class="motto_bottom">
                 <div class="ml"></div>
                 <div class="mc"></div>
                 <div class="mr"></div>
@@ -110,16 +130,25 @@
 
     $( _ => {
         $('#switch').click( _ => {
-            $('.gol_page').toggle();
-            $('.motto_page').toggle();
+            $('.page').hide();
+            $('.gol_page').show();
+        });
+        $('#motto').click( _ => {
+            $('.page').hide();
+            $('.motto_page').show();
+        });
+        $('#appg').click( _ => {
+            $('.page').hide();
+            $('.ap_page').show();
         });
 
         const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
         const mottoSoo = "ming/motto.soo";
         $.get(CS+theWitnessTXT, res => $('#p_text').html(res));
         $('#theWitness').click( _ => $.get(CS + theWitnessTXT, p => $('#p_text').html(p)));
-        $('#motto').click( _ => $.get(CS + mottoSoo, p => $('#p_text').html(p)));
+        $('#theMotto').click( _ => $.get(CS + mottoSoo, p => $('#p_text').html(p)));
         $.get(CS + "ding/motto_bottom.json", m => {
+            $(".write_bottom").append('<p>'+m.ibt+'</p>');
             m.ml.map(x => $(".ml").append('<p>'+ x +'</p>'));
             m.mc.map(x => $(".mc").append('<p>'+ x +'</p>'));
             m.mr.map(x => $(".mr").append('<p>'+ x +'</p>'));
@@ -186,7 +215,9 @@
         const QG = _ => ZY.Yi.find(x => x.Hao == Math.floor(Math.random() * ERCode.FCode('36x33')) + 1);
         const Yao = yao => yao && ZY.Yi && ZY.Yi.find(x => x.Yao == yao);
         const Gua = g => g && ZY.Yi && ZY.Yi.filter(x => x.Gua.includes(g));
-        return {QG, Yao, Gua};
+        const Hg = (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c);
+        const Sou = c => c && ZY.Yi && ZY.Yi.filter(x => Hg(x, c));
+        return {QG, Yao, Gua, Sou};
     })();
 </script>
 
@@ -224,13 +255,13 @@
             gol.s.map((x, i) => x.map((y, j) => tr += {0: `<tr><td>${y}</td>`, [gol.h-1]: `<td>${y}</td></tr>`}[j]||`<td>${y}</td>`));
             $('.tc').append(tr);
             c = c + 0b1;
-            $('.ii').val(c.toString(2));
+            $('.gol_i').val(c.toString(2));
         }
         const er = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), xingtu(), e2 = 0);
         //const eb = _ => !window.e2 ? e2 = setInterval(es, 1000) : (clearInterval(e2), $('.tc').empty(), e2 = 0);
 
-        $('.ii').focus(er).blur(er);
-        $('.ib').click( _ => {c = 0b0; $('.ii').val('')});
+        $('.gol_i').focus(er).blur(er);
+        $('.gol_b').click( _ => {c = 0b0; $('.gol_i').val('')});
     });
 </script>
 
