@@ -43,6 +43,7 @@
             .saying {margin: auto; padding-top: 2%; width: 70%; height: 100%; font-size: 14px;}
             .tl {text-align: left;}
             .tr {text-align: right;}
+            .apt {width: 50%;text-align: left;}
             .motto_bottom {
                 margin: auto; padding: 10px 0px 10px; width: 70%;
                 text-align: center; font-size: 12px; color: DarkGray;
@@ -62,8 +63,8 @@
     </head>
     <body>
         <input type="button" class="switch" id="switch" value="switch">
-        <input type="button" class="motto" id="motto" value="motto">
         <input type="button" class="appg" id="appg" value="appg">
+        <input type="button" class="motto" id="motto" value="motto">
 
         <div class="page gol_page">
             <div class="ti">
@@ -82,6 +83,31 @@
             <div class="write_bottom"></div>
         </div>
 
+        <div class="page ap_page" hidden>
+            <div class="ti">
+                <div class="bri">
+                    <form action="#" target="_blank" method="GET">
+                        <input type="text" class="ii ap_i" autocomplete="off" /><br>
+                        <input type="button" hidden class="ic astro_dict" value="AstroDict">
+                        <input type="button" hidden class="ic zhouyi" value="ZhouYi">
+                        <input type="button" hidden class="ic bazi" value="GanZhi">
+                        <input type="button" hidden class="ic ercode" value="ErCode">
+                        <input type="button" hidden class="ic record" value="Record">
+                        <!--<input type="button" class="ib ap_b" value=" "/>-->
+                    </form>
+                </div>
+                <div class="con">
+                    <table class="apt"></table>
+                </div>
+            </div>
+            <div class="motto_bottom">
+                <div class="ml"></div>
+                <div class="mc"></div>
+                <div class="mr"></div>
+                <div class="cls"></div>
+            </div>
+        </div>
+
         <div class="page motto_page" hidden>
             <input type="button" class="switch_mp" id="theWitness" value="The Witness">
             <input type="button" class="switch_mp" id="theMotto" value="Motto">
@@ -90,26 +116,6 @@
                 <p class="tr"><a href="https://github.com/HyleaSoo/Cthulhu">More</a></p>
             </div>
             <div class="motto_bottom" id="mb">
-                <div class="ml"></div>
-                <div class="mc"></div>
-                <div class="mr"></div>
-                <div class="cls"></div>
-            </div>
-        </div>
-
-        <div class="page ap_page" hidden>
-            <div class="ti">
-                <div class="bri">
-                    <form action="#" target="_blank" method="GET">
-                        <input type="text" class="ii ap_i" autocomplete="off" />
-                        <input type="button" class="ib ap_b" value=" "/>
-                    </form>
-                </div>
-                <div class="con">
-                    <table class="apt"></table>
-                </div>
-            </div>
-            <div class="motto_bottom">
                 <div class="ml"></div>
                 <div class="mc"></div>
                 <div class="mr"></div>
@@ -129,18 +135,9 @@
     const CS = "https://hyleasoo.github.io/Cthulhu/";
 
     $( _ => {
-        $('#switch').click( _ => {
-            $('.page').hide();
-            $('.gol_page').show();
-        });
-        $('#motto').click( _ => {
-            $('.page').hide();
-            $('.motto_page').show();
-        });
-        $('#appg').click( _ => {
-            $('.page').hide();
-            $('.ap_page').show();
-        });
+        $('#switch').click( _ => {$('.page').hide(), $('.gol_page').show()});
+        $('#motto').click( _ => {$('.page').hide(), $('.motto_page').show()});
+        $('#appg').click( _ => {$('.page').hide(), $('.ap_page').show()});
 
         const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
         const mottoSoo = "ming/motto.soo";
@@ -168,16 +165,15 @@
     let NSGames = null;
     const record = (_woo = prompt()) => {
         if (_woo == ERCode.FCode('72q65i63k6fh72t64') && _woo == FCode16("72 65 63 6f 72 64")) {
+            let totalG = 0;
+            let typeG = {'1': 0, '2': 0, '3': 0, '5': 0};
+            let regionG = {'1': 0, '2': 0, '3': 0, '4': 0, '5': 0};
+            let yearG = {'2018': 0, '2019':0, '2020':0, '2021': 0};
+
             const record_url = "ning/Records/Record.json";
             $.get(CS+record_url, res => { 
                 let rs = res.RECORDS;//JSON.parse(res).RECORDS;
                 NSGames = rs;
-
-                let totalG = 0;
-                let typeG = {'1': 0, '2': 0, '3': 0, '5': 0};
-                let regionG = {'1': 0, '2': 0, '3': 0, '4': 0, '5': 0};
-                let yearG = {'2018': 0, '2019':0, '2020':0};
-
                 const adt = (o, t) => ((parseFloat(o) || 0) + parseFloat(t)).toFixed(2);
 
                 rs.map(x => {
@@ -189,9 +185,10 @@
 
                 console.log('Type: ' + typeG['1'] + ', ' + typeG['2'] + ', ' + typeG['3'] + ', ' + typeG['5']);
                 console.log('Region: ' + regionG['1'] + ', ' + regionG['2'] + ', ' + regionG['3'] + ', ' + regionG['4'] + ', ' + regionG['5']);
-                console.log('Year:' +yearG['2018'] +', ' + yearG['2019'] +', '+ yearG['2020']);
+                console.log('Year: ' +yearG['2018'] +', ' + yearG['2019'] +', '+ yearG['2020'] +', '+ yearG['2021']);
                 console.log('Total: ' + totalG);
             });
+            return {totalG, typeG, regionG, yearG};
         } else {
             console.clear();
         }
@@ -204,8 +201,6 @@
     let AD = null;
     $.get(CS + "ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
-
-    $( _ => {$("#astro_btn").click( _ => {clearInterval(szi), $('.tc').empty(), AstroDict().map(x => $('.tc').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))})});
 </script>
 
 <script data-tag="ZhouYi">
@@ -242,6 +237,33 @@
         }, 1000);
     };
     $( _ => xingtu() );
+</script>
+
+<script data-tag="AP">
+    $( _ =>{
+        const aps = _ => $('.ic').toggle();
+        const aptcls = _ => $('.apt').empty();
+        $('.ap_i').on('input', _ => $('.ap_i').val() && $('.ic').show() || $('.ic').hide());//.blur( _ => {$('.ic').hide(),$('.ap_i').val('')});
+        $('.astro_dict').click( _ => {aptcls(); AstroDict($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))});
+        $('.zhouyi').click( _ => {aptcls(); zy.Sou($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))});
+        $('.bazi').click( _ => {aptcls(); x = bazi(); $('.apt').append(`<tr><td>bz:${x.bz}</td></tr><tr><td>bzq:${x.bzq}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr>`)});
+        $('.ercode').click( _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.TCode($('.ap_i').val())}</td></tr>`)});
+        $('.record').click( _ => {
+            aptcls(); 
+            let games = record($('.ap_i').val());
+            console.log(games);
+            $('.apt').append(`<tr><td>Type: ${Object.entries(games["typeG"]).map(x => x)}</td></tr>`);
+            $('.apt').append(`<tr><td>Region: ${Object.entries(games["regionG"]).map(x => x[0] +':'+ x[1])}</td></tr>`);
+            $('.apt').append(`<tr><td>Year: ${Object.entries(games["yearG"]).map(x => x[0] +':'+ x[1])}</td></tr>`);
+            $('.apt').append(`<tr><td>Total: ${games.totalG}</td></tr>`);
+        });
+/*
+        console.log('Type: ' + typeG['1'] + ', ' + typeG['2'] + ', ' + typeG['3'] + ', ' + typeG['5']);
+        console.log('Region: ' + regionG['1'] + ', ' + regionG['2'] + ', ' + regionG['3'] + ', ' + regionG['4'] + ', ' + regionG['5']);
+        console.log('Year:' +yearG['2018'] +', ' + yearG['2019'] +', '+ yearG['2020'] +', '+ yearG['2021']);
+        console.log('Total: ' + totalG);
+*/
+    });
 </script>
 
 <script data-tag="Gol">
