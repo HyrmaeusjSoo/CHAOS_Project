@@ -251,18 +251,11 @@
         $('.record').click( _ => {
             aptcls(); 
             let games = record($('.ap_i').val());
-            console.log(games);
             $('.apt').append(`<tr><td>Type: ${Object.entries(games["typeG"]).map(x => x)}</td></tr>`);
             $('.apt').append(`<tr><td>Region: ${Object.entries(games["regionG"]).map(x => x[0] +':'+ x[1])}</td></tr>`);
             $('.apt').append(`<tr><td>Year: ${Object.entries(games["yearG"]).map(x => x[0] +':'+ x[1])}</td></tr>`);
             $('.apt').append(`<tr><td>Total: ${games.totalG}</td></tr>`);
         });
-/*
-        console.log('Type: ' + typeG['1'] + ', ' + typeG['2'] + ', ' + typeG['3'] + ', ' + typeG['5']);
-        console.log('Region: ' + regionG['1'] + ', ' + regionG['2'] + ', ' + regionG['3'] + ', ' + regionG['4'] + ', ' + regionG['5']);
-        console.log('Year:' +yearG['2018'] +', ' + yearG['2019'] +', '+ yearG['2020'] +', '+ yearG['2021']);
-        console.log('Total: ' + totalG);
-*/
     });
 </script>
 
