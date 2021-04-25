@@ -266,7 +266,11 @@
             );
         });
         $('.mhrsk').click( _ => {
-            aptcls(); MHRsk($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>name:${x.name}</td><td>des:${x.des}</td></tr>`));
+            aptcls(); 
+            MHRsk($('.ap_i').val()).map(x => {
+                $('.apt').append(`<tr><td>${x.name}</td><td>${x.des}</td></tr>`);
+                x.levels.map(y => $('.apt').append(`<tr><td></td><td>level${y.lv} ---- ${y.des}</td></tr>`));
+            });
         });
     });
 </script>
