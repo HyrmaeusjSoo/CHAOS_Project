@@ -93,7 +93,7 @@
                         <input type="button" hidden class="ic bazi" value="GanZhi">
                         <input type="button" hidden class="ic ercode" value="ErCode">
                         <input type="button" hidden class="ic record" value="Record">
-                        <!--<input type="button" class="ib ap_b" value=" "/>-->
+                        <input type="button" hidden class="ic mhrsk" value="MHRsk">
                     </form>
                 </div>
                 <div class="con">
@@ -199,6 +199,12 @@
     $( _ => {$("#record_btn").click( _ => record())});
 </script>
 
+<script data-tag="MonsterHunterRiseSkill">
+    let mhr = null;
+    $.get(CS + "ding/mhr_skill.json", res => mhr = res);
+    const MHRsk = (_sk = prompt()) => _sk && mhr && mhr.filter(x => x.name.includes(_sk));
+</script>
+
 <script data-tag="AstroDict">
     let AD = null;
     $.get(CS + "ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
@@ -258,6 +264,9 @@
                 $('.apt').append(`<tr><td>Year: ${Object.entries(games["yearG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
                 $('.apt').append(`<tr><td>Total: ${games.totalG}</td></tr>`)
             );
+        });
+        $('.mhrsk').click( _ => {
+            aptcls(); MHRsk($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>name:${x.name}</td><td>des:${x.des}</td></tr>`));
         });
     });
 </script>
