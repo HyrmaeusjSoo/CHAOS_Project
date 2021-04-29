@@ -87,13 +87,21 @@
             <div class="ti">
                 <div class="bri">
                     <form action="#" target="_blank" method="GET">
-                        <input type="text" class="ii ap_i" autocomplete="off" /><br>
-                        <input type="button" hidden class="ic astro_dict" value="AstroDict">
-                        <input type="button" hidden class="ic zhouyi" value="ZhouYi">
-                        <input type="button" hidden class="ic bazi" value="GanZhi">
-                        <input type="button" hidden class="ic ercode" value="ErCode">
-                        <input type="button" hidden class="ic record" value="Record">
-                        <input type="button" hidden class="ic mhrsk" value="MHRsk">
+                        <input type="text" class="ii ap_i" autocomplete="off" />
+                        <div>
+                            <input type="button" hidden class="ic astro_dict" value="AstroDict">
+                            <input type="button" hidden class="ic zhouyi" value="ZhouYi">
+                            <input type="button" hidden class="ic bazi" value="GanZhi">
+                            <input type="button" hidden class="ic ercode" value="ErCode">
+                            <input type="button" hidden class="ic record" value="Record">
+                            <input type="button" hidden class="ic mhrsk" value="MHRsk">
+                        </div>
+                        <div>
+                            <input type="button" hidden class="icb icbec tcode" value="TCode">
+                            <input type="button" hidden class="icb icbec fcode" value="FCode">
+                            <input type="button" hidden class="icb icbmh mhrn" value="MHRskName">
+                            <input type="button" hidden class="icb icbmh mhrd" value="MHRskDes">
+                        </div>
                     </form>
                 </div>
                 <div class="con">
@@ -203,6 +211,7 @@
     let mhr = null;
     $.get(CS + "ding/mhr_skill.json", res => mhr = res);
     const MHRsk = (_sk = prompt()) => _sk && mhr && mhr.filter(x => x.name.includes(_sk));
+    const MHRskd = (_sk = prompt()) => _sk && mhr && mhr.filter(x => x.name.includes(_sk) || x.des.includes(_sk));
 </script>
 
 <script data-tag="AstroDict">
@@ -226,20 +235,20 @@
 
 <script data-tag="XingTu">
     let szi;
-    let xingtu = _ => {
+    const xingtu = _ => {
         $('.tc').empty();
         $('.tc').load(CS + "ying/XingTu.html");
-        let msj = ms => (ms % 5 == 1 && (ms - 1)) || (ms % 5 == 2 && (ms - 2)) || (ms % 5 == 3 && (ms + 2)) || (ms % 5 == 4 && (ms + 1)) || ms;
-        let sci = s => ((s>=23 || s<1) && 24) || (s>=1 && s<3 && 19) || (s>=3 && s<5 && 11) || (s>=5 && s<7 && 34) || (s>=7 && s<9 && 43) || (s>=9 && s<11 && 1) || (s>=11 && s<13 && 44) || (s>=13 && s<15 && 33) || (s>=15 && s<17 && 12) || (s>=17 && s<19 && 20) || (s>=19 && s<21 && 23) || (s>=21 && s==22 && 2) || 0;
+        const msj = ms => (ms % 5 == 1 && (ms - 1)) || (ms % 5 == 2 && (ms - 2)) || (ms % 5 == 3 && (ms + 2)) || (ms % 5 == 4 && (ms + 1)) || ms;
+        const sci = s => ((s>=23 || s<1) && 24) || (s>=1 && s<3 && 19) || (s>=3 && s<5 && 11) || (s>=5 && s<7 && 34) || (s>=7 && s<9 && 43) || (s>=9 && s<11 && 1) || (s>=11 && s<13 && 44) || (s>=13 && s<15 && 33) || (s>=15 && s<17 && 12) || (s>=17 && s<19 && 20) || (s>=19 && s<21 && 23) || (s>=21 && s==22 && 2) || 0;
         szi = setInterval( _ =>{
             $('.szt').text("");
-            let dt = new Date();
+            const dt = new Date();
             $('.m' + msj(dt.getSeconds())).text(dt.getSeconds());
-            let mm = dt.getMinutes();
-            let om = $('.m' + msj(mm)).text();
+            const mm = dt.getMinutes();
+            const om = $('.m' + msj(mm)).text();
             $('.m' + msj(mm)).text(om ? mm + ":" + om : "." + mm);
-            let hh = dt.getHours();
-            let oh = $('.h' + hh).text().replace(".", "");
+            const hh = dt.getHours();
+            const oh = $('.h' + hh).text().replace(".", "");
             $('.h' + hh).text(oh ? hh + "." + oh : hh + ".");
             $('.zys').text(sci(hh));
         }, 1000);
@@ -251,27 +260,53 @@
     $( _ =>{
         const aps = _ => $('.ic').toggle();
         const aptcls = _ => $('.apt').empty();
-        $('.ap_i').on('input', _ => $('.ap_i').val() && $('.ic').show() || $('.ic').hide());//.blur( _ => {$('.ic').hide(),$('.ap_i').val('')});
-        $('.astro_dict').click( _ => {aptcls(); AstroDict($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))});
-        $('.zhouyi').click( _ => {aptcls(); zy.Sou($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))});
-        $('.bazi').click( _ => {aptcls(); x = bazi(); $('.apt').append(`<tr><td>bz:${x.bz}</td></tr><tr><td>bzq:${x.bzq}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr>`)});
-        $('.ercode').click( _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.TCode($('.ap_i').val())}</td></tr>`)});
-        $('.record').click( _ => {
+
+        const b_ad = _ => {aptcls(); AstroDict($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))};
+        const b_zy = _ => {aptcls(); zy.Sou($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))};
+        const b_bz = _ => {aptcls(); x = bazi(); $('.apt').append(`<tr><td>bz:${x.bz}</td></tr><tr><td>bzq:${x.bzq}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr>`)};
+        const b_ect = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.TCode($('.ap_i').val())}</td></tr>`)};
+        const b_ecf = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.FCode($('.ap_i').val())}</td></tr>`)};
+        const b_rc = _ => {
             aptcls(); 
-            let games = record($('.ap_i').val()); games && (
+            const games = record($('.ap_i').val()); games && (
                 $('.apt').append(`<tr><td>Type: ${Object.entries(games["typeG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
                 $('.apt').append(`<tr><td>Region: ${Object.entries(games["regionG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
                 $('.apt').append(`<tr><td>Year: ${Object.entries(games["yearG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
                 $('.apt').append(`<tr><td>Total: ${games.totalG}</td></tr>`)
             );
-        });
-        $('.mhrsk').click( _ => {
+        };
+        const b_mhn = _ => {
             aptcls(); 
             MHRsk($('.ap_i').val()).map(x => {
                 $('.apt').append(`<tr><td>${x.name}</td><td>${x.des}</td></tr>`);
                 x.levels.map(y => $('.apt').append(`<tr><td></td><td>level${y.lv} : ${y.des}</td></tr>`));
             });
+        };
+        const b_mhd = _ => {
+            aptcls(); 
+            MHRskd($('.ap_i').val()).map(x => {
+                $('.apt').append(`<tr><td>${x.name}</td><td>${x.des}</td></tr>`);
+                x.levels.map(y => $('.apt').append(`<tr><td></td><td>level${y.lv} : ${y.des}</td></tr>`));
+            });
+        };
+
+        $('.ap_i').on('input', _ => ($('.ap_i').val() && $('.ic').show() || $('.ic').hide(), aptcls()));//.blur( _ => {$('.ic').hide(),$('.ap_i').val('')});
+        $('.ic').click(function () {
+            ({
+                'ErCode': _=>{$('.icb').hide();$('.icbec').toggle();}, 
+                'MHRsk': _=>{$('.icb').hide();$('.icbmh').toggle();}
+            }[$(this).val()] || (_ => false))();
         });
+        $('.astro_dict').click(b_ad);
+        $('.zhouyi').click(b_zy);
+        $('.bazi').click(b_bz);
+        $('.ercode').click(b_ect);
+        $('.record').click(b_rc);
+        $('.mhrsk').click(b_mhn);
+        $('.tcode').click(b_ect);
+        $('.fcode').click(b_ecf);
+        $('.mhrn').click(b_mhn);
+        $('.mhrd').click(b_mhd);
     });
 </script>
 
