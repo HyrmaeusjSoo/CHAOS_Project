@@ -210,8 +210,10 @@
 <script data-tag="MonsterHunterRiseSkill">
     let mhr = null;
     $.get(CS + "ding/mhr_skill.json", res => mhr = res);
-    const MHRsk = (_sk = prompt()) => _sk && mhr && mhr.filter(x => x.name.includes(_sk));
-    const MHRskd = (_sk = prompt()) => _sk && mhr && mhr.filter(x => x.name.includes(_sk) || x.des.includes(_sk));
+    const MHRsk = (_sk = prompt()) => _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk));
+    const MHRskd = (_sk = prompt()) => _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk) || x.des.includes(_sk));
+    const MHRbl = (_sk = prompt()) => _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk));
+    const MHRbld = (_sk = prompt()) => _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk) || x.des.includes(_sk));
 </script>
 
 <script data-tag="AstroDict">
