@@ -2,7 +2,7 @@
 ## &nbsp;&nbsp;&nbsp;&nbsp;:Personal Philosophy Encyclopedia （个人百科收录）
 [HyleaSoo](https://hyleasoo.github.io/CHAOS_Project/)
 
-#### 在りし日のふたり、ぼくらは同じ空を見上げている。
+#### 2021520、ぼくらは同じ空を見上げている。
 #### See me fly, I'm singing in the sky.
 #### 云伴月，风拂花。
 #### そんなことはないよ、ファンタジーアドベンチャー 。
