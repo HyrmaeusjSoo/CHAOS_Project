@@ -87,5 +87,6 @@ INSERT INTO `record` VALUES (1066, 3, 'What Remains of Edith Finch', 2, 0.00, 0.
 INSERT INTO `record` VALUES (1067, 3, 'Need for Speed™ Hot Pursuit Remastered', 2, 129.03, 0.00, 129.03, '2020-12-31 22:05:11', '时价$19.99');
 INSERT INTO `record` VALUES (1068, 3, 'MudRunner - American Wilds', 2, 48.34, 0.00, 48.34, '2020-12-31 22:11:52', '总价$7.49，金币兑换$4.26，支付$3.23');
 INSERT INTO `record` VALUES (1069, 3, 'MONSTER HUNTER RISE 豪華版', 4, 456.16, 0.00, 456.16, '2020-01-11 17:31:00', '时价HKD543.00');
+INSERT INTO `record` VALUES (1070, 2, '健身环大冒险', 2, 547.00, 0.00, 547.00, '2021-07-13 00:02:35', '');
 
 SET FOREIGN_KEY_CHECKS = 1;

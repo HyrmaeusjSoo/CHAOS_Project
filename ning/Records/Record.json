@@ -714,6 +714,17 @@
       "Total": "456.16",
       "TransactionDate": "2020-01-11 17:31:00",
       "Remark": "时价HKD543.00"
+    },
+    {
+      "Id": "1070",
+      "Type": "2",
+      "Name": "健身环大冒险",
+      "Region": "2",
+      "Price": "547.00",
+      "Freight": "0",
+      "Total": "547.00",
+      "TransactionDate": "2021-07-13 00:02:35",
+      "Remark": ""
     }
   ]
 }
