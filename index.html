@@ -15,40 +15,31 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0"/>
         <style>
             html, body {margin: auto;}
-            div {width: 100%;text-align: center;color: Gray;}
-            input {
-                padding: 8px 8px; outline-style: none;
-                border: 0px solid #ccc; border-radius: 10px;
-                background-color: WhiteSmoke;
-            }
-            table {margin: auto;width: 28%; height: 430px;}
+            div {width: 100%; text-align: center; color: Gray;}
+            input {padding: 8px 8px; outline-style: none; border: 0px solid #ccc; border-radius: 10px; background-color: WhiteSmoke;}
+            table {margin: auto; width: 28%; height: 430px;}
             pre {font-family: "Microsoft YaHei", Console, Verdana; font-size: 14px; text-align: left;}
-            .switch {margin-left: 20%;}
+            a {text-decoration: none; color: rgba(0,0,0,1);}
+            .skyrim {position: fixed; top: 0px; z-index: 2; background: rgba(192,192,192,0.4);}
+            .switch {margin-left: -45%;}
+            .iv {float: right; margin-right: 3.5%; font-size: 18px;}
+            .v {float: right; margin-right: 1%; font-size: 18px;}
+            .page {margin-top: 2.5%;}
+            .gol_page {margin-top: 2.5%;}
             .switch_mp {margin-left: 0.8%;}
-            .ti {height: 70%; padding-bottom: 2%;}
-            .write_bottom {
-                margin: auto; padding: 8px 0px 8px; width: 60%; height: 30%;
-                text-align: center; font-size: 12px; color: DarkGray;
-                border-top: 1px solid #e4e4e4;
-            }
-            .fcr {
-                margin: auto; width: 60%; height: 30%;
-                text-align: center; font-size: 12px; color: DarkGray;
-            }
+            .ti {padding-bottom: 2%;}
+            .write_bottom {margin: auto; padding: 8px 0px 8px; width: 60%; height: 30%; text-align: center; font-size: 12px; color: DarkGray; border-top: 1px solid #e4e4e4;}
+            .fcr {margin: auto; width: 60%; height: 30%; text-align: center; font-size: 12px; color: DarkGray;}
             .fcr p {margin: 0px 0px 8px 0px;}
-            .bri {margin: auto; padding-top: 2%;}
-            .con {margin: auto; padding-top: 2%; height: 100%;}
+            .bri {margin: auto; padding-top: 1%;}
+            .con {margin: auto; padding-top: 2%;}
             .ii {width: 30%; font-size: 14px; font-weight: 700;}
             .ib {width: 2.5%;}
             .saying {margin: auto; padding-top: 2%; width: 70%; height: 100%; font-size: 14px;}
             .tl {text-align: left;}
             .tr {text-align: right;}
             .apt {width: 50%;text-align: left;}
-            .motto_bottom {
-                margin: auto; padding: 10px 0px 10px; width: 70%;
-                text-align: center; font-size: 12px; color: DarkGray;
-                border-top: 1px solid #e4e4e4;
-            }
+            .motto_bottom {margin: auto; padding: 10px 0px 10px; width: 70%; text-align: center; font-size: 12px; color: DarkGray; border-top: 1px solid #e4e4e4;}
             .ml {text-align: left; width: 35%; height: 100%; float: left;}
             .mc {text-align: center; width: 31%; height: 100%; float: left;}
             .mr {text-align: right; width: 33%; height: 100%; float: right;}
@@ -62,10 +53,14 @@
         <script data-tag="ACNH" src="ying/ACNH.js"></script>
     </head>
     <body>
-        <input type="button" class="switch" id="switch" value="switch">
-        <input type="button" class="appg" id="appg" value="appg">
-        <input type="button" class="motto" id="motto" value="motto">
-
+        <div class="skyrim">
+            <input type="button" class="switch" id="switch" value="switch">
+            <input type="button" class="appg" id="appg" value="appg">
+            <input type="button" class="motto" id="motto" value="motto">
+            <a class="iv" data-v="v" href="javascript:;">☄🐚🌏</a>
+            <a class="v" data-v="v" href="javascript:;">☂🍂🔮〽🎯</a>
+        </div>
+        
         <div class="page gol_page">
             <div class="ti">
                 <p>Journey into night. So, I hope you will enjoy this last piece..very much.</p>
@@ -121,9 +116,9 @@
             <input type="button" class="switch_mp" id="theMotto" value="Motto">
             <div class="saying">
                 <pre id="p_text"></pre>
-                <p class="tr"><a href="https://github.com/HyleaSoo/CHAOS_Project">More</a></p>
+                <p class="tr"><a href="https://github.com/HyleaSoo/CHAOS_Project">More.</a></p>
             </div>
-            <div class="motto_bottom" id="mb">
+            <div class="motto_bottom">
                 <div class="ml"></div>
                 <div class="mc"></div>
                 <div class="mr"></div>
@@ -146,6 +141,8 @@
         $('#switch').click( _ => {$('.page').hide(), $('.gol_page').show()});
         $('#motto').click( _ => {$('.page').hide(), $('.motto_page').show()});
         $('#appg').click( _ => {$('.page').hide(), $('.ap_page').show()});
+        $('.v').click( _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0));
+        $('.iv').click(_ => window.scrollTo(0, 0));
 
         const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
         const mottoSoo = "ming/motto.soo";
@@ -163,8 +160,8 @@
     //localStorage.setItem(TCode16(location.hostname), ERCode.TCode(Date.now().toString(16)));
     //parseInt(ERCode.FCode(localStorage.getItem(TCode16(location.hostname))), 16);
 
-    document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
-    document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
+    //document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
+    //document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
 
     const step = (x = undefined) => window.si ? (clearInterval(si), si = 0) : si = kauntodaun(x);
 </script>
@@ -207,7 +204,7 @@
     $( _ => {$("#record_btn").click( _ => record())});
 </script>
 
-<script data-tag="MonsterHunterRiseSkill">
+<script data-tag="MHRSkill">
     let mhr = null;
     $.get(CS + "ding/MHRise/mhr_skill.json", res => mhr = res);
     const MHRsk = (_sk = prompt()) => _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk));
@@ -262,6 +259,7 @@
     $( _ =>{
         const aps = _ => $('.ic').toggle();
         const aptcls = _ => $('.apt').empty();
+        const icbh = (t) => {$('.icb').hide();$(t).show();}
 
         const b_ad = _ => {aptcls(); AstroDict($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))};
         const b_zy = _ => {aptcls(); zy.Sou($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))};
@@ -292,11 +290,12 @@
             });
         };
 
-        $('.ap_i').on('input', _ => ($('.ap_i').val() && $('.ic').show() || $('.ic').hide(), aptcls()));//.blur( _ => {$('.ic').hide(),$('.ap_i').val('')});
+        $('.ap_i').on('input', _ => ($('.ap_i').val() && $('.ic').show() || ($('.ic').hide(), icbh()), aptcls()));//.blur( _ => {$('.ic').hide(),$('.ap_i').val('')});
         $('.ic').click(function () {
+            $('.icb').hide();
             ({
-                'ErCode': _=>{$('.icb').hide();$('.icbec').toggle();}, 
-                'MHRsk': _=>{$('.icb').hide();$('.icbmh').toggle();}
+                'ErCode': _=>$('.icbec').show(),//icbh('.icbec'), 
+                'MHRsk': _=>$('.icbmh').show()//icbh('.icbmh')
             }[$(this).val()] || (_ => false))();
         });
         $('.astro_dict').click(b_ad);
