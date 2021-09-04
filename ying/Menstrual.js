@@ -26,7 +26,7 @@ const Menstrual = (_ => {
     const d = _ => md.map(x => dd(x.begin, x.end));
     const bd = _ => md.map((x, y) => md[y+1] && dd(md[y+1].end, x.begin));
 
-    return {d, bd};
+    return {dd, d, bd};
 })();
 
 
