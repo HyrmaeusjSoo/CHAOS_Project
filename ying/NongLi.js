@@ -1,5 +1,9 @@
 const tg = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"];
 const dz = ["子", "丑", "寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥"];
+const yang = ["阏逢", "旃蒙", "柔兆", "强圉", "著雍", "屠维", "上章", "重光", "玄黓", "昭阳"];
+const yin = ["困敦", "赤奋若", "摄提格", "单阏", "执徐", "大荒落", "敦牂", "协洽", "涒滩", "作噩", "阉茂", "大渊献"];
+const taisui = ["玄枵", "星纪", "析木", "大火", "寿星", "鹑尾", "鹑火", "鹑首", "实沈", "大梁", "降娄", "诹訾"];
+const sui = ["大火", "析木", "星纪", "玄枵", "诹訾", "降娄", "大梁", "实沈", "鹑首", "鹑火", "鹑尾", "寿星"];
 const sx = ["鼠", "牛", "虎", "兔", "龙", "蛇", "马", "羊", "猴", "鸡", "狗", "猪"];
 const w = ["木", "火", "土", "金", "水"];
 const f = ["东", "南", "中", "西", "北"];
@@ -144,9 +148,11 @@ const bazi = (dt = new Date()) => {
     tgr = (sumd + 54) % 10;
     dzr = (sumd + 52) % 12;
     gzr = tg[tgr] + dz[dzr];
+    syr = yang[tgr] + yin[dzr];
     dzs = Math.floor((h * 1 + 1) / 2) % 12;
     tgs = ((tgr % 5) * 2 + dzs) % 10;
     gzs = tg[tgs] + dz[dzs];
+    sys = yang[tgs] + yin[dzs];
     for (i = 0; ms[i][120] <= sumd; i++);
     k = (i == 0) ? 0 : ms[i - 1][120];
     p = i * 120;
@@ -160,7 +166,7 @@ const bazi = (dt = new Date()) => {
         p = -1;
     } else if (sumd < 0) {
         ri = 30 + sumd,
-            p = 0;
+        p = 0;
     } else ri = sumd + ly[ms[i][j]] - k;
     yue = ((p + 11) % 12 == 0) ? "正" : sz[(p + 11) % 12];
     mij = ms[i][j];
@@ -175,9 +181,11 @@ const bazi = (dt = new Date()) => {
     tgn = Math.floor((p - 1) / 12 + 7) % 10;
     dzn = Math.floor((p - 1) / 12 + 1) % 12;
     gzn = tg[tgn] + dz[dzn];
+    syn = yang[tgn] + yin[dzn];
     tgy = (p + 5) % 10;
     dzy = (p + 1) % 12;
     gzy = tg[tgy] + dz[dzy];
+    syy = yang[tgy] + yin[dzy];
     tn = tw[tgn];
     dn = dw[dzn];
     ty = tw[tgy];
@@ -189,7 +197,8 @@ const bazi = (dt = new Date()) => {
 
     return {
         bz: `${gzn + gzy + gzr + gzs}`,
-        bzq: `${gzn}年${gzy}月${gzr}日${gzs}时`,
+        bzs: `${gzn}年${gzy}月${gzr}日${gzs}时`,
+        ty: `${syn +' '+ syy +' '+ syr +' '+ sys}`,
         cj: `${cjy}月${cjr}日`,
         fw: `${f[tn] + f[dn]} ${f[ty] + f[dy]} ${f[tr] + f[dr]} ${f[ts] + f[ds]}`,
         gl: `${y}年${m}月${d}日(星期${xq})${h}点`,

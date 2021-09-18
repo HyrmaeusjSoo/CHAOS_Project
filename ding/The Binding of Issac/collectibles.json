@@ -1,0 +1,25 @@
+{
+    "collectibles": [
+        {"id": 1, "name": "The Sad Onion", "description": ""},
+        {"id": 2, "name": "The Inner Eye", "description": ""},
+        {"id": 3, "name": "Spoon Bender", "description": ""},
+        {"id": 4, "name": "Cricket's Head", "description": ""},
+        {"id": 5, "name": "My Reflection", "description": ""},
+        {"id": 6, "name": "Number One", "description": ""},
+        {"id": 7, "name": "Blood of the Martyr", "description": ""},
+        {"id": 8, "name": "Brother Bobby", "description": ""},
+        {"id": 9, "name": "Skatole", "description": ""},
+        {"id": 10, "name": "Halo of Flies", "description": ""},
+        {"id": 11, "name": "1up!", "description": ""},
+        {"id": 12, "name": "Magic Mushroom", "description": ""},
+        {"id": 13, "name": "The Virus", "description": ""},
+        {"id": 14, "name": "Roid Rage", "description": ""},
+        {"id": 15, "name": "<3", "description": ""},
+        {"id": 16, "name": "", "description": ""}
+    ],
+    "trinkets": [],
+    "cards": [],
+    "pills": [],
+    "special": []
+}
+

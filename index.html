@@ -18,6 +18,7 @@
             div {width: 100%; text-align: center; color: Gray;}
             input {padding: 8px 8px; outline-style: none; border: 0px solid #ccc; border-radius: 10px; background-color: WhiteSmoke;}
             table {margin: auto; width: 28%; height: 430px;}
+            /* table{table-layout: fixed;word-break: break-all; word-wrap: break-word;} */
             pre {font-family: "Microsoft YaHei", Console, Verdana; font-size: 14px; text-align: left;}
             a {text-decoration: none; color: rgba(0,0,0,1);}
             .skyrim {position: fixed; top: 0px; z-index: 2; background: rgba(192,192,192,0.4);}
@@ -80,6 +81,7 @@
 
         <div class="page ap_page" hidden>
             <div class="ti">
+                <p id="太岁"></p>
                 <div class="bri">
                     <form action="#" target="_blank" method="GET">
                         <input type="text" class="ii ap_i" autocomplete="off" />
@@ -144,6 +146,8 @@
         $('.v').click( _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0));
         $('.iv').click(_ => window.scrollTo(0, 0));
 
+        $("#太岁").text(bazi(new Date()).ty);
+
         const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
         const mottoSoo = "ming/motto.soo";
         $.get(CS+theWitnessTXT, res => $('#p_text').html(res));
@@ -207,10 +211,8 @@
 <script data-tag="MHRSkill">
     let mhr = null;
     $.get(CS + "ding/MHRise/mhr_skill.json", res => mhr = res);
-    const MHRsk = (_sk = prompt()) => _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk));
-    const MHRskd = (_sk = prompt()) => _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk) || x.des.includes(_sk));
-    const MHRbl = (_sk = prompt()) => _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk));
-    const MHRbld = (_sk = prompt()) => _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk) || x.des.includes(_sk));
+    const MHRskN = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk)), "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk))});
+    const MHRskD = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk) || x.des.includes(_sk)), "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk) || x.des.includes(_sk))});
 </script>
 
 <script data-tag="AstroDict">
@@ -222,14 +224,14 @@
 <script data-tag="ZhouYi">
     let ZY = {};
     $.get(CS + "ding/ZhouYi.json", res => ZY = res);
-    const zy = (_ => {
-        const QG = _ => ZY.Yi.find(x => x.Hao == Math.floor(Math.random() * ERCode.FCode('36x33')) + 1);
-        const Yao = yao => yao && ZY.Yi && ZY.Yi.find(x => x.Yao == yao);
-        const Gua = g => g && ZY.Yi && ZY.Yi.filter(x => x.Gua.includes(g));
-        const Hg = (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c);
-        const Sou = c => c && ZY.Yi && ZY.Yi.filter(x => Hg(x, c));
-        return {QG, Yao, Gua, Sou};
-    })();
+    const zy = ((Hg = (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c)) => ({
+        QG: (r = Math.floor(Math.random() * ERCode.FCode('36x34')) + 1) => ZY.Yi.find(x => x.Hao == r),
+        Hao: h => h && ZY.Yi && ZY.Yi.find(x => x.Hao == h),
+        Yao: yao => yao && ZY.Yi && ZY.Yi.find(x => x.Yao == yao),
+        Gua: g => g && ZY.Yi && ZY.Yi.filter(x => x.Gua.includes(g)),
+        //Hg: (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c),
+        Sou: c => c && ZY.Yi && ZY.Yi.filter(x => Hg(x, c))
+    }))();
 </script>
 
 <script data-tag="XingTu">
@@ -249,7 +251,7 @@
             const hh = dt.getHours();
             const oh = $('.h' + hh).text().replace(".", "");
             $('.h' + hh).text(oh ? hh + "." + oh : hh + ".");
-            $('.zys').text(sci(hh));
+            $('.zys').text(sci(hh));//bazi(dt).ty
         }, 1000);
     };
     $( _ => xingtu() );
@@ -263,7 +265,7 @@
 
         const b_ad = _ => {aptcls(); AstroDict($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))};
         const b_zy = _ => {aptcls(); zy.Sou($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))};
-        const b_bz = _ => {aptcls(); x = bazi(); $('.apt').append(`<tr><td>bz:${x.bz}</td></tr><tr><td>bzq:${x.bzq}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr>`)};
+        const b_bz = _ => {aptcls(); x = bazi(); $('.apt').append(`<tr><td>${x.bz}</td></tr><tr><td>${x.ty}</td></tr><tr><td>bzs:${x.bzs}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr>`)};
         const b_ect = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.TCode($('.ap_i').val())}</td></tr>`)};
         const b_ecf = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.FCode($('.ap_i').val())}</td></tr>`)};
         const b_rc = _ => {
@@ -275,19 +277,21 @@
                 $('.apt').append(`<tr><td>Total: ${games.totalG}</td></tr>`)
             );
         };
-        const b_mhn = _ => {
-            aptcls(); 
-            MHRsk($('.ap_i').val()).map(x => {
+        const b_mhrn = _ => {
+            aptcls();
+            MHRskN($('.ap_i').val()).skill.map(x => {
                 $('.apt').append(`<tr><td>${x.name}</td><td>${x.des}</td></tr>`);
                 x.levels.map(y => $('.apt').append(`<tr><td></td><td>level${y.lv} : ${y.des}</td></tr>`));
             });
+            MHRskN($('.ap_i').val()).bailong.map(x => {$('.apt').append(`<tr><td>（百）)${x.name}</td><td>${x.des}</td></tr>`)});
         };
-        const b_mhd = _ => {
-            aptcls(); 
-            MHRskd($('.ap_i').val()).map(x => {
+        const b_mhrd = _ => {
+            aptcls();
+            MHRskD($('.ap_i').val()).skill.map(x => {
                 $('.apt').append(`<tr><td>${x.name}</td><td>${x.des}</td></tr>`);
                 x.levels.map(y => $('.apt').append(`<tr><td></td><td>level${y.lv} : ${y.des}</td></tr>`));
             });
+            MHRskD($('.ap_i').val()).bailong.map(x => {$('.apt').append(`<tr><td>（百）${x.name}</td><td>${x.des}</td></tr>`)});
         };
 
         $('.ap_i').on('input', _ => ($('.ap_i').val() && $('.ic').show() || ($('.ic').hide(), icbh()), aptcls()));//.blur( _ => {$('.ic').hide(),$('.ap_i').val('')});
@@ -303,11 +307,11 @@
         $('.bazi').click(b_bz);
         $('.ercode').click(b_ect);
         $('.record').click(b_rc);
-        $('.mhrsk').click(b_mhn);
+        $('.mhrsk').click(b_mhrn);
         $('.tcode').click(b_ect);
         $('.fcode').click(b_ecf);
-        $('.mhrn').click(b_mhn);
-        $('.mhrd').click(b_mhd);
+        $('.mhrn').click(b_mhrn);
+        $('.mhrd').click(b_mhrd);
     });
 </script>
 
@@ -360,112 +364,6 @@
     })();
 </script>
 
-<script data-tag="GolCalc" data-version="0.8">
-    /*
-    const [w, h] = [10, 10];
-    let c = ( a => {
-        for (let i = 0; i < w; i++) {
-            a[i] = [];
-            for (let j = 0; j < h; j++) {
-                a[i][j] = Math.round(Math.random());
-            }
-        }
-        return a;
-    })([]);
 
-    const gol = (l = c) => {
-        for (let i = 0; i < c.length; i++) {
-            for (let j = 0; j < c[i].length; j++) {
-                let n = nigh(l, i, j);
-                if (n == 2) {
-                    c[i][j] = c[i][j];
-                } else if (n == 3) {
-                    c[i][j] = 1;
-                } else {
-                    c[i][j] = 0;
-                }
-            }
-        }
-    }
 
-    const nigh = (l, x, y, nd = 0) => {
-        for (let i = x - 1; i <= x + 1; i++) {
-            for (let j = y - 1; j <= y + 1; j++) {
-                if (i >= 0 && j >= 0 && i < h && j < w) {
-                    if (i != x || j != y) {
-                        nd += l[i][j];
-                    }
-                }
-            }
-        }
-        return nd;
-    }
 
-    const draw = () => {
-        console.clear();
-        for (let i = 0; i < c.length; i++) {
-            let a = '';
-            for (let j = 0; j < c[i].length; j++) {
-                a += c[i][j] + ' ';
-            }
-            console.info(i +': '+ a);
-        }
-    }
-
-    const run = () => {
-        gol();
-        draw();
-    }
-
-    document.body.ondblclick = () => {
-        if (!window.s) {
-            s = setInterval(run, 1000);
-        } else {
-            (clearInterval(s), s = 0);
-        }
-    }
-    */
-    /*
-    let NSGames = null;
-    const record = _woo => {
-        const tw = ERCode.FCode('72q65i63k6fh72t64');//FCode16("72 65 63 6f 72 64");
-        if (_woo == tw || prompt() == tw) {
-            const record_url = "ning/Records/Record.json";
-            $.get(CS+record_url, res => { 
-                let rs = JSON.parse(res).RECORDS;
-                NSGames = rs;
-                
-                let type1 = 0,type2 = 0, type3 = 0, type5 = 0;
-                let region1 = 0, region2 = 0, region3 = 0, region4 = 0, region5 = 0;
-                let total = 0;
-                
-                for (let i=0; i<rs.length; i++) {
-                    if ( ! rs[i].Total) {
-                        rs[i].Total = 0.00;
-                    }
-                    total = parseFloat((parseFloat(rs[i].Total) + total).toFixed(2));
-                    switch (rs[i].Type) {
-                        case '1': type1 = parseFloat((parseFloat(rs[i].Total) + type1).toFixed(2)); break;
-                        case '2': type2 = parseFloat((parseFloat(rs[i].Total) + type2).toFixed(2)); break;
-                        case '3': type3 = parseFloat((parseFloat(rs[i].Total) + type3).toFixed(2)); break;
-                        case '5': type5 = parseFloat((parseFloat(rs[i].Total) + type5).toFixed(2)); break;
-                    }
-                    switch (rs[i].Region) {
-                        case '1': region1 = parseFloat((parseFloat(rs[i].Total) + region1).toFixed(2)); break;
-                        case '2': region2 = parseFloat((parseFloat(rs[i].Total) + region2).toFixed(2)); break;
-                        case '3': region3 = parseFloat((parseFloat(rs[i].Total) + region3).toFixed(2)); break;
-                        case '4': region4 = parseFloat((parseFloat(rs[i].Total) + region4).toFixed(2)); break;
-                        case '5': region5 = parseFloat((parseFloat(rs[i].Total) + region5).toFixed(2)); break;
-                    }
-                }
-                
-                console.log('Type: ' + type1 + ', ' + type2 + ', ' + type3 + ', ' + type5);
-                console.log('Region: ' + region1 + ', ' + region2 + ', ' + region3 + ', ' + region4 + ', ' + region5);
-                console.log('Total:' + total);
-            });
-        } else {
-            console.clear();
-        }
-    }
-    */
-</script>
