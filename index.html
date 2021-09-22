@@ -211,14 +211,14 @@
 <script data-tag="MHRSkill">
     let mhr = null;
     $.get(CS + "ding/MHRise/mhr_skill.json", res => mhr = res);
-    const MHRskN = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk)), "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk))});
-    const MHRskD = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk) || x.des.includes(_sk)), "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk) || x.des.includes(_sk))});
+    const MHRskN = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk)) || [], "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk)) || []});
+    const MHRskD = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk) || x.des.includes(_sk)) || [], "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk) || x.des.includes(_sk)) || []});
 </script>
 
 <script data-tag="AstroDict">
     let AD = null;
     $.get(CS + "ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
-    const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D);
+    const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D) || [];
 </script>
 
 <script data-tag="ZhouYi">
@@ -226,11 +226,11 @@
     $.get(CS + "ding/ZhouYi.json", res => ZY = res);
     const zy = ((Hg = (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c)) => ({
         QG: (r = Math.floor(Math.random() * ERCode.FCode('36x34')) + 1) => ZY.Yi.find(x => x.Hao == r),
-        Hao: h => h && ZY.Yi && ZY.Yi.find(x => x.Hao == h),
-        Yao: yao => yao && ZY.Yi && ZY.Yi.find(x => x.Yao == yao),
-        Gua: g => g && ZY.Yi && ZY.Yi.filter(x => x.Gua.includes(g)),
+        Hao: h => h && ZY.Yi && ZY.Yi.find(x => x.Hao == h) || [],
+        Yao: yao => yao && ZY.Yi && ZY.Yi.find(x => x.Yao == yao) || [],
+        Gua: g => g && ZY.Yi && ZY.Yi.filter(x => x.Gua.includes(g)) || [],
         //Hg: (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c),
-        Sou: c => c && ZY.Yi && ZY.Yi.filter(x => Hg(x, c))
+        Sou: c => c && ZY.Yi && ZY.Yi.filter(x => Hg(x, c)) || []
     }))();
 </script>
 
@@ -263,8 +263,8 @@
         const aptcls = _ => $('.apt').empty();
         const icbh = (t) => {$('.icb').hide();$(t).show();}
 
-        const b_ad = _ => {aptcls(); AstroDict($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))};
-        const b_zy = _ => {aptcls(); zy.Sou($('.ap_i').val()).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))};
+        const b_ad = _ => {aptcls(); AstroDict($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))};
+        const b_zy = _ => {aptcls(); zy.Sou($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))};
         const b_bz = _ => {aptcls(); x = bazi(); $('.apt').append(`<tr><td>${x.bz}</td></tr><tr><td>${x.ty}</td></tr><tr><td>bzs:${x.bzs}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr>`)};
         const b_ect = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.TCode($('.ap_i').val())}</td></tr>`)};
         const b_ecf = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.FCode($('.ap_i').val())}</td></tr>`)};
@@ -279,19 +279,19 @@
         };
         const b_mhrn = _ => {
             aptcls();
-            MHRskN($('.ap_i').val()).skill.map(x => {
+            MHRskN($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).skill.map(x => {
                 $('.apt').append(`<tr><td>${x.name}</td><td>${x.des}</td></tr>`);
                 x.levels.map(y => $('.apt').append(`<tr><td></td><td>level${y.lv} : ${y.des}</td></tr>`));
             });
-            MHRskN($('.ap_i').val()).bailong.map(x => {$('.apt').append(`<tr><td>（百）)${x.name}</td><td>${x.des}</td></tr>`)});
+            MHRskN($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).bailong.map(x => {$('.apt').append(`<tr><td>（百）)${x.name}</td><td>${x.des}</td></tr>`)});
         };
         const b_mhrd = _ => {
             aptcls();
-            MHRskD($('.ap_i').val()).skill.map(x => {
+            MHRskD($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).skill.map(x => {
                 $('.apt').append(`<tr><td>${x.name}</td><td>${x.des}</td></tr>`);
                 x.levels.map(y => $('.apt').append(`<tr><td></td><td>level${y.lv} : ${y.des}</td></tr>`));
             });
-            MHRskD($('.ap_i').val()).bailong.map(x => {$('.apt').append(`<tr><td>（百）${x.name}</td><td>${x.des}</td></tr>`)});
+            MHRskD($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).bailong.map(x => {$('.apt').append(`<tr><td>（百）${x.name}</td><td>${x.des}</td></tr>`)});
         };
 
         $('.ap_i').on('input', _ => ($('.ap_i').val() && $('.ic').show() || ($('.ic').hide(), icbh()), aptcls()));//.blur( _ => {$('.ic').hide(),$('.ap_i').val('')});
