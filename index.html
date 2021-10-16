@@ -257,15 +257,29 @@
     $( _ => xingtu() );
 </script>
 
+<script>
+    /*localStorage.setItem('point', 1);
+    localStorage.setItem('gj', 1);
+    localStorage.setItem('bd', 1);
+
+    setInterval(_ => {
+        let v = localStorage.getItem('point');
+        v = !v ? 1 : parseInt(v)+1;
+        localStorage.setItem('point',v);
+        console.clear();
+        console.log(v);
+    }, 1000);*/
+</script>
+
 <script data-tag="AP">
     $( _ =>{
         const aps = _ => $('.ic').toggle();
         const aptcls = _ => $('.apt').empty();
         const icbh = (t) => {$('.icb').hide();$(t).show();}
-
+        const apir = _ => $('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "");
         const b_ad = _ => {aptcls(); AstroDict($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))};
         const b_zy = _ => {aptcls(); zy.Sou($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))};
-        const b_bz = _ => {aptcls(); x = bazi(); $('.apt').append(`<tr><td>${x.bz}</td></tr><tr><td>${x.ty}</td></tr><tr><td>bzs:${x.bzs}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr>`)};
+        const b_bz = _ => {aptcls(); let ds = $('.ap_i').val().replace(/(^\s*)|(\s*$)/g, ""); x = !ds ? bazi() : bazi(new Date(ds)); $('.apt').append(`<tr><td>${x.bz}</td></tr><tr><td>${x.ty}</td></tr><tr><td>bzs:${x.bzs}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr>`)};
         const b_ect = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.TCode($('.ap_i').val())}</td></tr>`)};
         const b_ecf = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.FCode($('.ap_i').val())}</td></tr>`)};
         const b_rc = _ => {
