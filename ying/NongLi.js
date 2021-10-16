@@ -124,6 +124,7 @@ const bazi = (dt = new Date()) => {
     m = dt.getMonth() + 1;
     d = dt.getDate();
     h = dt.getHours();
+    const gzyy = s => (s++)%2 ? "阴" : "阳";
 
     gl0 = (Date.UTC(y, 0, 1) - Date.UTC(1901, 1, 19)) / 86400000;
     dy = y - 1901;
@@ -205,6 +206,7 @@ const bazi = (dt = new Date()) => {
         nl: `${gzn}年${yue}月${ri}日${dz[dzs]}时`,
         qh: `${jq}年=>${gzn}年=>${jh}年`,
         sx: `${sx[dzn]}`,
-        wx: `${w[tn] + w[dn]} ${w[ty] + w[dy]} ${w[tr] + w[dr]} ${w[ts] + w[ds]}`
+        wx: `${w[tn] + w[dn]} ${w[ty] + w[dy]} ${w[tr] + w[dr]} ${w[ts] + w[ds]}`,
+        yy: `${gzyy(tgn)+gzyy(dzn) +' '+ gzyy(tgy)+gzyy(dzy) +' '+ gzyy(tgr)+gzyy(dzr) +' '+ gzyy(tgs)+gzyy(dzs)}`
     };
 }
