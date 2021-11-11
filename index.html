@@ -251,7 +251,7 @@
             const hh = dt.getHours();
             const oh = $('.h' + hh).text().replace(".", "");
             $('.h' + hh).text(oh ? hh + "." + oh : hh + ".");
-            $('.zys').text(sci(hh));//bazi(dt).ty
+            $('.zys').text("太岁于辰 " + bazi(dt).ts);//sci(hh)
         }, 1000);
     };
     $( _ => xingtu() );
