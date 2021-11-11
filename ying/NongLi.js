@@ -208,6 +208,7 @@ const bazi = (dt = new Date()) => {
         sx: `${sx[dzn]}`,
         wx: `${w[tn] + w[dn]} ${w[ty] + w[dy]} ${w[tr] + w[dr]} ${w[ts] + w[ds]}`,
         yy: `${gzyy(tgn)+gzyy(dzn) +' '+ gzyy(tgy)+gzyy(dzy) +' '+ gzyy(tgr)+gzyy(dzr) +' '+ gzyy(tgs)+gzyy(dzs)}`,
-        ts: `${taisui[dzs]}`
+        ts: `太岁于辰 ${taisui[dzs]}`,
+        s: `岁于辰 ${sui[dzs]}`
     };
 }
