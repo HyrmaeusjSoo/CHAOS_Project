@@ -139,7 +139,6 @@
 <script data-tag="Variable">
     //const CS = "https://raw.githubusercontent.com/HyleaSoo/CHAOS_Project/master/";
     const CS = "https://hyleasoo.github.io/CHAOS_Project/";
-    axios.defaults.baseURL = 'https://hyleasoo.github.io/CHAOS_Project/';
 
     $( _ => {
         $('#switch').click( _ => {$('.page').hide(), $('.gol_page').show()});
@@ -152,11 +151,10 @@
 
         const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
         const mottoSoo = "ming/motto.soo";
-        axios(theWitnessTXT).then(r => $('#p_text').html(r.data));
-        $('#theWitness').click( _ => axios(theWitnessTXT).then(r => $('#p_text').html(r.data)));
-        $('#theMotto').click( _ => axios(mottoSoo).then(r => $('#p_text').html(r.data)));
-        axios('ding/motto_bottom.json').then(r => {
-            const m = r.data;
+        $.get(CS+theWitnessTXT, res => $('#p_text').html(res));
+        $('#theWitness').click( _ => $.get(CS + theWitnessTXT, p => $('#p_text').html(p)));
+        $('#theMotto').click( _ => $.get(CS + mottoSoo, p => $('#p_text').html(p)));
+        $.get(CS + "ding/motto_bottom.json", m => {
             $(".write_bottom").append('<p>'+m.ibt+'</p>');
             m.ml.map(x => $(".ml").append('<p>'+ x +'</p>'));
             m.mc.map(x => $(".mc").append('<p>'+ x +'</p>'));
@@ -175,15 +173,17 @@
 
 <script data-tag="NSGames">
     let NSGames = null;
-    const record = async (_woo = prompt()) => {
+    const record = (_woo = prompt()) => {
         if (_woo == ERCode.FCode('72q65i63k6fh72t64') && _woo == FCode16("72 65 63 6f 72 64")) {
             let totalG = 0;
             let typeG = {'1': 0, '2': 0, '3': 0, '5': 0};
             let regionG = {'0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0};
             let yearG = {'2018': 0, '2019':0, '2020':0, '2021': 0};
 
-            await axios('ning/Records/Record.json').then(r => {
-                let rs = r.data.RECORDS;
+            const record_url = "ning/Records/Record.json";
+            $.ajaxSettings.async = false;
+            $.get(CS+record_url, res => { 
+                let rs = res.RECORDS;//JSON.parse(res).RECORDS;
                 NSGames = rs;
                 const adt = (o, t) => ((parseFloat(o) || 0) + parseFloat(t)).toFixed(2);
 
@@ -199,6 +199,7 @@
                 console.log('Year: ' + yearG['2018'] +', ' + yearG['2019'] +', '+ yearG['2020'] +', '+ yearG['2021']);
                 console.log('Total: ' + totalG);
             });
+            $.ajaxSettings.async = true;
             return {totalG, typeG, regionG, yearG};
         } else {
             console.clear();
@@ -210,20 +211,20 @@
 
 <script data-tag="MHRSkill">
     let mhr = null;
-    axios('ding/MHRise/mhr_skill.json').then(r => mhr = r.data);
+    $.get(CS + "ding/MHRise/mhr_skill.json", res => mhr = res);
     const MHRskN = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk)) || [], "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk)) || []});
     const MHRskD = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk) || x.des.includes(_sk)) || [], "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk) || x.des.includes(_sk)) || []});
 </script>
 
 <script data-tag="AstroDict">
     let AD = null;
-    axios('ding/astrodict_191103/astrodict_191103ec.json').then(r => AD = r.data);
+    $.get(CS + "ding/astrodict_191103/astrodict_191103ec.json", res => AD = res.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D) || [];
 </script>
 
 <script data-tag="ZhouYi">
     let ZY = {};
-    axios('ding/ZhouYi.json').then(r => ZY = r.data);
+    $.get(CS + "ding/ZhouYi.json", res => ZY = res);
     const zy = ((Hg = (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c)) => ({
         QG: (r = Math.floor(Math.random() * ERCode.FCode('36x34')) + 1) => ZY.Yi.find(x => x.Hao == r),
         Hao: h => h && ZY.Yi && ZY.Yi.find(x => x.Hao == h) || [],
@@ -284,13 +285,12 @@
         const b_ecf = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.FCode($('.ap_i').val())}</td></tr>`)};
         const b_rc = _ => {
             aptcls(); 
-            const games = record($('.ap_i').val()); 
-            games && games.then(p => p && (
-                    $('.apt').append(`<tr><td>Type: ${Object.entries(p["typeG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
-                    $('.apt').append(`<tr><td>Region: ${Object.entries(p["regionG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
-                    $('.apt').append(`<tr><td>Year: ${Object.entries(p["yearG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
-                    $('.apt').append(`<tr><td>Total: ${p.totalG}</td></tr>`)
-            ));
+            const games = record($('.ap_i').val()); games && (
+                $('.apt').append(`<tr><td>Type: ${Object.entries(games["typeG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
+                $('.apt').append(`<tr><td>Region: ${Object.entries(games["regionG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
+                $('.apt').append(`<tr><td>Year: ${Object.entries(games["yearG"]).map(x => x[0] +':'+ x[1] +' ')}</td></tr>`),
+                $('.apt').append(`<tr><td>Total: ${games.totalG}</td></tr>`)
+            );
         };
         const b_mhrn = _ => {
             aptcls();
