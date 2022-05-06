@@ -4,14 +4,15 @@
         Bookmarks.
         Bracket Pair Colorizer 2.
         ESLint.
+        JavaScript(ES6) code snippets.
+        Python
+        //C#
+        //SQLite
         GitHub Plus Theme.
         GitHub Sharp Theme.
-        JavaScript(ES6) code snippets.
         Night Owl - Theme
         Verdandi Theme
         Winter is Coming Theme
-        C#
-        SQLite
     */
 
     // 书签自定义图标路径
@@ -122,14 +123,6 @@
             "savePassword": true
         }
     ],
-
-    //// 指定PHP可执行文件
-    //"php.validate.executablePath": "/php/php-7.2.1-nts/php.exe",
-    //// PHP IntelliSense php7.0指定路径(必须7.0以上)
-    //"php.executablePath": "/php/php-7.2.1-nts/php.exe",
-
-    // 菜单条显示方式 动态(可用alt调出)
-    "window.menuBarVisibility": "toggle",
     // 动作条可见
     "workbench.activityBar.visible": true,
     // 主题

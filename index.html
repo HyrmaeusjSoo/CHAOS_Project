@@ -22,7 +22,7 @@
             pre {font-family: "Microsoft YaHei", Console, Verdana; font-size: 14px; text-align: left;}
             a {text-decoration: none; color: rgba(0,0,0,1);}
             .skyrim {position: fixed; top: 0px; z-index: 2; background: rgba(192,192,192,0.4);}
-            .switch {margin-left: -45%;}
+            .switch {margin-left: -55%;}
             .iv {float: right; margin-right: 3.5%; font-size: 18px;}
             .v {float: right; margin-right: 1%; font-size: 18px;}
             .page {margin-top: 2.5%;}
@@ -59,10 +59,11 @@
             <input type="button" class="switch" id="switch" value="switch">
             <input type="button" class="appg" id="appg" value="appg">
             <input type="button" class="motto" id="motto" value="motto">
-            <a class="iv" data-v="v" href="javascript:;">☄🐚🌏</a>
-            <a class="v" data-v="v" href="javascript:;">☂🍂🔮〽🎯</a>
+            <input type="button" class="solar" id="solar" value="solar">
+            <a class="iv" data-v="v" href="javascript:;">☄</a>
+            <a class="v" data-v="v" href="javascript:;">☂</a>
         </div>
-        
+
         <div class="page gol_page">
             <div class="ti">
                 <p>Journey into night. So, I hope you will enjoy this last piece..very much.</p>
@@ -129,6 +130,8 @@
             </div>
         </div>
 
+        <div class="page solar_page" hidden></div>
+
         <div class="fcr">
             <p>public 2018 - 2021 Hylea Soo</p>
             <p id="record_btn">&nbsp;&nbsp;&nbsp;&nbsp;</p>
@@ -145,6 +148,7 @@
         $('#switch').click( _ => {$('.page').hide(), $('.gol_page').show()});
         $('#motto').click( _ => {$('.page').hide(), $('.motto_page').show()});
         $('#appg').click( _ => {$('.page').hide(), $('.ap_page').show()});
+        $('#solar').click( _ => alert(ERCode.TCode('To Be Continued')));
         $('.v').click( _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0));
         $('.iv').click(_ => window.scrollTo(0, 0));
 
