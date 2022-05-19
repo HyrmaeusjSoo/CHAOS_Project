@@ -2,7 +2,6 @@
     /*
     插件列表:
         Bookmarks.
-        Bracket Pair Colorizer 2.
         ESLint.
         JavaScript(ES6) code snippets.
         Python
@@ -16,17 +15,88 @@
     */
 
     // 书签自定义图标路径
-    "bookmarks.gutterIconPath": "icon/ds.jpg",
+    //"bookmarks.gutterIconPath": "icon/ds.jpg",
 
-    // 活动范围设置
-    "bracket-pair-colorizer-2.activeScopeCSS": [
-        "borderStyle : solid",
-        "borderWidth : 1px",
-        "borderColor : {color}",
-        "opacity: 0.5"
+    // Crane: 可能是错误检查?
+    "crane.enableErrorTelemetry": true,
+    // 显示空格
+    "editor.renderWhitespace": "all",
+    // 显示制表符
+    "editor.renderControlCharacters": true,
+    // 关闭检测第一个tab后面全是tab
+    "editor.detectIndentation": false,
+    // tab为4个空格
+    "editor.tabSize": 4,
+    // 转为空格
+    "editor.insertSpaces": true,
+    // 启用minimap
+    "editor.minimap.enabled": true,
+    // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
+    "editor.cursorBlinking": "expand",
+    // 光滑输入
+    "editor.cursorSmoothCaretAnimation": true,
+    // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
+    "editor.rulers": [72,108,500],
+    // 控制字体系列
+    "editor.fontFamily": "'Fira Code Retina', Consolas, monospace",
+    // 启用字体连字
+    "editor.fontLigatures": true,
+    // 以像素为单位控制字号
+    "editor.fontSize": 15,
+    // 控制字体粗细
+    "editor.fontWeight": "normal",
+    // 代码超出屏幕换行
+    "editor.wordWrap": "off",
+    // 编辑器是否动画滚动
+    "editor.smoothScrolling": false,
+    // 自动关闭括号
+    "editor.autoClosingBrackets": "always",
+    // 窗口放大级别
+    "window.zoomLevel": 0,
+
+    // 与活动文件同步
+    "explorer.autoReveal": false,
+    // 删除前询问
+    "explorer.confirmDelete": false,
+
+    // 忽视git失效警告
+    "git.ignoreMissingGitWarning": true,
+
+    // SQL Server 连接配置
+    "mssql.connections": [
+        {
+            "server": "localhost",
+            "database": "Record",
+            "authenticationType": "SqlLogin",
+            "user": "sa",
+            "password": "root",
+            "emptyPasswordInput": false,
+            "savePassword": true
+        }
     ],
-    // 色彩模式 - 连贯显示
-    "bracket-pair-colorizer-2.colorMode": "Consecutive",
+    // 动作条可见
+    "workbench.activityBar.visible": true,
+    // 主题
+    "workbench.colorTheme": "GitHub Sharp",
+    "security.workspace.trust.untrustedFiles": "open",
+    
+    // 启用括号着色器
+    "editor.bracketPairColorization.enabled": true,
+    // 不同括号类型是否有独立的颜色池
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+    // 括号组
+    "editor.guides.bracketPairs": "active",
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#6969ff",
+        "editorBracketHighlight.foreground2": "#ff0",
+        "editorBracketHighlight.foreground3": "#ff8000",
+        "editorBracketHighlight.foreground4": "#0f0",
+        "editorBracketHighlight.foreground5": "#BA2636",
+        "editorBracketHighlight.foreground6": "#43ebbb",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000",
+    },
+/*
+括号着色器2已弃用
     // 括号匹配颜色
     "bracket-pair-colorizer-2.colors": [
         //wow
@@ -55,76 +125,5 @@
         "#F4606C", //淡玫红
         "#8CC7B5", //灰绿
     ],
-    // 强制迭代颜色
-    "bracket-pair-colorizer-2.forceIterationColorCycle": false,
-    // 强制唯一颜色
-    "bracket-pair-colorizer-2.forceUniqueOpeningColor": false,
-    // 高亮活动范围
-    "bracket-pair-colorizer-2.highlightActiveScope": false,
-    // 范围线样式
-    "bracket-pair-colorizer-2.scopeLineCSS": [
-        "borderStyle : solid",
-        "borderWidth : 1px",
-        "borderColor : {color}",
-        "opacity: 0.5"
-    ],
-    // 装订线内显示括号
-    "bracket-pair-colorizer-2.showBracketsInGutter": true,
-
-    // Crane: 可能是错误检查?
-    "crane.enableErrorTelemetry": true,
-
-    // 显示空格
-    "editor.renderWhitespace": "all",
-    // 显示制表符
-    "editor.renderControlCharacters": true,
-    // 关闭检测第一个tab后面全是tab
-    "editor.detectIndentation": false,
-    // tab为4个空格
-    "editor.tabSize": 4,
-    // 转为空格
-    "editor.insertSpaces": true,
-    // 启用minimap
-    "editor.minimap.enabled": true,
-    // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
-    "editor.cursorBlinking": "expand",
-    // 光滑输入
-    "editor.cursorSmoothCaretAnimation": true,
-    // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
-    "editor.rulers": [110,150],
-    // 控制字体系列
-    "editor.fontFamily": "'Fira Code Retina', Consolas, monospace",
-    // 启用字体连字
-    "editor.fontLigatures": true,
-    // 以像素为单位控制字号
-    "editor.fontSize": 15,
-    // 控制字体粗细
-    "editor.fontWeight": "normal",
-    // 代码超出屏幕换行
-    "editor.wordWrap": "off",
-
-    // 与活动文件同步
-    "explorer.autoReveal": false,
-    // 删除前询问
-    "explorer.confirmDelete": false,
-
-    // 忽视git失效警告
-    "git.ignoreMissingGitWarning": true,
-
-    // SQL Server 连接配置
-    "mssql.connections": [
-        {
-            "server": "localhost",
-            "database": "Record",
-            "authenticationType": "SqlLogin",
-            "user": "sa",
-            "password": "root",
-            "emptyPasswordInput": false,
-            "savePassword": true
-        }
-    ],
-    // 动作条可见
-    "workbench.activityBar.visible": true,
-    // 主题
-    "workbench.colorTheme": "GitHub Sharp",
+*/
 }
