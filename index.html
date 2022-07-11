@@ -5,7 +5,7 @@
 <!-- +---------------------------------------------------------------------------------------+ -->
 <!-- | Hermaeus Mora's Oghma Infinium. _wabbajack Zeno Human Requests.                 2020  | -->
 <!-- +---------------------------------------------------------------------------------------+ -->
-<!-- |                                                             —————— 龍が如く Hylea Soo  | -->
+<!-- | RGB Rainbow                                                —————— 龍が如く Hylea Soo  | -->
 <!-- +---------------------------------------------------------------------------------------+ -->
 <!DOCTYPE html>
 <html>
@@ -148,7 +148,7 @@
         $('#switch').click( _ => {$('.page').hide(), $('.gol_page').show()});
         $('#motto').click( _ => {$('.page').hide(), $('.motto_page').show()});
         $('#appg').click( _ => {$('.page').hide(), $('.ap_page').show()});
-        $('#solar').click( _ => alert(ERCode.TCode('To Be Continued')));
+        $('#solar').click( _ => alert(ERHex.TCode('To Be Continued')));
         $('.v').click( _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0));
         $('.iv').click(_ => window.scrollTo(0, 0));
 
@@ -180,7 +180,7 @@
 <script data-tag="NSGames">
     let NSGames = null;
     const record = async (_woo = prompt()) => {
-        if (_woo == ERCode.FCode('72q65i63k6fh72t64') && _woo == FCode16("72 65 63 6f 72 64")) {
+        if (_woo == ERHex.FCode('72q65i63k6fh72t64') && _woo == FCode16("72 65 63 6f 72 64")) {
             let totalG = 0;
             let typeG = {'1': 0, '2': 0, '3': 0, '5': 0};
             let regionG = {'0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0};
@@ -229,7 +229,7 @@
     let ZY = {};
     axios('ding/ZhouYi.json').then(r => ZY = r.data);
     const zy = ((Hg = (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c)) => ({
-        QG: (r = Math.floor(Math.random() * ERCode.FCode('36x34')) + 1) => ZY.Yi.find(x => x.Hao == r),
+        QG: (r = Math.floor(Math.random() * ERHex.FCode('36x34')) + 1) => ZY.Yi.find(x => x.Hao == r),
         Hao: h => h && ZY.Yi && ZY.Yi.find(x => x.Hao == h) || [],
         Yao: yao => yao && ZY.Yi && ZY.Yi.find(x => x.Yao == yao) || [],
         Gua: g => g && ZY.Yi && ZY.Yi.filter(x => x.Gua.includes(g)) || [],
@@ -284,8 +284,8 @@
         const b_ad = _ => {aptcls(); AstroDict($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))};
         const b_zy = _ => {aptcls(); zy.Sou($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))};
         const b_bz = _ => {aptcls(); let ds = $('.ap_i').val().replace(/(^\s*)|(\s*$)/g, ""); x = !ds ? bazi() : bazi(new Date(ds)); $('.apt').append(`<tr><td>${x.bz}</td></tr><tr><td>${x.ty}</td></tr><tr><td>bzs:${x.bzs}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr><tr><td>yy:${x.yy}</td></tr><tr><td>sts:${x.ts}，${x.s}</td></tr>`)};
-        const b_ect = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.TCode($('.ap_i').val())}</td></tr>`)};
-        const b_ecf = _ => {aptcls(); $('.apt').append(`<tr><td>${ERCode.FCode($('.ap_i').val())}</td></tr>`)};
+        const b_ect = _ => {aptcls(); $('.apt').append(`<tr><td>${ERHex.TCode($('.ap_i').val())}</td></tr>`)};
+        const b_ecf = _ => {aptcls(); $('.apt').append(`<tr><td>${ERHex.FCode($('.ap_i').val())}</td></tr>`)};
         const b_rc = _ => {
             aptcls(); 
             const games = record($('.ap_i').val()); 

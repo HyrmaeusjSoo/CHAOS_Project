@@ -5,9 +5,17 @@
 // +---------------------------------------------------------------------------------------+
 // | Hermaeus Mora's Oghma Infinium. _wabbajack Zeno Human Requests.                 2019  |
 // +---------------------------------------------------------------------------------------+
-// |                                                             —————— 龍が如く Hylea Soo  |
+// | RGB Rainbow                                                 —————— 龍が如く Hylea Soo  |
 // +---------------------------------------------------------------------------------------+
 //const _Simulator = "63067#1.2.3.";
+
+const rc = f => String.fromCharCode(96 + f + Math.ceil(Math.random() * (26 - f)));
+const ERHex = ((b = 16, f = b > 10 ? b - 10 : 0) => ({
+    TCode: s => [...s].map((x, y) => (y > 0 && rc(f) || '') + x.charCodeAt().toString(b)).join(''),
+    FCode: s => [...s].map((x, y) => (x.charCodeAt() > 96 + f) ? ' ' : s[y]).join('').split(' ').map(e => String.fromCharCode(parseInt(e, b))).join(''),
+    SCode: s => [...s].map((x, y) => (x.charCodeAt() > 96 + f) ? ' ' : s[y]),
+    SFCode: s => SCode(s).join('').split(' ').map(e => String.fromCharCode(parseInt(e, b))).join('')
+}))();
 
 const ERCode = ((b = 16, f = b > 10 ? b - 10 : 0, rc = _ => String.fromCharCode(96 + f + Math.ceil(Math.random() * (26 - f)))) => ({
     TCode: s => [...s].map((x, y) => (y > 0 && rc() || '') + x.charCodeAt().toString(b)).join(''),
