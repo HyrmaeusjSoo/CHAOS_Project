@@ -199,7 +199,7 @@ const bazi = (dt = new Date()) => {
     return {
         bz: `${gzn + gzy + gzr + gzs}`,
         bzs: `${gzn}年${gzy}月${gzr}日${gzs}时`,
-        ty: `${syn +' '+ syy +' '+ syr +' '+ sys}`,
+        ty: `${syn} ${syy} ${syr} ${sys}`,
         cj: `${cjy}月${cjr}日`,
         fw: `${f[tn] + f[dn]} ${f[ty] + f[dy]} ${f[tr] + f[dr]} ${f[ts] + f[ds]}`,
         gl: `${y}年${m}月${d}日(星期${xq})${h}点`,
@@ -207,7 +207,7 @@ const bazi = (dt = new Date()) => {
         qh: `${jq}年=>${gzn}年=>${jh}年`,
         sx: `${sx[dzn]}`,
         wx: `${w[tn] + w[dn]} ${w[ty] + w[dy]} ${w[tr] + w[dr]} ${w[ts] + w[ds]}`,
-        yy: `${gzyy(tgn)+gzyy(dzn) +' '+ gzyy(tgy)+gzyy(dzy) +' '+ gzyy(tgr)+gzyy(dzr) +' '+ gzyy(tgs)+gzyy(dzs)}`,
+        yy: `${gzyy(tgn) + gzyy(dzn)} ${gzyy(tgy) + gzyy(dzy)} ${gzyy(tgr) + gzyy(dzr)} ${gzyy(tgs) + gzyy(dzs)}`,
         ts: `太岁于辰 ${taisui[dzs]}`,
         s: `岁于辰 ${sui[dzs]}`
     };

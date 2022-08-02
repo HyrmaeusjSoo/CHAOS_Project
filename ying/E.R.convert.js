@@ -38,6 +38,8 @@ const ERCode_ = ((b = 16) => {
 const TCode16 = s => [...s].map((e, i) => (i>0 && ' ' || '') + e.charCodeAt().toString(16)).join('');
 const FCode16 = s => s.split(' ').map(e => String.fromCharCode(parseInt(e, 16))).join('');
 
+export {TCode16, FCode16, ERHex};
+
 function toCode(str){
     var result = [];
     var list = str.split("");

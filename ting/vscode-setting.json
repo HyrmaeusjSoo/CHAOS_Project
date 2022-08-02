@@ -1,18 +1,25 @@
 {
-    /*
-    插件列表:
-        Bookmarks.
-        ESLint.
-        JavaScript(ES6) code snippets.
-        Python
-        //C#
-        //SQLite
-        GitHub Plus Theme.
-        GitHub Sharp Theme.
-        Night Owl - Theme
-        Verdandi Theme
-        Winter is Coming Theme
-    */
+    /**************************************************
+        插件列表：
+            PHP Intelephense
+            JavaScript(ES6) code snippets
+            ESLint
+            Javascript and TypeScript Nightly
+            Vetur
+            Python
+
+            Bookmarks
+            Markdown All in One
+            Microsoft Edge Tools for VS Code
+            Prettier - Code formatter
+
+            GitHub Sharp Theme
+            GitHub Theme
+            Night Owl
+            Verdandi Theme
+            Rainbow Fart
+                              —— 2022-07-29 15:22:00
+    **************************************************/
 
     /** 编辑器设置 */
     // 显示空格
@@ -29,12 +36,19 @@
     "editor.insertSpaces": true,
     // 启用minimap
     "editor.minimap.enabled": true,
+    // minimap自动隐藏
+    "editor.minimap.autohide": false,
+    // 控制迷你地图的大小。
+    //  - proportional: 迷你地图的大小与编辑器内容相同(并且可能滚动)。
+    //  - fill: 迷你地图将根据需要拉伸或缩小以填充编辑器的高度(不滚动)。
+    //  - fit: 迷你地图将根据需要缩小，永远不会大于编辑器(不滚动)。
+    "editor.minimap.size": "proportional",
     // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
     "editor.cursorBlinking": "expand",
     // 光滑输入
     "editor.cursorSmoothCaretAnimation": true,
     // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
-    "editor.rulers": [72,108,500],
+    "editor.rulers": [72,100,125],
     // 控制字体系列
     "editor.fontFamily": "'Fira Code Retina', Consolas, monospace",
     // 启用字体连字
@@ -56,151 +70,148 @@
     // 折叠策略
     "editor.foldingStrategy": "auto",
     // 控制何时显示行号槽上的折叠控件。
-    // - always: 始终显示折叠控件。
-    // - mouseover: 仅在鼠标位于装订线上方时显示折叠控件。
+    //  - always: 始终显示折叠控件。
+    //  - mouseover: 仅在鼠标位于装订线上方时显示折叠控件。
     "editor.showFoldingControls": "always",
     // 启用括号着色器
     "editor.bracketPairColorization.enabled": true,
     // 不同括号类型是否有独立的颜色池
     "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-    // 括号组
+    // 括号对连接
     "editor.guides.bracketPairs": "active",
+    //编辑器自定义颜色
+    "editor.tokenColorCustomizations": {
+        "types": "#1a05d4",
+        //"comments": "#474343cf", // 注释
+        "keywords": "#ce068f", // 关键字
+        //"functions": "#5b99fcc9", // 函数名
+        "variables": "#05658b", // 变量名
+        //"strings": "#04771f", // 字符串 
+        "numbers": "#0b94a3", // 数字
+    },
+    // 全局搞颜色 - dwbRGB
     "workbench.colorCustomizations": {
-        // "editorBracketHighlight.foreground1": "#6969ff",
-        // "editorBracketHighlight.foreground2": "#e1e109",
-        // "editorBracketHighlight.foreground3": "#ff8000",
-        // "editorBracketHighlight.foreground4": "#0f0",
-        // "editorBracketHighlight.foreground5": "#BA2636",
-        // "editorBracketHighlight.foreground6": "#43ebbb",
+        // 括号对
+        "editorBracketMatch.background": "#c0c0c055",
+        "editorBracketMatch.border": "#FFD700",
         "editorBracketHighlight.foreground1": "#1eff00",
         "editorBracketHighlight.foreground2": "#0081ff",
-        "editorBracketHighlight.foreground3": "#e5cc80",
-        "editorBracketHighlight.foreground4": "#c600ff",
-        "editorBracketHighlight.foreground5": "#ff8000",
-        "editorBracketHighlight.foreground6": "#BA2636",
-        "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000",
+        "editorBracketHighlight.foreground3": "#c600ff",
+        "editorBracketHighlight.foreground4": "#ff8000",
+        "editorBracketHighlight.foreground5": "#43ebbb",
+        "editorBracketHighlight.foreground6": "#ff6ec7",
+        "editorBracketHighlight.unexpectedBracket.foreground": "#BA2636",
+        // 标尺
+        "editorRuler.foreground": "#fb03a421",
+        // 鼠标
+        "editorCursor.foreground": "#ff1cae",
+        // 行号 - 当前行
+        "editorLineNumber.activeForeground": "#ff6ec7",
+        // 当前行高亮
+        "editor.lineHighlightBorder": "#cecccc90",
+        "editor.lineHighlightBackground": "#f4f3f3b1",
+        // 空格
+        "editorWhitespace.foreground": "#09000025",
+        // 书签
+        "bookmarks.lineBackground": "#005eff04",
+        "bookmarks.lineBorder": "#adeaeaa0",
+        "bookmarks.overviewRuler": "#adeaea99"
     },
-
-    // 忽视git失效警告
-    "git.ignoreMissingGitWarning": true,
-    // 动作条可见
-    "workbench.activityBar.visible": true,
-    // 主题
-    "workbench.colorTheme": "GitHub Sharp",
     // 控制编辑器打开的位置
-    // - `left` 或 `right` 可分别在当前活动编辑器的左侧或右侧打开
-    // - `first` (最前) 或 `last` (最后) 打开的位置与当前活动编辑器无关
+    //  - `left` 或 `right` 可分别在当前活动编辑器的左侧或右侧打开
+    //  - `first` (最前) 或 `last` (最后) 打开的位置与当前活动编辑器无关
     "workbench.editor.openPositioning": "last",
     // 控制编辑器选项卡的大小调整。当 "#workbench.editor.showTabs#" 处于禁用状态时，将忽略此值。
-    // - fit: 始终将标签页保持足够大，能够完全显示编辑器标签。
-    // - shrink: 在不能同时显示所有选项卡时，允许选项卡缩小。
+    //  - fit: 始终将标签页保持足够大，能够完全显示编辑器标签。
+    //  - shrink: 在不能同时显示所有选项卡时，允许选项卡缩小。
     "workbench.editor.tabSizing": "shrink",
     // 项目文件树缩进像素
     "workbench.tree.indent": 10,
-
-    // 打开文件信任
-    "security.workspace.trust.untrustedFiles": "open",
-
-    "vscode-edge-devtools.webhint": false,
-
-    // 控制具有未保存更改的编辑器的 [自动保存](https://code.visualstudio.com/docs/editor/codebasics#_save-auto-save)。
-    // - off: 具有更改的编辑器永远不会自动保存。
-    // - afterDelay: 在配置的 `files.autoSaveDelay` 之后，会自动保存具有更改的编辑器。
-    // - onFocusChange: 当编辑器失去焦点时，会自动保存具有更改的编辑器。
-    // - onWindowChange: 当窗口失去焦点时，会自动保存具有更改的编辑器。
-    "files.autoSave": "onFocusChange",
-    // 配置语言的文件关联 (如: `"*.extension": "html"`)。这些关联的优先级高于已安装语言的默认关联。
+    // 主题
+    "workbench.colorTheme": "GitHub Sharp",
+    // 与活动文件同步
+    "explorer.autoReveal": false,
+    // 删除前询问
+    "explorer.confirmDelete": true,
+    // 文件自动保存
+    //  - off: 关闭自动保存
+    //  - afterDelay: 在配置的 `files.autoSaveDelay` 之后
+    //  - onFocusChange: 编辑器失去焦点
+    //  - onWindowChange: 软件窗口失去焦点
+    "files.autoSave": "onWindowChange",
+    // 配置语言的文件关联。 这些关联的优先级高于已安装语言的默认关联。
     "files.associations": {"*.module": "php"},
     /* php环境配置 */
     "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.1.9nts/php.exe",
     "php.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.1.9nts/php.exe",
     "php.suggest.basic": false,
     "intelephense.environment.documentRoot": "index.php",
+    // intelephense排除文件夹（资源文件加太大了造成一直在检索php文件导致提示跳转根本用不了）
     "intelephense.files.exclude": [
-        "**/.git/**" ,
-        "**/.svn/**" ,
-        "**/.hg/**" ,
-        "**/.DS_Store/**" ,
-        "**/.history/**" ,
-        "**/CVS/**" ,
-        "**/node_modules/**" ,
-        "**/bower_components/**" ,
-        "**/vendor/**/{Tests,tests}/**" ,
-        "**/vendor/**/vendor/**" ,
-        "**/runtime/**" ,
-        "**/laya/**" ,
-        "**/zt/**" ,
-        "**/upload/**" ,
-        "**/static/**" ,
-        "**/images/**"
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/.DS_Store/**",
+        "**/.history/**",
+        "**/.settings/**",
+        "**/CVS/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/vendor/**/{Tests,tests}/**",
+        "**/vendor/**/vendor/**",
+        "**/runtime/**",
+        "**/laya/**",
+        "**/zt/**",
+        "**/upload/**",
+        "**/static/**",
+        "**/images/**",
+        "**/vagrant/**",
+        //"**/frontend/**",
+        "**/o2o_platform/**",
+        "**/KeyPressCounter/**",
+        "**/CHAOS_Project/**",
     ],
+    // 书签图标颜色
+    "bookmarks.gutterIconBorderColor": "#38b0de",
+    "bookmarks.gutterIconFillColor": "#f4f3f3b1",
+    // 忽视git失效警告
+    "git.ignoreMissingGitWarning": true,
+    // 打开文件信任
+    "security.workspace.trust.untrustedFiles": "open",
+    // edge插件开发者工具
+    "vscode-edge-devtools.webhint": false,
 
-    // 与活动文件同步
-    "explorer.autoReveal": false,
-    // 删除前询问
-    "explorer.confirmDelete": true,
-
-    // 书签边框颜色
-    "bookmarks.gutterIconBorderColor": "#e5cc80",
-    // 书签填充颜色
-    "bookmarks.gutterIconFillColor": "#43ebbb",
-
-    /*  prettier的配置 */
-    /* "prettier.printWidth": 100, // 超过最大值换行
-    "prettier.tabWidth": 4, // 缩进字节数
-    "prettier.useTabs": false, // 缩进不使用tab，使用空格
-    "prettier.semi": true, // 句尾添加分号
-    "prettier.singleQuote": true, // 使用单引号代替双引号
-    "prettier.proseWrap": "preserve", // 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
-    "prettier.arrowParens": "avoid", //  (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
-    "prettier.bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
-    //"prettier.disableLanguages": ["vue"], // 不格式化vue文件，vue文件的格式化单独设置
-    "prettier.endOfLine": "auto", // 结尾是 \n \r \n\r auto
-    "prettier.eslintIntegration": false, //不让prettier使用eslint的代码格式进行校验
-    "prettier.htmlWhitespaceSensitivity": "ignore",
-    "prettier.ignorePath": ".prettierignore", // 不使用prettier格式化的文件填写在项目的.prettierignore文件中
-    "prettier.jsxBracketSameLine": false, // 在jsx中把'>' 是否单独放一行
-    "prettier.jsxSingleQuote": false, // 在jsx中使用单引号代替双引号
-    "prettier.parser": "babylon", // 格式化的解析器，默认是babylon
-    "prettier.requireConfig": false, // Require a 'prettierconfig' to format prettier
-    "prettier.stylelintIntegration": false, //不让prettier使用stylelint的代码格式进行校验
-    "prettier.trailingComma": "es5", // 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
-    "prettier.tslintIntegration": false,
-    "terminal.integrated.allowMnemonics": true,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }, // 不让prettier使用tslint的代码格式进行校验
-    "editor.formatOnSave": false //保存自动格式化 */
 }
 
-/*
-    括号着色器2已弃用
-    // 括号匹配颜色
-    "bracket-pair-colorizer-2.colors": [
-        //wow
-        "#e5cc80", //artifact (gold)
-        "#1eff00", //uncommon (green)
-        "#0081ff", //rare (blue)
-        "#c600ff", //epic (purple)
-        "#ff8000", //legendary (orange)
-        //diablo
-        "#43ebbb", //无形
-        "#BA2636", //太古
-        //"#f00", //太古
-        "#0f0", //套装
-        "#ff8000", //传奇
-        "#ff0", //魔法
-        "#6969ff", //稀有
-        //"#fff", //普通
-        //other
-        "#E4007F", //品红
-        "Aqua", //青
-        "Pink", //粉
-        "#CC9909", //暗金
-        "DarkCyan",//灰蓝
-        "#19CAAD", //淡绿
-        "#D1BA74", //灰黄
-        "#F4606C", //淡玫红
-        "#8CC7B5", //灰绿
+/**
+    "搞颜色配色表": [
+        // World of Warcraft
+        #e5cc80 //artifact (gold)
+        #1eff00 //uncommon (green)
+        #0081ff //rare (blue)
+        #c600ff //epic (purple)
+        #ff8000 //legendary (orange)
+        // Diablo
+        #43ebbb //无形
+        #BA2636 //太古
+        #f00    //太古
+        #0f0    //套装
+        #ff8000 //传奇
+        #ff0    //魔法
+        #6969ff //稀有
+        #fff    //普通
+        // borderlands
+        #E4007F //品红
+        Aqua    //青
+        Pink    //粉
+        // Other
+        #ff6ec7  //霓虹粉
+        #ff1cae  //艳粉
+        #CC9909  //暗金
+        DarkCyan //灰蓝
+        #19CAAD  //淡绿
+        #D1BA74  //灰黄
+        #F4606C  //淡玫红
+        #8CC7B5  //灰绿
     ],
 */
