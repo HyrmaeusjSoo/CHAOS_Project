@@ -1,5 +1,5 @@
 {
-    /**************************************************
+    /*************************************************
         插件列表：
             PHP Intelephense
             JavaScript(ES6) code snippets
@@ -18,7 +18,7 @@
             Night Owl
             Verdandi Theme
             Rainbow Fart
-                              —— 2022-07-29 15:22:00
+                              —— 2022-07-29 14:57:00
     **************************************************/
 
     /** 编辑器设置 */
@@ -48,7 +48,7 @@
     // 光滑输入
     "editor.cursorSmoothCaretAnimation": true,
     // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
-    "editor.rulers": [72,100,125],
+    "editor.rulers": [72,100,120],
     // 控制字体系列
     "editor.fontFamily": "'Fira Code Retina', Consolas, monospace",
     // 启用字体连字
@@ -72,7 +72,10 @@
     // 控制何时显示行号槽上的折叠控件。
     //  - always: 始终显示折叠控件。
     //  - mouseover: 仅在鼠标位于装订线上方时显示折叠控件。
+    //  - never: 隐藏
     "editor.showFoldingControls": "always",
+    // 代码粘滞滚动 - 现在还不好用，它把名头注释给粘滞了
+    "editor.experimental.stickyScroll.enabled": false,
     // 启用括号着色器
     "editor.bracketPairColorization.enabled": true,
     // 不同括号类型是否有独立的颜色池
@@ -133,6 +136,8 @@
     "explorer.autoReveal": false,
     // 删除前询问
     "explorer.confirmDelete": true,
+    // 标题框中部命令行
+    "window.commandCenter": true,
     // 文件自动保存
     //  - off: 关闭自动保存
     //  - afterDelay: 在配置的 `files.autoSaveDelay` 之后
@@ -157,16 +162,16 @@
         "**/CVS/**",
         "**/node_modules/**",
         "**/bower_components/**",
-        "**/vendor/**/{Tests,tests}/**",
-        "**/vendor/**/vendor/**",
-        "**/runtime/**",
-        "**/laya/**",
-        "**/zt/**",
         "**/upload/**",
         "**/static/**",
         "**/images/**",
+        "**/runtime/**",
+        "**/vendor/**/{Tests,tests}/**",
+        "**/vendor/**/vendor/**",
+        "**/laya/**",
+        "**/zt/**",
         "**/vagrant/**",
-        //"**/frontend/**",
+        "**/frontend/**",
         "**/o2o_platform/**",
         "**/KeyPressCounter/**",
         "**/CHAOS_Project/**",
@@ -184,7 +189,7 @@
 }
 
 /**
-    "搞颜色配色表": [
+    "搞颜色表": [
         // World of Warcraft
         #e5cc80 //artifact (gold)
         #1eff00 //uncommon (green)
@@ -200,7 +205,7 @@
         #ff0    //魔法
         #6969ff //稀有
         #fff    //普通
-        // borderlands
+        // Borderlands
         #E4007F //品红
         Aqua    //青
         Pink    //粉
