@@ -5,7 +5,7 @@
 // +---------------------------------------------------------------------------------------+
 // | Hermaeus Mora's Oghma Infinium. _wabbajack Zeno Human Requests.                 2019  |
 // +---------------------------------------------------------------------------------------+
-// | RGB Rainbow                                                 —————— 龍が如く Hylea Soo  |
+// | 彩                                                           —————— 龍が如く Hylea Soo  |
 // +---------------------------------------------------------------------------------------+
 //const _Simulator = "63067#1.2.3.";
 
@@ -38,7 +38,7 @@ const ERCode_ = ((b = 16) => {
 const TCode16 = s => [...s].map((e, i) => (i>0 && ' ' || '') + e.charCodeAt().toString(16)).join('');
 const FCode16 = s => s.split(' ').map(e => String.fromCharCode(parseInt(e, 16))).join('');
 
-export {TCode16, FCode16, ERHex};
+//export {TCode16, FCode16, ERHex};
 
 function toCode(str){
     var result = [];

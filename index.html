@@ -5,7 +5,7 @@
 <!-- +---------------------------------------------------------------------------------------+ -->
 <!-- | Hermaeus Mora's Oghma Infinium. _wabbajack Zeno Human Requests.                 2020  | -->
 <!-- +---------------------------------------------------------------------------------------+ -->
-<!-- | RGB Rainbow                                                —————— 龍が如く Hylea Soo  | -->
+<!-- | 彩                                                          —————— 龍が如く Hylea Soo  | -->
 <!-- +---------------------------------------------------------------------------------------+ -->
 <!DOCTYPE html>
 <html>
@@ -48,11 +48,10 @@
             .cls {clear: both;}
         </style>
         <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.27.2/axios.min.js"></script>
-        <script data-tag="E.R.convert" src="ying/E.R.convert.js" type="module"></script>
+        <script data-tag="E.R.convert" src="ying/E.R.convert.js"></script>
         <script data-tag="BaZi" src="ying/NongLi.js"></script>
         <script data-tag="Kauntodaun" src="ying/Kauntodaun.js"></script>
-        <script data-tag="Xenoblade" src="ying/Xenoblade.js" type="module"></script>
+        <script data-tag="Xenoblade" src="ying/Xenoblade.js"></script>
         <script data-tag="ACNH" src="ying/ACNH.js"></script>
     </head>
     <body>
@@ -61,8 +60,8 @@
             <input type="button" class="appg" id="appg" value="appg">
             <input type="button" class="motto" id="motto" value="motto">
             <input type="button" class="solar" id="solar" value="solar">
-            <a class="iv" data-v="v" href="javascript:;">☄</a>
-            <a class="v" data-v="v" href="javascript:;">☂</a>
+            <a class="iv" data-v="v" href="javascript:;">🌈</a>
+            <a class="v" data-v="v" href="javascript:;">☄☂</a>
         </div>
 
         <div class="page gol_page">
@@ -120,7 +119,9 @@
             <input type="button" class="switch_mp" id="theWitness" value="The Witness">
             <input type="button" class="switch_mp" id="theMotto" value="Motto">
             <div class="saying">
-                <pre id="p_text"></pre>
+                <!-- <pre id="p_text"></pre> -->
+                <pre id="p_witness"></pre>
+                <pre id="p_motto" hidden></pre>
                 <p class="tr"><a href="https://github.com/HyleaSoo/CHAOS_Project">More.</a></p>
             </div>
             <div class="motto_bottom">
@@ -143,7 +144,6 @@
 <script data-tag="Variable">
     //const CS = "https://raw.githubusercontent.com/HyleaSoo/CHAOS_Project/master/";
     const CS = "https://hyleasoo.github.io/CHAOS_Project/";
-    axios.defaults.baseURL = 'https://hyleasoo.github.io/CHAOS_Project/';
 
     $( _ => {
         $('#switch').click( _ => {$('.page').hide(), $('.gol_page').show()});
@@ -157,20 +157,25 @@
 
         const theWitnessTXT = "ping/The%20Witness%E5%BD%95%E9%9F%B3%E6%95%B4%E7%90%86.txt";
         const mottoSoo = "ming/motto.soo";
-        axios(theWitnessTXT).then(r => $('#p_text').html(r.data));
-        $('#theWitness').click( _ => axios(theWitnessTXT).then(r => $('#p_text').html(r.data)));
-        $('#theMotto').click( _ => axios(mottoSoo).then(r => $('#p_text').html(r.data)));
-        axios('ding/motto_bottom.json').then(r => {
-            const m = r.data;
+        fetch(CS+theWitnessTXT).then(r => r.text()).then(r => $('#p_witness').html(r));
+        fetch(CS+mottoSoo).then(r => r.text()).then(r => $('#p_motto').html(r));
+        $('#theWitness').click( _ => {$('#p_witness').toggle();$('#p_motto').toggle();});
+        $('#theMotto').click( _ => {$('#p_witness').toggle();$('#p_motto').toggle();});
+        fetch(`${CS}ding/motto_bottom.json`).then(res => res.json()).then(r => {
+            const m = r;
             $(".write_bottom").append('<p>'+m.ibt+'</p>');
             m.ml.map(x => $(".ml").append('<p>'+ x +'</p>'));
             m.mc.map(x => $(".mc").append('<p>'+ x +'</p>'));
             m.mr.map(x => $(".mr").append('<p>'+ x +'</p>'));
-        });
+        }).catch(e => console.log(e));
     });
 
-    //localStorage.setItem(TCode16(location.hostname), ERCode.TCode(Date.now().toString(16)));
-    //parseInt(ERCode.FCode(localStorage.getItem(TCode16(location.hostname))), 16);
+    // const test = fetch(`${CS}ding/motto_bottom.json`)
+    //     .then(res => res.json())
+    //     .then(data => console.log(data));
+
+    //localStorage.setItem(ERCode.TCode(location.hostname), ERCode.TCode(Date.now().toString(16)));
+    //parseInt(ERCode.FCode(localStorage.getItem(ERCode.TCode(location.hostname))), 16);
 
     //document.getElementById('p_text').ondblclick = _ => !window.s ? s = setInterval( _ => window.scroll(0, window.scrollY + 200), 500) : (clearInterval(s), s = 0);
     //document.getElementById('mb').ondblclick = _ => window.scrollTo(0, 0);
@@ -181,14 +186,14 @@
 <script data-tag="NSGames">
     let NSGames = null;
     const record = async (_woo = prompt()) => {
-        if (_woo == ERHex.FCode('72q65i63k6fh72t64') && _woo == FCode16("72 65 63 6f 72 64")) {
+        if (_woo == ERHex.FCode('72q65i63k6fh72t64') && _woo == ERCode.FCode("72 65 63 6f 72 64")) {
             let totalG = 0;
             let typeG = {'1': 0, '2': 0, '3': 0, '5': 0};
             let regionG = {'0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0};
             let yearG = {'2018': 0, '2019':0, '2020':0, '2021': 0};
 
-            await axios('ning/Records/Record.json').then(r => {
-                let rs = r.data.RECORDS;
+            await fetch(`${CS}ning/Records/Record.json`).then(r => r.json()).then(r => {
+                let rs = r.RECORDS;
                 NSGames = rs;
                 const adt = (o, t) => ((parseFloat(o) || 0) + parseFloat(t)).toFixed(2);
 
@@ -215,24 +220,24 @@
 
 <script data-tag="MHRSkill">
     let mhr = null;
-    axios('ding/MHRise/mhr_skill.json').then(r => mhr = r.data);
+    fetch(`${CS}ding/MHRise/mhr_skill.json`).then(r => r.json()).then(r => mhr = r);
     const MHRskN = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk)) || [], "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk)) || []});
     const MHRskD = (_sk = prompt()) => ({"skill": _sk && mhr && mhr.skill.filter(x => x.name.includes(_sk) || x.des.includes(_sk)) || [], "bailong": _sk && mhr && mhr.bailong.filter(x => x.name.includes(_sk) || x.des.includes(_sk)) || []});
 </script>
 
 <script data-tag="AstroDict">
     let AD = null;
-    axios('ding/astrodict_191103/astrodict_191103ec.json').then(r => AD = r.data);
+    fetch(`${CS}ding/astrodict_191103/astrodict_191103ec.json`).then(r => r.json()).then(r => AD = r.AstroDict);
     const AstroDict = (_woo = prompt()) => _woo && AD && AD.map(D => ({D, P:[...D.E, ...D.C].join('')})).filter(x => x.P.includes(_woo)).map(x => x.D) || [];
 </script>
 
 <script data-tag="ZhouYi">
     let ZY = {};
-    axios('ding/ZhouYi.json').then(r => ZY = r.data);
+    fetch(`${CS}ding/ZhouYi.json`).then(r => r.json()).then(r => ZY = r);
     const zy = ((Hg = (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c)) => ({
         QG: (r = Math.floor(Math.random() * ERHex.FCode('36x34')) + 1) => ZY.Yi.find(x => x.Hao == r),
         Hao: h => h && ZY.Yi && ZY.Yi.find(x => x.Hao == h) || [],
-        Yao: yao => yao && ZY.Yi && ZY.Yi.find(x => x.Yao == yao) || [],
+        Yao: yao => yao && ZY.Yi && ZY.Yi.filter(x => x.Yao.includes(yao)) || [],
         Gua: g => g && ZY.Yi && ZY.Yi.filter(x => x.Gua.includes(g)) || [],
         //Hg: (g, c) => ({g, P:[...g.Gua, ...g.Ci, ...g.Chu, ...g.Er, ...g.San, ...g.Si, ...g.Wu, ...g.Shang].join('')}).P.includes(c),
         Sou: c => c && ZY.Yi && ZY.Yi.filter(x => Hg(x, c)) || []
@@ -283,7 +288,11 @@
         const icbh = (t) => {$('.icb').hide();$(t).show();}
         const apir = _ => $('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "");
         const b_ad = _ => {aptcls(); AstroDict($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>EN:${x.E}</td><td>CHS:${x.C}</td></tr>`))};
-        const b_zy = _ => {aptcls(); zy.Sou($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'))};
+        const b_zy = _ => {
+            aptcls(); 
+            zy.Sou($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'));
+            zy.Yao($('.ap_i').val().replace(/(^\s*)|(\s*$)/g, "")).map(x => $('.apt').append(`<tr><td>Hao:${x.Hao} Yao:${x.Yao} Gua:${x.Gua}</td></tr><tr><td>Ci:${x.Ci}</td></tr><tr><td>Chu:${x.Chu}</td></tr><tr><td>Er:${x.Er}</td></tr><tr><td>San:${x.San}</td></tr><tr><td>Si:${x.Si}</td></tr><tr><td>Wu:${x.Wu}</td></tr><tr><td>Shang:${x.Shang}</td>` + (x.Yong ? `</tr><tr><td>Yong:${x.Yong}</td></tr>` : '') + '<tr><td>&nbsp;</td></tr>'));
+        };
         const b_bz = _ => {aptcls(); let ds = $('.ap_i').val().replace(/(^\s*)|(\s*$)/g, ""); x = !ds ? bazi() : bazi(new Date(ds)); $('.apt').append(`<tr><td>${x.bz}</td></tr><tr><td>${x.ty}</td></tr><tr><td>bzs:${x.bzs}</td></tr><tr><td>cj:${x.cj}</td></tr><tr><td>fw:${x.fw}</td></tr><tr><td>gl:${x.gl}</td></tr><tr><td>nl:${x.nl}</td></tr><tr><td>qh:${x.qh}</td></tr><tr><td>sx:${x.sx}</td></tr><tr><td>wx:${x.wx}</td></tr><tr><td>yy:${x.yy}</td></tr><tr><td>sts:${x.ts}，${x.s}</td></tr>`)};
         const b_ect = _ => {aptcls(); $('.apt').append(`<tr><td>${ERHex.TCode($('.ap_i').val())}</td></tr>`)};
         const b_ecf = _ => {aptcls(); $('.apt').append(`<tr><td>${ERHex.FCode($('.ap_i').val())}</td></tr>`)};
@@ -334,6 +343,7 @@
         $('.mhrd').click(b_mhrd);
     });
 </script>
+
 <script data-tag="Gol">
     $( _ => {
         let c = 0b0;

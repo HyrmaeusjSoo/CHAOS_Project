@@ -5,7 +5,7 @@
 // +---------------------------------------------------------------------------------------+
 // | Hermaeus Mora's Oghma Infinium. _wabbajack Zeno Human Requests.                 2019  |
 // +---------------------------------------------------------------------------------------+
-// |                                                             —————— 龍が如く Hylea Soo  |
+// | 彩                                                           —————— 龍が如く Hylea Soo  |
 // +---------------------------------------------------------------------------------------+
 //const _Simulator = "63067#1.2.3.";
 
@@ -13,7 +13,7 @@ const htm = m => Math.floor(m / 60) + ":" + m % 60
 
 const kauntodaun = (dogo = 24 - 8 + 1) => setInterval(
     (
-        fixed = (new Date(new Date().toLocaleDateString() + ' '+dogo+':00:00')).getTime()
+        fixed = (new Date(new Date().toLocaleDateString() + ` ${dogo}:00:00`)).getTime()
 
         , milliseconds = fixed - Date.now()
         , seconds = (milliseconds / 1000).toString()
