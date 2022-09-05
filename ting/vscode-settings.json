@@ -6,6 +6,7 @@
             ESLint
             Javascript and TypeScript Nightly
             Vetur
+            Vue 3 Snippets
             Python
 
             Bookmarks
@@ -18,7 +19,7 @@
             Night Owl
             Verdandi Theme
             Rainbow Fart
-                              —— 2022-08-08 16:37:00
+                              —— 2022-09-05 13:45:00
     **************************************************/
 
     /** 编辑器设置 */
@@ -50,7 +51,8 @@
     // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
     "editor.rulers": [72,100,120],
     // 控制字体系列
-    "editor.fontFamily": "'Fira Code Retina', Consolas, monospace",
+    "editor.fontFamily": "'Fira Code Retina', 'HarmonyOS Sans SC', monospace",
+    "terminal.integrated.fontFamily": "'Maple Mono SC NF', 'HarmonyOS Sans SC', monospace",
     // 启用字体连字
     "editor.fontLigatures": true,
     // 以像素为单位控制字号
@@ -63,6 +65,12 @@
     "editor.smoothScrolling": false,
     // 自动关闭括号
     "editor.autoClosingBrackets": "always",
+    // 代码粘滞滚动 - 现在还不好用，它把名头注释给粘滞了
+    //"editor.experimental.stickyScroll.enabled": false,
+    // 首行粘滞滚动
+    "editor.stickyScroll.enabled": true,
+    // 粘滞滚动最大行数
+    "editor.stickyScroll.maxLineCount": 5,
     // Tab键自动填入最佳推荐值
     "editor.tabCompletion": "on",
     // 缩进参考线
@@ -74,8 +82,6 @@
     //  - mouseover: 仅在鼠标位于装订线上方时显示折叠控件。
     //  - never: 隐藏
     "editor.showFoldingControls": "always",
-    // 代码粘滞滚动 - 现在还不好用，它把名头注释给粘滞了
-    "editor.experimental.stickyScroll.enabled": false,
     // 启用括号着色器
     "editor.bracketPairColorization.enabled": true,
     // 不同括号类型是否有独立的颜色池
@@ -89,9 +95,13 @@
         "keywords": "#cc3299", // 关键字
         //"functions": "#5b99fcc9", // 函数名
         "variables": "#05658b", // 变量名
-        //"strings": "#04771f", // 字符串 
+        //"strings": "#04771f", // 字符串
         "numbers": "#06aaaf", // 数字
         "textMateRules": [
+            {   //数据类型
+                "scope": "storage.type123",
+                "settings": {"foreground": "#238e68",}
+            },
             {   //类的名称
                 "scope": "entity.name.type", //函数和类的名称颜色
                 "settings": {"foreground": "#238e68",}
@@ -138,9 +148,9 @@
         // 空格
         "editorWhitespace.foreground": "#09000025",
         // 书签
-        "bookmarks.lineBackground": "#005eff04",
-        "bookmarks.lineBorder": "#adeaeaa0",
-        "bookmarks.overviewRuler": "#adeaea99"
+        "bookmarks.lineBackground": "#005eff04",//行背景
+        "bookmarks.lineBorder": "#adeaeaa0",//行边框
+        "bookmarks.overviewRuler": "#82d4f5",//滚动条中条块色
     },
     // 控制编辑器打开的位置
     //  - `left` 或 `right` 可分别在当前活动编辑器的左侧或右侧打开
@@ -154,25 +164,34 @@
     "workbench.tree.indent": 10,
     // 主题
     "workbench.colorTheme": "GitHub Sharp",
+    // 标题栏显示命令中心
+    "window.commandCenter": true,
+    // 菜单可见性
+    "window.menuBarVisibility": "classic",
     // 与活动文件同步
     "explorer.autoReveal": false,
     // 删除前询问
     "explorer.confirmDelete": true,
-    // 标题框中部命令行
-    "window.commandCenter": true,
     // 文件自动保存
     //  - off: 关闭自动保存
     //  - afterDelay: 在配置的 `files.autoSaveDelay` 之后
     //  - onFocusChange: 编辑器失去焦点
     //  - onWindowChange: 软件窗口失去焦点
     "files.autoSave": "onWindowChange",
+    // 项目列表排除某文件、文件夹
+    "files.exclude": {
+        "**/.idea": true,
+    },
     // 配置语言的文件关联。 这些关联的优先级高于已安装语言的默认关联。
     "files.associations": {"*.module": "php"},
     /* php环境配置 */
     "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.1.9nts/php.exe",
     "php.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.1.9nts/php.exe",
     "php.suggest.basic": false,
+    // php主页
     "intelephense.environment.documentRoot": "index.php",
+    // php检查版本
+    "intelephense.environment.phpVersion": "7.1.9",
     // intelephense排除文件夹（资源文件加太大了造成一直在检索php文件导致提示跳转根本用不了）
     "intelephense.files.exclude": [
         "**/.git/**",
@@ -181,9 +200,11 @@
         "**/.DS_Store/**",
         "**/.history/**",
         "**/.settings/**",
+        "**/.idea/**",
         "**/CVS/**",
         "**/node_modules/**",
         "**/bower_components/**",
+        "**/update/**",
         "**/upload/**",
         "**/static/**",
         "**/images/**",
@@ -193,22 +214,21 @@
         "**/laya/**",
         "**/zt/**",
         "**/vagrant/**",
-        "**/frontend/**",
         "**/o2o_platform/**",
-        "**/KeyPressCounter/**",
-        "**/CHAOS_Project/**",
     ],
-    // 书签图标颜色
+    // 忽视git失效警告
     "bookmarks.gutterIconBorderColor": "#38b0de",
     "bookmarks.gutterIconFillColor": "#f4f3f3b1",
-    // 忽视git失效警告
     "git.ignoreMissingGitWarning": true,
     // 打开文件信任
     "security.workspace.trust.untrustedFiles": "open",
     // edge插件开发者工具
-    "vscode-edge-devtools.webhint": false,
+    //"vscode-edge-devtools.webhint": false,
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
     },
 
 }
