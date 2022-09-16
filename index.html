@@ -9,24 +9,26 @@
 <!-- +---------------------------------------------------------------------------------------+ -->
 
 <!DOCTYPE html>
-<html>
+<html lang="zh">
     <head>
         <link rel="icon" href="1001.ico">
         <title>Journey's</title>
-        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <style>
             html, body {margin: auto;}
             div {width: 100%; text-align: center; color: Gray;}
             input {padding: 8px 8px; outline-style: none; border: 0px solid #ccc; border-radius: 10px; background-color: WhiteSmoke;}
             table {margin: auto; width: 28%; height: 430px;}
             /* table{table-layout: fixed;word-break: break-all; word-wrap: break-word;} */
-            pre {font-family: "Microsoft YaHei", Console, Verdana; font-size: 14px; text-align: left;}
+            pre {font-family: "HarmonyOS Sans SC", "Microsoft YaHei", Console, Verdana, monospace; font-size: 14px; text-align: left;}
             a {text-decoration: none; color: rgba(0,0,0,1);}
             .skyrim {position: fixed; top: 0px; z-index: 2; background: rgba(192,192,192,0.4);}
-            .switch {margin-left: -55%;}
-            .iv {float: right; margin-right: 3.5%; font-size: 18px;}
-            .v {float: right; margin-right: 1%; font-size: 18px;}
+            .l-skyrim{width:60%;text-align:left;padding-left: 8%;float:left;}
+            .r-skyrim{width:15%;float:right;padding-right: 2%;}
+            /*.switch {margin-left: -55%;}*/
+            .v {margin-right: 2%;}
+            /* .iv {} */
             .page {margin-top: 2.5%;}
             .gol_page {margin-top: 2.5%;}
             .switch_mp {margin-left: 0.8%;}
@@ -57,12 +59,16 @@
     </head>
     <body>
         <div class="skyrim">
-            <input type="button" class="switch" id="switch" value="switch">
-            <input type="button" class="appg" id="appg" value="appg">
-            <input type="button" class="motto" id="motto" value="motto">
-            <input type="button" class="solar" id="solar" value="solar">
-            <a class="iv" data-v="v" href="javascript:;">🌈</a>
-            <a class="v" data-v="v" href="javascript:;">☄☂</a>
+            <div class="l-skyrim">
+                <input type="button" class="switch" id="switch" value="switch">
+                <input type="button" class="appg" id="appg" value="appg">
+                <input type="button" class="motto" id="motto" value="motto">
+                <input type="button" class="solar" id="solar" value="solar">
+            </div>
+            <div class="r-skyrim">
+                <a class="v" data-v="v" href="javascript:;">☄☂</a>
+                <a class="iv" data-v="v" href="javascript:;">🌈</a>
+            </div>
         </div>
 
         <div class="page gol_page">
@@ -252,7 +258,7 @@
         $('.tc').load(CS + "ying/XingTu.html");
         const msj = ms => (ms % 5 == 1 && (ms - 1)) || (ms % 5 == 2 && (ms - 2)) || (ms % 5 == 3 && (ms + 2)) || (ms % 5 == 4 && (ms + 1)) || ms;
         const sci = s => ((s>=23 || s<1) && 24) || (s>=1 && s<3 && 19) || (s>=3 && s<5 && 11) || (s>=5 && s<7 && 34) || (s>=7 && s<9 && 43) || (s>=9 && s<11 && 1) || (s>=11 && s<13 && 44) || (s>=13 && s<15 && 33) || (s>=15 && s<17 && 12) || (s>=17 && s<19 && 20) || (s>=19 && s<21 && 23) || (s>=21 && s==22 && 2) || 0;
-        szi = setInterval( _ =>{
+        szi = setInterval( _ => {
             $('.szt').text("");
             const dt = new Date();
             $('.m' + msj(dt.getSeconds())).text(dt.getSeconds());

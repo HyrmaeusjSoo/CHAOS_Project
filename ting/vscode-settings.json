@@ -19,7 +19,8 @@
             Night Owl
             Verdandi Theme
             Rainbow Fart
-                              —— 2022-09-05 13:45:00
+            background
+                              —— 2022-09-13 14:58:00
     **************************************************/
 
     /** 编辑器设置 */
@@ -27,14 +28,14 @@
     "editor.renderWhitespace": "all",
     // 显示制表符
     "editor.renderControlCharacters": true,
-    // 当前行突出显示
-    "editor.renderLineHighlight":"all",
+    // 转为空格
+    "editor.insertSpaces": true,
     // 关闭检测第一个tab后面全是tab
     "editor.detectIndentation": false,
     // tab为4个空格
     "editor.tabSize": 4,
-    // 转为空格
-    "editor.insertSpaces": true,
+    // 当前行突出显示
+    "editor.renderLineHighlight":"all",
     // 启用minimap
     "editor.minimap.enabled": true,
     // minimap自动隐藏
@@ -50,8 +51,9 @@
     "editor.cursorSmoothCaretAnimation": true,
     // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
     "editor.rulers": [72,100,120],
-    // 控制字体系列
+    // 编辑器字体系列
     "editor.fontFamily": "'Fira Code Retina', 'HarmonyOS Sans SC', monospace",
+    // 控制台字体系列
     "terminal.integrated.fontFamily": "'Maple Mono SC NF', 'HarmonyOS Sans SC', monospace",
     // 启用字体连字
     "editor.fontLigatures": true,
@@ -211,14 +213,28 @@
         "**/runtime/**",
         "**/vendor/**/{Tests,tests}/**",
         "**/vendor/**/vendor/**",
+        "**/v20/**/runtime/**",
         "**/laya/**",
         "**/zt/**",
         "**/vagrant/**",
         "**/o2o_platform/**",
+        "**/frontend/**",
+        "**/CHAOS_Project/**",
     ],
-    // 忽视git失效警告
+    // 书签 边框、填充色
     "bookmarks.gutterIconBorderColor": "#38b0de",
     "bookmarks.gutterIconFillColor": "#f4f3f3b1",
+    // 背景图片
+    "background.loop": true,
+    "background.useDefault": false,
+    "background.customImages": ["file://D://Pro/icon/3body.jpeg"],
+    "background.style": {
+        "z-index": "99",
+        "background-position": "98.5% 99.5%",
+        "opacity": 1,
+        "background-size": "35px 26px",
+    },
+    // 忽视git失效警告
     "git.ignoreMissingGitWarning": true,
     // 打开文件信任
     "security.workspace.trust.untrustedFiles": "open",
