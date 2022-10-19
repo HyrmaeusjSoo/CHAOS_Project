@@ -1,5 +1,6 @@
 {
     /*************************************************
+        User Global Settings - Basic
         插件列表：
             PHP Intelephense
             JavaScript(ES6) code snippets
@@ -20,7 +21,7 @@
             Verdandi Theme
             Rainbow Fart
             background
-                              —— 2022-09-13 14:58:00
+                              —— 2022-10-19 08:08:00
     **************************************************/
 
     /** 编辑器设置 */
@@ -67,8 +68,6 @@
     "editor.smoothScrolling": false,
     // 自动关闭括号
     "editor.autoClosingBrackets": "always",
-    // 代码粘滞滚动 - 现在还不好用，它把名头注释给粘滞了
-    //"editor.experimental.stickyScroll.enabled": false,
     // 首行粘滞滚动
     "editor.stickyScroll.enabled": true,
     // 粘滞滚动最大行数
@@ -214,25 +213,38 @@
         "**/vendor/**/{Tests,tests}/**",
         "**/vendor/**/vendor/**",
         "**/v20/**/runtime/**",
+        "**/log/**",
         "**/laya/**",
         "**/zt/**",
         "**/vagrant/**",
-        "**/o2o_platform/**",
+        "**/o2o/cms/Lib/ORG/mpdf/**",
         "**/frontend/**",
+        "**/o2o_platform/**",
         "**/CHAOS_Project/**",
     ],
+    // 书签 保存到项目中，防止误操作移除项目后书签丢失的情况
+    "bookmarks.saveBookmarksInProject": true,
     // 书签 边框、填充色
     "bookmarks.gutterIconBorderColor": "#38b0de",
     "bookmarks.gutterIconFillColor": "#f4f3f3b1",
     // 背景图片
     "background.loop": true,
     "background.useDefault": false,
+    /* //三体图标
     "background.customImages": ["file://D://Pro/icon/3body.jpeg"],
     "background.style": {
         "z-index": "99",
         "background-position": "98.5% 99.5%",
         "opacity": 1,
         "background-size": "35px 26px",
+    }, */
+    // terraria
+    "background.customImages": ["file://D://Pro/icon/terraria/Winged_Slime_Mount.gif"],
+    "background.style": {
+        "z-index": "99",
+        "background-position": "98% 99.5%",
+        "opacity": 1,
+        "background-size": "20px 17px",
     },
     // 忽视git失效警告
     "git.ignoreMissingGitWarning": true,
@@ -246,6 +258,9 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
+    "gopls": {
+        "build.experimentalWorkspaceModule": true
+    }
 
 }
 
