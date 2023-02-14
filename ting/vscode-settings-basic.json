@@ -6,6 +6,7 @@
             JavaScript(ES6) code snippets
             ESLint
             Javascript and TypeScript Nightly
+            Go
             Vetur
             Vue 3 Snippets
             Python
@@ -21,7 +22,7 @@
             Verdandi Theme
             Rainbow Fart
             background
-                              —— 2022-10-19 08:08:00
+                              —— 2023-01-19 14:12:00
     **************************************************/
 
     /** 编辑器设置 */
@@ -31,7 +32,7 @@
     "editor.renderControlCharacters": true,
     // 转为空格
     "editor.insertSpaces": true,
-    // 关闭检测第一个tab后面全是tab
+    // 检测第一个tab后面全是tab
     "editor.detectIndentation": false,
     // tab为4个空格
     "editor.tabSize": 4,
@@ -39,8 +40,6 @@
     "editor.renderLineHighlight":"all",
     // 启用minimap
     "editor.minimap.enabled": true,
-    // minimap自动隐藏
-    "editor.minimap.autohide": false,
     // 控制迷你地图的大小。
     //  - proportional: 迷你地图的大小与编辑器内容相同(并且可能滚动)。
     //  - fill: 迷你地图将根据需要拉伸或缩小以填充编辑器的高度(不滚动)。
@@ -50,6 +49,10 @@
     "editor.cursorBlinking": "expand",
     // 光滑输入
     "editor.cursorSmoothCaretAnimation": true,
+    // 终端光标闪动
+    "terminal.integrated.cursorBlinking": true,
+    // 终端光标样式
+    "terminal.integrated.cursorStyle": "underline",
     // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
     "editor.rulers": [72,100,120],
     // 编辑器字体系列
@@ -100,8 +103,8 @@
         "numbers": "#06aaaf", // 数字
         "textMateRules": [
             {   //数据类型
-                "scope": "storage.type123",
-                "settings": {"foreground": "#238e68",}
+                "scope": "storage.type",
+                "settings": {"foreground": "#f48cba"}//aad372
             },
             {   //类的名称
                 "scope": "entity.name.type", //函数和类的名称颜色
@@ -113,7 +116,7 @@
             },
             {   //逻辑符号
                 "scope": "keyword.operator.logical",
-                "settings": {"foreground": "#cc3299"}
+                "settings": {"foreground": "#cc3299",}
             },
             {   //逗号分隔符,分号
                 "scope": ["punctuation.separator", "punctuation.terminator"],
@@ -152,6 +155,8 @@
         "bookmarks.lineBackground": "#005eff04",//行背景
         "bookmarks.lineBorder": "#adeaeaa0",//行边框
         "bookmarks.overviewRuler": "#82d4f5",//滚动条中条块色
+        // 终端
+        "terminalCursor.foreground": "#ff1cae",
     },
     // 控制编辑器打开的位置
     //  - `left` 或 `right` 可分别在当前活动编辑器的左侧或右侧打开
@@ -162,7 +167,7 @@
     //  - shrink: 在不能同时显示所有选项卡时，允许选项卡缩小。
     "workbench.editor.tabSizing": "shrink",
     // 项目文件树缩进像素
-    "workbench.tree.indent": 10,
+    //"workbench.tree.indent": 10,
     // 主题
     "workbench.colorTheme": "GitHub Sharp",
     // 标题栏显示命令中心
@@ -186,14 +191,14 @@
     // 配置语言的文件关联。 这些关联的优先级高于已安装语言的默认关联。
     "files.associations": {"*.module": "php"},
     /* php环境配置 */
-    "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.1.9nts/php.exe",
-    "php.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.1.9nts/php.exe",
+    "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.2.9nts/php.exe",
+    "php.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.2.9nts/php.exe",
     "php.suggest.basic": false,
-    // php主页
-    "intelephense.environment.documentRoot": "index.php",
+    // php入口文件
+    //"intelephense.environment.documentRoot": "index.php",
     // php检查版本
-    "intelephense.environment.phpVersion": "7.1.9",
-    // intelephense排除文件夹（资源文件加太大了造成一直在检索php文件导致提示跳转根本用不了）
+    "intelephense.environment.phpVersion": "7.2.9",
+    // 排除文件夹（资源文件加太大了造成一直在检索php文件导致提示跳转根本用不了）
     "intelephense.files.exclude": [
         "**/.git/**",
         "**/.svn/**",
@@ -212,14 +217,23 @@
         "**/runtime/**",
         "**/vendor/**/{Tests,tests}/**",
         "**/vendor/**/vendor/**",
+        "**/vendor/whichbrowser/parser/data/models-android.php",
+        "**/vendor/whichbrowser/parser/data/profiles.php",
+        "**/vendor/dompdf/dompdf/lib/fonts/simsun.ufm.php",
         "**/v20/**/runtime/**",
         "**/log/**",
         "**/laya/**",
         "**/zt/**",
         "**/vagrant/**",
         "**/o2o/cms/Lib/ORG/mpdf/**",
-        "**/frontend/**",
-        "**/o2o_platform/**",
+        "**/frontend/o2o_platform/**",
+        "**/v20/public/hjjt/**",
+        "**/v20/public/platform/**",
+        "**/v20/public/platform_dev/**",
+        "**/v20/public/platform2/**",
+        "**/v20/public/platform202110128/**",
+        "**/v20/public/platformbak20220706/**",
+        "**/v20/public/zt/**",
         "**/CHAOS_Project/**",
     ],
     // 书签 保存到项目中，防止误操作移除项目后书签丢失的情况
@@ -228,10 +242,11 @@
     "bookmarks.gutterIconBorderColor": "#38b0de",
     "bookmarks.gutterIconFillColor": "#f4f3f3b1",
     // 背景图片
+    "background.enabled": true,
     "background.loop": true,
     "background.useDefault": false,
     /* //三体图标
-    "background.customImages": ["file://D://Pro/icon/3body.jpeg"],
+    "background.customImages": ["file:///D://Pro/icon/3body.jpeg"],
     "background.style": {
         "z-index": "99",
         "background-position": "98.5% 99.5%",
@@ -239,12 +254,18 @@
         "background-size": "35px 26px",
     }, */
     // terraria
-    "background.customImages": ["file://D://Pro/icon/terraria/Winged_Slime_Mount.gif"],
+    "background.customImages": [
+        "file:///D://Pro/icon/terraria/125x100_Winged_Slime_Mount.gif",
+        "file:///D://Pro/icon/terraria/80px-Queen_Slime.png",
+        "file:///D://Pro/icon/terraria/Fairy_Princess.gif",
+        "file:///D://Pro/icon/terraria/Shimmer_Slime.gif",
+        "file:///D://Pro/icon/3bodybw.jpeg"
+    ],
     "background.style": {
         "z-index": "99",
-        "background-position": "98% 99.5%",
+        "background-position": "98.5% 99.5%",
         "opacity": 1,
-        "background-size": "20px 17px",
+        "background-size": "19.5px 17px",
     },
     // 忽视git失效警告
     "git.ignoreMissingGitWarning": true,
@@ -258,9 +279,15 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "gopls": {
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur"
+    },
+    /* "gopls": {
         "build.experimentalWorkspaceModule": true
-    }
+    }, */
 
 }
 
