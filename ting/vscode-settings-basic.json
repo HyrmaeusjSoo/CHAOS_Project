@@ -16,16 +16,15 @@
             Microsoft Edge Tools for VS Code
             Prettier - Code formatter
 
+            background
             GitHub Sharp Theme
             GitHub Theme
             Night Owl
             Verdandi Theme
             Rainbow Fart
-            background
-                              —— 2023-01-19 14:12:00
+                              —— 2023-02-07 08:50:00
     **************************************************/
 
-    /** 编辑器设置 */
     // 显示空格
     "editor.renderWhitespace": "all",
     // 显示制表符
@@ -48,7 +47,7 @@
     // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
     "editor.cursorBlinking": "expand",
     // 光滑输入
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     // 终端光标闪动
     "terminal.integrated.cursorBlinking": true,
     // 终端光标样式
@@ -92,7 +91,7 @@
     "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
     // 括号对连接
     "editor.guides.bracketPairs": "active",
-    //编辑器代码颜色
+    // 编辑器代码颜色
     "editor.tokenColorCustomizations": {
         "types": "#1a05d4",
         //"comments": "#474343cf", // 注释
@@ -126,6 +125,14 @@
                 "scope": "constant.character.escape",
                 "settings": {"foreground": "#d98719",}
             },
+            {   //php function
+                "scope":"storage.type.function.php",
+                "settings": {"foreground": "#cc3299",}
+            },
+            {   //GO 内置函数
+                "scope": "support.function.builtin.go",
+                "settings": {"foreground": "#007d9c"}
+            },
         ]
     },
     // 全局搞颜色 - dwbRGB
@@ -155,7 +162,7 @@
         "bookmarks.lineBackground": "#005eff04",//行背景
         "bookmarks.lineBorder": "#adeaeaa0",//行边框
         "bookmarks.overviewRuler": "#82d4f5",//滚动条中条块色
-        // 终端
+        // 终端-光标
         "terminalCursor.foreground": "#ff1cae",
     },
     // 控制编辑器打开的位置
@@ -190,7 +197,37 @@
     },
     // 配置语言的文件关联。 这些关联的优先级高于已安装语言的默认关联。
     "files.associations": {"*.module": "php"},
-    /* php环境配置 */
+    // 忽视git失效警告
+    "git.ignoreMissingGitWarning": true,
+    // 打开文件信任
+    "security.workspace.trust.untrustedFiles": "open",
+    // edge插件开发者工具
+    //"vscode-edge-devtools.webhint": false,
+    // 书签 保存到项目中，防止误操作移除项目后书签丢失的情况
+    "bookmarks.saveBookmarksInProject": true,
+    /* 书签 边框、填充色 */
+    "bookmarks.gutterIconBorderColor": "#38b0de",
+    "bookmarks.gutterIconFillColor": "#f4f3f3b1",
+    /* 背景图片 */
+    "background.enabled": true,
+    "background.loop": true,
+    "background.useDefault": false,
+    // terraria,三体图标
+    "background.customImages": [
+        "file:///D://Pro/icon/terraria/125x100_Winged_Slime_Mount.gif",
+        "file:///D://Pro/icon/terraria/80px-Queen_Slime.png",
+        "file:///D://Pro/icon/terraria/Fairy_Princess.gif",
+        "file:///D://Pro/icon/terraria/Shimmer_Slime.gif",
+        "file:///D://Pro/icon/3bodybw.jpeg"
+    ],
+    "background.style": {
+        "z-index": "99",
+        "background-position": "98.5% 99.5%",
+        "opacity": 1,
+        "background-size": "19.5px 17px",
+    },
+
+    /* - php环境配置 - */
     "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.2.9nts/php.exe",
     "php.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.2.9nts/php.exe",
     "php.suggest.basic": false,
@@ -221,12 +258,6 @@
         "**/vendor/whichbrowser/parser/data/profiles.php",
         "**/vendor/dompdf/dompdf/lib/fonts/simsun.ufm.php",
         "**/v20/**/runtime/**",
-        "**/log/**",
-        "**/laya/**",
-        "**/zt/**",
-        "**/vagrant/**",
-        "**/o2o/cms/Lib/ORG/mpdf/**",
-        "**/frontend/o2o_platform/**",
         "**/v20/public/hjjt/**",
         "**/v20/public/platform/**",
         "**/v20/public/platform_dev/**",
@@ -234,60 +265,35 @@
         "**/v20/public/platform202110128/**",
         "**/v20/public/platformbak20220706/**",
         "**/v20/public/zt/**",
+        "**/log/**",
+        "**/laya/**",
+        "**/zt/**",
+        "**/vagrant/**",
+        "**/o2o/cms/Lib/ORG/mpdf/**",
+        "**/frontend/o2o_platform/**",
         "**/CHAOS_Project/**",
+        "**/WorkSpace/workspace/**"
     ],
-    // 书签 保存到项目中，防止误操作移除项目后书签丢失的情况
-    "bookmarks.saveBookmarksInProject": true,
-    // 书签 边框、填充色
-    "bookmarks.gutterIconBorderColor": "#38b0de",
-    "bookmarks.gutterIconFillColor": "#f4f3f3b1",
-    // 背景图片
-    "background.enabled": true,
-    "background.loop": true,
-    "background.useDefault": false,
-    /* //三体图标
-    "background.customImages": ["file:///D://Pro/icon/3body.jpeg"],
-    "background.style": {
-        "z-index": "99",
-        "background-position": "98.5% 99.5%",
-        "opacity": 1,
-        "background-size": "35px 26px",
-    }, */
-    // terraria
-    "background.customImages": [
-        "file:///D://Pro/icon/terraria/125x100_Winged_Slime_Mount.gif",
-        "file:///D://Pro/icon/terraria/80px-Queen_Slime.png",
-        "file:///D://Pro/icon/terraria/Fairy_Princess.gif",
-        "file:///D://Pro/icon/terraria/Shimmer_Slime.gif",
-        "file:///D://Pro/icon/3bodybw.jpeg"
-    ],
-    "background.style": {
-        "z-index": "99",
-        "background-position": "98.5% 99.5%",
-        "opacity": 1,
-        "background-size": "19.5px 17px",
+
+    /* - GO环境配置 - */
+    //自动更新
+    "go.toolsManagement.autoUpdate": true,
+    //右键菜单选项可见性
+    "go.editorContextMenuCommands": {
+        "toggleTestFile": false,
+        "removeTags": true,
+        "fillStruct": true,
+        "testAtCursor": false,
+        "playground": false
     },
-    // 忽视git失效警告
-    "git.ignoreMissingGitWarning": true,
-    // 打开文件信任
-    "security.workspace.trust.untrustedFiles": "open",
-    // edge插件开发者工具
-    //"vscode-edge-devtools.webhint": false,
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    //常量值显示
+    "go.inlayHints.constantValues": true,
+    //在 Output 中输出客户端和 gopls Server 的通讯，方便调试
+    //"go.trace.server": "verbose", 
+    "gopls": {
+        "ui.semanticTokens": true
     },
-    "[html]": {
-        "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[vue]": {
-        "editor.defaultFormatter": "octref.vetur"
-    },
-    /* "gopls": {
-        "build.experimentalWorkspaceModule": true
-    }, */
+    "diffEditor.ignoreTrimWhitespace": false,
 
 }
 
