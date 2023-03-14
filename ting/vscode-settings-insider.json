@@ -18,13 +18,14 @@
 
             background
             GitHub Sharp Theme
-            GitHub Theme
-            Night Owl
-            Verdandi Theme
+            SynthWave '80
+
+
             Rainbow Fart
-                              —— 2023-02-07 08:50:00
+                              —— 2023-03-08 20:33:00
     **************************************************/
 
+    "workbench.colorTheme": "SynthWave '84",
     // 显示空格
     "editor.renderWhitespace": "all",
     // 显示制表符
@@ -85,6 +86,8 @@
     //  - mouseover: 仅在鼠标位于装订线上方时显示折叠控件。
     //  - never: 隐藏
     "editor.showFoldingControls": "always",
+    "editor.quickSuggestionsDelay": 0,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
     // 启用括号着色器
     "editor.bracketPairColorization.enabled": true,
     // 不同括号类型是否有独立的颜色池
@@ -93,53 +96,60 @@
     "editor.guides.bracketPairs": "active",
     // 编辑器代码颜色
     "editor.tokenColorCustomizations": {
-        "types": "#1a05d4",
-        //"comments": "#474343cf", // 注释
-        "keywords": "#cc3299", // 关键字
-        //"functions": "#5b99fcc9", // 函数名
-        "variables": "#05658b", // 变量名
-        //"strings": "#04771f", // 字符串
-        "numbers": "#06aaaf", // 数字
-        "textMateRules": [
-            {   //数据类型
-                "scope": "storage.type",
-                "settings": {"foreground": "#f48cba"}//aad372
-            },
-            {   //类的名称
-                "scope": "entity.name.type", //函数和类的名称颜色
-                "settings": {"foreground": "#238e68",}
-            },
-            {   //运算符号
-                "scope": "keyword.operator",
-                "settings": {"foreground": "#bc1717",}
-            },
-            {   //逻辑符号
-                "scope": "keyword.operator.logical",
-                "settings": {"foreground": "#cc3299",}
-            },
-            {   //逗号分隔符,分号
-                "scope": ["punctuation.separator", "punctuation.terminator"],
-                "settings": {"foreground": "#23238e",}
-            },
-            {   //换行符、转义符等
-                "scope": "constant.character.escape",
-                "settings": {"foreground": "#d98719",}
-            },
-            {   //php function
-                "scope":"storage.type.function.php",
-                "settings": {"foreground": "#cc3299",}
-            },
-            {   //GO 内置函数
-                "scope": "support.function.builtin.go",
-                "settings": {"foreground": "#007d9c"}
-            },
-        ]
+        "[GitHub Sharp]": {
+            "types": "#1a05d4",
+            //"comments": "#474343cf", // 注释
+            "keywords": "#cc3299", // 关键字
+            //"functions": "#5b99fcc9", // 函数名
+            "variables": "#05658b", // 变量名
+            //"strings": "#04771f", // 字符串
+            "numbers": "#06aaaf", // 数字
+            "textMateRules": [
+                {   //数据类型
+                    "scope": "storage.type",
+                    "settings": {"foreground": "#f48cba"}//aad372
+                },
+                {   //类的名称
+                    "scope": "entity.name.type", //函数和类的名称颜色
+                    "settings": {"foreground": "#238e68",}
+                },
+                {   //运算符号
+                    "scope": "keyword.operator",
+                    "settings": {"foreground": "#bc1717",}
+                },
+                {   //逻辑符号
+                    "scope": "keyword.operator.logical",
+                    "settings": {"foreground": "#cc3299",}
+                },
+                {   //逗号分隔符,分号
+                    "scope": ["punctuation.separator", "punctuation.terminator"],
+                    "settings": {"foreground": "#23238e",}
+                },
+                {   //换行符、转义符等
+                    "scope": "constant.character.escape",
+                    "settings": {"foreground": "#d98719",}
+                },
+                {   //php function
+                    "scope":"storage.type.function.php",
+                    "settings": {"foreground": "#cc3299",}
+                },
+                {   //java 注解
+                    "scope":"storage.type.annotation.java",
+                    "settings": {"foreground": "#4ec9b0",}
+                },
+                {   //GO 内置函数
+                    "scope": "support.function.builtin.go",
+                    "settings": {"foreground": "#007d9c"}
+                },
+            ]
+        },
     },
     // 全局搞颜色 - dwbRGB
     "workbench.colorCustomizations": {
+        "tab.activeForeground": "#03edf9",
+        "terminal.tab.activeBorder": "#ff6ec7",
+        "panelTitle.activeForeground": "#CC9909",
         // 括号对
-        "editorBracketMatch.border": "#FFD700",
-        "editorBracketMatch.background": "#c0c0c055",
         "editorBracketHighlight.foreground1": "#1eff00",
         "editorBracketHighlight.foreground2": "#0081ff",
         "editorBracketHighlight.foreground3": "#c600ff",
@@ -147,23 +157,26 @@
         "editorBracketHighlight.foreground5": "#43ebbb",
         "editorBracketHighlight.foreground6": "#ff6ec7",
         "editorBracketHighlight.unexpectedBracket.foreground": "#BA2636",
-        // 标尺
-        "editorRuler.foreground": "#fb03a421",
-        // 鼠标
-        "editorCursor.foreground": "#ff1cae",
-        // 行号 - 当前行
-        "editorLineNumber.activeForeground": "#ff6ec7",
-        // 当前行高亮
-        "editor.lineHighlightBorder": "#cecccc90",
-        "editor.lineHighlightBackground": "#f4f3f3b1",
-        // 空格
-        "editorWhitespace.foreground": "#09000025",
-        // 书签
-        "bookmarks.lineBackground": "#005eff04",//行背景
-        "bookmarks.lineBorder": "#adeaeaa0",//行边框
-        "bookmarks.overviewRuler": "#82d4f5",//滚动条中条块色
-        // 终端-光标
-        "terminalCursor.foreground": "#ff1cae",
+        "editorLineNumber.activeForeground": "#ff6ec7",// 行号 - 当前行
+        "terminalCursor.foreground": "#ff1cae",// 终端-光标
+        // 主题自定义配色
+        "[SynthWave '84]": {
+            "editorWhitespace.foreground": "#0f8b7d89",// 空格
+        },
+        "[GitHub Sharp]": {
+            "editorBracketMatch.border": "#FFD700",// 括号对匹配边框
+            "editorBracketMatch.background": "#c0c0c055",// 括号对匹配背景
+            "editorRuler.foreground": "#fb03a421",// 标尺
+            "editor.lineHighlightBorder": "#cecccc90",// 当前行高亮-边框
+            "editor.lineHighlightBackground": "#f4f3f3b1",// 当前行高亮-背景
+            "editorCursor.foreground": "#ff1cae",// 鼠标
+            "editorWhitespace.foreground": "#09000025",// 空格
+            // 书签
+            "bookmarks.lineBackground": "#005eff04",//行背景
+            "bookmarks.lineBorder": "#adeaeaa0",//行边框
+            "bookmarks.overviewRuler": "#82d4f5",//滚动条中条块色
+            "statusBar.debuggingBackground": "#23238e"  //调试状态下状态栏
+        }
     },
     // 控制编辑器打开的位置
     //  - `left` 或 `right` 可分别在当前活动编辑器的左侧或右侧打开
@@ -172,11 +185,7 @@
     // 控制编辑器选项卡的大小调整。当 "#workbench.editor.showTabs#" 处于禁用状态时，将忽略此值。
     //  - fit: 始终将标签页保持足够大，能够完全显示编辑器标签。
     //  - shrink: 在不能同时显示所有选项卡时，允许选项卡缩小。
-    "workbench.editor.tabSizing": "shrink",
-    // 项目文件树缩进像素
-    //"workbench.tree.indent": 10,
-    // 主题
-    "workbench.colorTheme": "GitHub Sharp",
+    //"workbench.editor.tabSizing": "shrink",
     // 标题栏显示命令中心
     "window.commandCenter": true,
     // 菜单可见性
@@ -234,7 +243,7 @@
     // php入口文件
     //"intelephense.environment.documentRoot": "index.php",
     // php检查版本
-    "intelephense.environment.phpVersion": "7.2.9",
+    "intelephense.environment.phpVersion": "7.4.3",
     // 排除文件夹（资源文件加太大了造成一直在检索php文件导致提示跳转根本用不了）
     "intelephense.files.exclude": [
         "**/.git/**",
@@ -244,6 +253,8 @@
         "**/.history/**",
         "**/.settings/**",
         "**/.idea/**",
+        "**/.build/**",
+        "**/.github/**",
         "**/CVS/**",
         "**/node_modules/**",
         "**/bower_components/**",
@@ -271,6 +282,11 @@
         "**/vagrant/**",
         "**/o2o/cms/Lib/ORG/mpdf/**",
         "**/frontend/o2o_platform/**",
+        "**/mochat/dashboard/**",
+        "**/mochat/sidebar/**",
+        "**/mochat/operation/**",
+        "**/mochat/workbench/**",
+        "**/niushop/uniapp/**",
         "**/CHAOS_Project/**",
         "**/WorkSpace/workspace/**"
     ],
@@ -294,6 +310,18 @@
         "ui.semanticTokens": true
     },
     "diffEditor.ignoreTrimWhitespace": false,
+    
+    /* Java */
+    "boot-java.rewrite.reconcile": true,
+    "redhat.telemetry.enabled": true,
+    //"maven.executable.path": "",
+    "maven.excludedFolders": [
+        "**/.*",
+        "**/node_modules",
+        "**/target",
+        "**/bin",
+        "**/archetype-resources"
+    ],
 
 }
 

@@ -9,8 +9,17 @@
 // +---------------------------------------------------------------------------------------+
 //const _Simulator = "63067#1.2.3.";
 
+const ERHex = {
+    b: 16,
+    f: _ => ERHex.b > 10 ? ERHex.b - 10 : 0,
+    TCode: s => [...s].map((x, y) => (y > 0 && rc(ERHex.f()) || '') + x.charCodeAt().toString(ERHex.b)).join(''),
+    FCode: s => [...s].map((x, y) => (x.charCodeAt() > 96 + ERHex.f()) ? ' ' : s[y]).join('').split(' ').map(e => String.fromCharCode(parseInt(e, ERHex.b))).join(''),
+    SCode: s => [...s].map((x, y) => (x.charCodeAt() > 96 + ERHex.f()) ? ' ' : s[y]),
+    SFCode: s => SCode(s).join('').split(' ').map(e => String.fromCharCode(parseInt(e, ERHex.b))).join('')
+};
+
 const rc = f => String.fromCharCode(96 + f + Math.ceil(Math.random() * (26 - f)));
-const ERHex = ((b = 16, f = b > 10 ? b - 10 : 0) => ({
+const ERHex_ = ((b = 16, f = b > 10 ? b - 10 : 0) => ({
     TCode: s => [...s].map((x, y) => (y > 0 && rc(f) || '') + x.charCodeAt().toString(b)).join(''),
     FCode: s => [...s].map((x, y) => (x.charCodeAt() > 96 + f) ? ' ' : s[y]).join('').split(' ').map(e => String.fromCharCode(parseInt(e, b))).join(''),
     SCode: s => [...s].map((x, y) => (x.charCodeAt() > 96 + f) ? ' ' : s[y]),
@@ -25,26 +34,26 @@ const ERCode = ((b = 16, f = b > 10 ? b - 10 : 0, rc = _ => String.fromCharCode(
 }))();
 
 const ERCode_ = ((b = 16) => {
-    const f = b>10 ? b-10 : 0;
+    const f = b > 10 ? b - 10 : 0;
     const rc = _ => String.fromCharCode(96 + f + Math.ceil(Math.random() * (26 - f)));
-    const TCode = s => [...s].map((x, y) => (y>0 && rc() || '') + x.charCodeAt().toString(b)).join('');
+    const TCode = s => [...s].map((x, y) => (y > 0 && rc() || '') + x.charCodeAt().toString(b)).join('');
     const FCode = s => [...s].map((x, y) => (x.charCodeAt() > 96 + f) ? ' ' : s[y]).join('').split(' ').map(e => String.fromCharCode(parseInt(e, b))).join('');
     const SCode = s => [...s].map((x, y) => (x.charCodeAt() > 96 + f) ? ' ' : s[y]);
     const SFCode = s => SCode(s).join('').split(' ').map(e => String.fromCharCode(parseInt(e, b))).join('');
 
-    return {rc, TCode, FCode, SCode, SFCode};
+    return { rc, TCode, FCode, SCode, SFCode };
 })();
 
-const TCode16 = s => [...s].map((e, i) => (i>0 && ' ' || '') + e.charCodeAt().toString(16)).join('');
+const TCode16 = s => [...s].map((e, i) => (i > 0 && ' ' || '') + e.charCodeAt().toString(16)).join('');
 const FCode16 = s => s.split(' ').map(e => String.fromCharCode(parseInt(e, 16))).join('');
 
 //export {TCode16, FCode16, ERHex};
 
-function toCode(str){
+function toCode(str) {
     var result = [];
     var list = str.split("");
-    for(var i=0;i<list.length;i++){
-        if(i != 0){
+    for (var i = 0; i < list.length; i++) {
+        if (i != 0) {
             result.push(" ");
         }
         var item = list[i];
@@ -54,14 +63,14 @@ function toCode(str){
     return result.join("");
 }
 
-function fromCode(str){
+function fromCode(str) {
     var result = [];
     var list = str.split(" ");
-    for(var i=0;i<list.length;i++){
-         var item = list[i];
-         var asciiCode = parseInt(item,2);
-         var charValue = String.fromCharCode(asciiCode);
-         result.push(charValue);
+    for (var i = 0; i < list.length; i++) {
+        var item = list[i];
+        var asciiCode = parseInt(item, 2);
+        var charValue = String.fromCharCode(asciiCode);
+        result.push(charValue);
     }
     return result.join("");
 }
