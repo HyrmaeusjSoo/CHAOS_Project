@@ -1,31 +1,28 @@
-{
     /*************************************************
         User Global Settings - Insider
         插件列表：
-            PHP Intelephense
+            Go
+            IntelliCode
+            IntelliCode API Usage Examples
+            HTML CSS Support
             JavaScript(ES6) code snippets
             ESLint
-            Javascript and TypeScript Nightly
-            Go
-            Vetur
-            Vue 3 Snippets
-            Python
-
+            Vue Language Features (Volar)
+            TypeScript Vue Plugin (Volar)
+            Vue Peek
+            Vue VSCode Snippets
             Bookmarks
-            Markdown All in One
-            Microsoft Edge Tools for VS Code
-            Prettier - Code formatter
 
             background
             GitHub Sharp Theme
             SynthWave '80
-
-
             Rainbow Fart
-                              —— 2023-03-08 20:33:00
+                              —— 2023-03-31 15:34:00
     **************************************************/
-
+{
+    // "workbench.colorTheme": "GitHub Sharp",
     "workbench.colorTheme": "SynthWave '84",
+    "synthwave84.brightness": 1,
     // 显示空格
     "editor.renderWhitespace": "all",
     // 显示制表符
@@ -74,7 +71,7 @@
     // 首行粘滞滚动
     "editor.stickyScroll.enabled": true,
     // 粘滞滚动最大行数
-    "editor.stickyScroll.maxLineCount": 5,
+    "editor.stickyScroll.maxLineCount": 10,
     // Tab键自动填入最佳推荐值
     "editor.tabCompletion": "on",
     // 缩进参考线
@@ -111,43 +108,41 @@
                 },
                 {   //类的名称
                     "scope": "entity.name.type", //函数和类的名称颜色
-                    "settings": {"foreground": "#238e68",}
+                    "settings": {"foreground": "#238e68"}
                 },
                 {   //运算符号
                     "scope": "keyword.operator",
-                    "settings": {"foreground": "#bc1717",}
+                    "settings": {"foreground": "#bc1717"}
                 },
                 {   //逻辑符号
                     "scope": "keyword.operator.logical",
-                    "settings": {"foreground": "#cc3299",}
+                    "settings": {"foreground": "#cc3299"}
                 },
                 {   //逗号分隔符,分号
                     "scope": ["punctuation.separator", "punctuation.terminator"],
-                    "settings": {"foreground": "#23238e",}
+                    "settings": {"foreground": "#23238e"}
                 },
                 {   //换行符、转义符等
                     "scope": "constant.character.escape",
-                    "settings": {"foreground": "#d98719",}
+                    "settings": {"foreground": "#d98719"}
                 },
                 {   //php function
                     "scope":"storage.type.function.php",
-                    "settings": {"foreground": "#cc3299",}
+                    "settings": {"foreground": "#cc3299"}
                 },
                 {   //java 注解
                     "scope":"storage.type.annotation.java",
-                    "settings": {"foreground": "#4ec9b0",}
+                    "settings": {"foreground": "#4ec9b0"}
                 },
                 {   //GO 内置函数
                     "scope": "support.function.builtin.go",
                     "settings": {"foreground": "#007d9c"}
-                },
+                }
             ]
-        },
+        }
     },
     // 全局搞颜色 - dwbRGB
     "workbench.colorCustomizations": {
-        "tab.activeForeground": "#03edf9",
-        "terminal.tab.activeBorder": "#ff6ec7",
         "panelTitle.activeForeground": "#CC9909",
         // 括号对
         "editorBracketHighlight.foreground1": "#1eff00",
@@ -161,9 +156,11 @@
         "terminalCursor.foreground": "#ff1cae",// 终端-光标
         // 主题自定义配色
         "[SynthWave '84]": {
-            "editorWhitespace.foreground": "#0f8b7d89",// 空格
+            "editorWhitespace.foreground": "#0f8b7d89"// 空格
         },
         "[GitHub Sharp]": {
+            // "tab.activeForeground": "#03edf9",
+            "terminal.tab.activeBorder": "#ff6ec7",
             "editorBracketMatch.border": "#FFD700",// 括号对匹配边框
             "editorBracketMatch.background": "#c0c0c055",// 括号对匹配背景
             "editorRuler.foreground": "#fb03a421",// 标尺
@@ -202,7 +199,7 @@
     "files.autoSave": "onWindowChange",
     // 项目列表排除某文件、文件夹
     "files.exclude": {
-        "**/.idea": true,
+        "**/.idea": true
     },
     // 配置语言的文件关联。 这些关联的优先级高于已安装语言的默认关联。
     "files.associations": {"*.module": "php"},
@@ -233,13 +230,12 @@
         "z-index": "99",
         "background-position": "98.5% 99.5%",
         "opacity": 1,
-        "background-size": "19.5px 17px",
+        "background-size": "19.5px 17px"
     },
 
     /* - php环境配置 - */
-    "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.2.9nts/php.exe",
-    "php.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.2.9nts/php.exe",
-    "php.suggest.basic": false,
+    //"php.suggest.basic": false,
+    "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.4.3nts/php.exe",
     // php入口文件
     //"intelephense.environment.documentRoot": "index.php",
     // php检查版本
@@ -282,13 +278,8 @@
         "**/vagrant/**",
         "**/o2o/cms/Lib/ORG/mpdf/**",
         "**/frontend/o2o_platform/**",
-        "**/mochat/dashboard/**",
-        "**/mochat/sidebar/**",
-        "**/mochat/operation/**",
-        "**/mochat/workbench/**",
         "**/niushop/uniapp/**",
-        "**/CHAOS_Project/**",
-        "**/WorkSpace/workspace/**"
+        "**/uniapp/**"
     ],
 
     /* - GO环境配置 - */
@@ -308,20 +299,7 @@
     //"go.trace.server": "verbose", 
     "gopls": {
         "ui.semanticTokens": true
-    },
-    "diffEditor.ignoreTrimWhitespace": false,
-    
-    /* Java */
-    "boot-java.rewrite.reconcile": true,
-    "redhat.telemetry.enabled": true,
-    //"maven.executable.path": "",
-    "maven.excludedFolders": [
-        "**/.*",
-        "**/node_modules",
-        "**/target",
-        "**/bin",
-        "**/archetype-resources"
-    ],
+    }
 
 }
 
