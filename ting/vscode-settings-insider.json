@@ -17,324 +17,336 @@
             GitHub Sharp Theme
             SynthWave '80
             Rainbow Fart
-                              —— 2023-03-31 15:34:00
+                              —— 2023-08-06 20:11:00
     **************************************************/
-{
-    // "workbench.colorTheme": "GitHub Sharp",
-    "workbench.colorTheme": "SynthWave '84",
-    "synthwave84.brightness": 1,
-    // 显示空格
-    "editor.renderWhitespace": "all",
-    // 显示制表符
-    "editor.renderControlCharacters": true,
-    // 转为空格
-    "editor.insertSpaces": true,
-    // 检测第一个tab后面全是tab
-    "editor.detectIndentation": false,
-    // tab为4个空格
-    "editor.tabSize": 4,
-    // 当前行突出显示
-    "editor.renderLineHighlight":"all",
-    // 启用minimap
-    "editor.minimap.enabled": true,
-    // 控制迷你地图的大小。
-    //  - proportional: 迷你地图的大小与编辑器内容相同(并且可能滚动)。
-    //  - fill: 迷你地图将根据需要拉伸或缩小以填充编辑器的高度(不滚动)。
-    //  - fit: 迷你地图将根据需要缩小，永远不会大于编辑器(不滚动)。
-    "editor.minimap.size": "proportional",
-    // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
-    "editor.cursorBlinking": "expand",
-    // 光滑输入
-    "editor.cursorSmoothCaretAnimation": "on",
-    // 终端光标闪动
-    "terminal.integrated.cursorBlinking": true,
-    // 终端光标样式
-    "terminal.integrated.cursorStyle": "underline",
-    // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
-    "editor.rulers": [72,100,120],
-    // 编辑器字体系列
-    "editor.fontFamily": "'Fira Code Retina', 'HarmonyOS Sans SC', monospace",
-    // 控制台字体系列
-    "terminal.integrated.fontFamily": "'Maple Mono SC NF', 'HarmonyOS Sans SC', monospace",
-    // 启用字体连字
-    "editor.fontLigatures": true,
-    // 以像素为单位控制字号
-    "editor.fontSize": 14.5,
-    // 控制字体粗细
-    "editor.fontWeight": "normal",
-    // 代码超出屏幕换行
-    "editor.wordWrap": "off",
-    // 编辑器是否动画滚动
-    "editor.smoothScrolling": false,
-    // 自动关闭括号
-    "editor.autoClosingBrackets": "always",
-    // 首行粘滞滚动
-    "editor.stickyScroll.enabled": true,
-    // 粘滞滚动最大行数
-    "editor.stickyScroll.maxLineCount": 10,
-    // Tab键自动填入最佳推荐值
-    "editor.tabCompletion": "on",
-    // 缩进参考线
-    "editor.guides.indentation": true,
-    // 折叠策略
-    "editor.foldingStrategy": "auto",
-    // 控制何时显示行号槽上的折叠控件。
-    //  - always: 始终显示折叠控件。
-    //  - mouseover: 仅在鼠标位于装订线上方时显示折叠控件。
-    //  - never: 隐藏
-    "editor.showFoldingControls": "always",
-    "editor.quickSuggestionsDelay": 0,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    // 启用括号着色器
-    "editor.bracketPairColorization.enabled": true,
-    // 不同括号类型是否有独立的颜色池
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
-    // 括号对连接
-    "editor.guides.bracketPairs": "active",
-    // 编辑器代码颜色
-    "editor.tokenColorCustomizations": {
-        "[GitHub Sharp]": {
-            "types": "#1a05d4",
-            //"comments": "#474343cf", // 注释
-            "keywords": "#cc3299", // 关键字
-            //"functions": "#5b99fcc9", // 函数名
-            "variables": "#05658b", // 变量名
-            //"strings": "#04771f", // 字符串
-            "numbers": "#06aaaf", // 数字
-            "textMateRules": [
-                {   //数据类型
-                    "scope": "storage.type",
-                    "settings": {"foreground": "#f48cba"}//aad372
-                },
-                {   //类的名称
-                    "scope": "entity.name.type", //函数和类的名称颜色
-                    "settings": {"foreground": "#238e68"}
-                },
-                {   //运算符号
-                    "scope": "keyword.operator",
-                    "settings": {"foreground": "#bc1717"}
-                },
-                {   //逻辑符号
-                    "scope": "keyword.operator.logical",
-                    "settings": {"foreground": "#cc3299"}
-                },
-                {   //逗号分隔符,分号
-                    "scope": ["punctuation.separator", "punctuation.terminator"],
-                    "settings": {"foreground": "#23238e"}
-                },
-                {   //换行符、转义符等
-                    "scope": "constant.character.escape",
-                    "settings": {"foreground": "#d98719"}
-                },
-                {   //php function
-                    "scope":"storage.type.function.php",
-                    "settings": {"foreground": "#cc3299"}
-                },
-                {   //java 注解
-                    "scope":"storage.type.annotation.java",
-                    "settings": {"foreground": "#4ec9b0"}
-                },
-                {   //GO 内置函数
-                    "scope": "support.function.builtin.go",
-                    "settings": {"foreground": "#007d9c"}
-                }
-            ]
-        }
-    },
-    // 全局搞颜色 - dwbRGB
-    "workbench.colorCustomizations": {
-        "panelTitle.activeForeground": "#CC9909",
-        // 括号对
-        "editorBracketHighlight.foreground1": "#1eff00",
-        "editorBracketHighlight.foreground2": "#0081ff",
-        "editorBracketHighlight.foreground3": "#c600ff",
-        "editorBracketHighlight.foreground4": "#ff8000",
-        "editorBracketHighlight.foreground5": "#43ebbb",
-        "editorBracketHighlight.foreground6": "#ff6ec7",
-        "editorBracketHighlight.unexpectedBracket.foreground": "#BA2636",
-        "editorLineNumber.activeForeground": "#ff6ec7",// 行号 - 当前行
-        "terminalCursor.foreground": "#ff1cae",// 终端-光标
-        // 主题自定义配色
-        "[SynthWave '84]": {
-            "editorWhitespace.foreground": "#0f8b7d89"// 空格
+    {
+        // "workbench.colorTheme": "GitHub Sharp",
+        "workbench.colorTheme": "SynthWave '84",
+        "synthwave84.brightness": 1,
+        // 显示空格
+        "editor.renderWhitespace": "all",
+        // 显示制表符
+        "editor.renderControlCharacters": true,
+        // 转为空格
+        "editor.insertSpaces": true,
+        // 检测第一个tab后面全是tab
+        "editor.detectIndentation": false,
+        // tab为4个空格
+        "editor.tabSize": 4,
+        // 当前行突出显示
+        "editor.renderLineHighlight":"all",
+        // 启用minimap
+        "editor.minimap.enabled": true,
+        // 控制迷你地图的大小。
+        //  - proportional: 迷你地图的大小与编辑器内容相同(并且可能滚动)。
+        //  - fill: 迷你地图将根据需要拉伸或缩小以填充编辑器的高度(不滚动)。
+        //  - fit: 迷你地图将根据需要缩小，永远不会大于编辑器(不滚动)。
+        "editor.minimap.size": "proportional",
+        // 控制光标动画样式，可能的值为 "blink"、"smooth"、"phase"、"expand" 和 "solid"
+        "editor.cursorBlinking": "expand",
+        // 光滑输入
+        "editor.cursorSmoothCaretAnimation": "on",
+        // 终端光标闪动
+        "terminal.integrated.cursorBlinking": true,
+        // 终端光标样式
+        "terminal.integrated.cursorStyle": "underline",
+        // 在一定数量的等宽字符后显示垂直标尺。输入多个值，显示多个标尺。若数组为空，则不绘制标尺。
+        "editor.rulers": [72,100,120],
+        // 编辑器字体系列
+        "editor.fontFamily": "'Fira Code Retina', 'HarmonyOS Sans SC', monospace",
+        // 控制台字体系列
+        "terminal.integrated.fontFamily": "'Maple Mono SC NF', 'HarmonyOS Sans SC', monospace",
+        // debug控制台字体系列
+        "debug.console.fontFamily": "'Maple Mono SC NF', 'HarmonyOS Sans SC', monospace",
+        // 启用字体连字
+        "editor.fontLigatures": true,
+        // 以像素为单位控制字号
+        "editor.fontSize": 14.5,
+        // 控制字体粗细
+        "editor.fontWeight": "normal",
+        // 代码超出屏幕换行
+        "editor.wordWrap": "off",
+        // 编辑器是否动画滚动
+        "editor.smoothScrolling": false,
+        // 自动关闭括号
+        "editor.autoClosingBrackets": "always",
+        // 首行粘滞滚动
+        "editor.stickyScroll.enabled": true,
+        // 粘滞滚动最大行数
+        "editor.stickyScroll.maxLineCount": 10,
+        // Tab键自动填入最佳推荐值
+        "editor.tabCompletion": "on",
+        // 缩进参考线
+        "editor.guides.indentation": true,
+        // 折叠策略
+        "editor.foldingStrategy": "auto",
+        // 控制何时显示行号槽上的折叠控件。
+        //  - always: 始终显示折叠控件。
+        //  - mouseover: 仅在鼠标位于装订线上方时显示折叠控件。
+        //  - never: 隐藏
+        "editor.showFoldingControls": "always",
+        "editor.quickSuggestionsDelay": 0,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        // 启用括号着色器
+        "editor.bracketPairColorization.enabled": true,
+        // 不同括号类型是否有独立的颜色池
+        "editor.bracketPairColorization.independentColorPoolPerBracketType": false,
+        // 括号对连接
+        "editor.guides.bracketPairs": "active",
+        // 编辑器代码颜色
+        "editor.tokenColorCustomizations": {
+            "[GitHub Sharp]": {
+                "types": "#1a05d4",
+                //"comments": "#474343cf", // 注释
+                "keywords": "#cc3299", // 关键字
+                //"functions": "#5b99fcc9", // 函数名
+                "variables": "#05658b", // 变量名
+                //"strings": "#04771f", // 字符串
+                "numbers": "#06aaaf", // 数字
+                "textMateRules": [
+                    {   //数据类型
+                        "scope": "storage.type",
+                        "settings": {"foreground": "#f48cba"}//aad372
+                    },
+                    {   //类的名称
+                        "scope": "entity.name.type", //函数和类的名称颜色
+                        "settings": {"foreground": "#238e68"}
+                    },
+                    {   //运算符号
+                        "scope": "keyword.operator",
+                        "settings": {"foreground": "#bc1717"}
+                    },
+                    {   //逻辑符号
+                        "scope": "keyword.operator.logical",
+                        "settings": {"foreground": "#cc3299"}
+                    },
+                    {   //逗号分隔符,分号
+                        "scope": ["punctuation.separator", "punctuation.terminator"],
+                        "settings": {"foreground": "#23238e"}
+                    },
+                    {   //换行符、转义符等
+                        "scope": "constant.character.escape",
+                        "settings": {"foreground": "#d98719"}
+                    },
+                    {   //php function
+                        "scope":"storage.type.function.php",
+                        "settings": {"foreground": "#cc3299"}
+                    },
+                    {   //java 注解
+                        "scope":"storage.type.annotation.java",
+                        "settings": {"foreground": "#4ec9b0"}
+                    },
+                    {   //GO 内置函数
+                        "scope": "support.function.builtin.go",
+                        "settings": {"foreground": "#007d9c"}
+                    }
+                ]
+            }
         },
-        "[GitHub Sharp]": {
-            // "tab.activeForeground": "#03edf9",
-            "terminal.tab.activeBorder": "#ff6ec7",
-            "editorBracketMatch.border": "#FFD700",// 括号对匹配边框
-            "editorBracketMatch.background": "#c0c0c055",// 括号对匹配背景
-            "editorRuler.foreground": "#fb03a421",// 标尺
-            "editor.lineHighlightBorder": "#cecccc90",// 当前行高亮-边框
-            "editor.lineHighlightBackground": "#f4f3f3b1",// 当前行高亮-背景
-            "editorCursor.foreground": "#ff1cae",// 鼠标
-            "editorWhitespace.foreground": "#09000025",// 空格
-            // 书签
-            "bookmarks.lineBackground": "#005eff04",//行背景
-            "bookmarks.lineBorder": "#adeaeaa0",//行边框
-            "bookmarks.overviewRuler": "#82d4f5",//滚动条中条块色
-            "statusBar.debuggingBackground": "#23238e"  //调试状态下状态栏
+        // 全局搞颜色 - dwbRGB
+        "workbench.colorCustomizations": {
+            "panelTitle.activeForeground": "#CC9909",
+            // 括号对
+            "editorBracketHighlight.foreground1": "#1eff00",
+            "editorBracketHighlight.foreground2": "#0081ff",
+            "editorBracketHighlight.foreground3": "#c600ff",
+            "editorBracketHighlight.foreground4": "#ff8000",
+            "editorBracketHighlight.foreground5": "#43ebbb",
+            "editorBracketHighlight.foreground6": "#ff6ec7",
+            "editorBracketHighlight.unexpectedBracket.foreground": "#BA2636",
+            "editorLineNumber.activeForeground": "#ff6ec7",// 行号 - 当前行
+            "terminalCursor.foreground": "#ff1cae",// 终端-光标
+            // 主题自定义配色
+            "[SynthWave '84]": {
+                "editorWhitespace.foreground": "#0f8b7d89"// 空格
+            },
+            "[GitHub Sharp]": {
+                // "tab.activeForeground": "#03edf9",
+                "terminal.tab.activeBorder": "#ff6ec7",
+                "editorBracketMatch.border": "#FFD700",// 括号对匹配边框
+                "editorBracketMatch.background": "#c0c0c055",// 括号对匹配背景
+                "editorRuler.foreground": "#fb03a421",// 标尺
+                "editor.lineHighlightBorder": "#cecccc90",// 当前行高亮-边框
+                "editor.lineHighlightBackground": "#f4f3f3b1",// 当前行高亮-背景
+                "editorCursor.foreground": "#ff1cae",// 鼠标
+                "editorWhitespace.foreground": "#09000025",// 空格
+                // 书签
+                "bookmarks.lineBackground": "#005eff04",//行背景
+                "bookmarks.lineBorder": "#adeaeaa0",//行边框
+                "bookmarks.overviewRuler": "#82d4f5",//滚动条中条块色
+                "statusBar.debuggingBackground": "#23238e"  //调试状态下状态栏
+            }
+        },
+        // 控制编辑器打开的位置
+        //  - `left` 或 `right` 可分别在当前活动编辑器的左侧或右侧打开
+        //  - `first` (最前) 或 `last` (最后) 打开的位置与当前活动编辑器无关
+        "workbench.editor.openPositioning": "last",
+        // 控制编辑器选项卡的大小调整。当 "#workbench.editor.showTabs#" 处于禁用状态时，将忽略此值。
+        //  - fit: 始终将标签页保持足够大，能够完全显示编辑器标签。
+        //  - shrink: 在不能同时显示所有选项卡时，允许选项卡缩小。
+        //"workbench.editor.tabSizing": "shrink",
+        // 标题栏显示命令中心
+        "window.commandCenter": true,
+        // 菜单可见性
+        "window.menuBarVisibility": "classic",
+        // 与活动文件同步
+        "explorer.autoReveal": false,
+        // 删除前询问
+        "explorer.confirmDelete": false,
+        // 文件自动保存
+        //  - off: 关闭自动保存
+        //  - afterDelay: 在配置的 `files.autoSaveDelay` 之后
+        //  - onFocusChange: 编辑器失去焦点
+        //  - onWindowChange: 软件窗口失去焦点
+        "files.autoSave": "onWindowChange",
+        // 项目列表排除某文件、文件夹
+        "files.exclude": {
+            "**/.idea": true
+        },
+        // 配置语言的文件关联。 这些关联的优先级高于已安装语言的默认关联。
+        "files.associations": {
+            "*.module": "php",
+            "*.tmpl": "html"
+        },
+        // 忽视git失效警告
+        "git.ignoreMissingGitWarning": true,
+        // 打开文件信任
+        "security.workspace.trust.untrustedFiles": "open",
+        // edge插件开发者工具
+        //"vscode-edge-devtools.webhint": false,
+        // 书签 保存到项目中，防止误操作移除项目后书签丢失的情况
+        "bookmarks.saveBookmarksInProject": true,
+        /* 书签 边框、填充色 */
+        "bookmarks.gutterIconBorderColor": "#38b0de",
+        "bookmarks.gutterIconFillColor": "#f4f3f3b1",
+        /* 背景图片 */
+        "background.enabled": true,
+        // terraria,三体图标
+        "background.customImages": [
+            "file:///D://Pro/icon/terraria/125x100_Winged_Slime_Mount.gif",
+            "file:///D://Pro/icon/terraria/80px-Queen_Slime.png",
+            "file:///D://Pro/icon/terraria/Fairy_Princess.gif",
+            "file:///D://Pro/icon/terraria/Shimmer_Slime.gif",
+            "file:///D://Pro/icon/3bodybw.jpeg"
+        ],
+        "background.style": {
+            "z-index": "99",
+            "background-position": "98.5% 99.5%",
+            "opacity": 1,
+            "background-size": "19.5px 17px"
+        },
+    
+        /* - php环境配置 - */
+        //"php.suggest.basic": false,
+        "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.4.3nts/php.exe",
+        // php入口文件
+        //"intelephense.environment.documentRoot": "index.php",
+        // php检查版本
+        "intelephense.environment.phpVersion": "7.4.3",
+        // 排除文件夹（资源文件加太大了造成一直在检索php文件导致提示跳转根本用不了）
+        "intelephense.files.exclude": [
+            "**/.git/**",
+            "**/.svn/**",
+            "**/.hg/**",
+            "**/.DS_Store/**",
+            "**/.history/**",
+            "**/.settings/**",
+            "**/.idea/**",
+            "**/.build/**",
+            "**/.github/**",
+            "**/CVS/**",
+            "**/node_modules/**",
+            "**/bower_components/**",
+            "**/update/**",
+            "**/upload/**",
+            "**/static/**",
+            "**/images/**",
+            "**/runtime/**",
+            "**/vendor/**/{Tests,tests}/**",
+            "**/vendor/**/vendor/**",
+            "**/vendor/whichbrowser/parser/data/models-android.php",
+            "**/vendor/whichbrowser/parser/data/profiles.php",
+            "**/vendor/dompdf/dompdf/lib/fonts/simsun.ufm.php",
+            "**/v20/**/runtime/**",
+            "**/v20/public/hjjt/**",
+            "**/v20/public/platform/**",
+            "**/v20/public/platform_dev/**",
+            "**/v20/public/platform2/**",
+            "**/v20/public/platform202110128/**",
+            "**/v20/public/platformbak20220706/**",
+            "**/v20/public/zt/**",
+            "**/log/**",
+            "**/laya/**",
+            "**/zt/**",
+            "**/vagrant/**",
+            "**/o2o/cms/Lib/ORG/mpdf/**",
+            "**/frontend/o2o_platform/**",
+            "**/niushop/uniapp/**",
+            "**/uniapp/**"
+        ],
+    
+        /* - GO环境配置 - */
+        // tools自动更新
+        "go.toolsManagement.autoUpdate": true,
+        // 右键菜单选项可见性
+        "go.editorContextMenuCommands": {
+            "toggleTestFile": false,
+            "removeTags": true,
+            "fillStruct": true,
+            "testAtCursor": false,
+            "generateTestForFunction": false,
+            "testCoverage": false,
+            "playground": false,
+            "debugTestAtCursor": false
+        },
+        // 嵌入显示
+        "go.inlayHints.constantValues": true, //常量值
+        "go.inlayHints.assignVariableTypes": true, //变量类型
+        "go.inlayHints.compositeLiteralFields": true, //结构体匿名赋值时显示字段名
+        "go.inlayHints.compositeLiteralTypes": true, //复合显示类型
+        "go.inlayHints.functionTypeParameters": true, //函数参数类型
+        "go.inlayHints.parameterNames": true, //函数参数名
+        "go.inlayHints.rangeVariableTypes": true, //range变量类型
+        // 在 Output 中输出客户端和 gopls Server 的通讯，方便调试
+        //"go.trace.server": "verbose", 
+        "gopls": {
+            "ui.semanticTokens": true
         }
-    },
-    // 控制编辑器打开的位置
-    //  - `left` 或 `right` 可分别在当前活动编辑器的左侧或右侧打开
-    //  - `first` (最前) 或 `last` (最后) 打开的位置与当前活动编辑器无关
-    "workbench.editor.openPositioning": "last",
-    // 控制编辑器选项卡的大小调整。当 "#workbench.editor.showTabs#" 处于禁用状态时，将忽略此值。
-    //  - fit: 始终将标签页保持足够大，能够完全显示编辑器标签。
-    //  - shrink: 在不能同时显示所有选项卡时，允许选项卡缩小。
-    //"workbench.editor.tabSizing": "shrink",
-    // 标题栏显示命令中心
-    "window.commandCenter": true,
-    // 菜单可见性
-    "window.menuBarVisibility": "classic",
-    // 与活动文件同步
-    "explorer.autoReveal": false,
-    // 删除前询问
-    "explorer.confirmDelete": true,
-    // 文件自动保存
-    //  - off: 关闭自动保存
-    //  - afterDelay: 在配置的 `files.autoSaveDelay` 之后
-    //  - onFocusChange: 编辑器失去焦点
-    //  - onWindowChange: 软件窗口失去焦点
-    "files.autoSave": "onWindowChange",
-    // 项目列表排除某文件、文件夹
-    "files.exclude": {
-        "**/.idea": true
-    },
-    // 配置语言的文件关联。 这些关联的优先级高于已安装语言的默认关联。
-    "files.associations": {"*.module": "php"},
-    // 忽视git失效警告
-    "git.ignoreMissingGitWarning": true,
-    // 打开文件信任
-    "security.workspace.trust.untrustedFiles": "open",
-    // edge插件开发者工具
-    //"vscode-edge-devtools.webhint": false,
-    // 书签 保存到项目中，防止误操作移除项目后书签丢失的情况
-    "bookmarks.saveBookmarksInProject": true,
-    /* 书签 边框、填充色 */
-    "bookmarks.gutterIconBorderColor": "#38b0de",
-    "bookmarks.gutterIconFillColor": "#f4f3f3b1",
-    /* 背景图片 */
-    "background.enabled": true,
-    "background.loop": true,
-    "background.useDefault": false,
-    // terraria,三体图标
-    "background.customImages": [
-        "file:///D://Pro/icon/terraria/125x100_Winged_Slime_Mount.gif",
-        "file:///D://Pro/icon/terraria/80px-Queen_Slime.png",
-        "file:///D://Pro/icon/terraria/Fairy_Princess.gif",
-        "file:///D://Pro/icon/terraria/Shimmer_Slime.gif",
-        "file:///D://Pro/icon/3bodybw.jpeg"
-    ],
-    "background.style": {
-        "z-index": "99",
-        "background-position": "98.5% 99.5%",
-        "opacity": 1,
-        "background-size": "19.5px 17px"
-    },
-
-    /* - php环境配置 - */
-    //"php.suggest.basic": false,
-    "php.validate.executablePath": "D:/Programs/phpstudy_pro/Extensions/php/php7.4.3nts/php.exe",
-    // php入口文件
-    //"intelephense.environment.documentRoot": "index.php",
-    // php检查版本
-    "intelephense.environment.phpVersion": "7.4.3",
-    // 排除文件夹（资源文件加太大了造成一直在检索php文件导致提示跳转根本用不了）
-    "intelephense.files.exclude": [
-        "**/.git/**",
-        "**/.svn/**",
-        "**/.hg/**",
-        "**/.DS_Store/**",
-        "**/.history/**",
-        "**/.settings/**",
-        "**/.idea/**",
-        "**/.build/**",
-        "**/.github/**",
-        "**/CVS/**",
-        "**/node_modules/**",
-        "**/bower_components/**",
-        "**/update/**",
-        "**/upload/**",
-        "**/static/**",
-        "**/images/**",
-        "**/runtime/**",
-        "**/vendor/**/{Tests,tests}/**",
-        "**/vendor/**/vendor/**",
-        "**/vendor/whichbrowser/parser/data/models-android.php",
-        "**/vendor/whichbrowser/parser/data/profiles.php",
-        "**/vendor/dompdf/dompdf/lib/fonts/simsun.ufm.php",
-        "**/v20/**/runtime/**",
-        "**/v20/public/hjjt/**",
-        "**/v20/public/platform/**",
-        "**/v20/public/platform_dev/**",
-        "**/v20/public/platform2/**",
-        "**/v20/public/platform202110128/**",
-        "**/v20/public/platformbak20220706/**",
-        "**/v20/public/zt/**",
-        "**/log/**",
-        "**/laya/**",
-        "**/zt/**",
-        "**/vagrant/**",
-        "**/o2o/cms/Lib/ORG/mpdf/**",
-        "**/frontend/o2o_platform/**",
-        "**/niushop/uniapp/**",
-        "**/uniapp/**"
-    ],
-
-    /* - GO环境配置 - */
-    //自动更新
-    "go.toolsManagement.autoUpdate": true,
-    //右键菜单选项可见性
-    "go.editorContextMenuCommands": {
-        "toggleTestFile": false,
-        "removeTags": true,
-        "fillStruct": true,
-        "testAtCursor": false,
-        "playground": false
-    },
-    //常量值显示
-    "go.inlayHints.constantValues": true,
-    //在 Output 中输出客户端和 gopls Server 的通讯，方便调试
-    //"go.trace.server": "verbose", 
-    "gopls": {
-        "ui.semanticTokens": true
+    
     }
-
-}
-
-/**
-    "搞颜色表": [
-        // World of Warcraft
-        #e5cc80 //artifact (gold)
-        #1eff00 //uncommon (green)
-        #0081ff //rare (blue)
-        #c600ff //epic (purple)
-        #ff8000 //legendary (orange)
-        // Diablo
-        #43ebbb //无形
-        #BA2636 //太古
-        #f00    //太古
-        #0f0    //套装
-        #ff8000 //传奇
-        #ff0    //魔法
-        #6969ff //稀有
-        #fff    //普通
-        // Borderlands
-        #E4007F //品红
-        Aqua    //青
-        Pink    //粉
-        // Other
-        #ff6ec7  //霓虹粉
-        #ff1cae  //艳粉
-        #CC9909  //暗金
-        DarkCyan //灰蓝
-        #19CAAD  //淡绿
-        #D1BA74  //灰黄
-        #F4606C  //淡玫红
-        #8CC7B5  //灰绿
-        #23238e  //自然选择，前进四
-        #238e68  //海绿
-        #cc3299  //紫罗兰
-    ],
-*/
+    
+    /**
+        "搞颜色表": [
+            // World of Warcraft
+            #e5cc80 //artifact (gold)
+            #1eff00 //uncommon (green)
+            #0081ff //rare (blue)
+            #c600ff //epic (purple)
+            #ff8000 //legendary (orange)
+            // Diablo
+            #43ebbb //无形
+            #BA2636 //太古
+            #f00    //太古
+            #0f0    //套装
+            #ff8000 //传奇
+            #ff0    //魔法
+            #6969ff //稀有
+            #fff    //普通
+            // Borderlands
+            #E4007F //品红
+            Aqua    //青
+            Pink    //粉
+            // Other
+            #ff6ec7  //霓虹粉
+            #ff1cae  //艳粉
+            #CC9909  //暗金
+            DarkCyan //灰蓝
+            #19CAAD  //淡绿
+            #D1BA74  //灰黄
+            #F4606C  //淡玫红
+            #8CC7B5  //灰绿
+            #23238e  //自然选择，前进四
+            #238e68  //海绿
+            #cc3299  //紫罗兰
+        ],
+    */

@@ -1,32 +1,31 @@
-    /*************************************************
-        User Global Settings - Basic
-        插件列表：
-            PHP Intelephense
-            PHP Namespace Resolver
-            Go
-            IntelliCode
-            IntelliCode API Usage Examples
-            HTML CSS Support
-            JavaScript(ES6) code snippets
-            ESLint
-            Vue Language Features (Volar)
-            TypeScript Vue Plugin (Volar)
-            Vue Peek
-            Vue VSCode Snippets
+/*************************************************
+    User Global Settings - Basic
+    插件列表：
+        PHP Intelephense
+        PHP Namespace Resolver
+        Go
+        IntelliCode
+        IntelliCode API Usage Examples
+        HTML CSS Support
+        JavaScript(ES6) code snippets
+        ESLint
+        Vue Language Features (Volar)
+        TypeScript Vue Plugin (Volar)
+        Vue Peek
+        Vue VSCode Snippets
 
-            Bookmarks
-            Markdown All in One
-            Microsoft Edge Tools for VS Code
-            Prettier - Code formatter
+        Bookmarks
+        Markdown All in One
+        Microsoft Edge Tools for VS Code
+        Prettier - Code formatter
 
-            background
-            GitHub Sharp Theme
-            SynthWave '80
-            Rainbow Fart
-                                —— 2023-03-31 15:29:00
-    **************************************************/
+        background
+        GitHub Sharp Theme
+        SynthWave '80
+        Rainbow Fart
+                            —— 2023-08-06 20:15:00
+**************************************************/
 {
-    // "workbench.colorTheme": "GitHub Sharp",
     "workbench.colorTheme": "SynthWave '84",
     "synthwave84.brightness": 0.8,
     // 显示空格
@@ -62,6 +61,8 @@
     "editor.fontFamily": "'Fira Code Retina', 'HarmonyOS Sans SC', monospace",
     // 控制台字体系列
     "terminal.integrated.fontFamily": "'Maple Mono SC NF', 'HarmonyOS Sans SC', monospace",
+    // debug控制台字体系列
+    "debug.console.fontFamily": "'Maple Mono SC NF', 'HarmonyOS Sans SC', monospace",
     // 启用字体连字
     "editor.fontLigatures": true,
     // 以像素为单位控制字号
@@ -81,7 +82,7 @@
     // 粘滞模式
     // "editor.stickyScroll.defaultModel": "outlineModel",
     // 粘滞 当使用空格缩进时，模仿制表符的选择行为。选择将坚持到制表符的位置。
-    //"editor.stickyTabStops": false,
+    "editor.stickyTabStops": false,
     // Tab键自动填入最佳推荐值
     "editor.tabCompletion": "on",
     // 缩进参考线
@@ -166,7 +167,7 @@
         "terminalCursor.foreground": "#ff1cae",// 终端-光标
         // 主题自定义配色
         "[SynthWave '84]": {
-            "editorWhitespace.foreground": "#0f8b7d89"// 空格
+            "editorWhitespace.foreground": "#0f8b7d89" // 空格
         },
         "[GitHub Sharp]": {
             // "tab.activeForeground": "#03edf9",
@@ -212,7 +213,10 @@
         "**/.idea": true
     },
     // 配置语言的文件关联。 这些关联的优先级高于已安装语言的默认关联。
-    "files.associations": {"*.module": "php"},
+    "files.associations": {
+        "*.module": "php",
+        "*.tmpl": "html"
+    },
     // 忽视git失效警告
     "git.ignoreMissingGitWarning": true,
     // 打开文件信任
@@ -226,8 +230,6 @@
     "bookmarks.gutterIconFillColor": "#f4f3f3b1",
     /* 背景图片 */
     "background.enabled": true,
-    "background.loop": true,
-    "background.useDefault": false,
     // terraria,三体图标
     "background.customImages": [
         "file:///D://Pro/icon/terraria/125x100_Winged_Slime_Mount.gif",
@@ -292,19 +294,28 @@
     ],
 
     /* - GO环境配置 - */
-    //自动更新
+    // tools自动更新
     "go.toolsManagement.autoUpdate": true,
-    //右键菜单选项可见性
+    // 右键菜单选项可见性
     "go.editorContextMenuCommands": {
         "toggleTestFile": false,
         "removeTags": true,
         "fillStruct": true,
         "testAtCursor": false,
-        "playground": false
+        "generateTestForFunction": false,
+        "testCoverage": false,
+        "playground": false,
+        "debugTestAtCursor": false
     },
-    //常量值显示
-    "go.inlayHints.constantValues": true,
-    //在 Output 中输出客户端和 gopls Server 的通讯，方便调试
+    // 嵌入显示
+    "go.inlayHints.constantValues": true, //常量值
+    "go.inlayHints.assignVariableTypes": true, //变量类型
+    "go.inlayHints.compositeLiteralFields": true, //结构体匿名赋值时显示字段名
+    "go.inlayHints.compositeLiteralTypes": true, //复合显示类型
+    "go.inlayHints.functionTypeParameters": true, //函数参数类型
+    "go.inlayHints.parameterNames": true, //函数参数名
+    "go.inlayHints.rangeVariableTypes": true, //range变量类型
+    // 在 Output 中输出客户端和 gopls Server 的通讯，方便调试
     //"go.trace.server": "verbose", 
     "gopls": {
         "ui.semanticTokens": true
